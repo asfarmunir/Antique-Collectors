@@ -93,13 +93,13 @@ const Seller = () => {
           </div>
 
           <div className="bg-[#F9F8F3] text-[#0D0106] w-full capitalize p-4 relative pt-16 ">
-            <div className="flex flex-col md:flex-row w-full bg-red-50 items-center text-center justify-between  md:text-left gap-2 pt-1">
+            <div className="flex flex-col md:flex-row w-full  items-center text-center justify-between  md:text-left gap-2 pt-1">
               <h1 className="font-playfair text-2xl">Antique Animal Jewelry</h1>
 
               <div className="flex flex-col  md:flex-row gap-3">
                 <Button
                   label="Follow"
-                  className="uppercase text-white text-xs px-7"
+                  className="uppercase text-white text-xs px-14"
                 />
                 <Button
                   label="Message Seller"

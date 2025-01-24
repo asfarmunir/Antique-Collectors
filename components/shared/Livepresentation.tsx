@@ -68,7 +68,7 @@ export function LivePresentation({ onClose }: { onClose: any }) {
             <p className="bg-[#EBE9E0] text-center text-sm py-1 font-sans uppercase">
               Available to watch for another 14 hours
             </p>
-            <div className="my-2">
+            <div className="">
               <div className="pb-2">
                 <div
                   style={{
@@ -93,37 +93,43 @@ export function LivePresentation({ onClose }: { onClose: any }) {
                     <LuUpload className="text-lg" />
                   </button>
                 </div>
-
-                <p className="text-sm font-sans">Streamed 22 hours ago</p>
               </div>
 
-              <div>
-                <div className="flex flex-row justify-between py-3 items-center text-sm gap-2">
-                  <div className="flex flex-row items-center gap-2">
-                    <div className="bg-[#EBE9E0] p-2 rounded-full w-8 h-8 flex items-center justify-center">
-                      <Image
-                        src="/"
-                        width={10}
-                        height={10}
-                        className="rounded-full"
-                        alt=""
-                      />
-                    </div>
-
-                    <h1 className="text-xs uppercase text-[#919089] font-sans">
-                      Seller Name
-                    </h1>
+              <div className="flex flex-row justify-between py-3 items-center text-sm gap-2 border-y border-[#EBE9E0]   ">
+                <div className="flex flex-row items-center gap-2">
+                  <div className="bg-[#EBE9E0] p-2 rounded-full w-8 h-8 flex items-center justify-center">
+                    <Image
+                      src="/"
+                      width={10}
+                      height={10}
+                      className="rounded-full"
+                      alt=""
+                    />
                   </div>
 
-                  <Button
-                    label="Follow"
-                    className="uppercase font-sans text-[10px] p-0 bg-transparent text-[#0D0106]"
-                  />
+                  <h1 className="text-xs uppercase text-[#919089] font-sans">
+                    Seller Name
+                  </h1>
                 </div>
 
-                <div className="mx-4">
-                  <Carousel items={slides} />
-                </div>
+                <Button
+                  label="Follow"
+                  className="uppercase font-sans text-[10px] p-0 bg-transparent text-[#0D0106]"
+                />
+              </div>
+              <h2 className="text-lg mt-2 font-playfair">
+                Featured Products in the Live
+              </h2>
+              <div className="flex items-center gap-2">
+                {Array.from({ length: 4 }).map((_, index) => (
+                  <Image
+                    key={index}
+                    src="/images/products/p5.png"
+                    width={100}
+                    height={100}
+                    alt="product"
+                  />
+                ))}
               </div>
             </div>
           </div>

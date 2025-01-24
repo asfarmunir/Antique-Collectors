@@ -25,7 +25,7 @@ const Aboutus = () => {
             <div className="absolute md:-bottom-8 md:block hidden">
               <Image
                 src="/images/about/about2.png"
-                width={190}
+                width={200}
                 height={80}
                 alt="about pic1"
               />
@@ -34,7 +34,7 @@ const Aboutus = () => {
             <div className="absolute left-4 top-4 md:hidden block ">
               <Image
                 src="/images/about/about2.png"
-                width={130}
+                width={140}
                 height={80}
                 alt="about pic1"
               />
@@ -43,15 +43,22 @@ const Aboutus = () => {
 
           <div className="mt-28 px-4 sm:mt-20 md:mt-0 flex flex-col gap-2 items-center justify-center">
             <h1 className="font-playfair text-3xl md:text-5xl">Our Story</h1>
-            <p className=" max-w-lg text-sm px-4 text-center md:mt-4">
-              <span className=" font-playfair text-lg px-1">
-                The Antique Collector
-              </span>
-              is a new and exciting global platform where potential buyers can
-              interact with the world's premiere antique and jewelry dealers,
-              and peruse and buy their latest stock. Created by two dealers who
-              thought it was time for a change, for somewhere more specialised,
-              but still fresh and without a regimented corporate feel.
+            <p className=" max-w-lg md:max-w-xl font-sans text-sm px-4 text-center md:mt-4">
+              <span className=" font-bold px-1">The Antique Collector</span>
+              was conceived when two dealers realised it was time for a change,
+              that there needed to be a real community where dealers and
+              collectors could meet, not just to buy wonderful antiques and
+              jewelry, but to talk about them, to learn, to admire, and to
+              share.
+              <br /> <br />
+              The two co-founders come with years of experience in the antiques
+              and jewelry sector, both having run successful businesses for many
+              years. They took the best of social media, and the best of online
+              platforms, and created a new type of marketplace, <br /> <br />{" "}
+              Our community of trusted sellers, operates without fees, or hefty
+              commissions that we all know force prices up so much. We don’t
+              sell your data. And if you get locked out of your account, we will
+              make sure you get right back in!
             </p>
           </div>
         </div>
@@ -112,9 +119,9 @@ const Aboutus = () => {
           </div>
         </section>
 
-        <section className="px-4 md:px-6 lg:px-12  pt-10 ">
+        <section className="px-4 md:px-6 lg:px-12  py-10 ">
           <div className="grid md:grid-cols-5 mb-8">
-            <div className="col-span-2 md:h-96 flex flex-col justify-start px-4 md:p-6">
+            <div className="col-span-2 flex flex-col justify-start px-4 md:p-6">
               <h1 className="text-[24px] md:text-[28px] font-playfair">
                 Liaise With Dealers Privately
               </h1>
@@ -133,7 +140,7 @@ const Aboutus = () => {
                 height={160}
               />
             </div>
-            <div className="col-span-2 md:h-96 flex flex-col justify-end p-6">
+            <div className="col-span-2 flex flex-col justify-start p-6">
               <h1 className="text-[24px] md:text-[28px] font-playfair">
                 Become a dealer and be seen
               </h1>
@@ -150,11 +157,11 @@ const Aboutus = () => {
         {/* how to join community */}
 
         <section className="bg-[#463F3A] flex text-white flex-col items-center justify-center ">
-          <div className="w-full flex flex-col items-center px-3 md:w-1/2 py-10 text-center">
+          <div className="w-full flex flex-col items-center px-3 md:w-1/2 py-12 text-center">
             <h1 className="text-[24px] md:text-[32px] font-playfair capitalize">
               How to Join our Community
             </h1>
-            <p className="text-[#EBE9E0] max-w-md text-[14px] py-2">
+            <p className="text-[#EBE9E0] max-w-lg text-[14px] py-2">
               The Antique Collector is free for all buyers. Just download the
               app and login. Sellers download the app and login, and then fill
               in the online application here or on the app to start selling.

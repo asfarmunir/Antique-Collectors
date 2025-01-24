@@ -4,6 +4,8 @@ import Button from "@/components/ui/Button";
 import Image from "next/image";
 import { FaHeart, FaRegHeart } from "react-icons/fa";
 import { BsChatSquareDots } from "react-icons/bs";
+import { CgMailReply } from "react-icons/cg";
+
 import {
   RiArrowDropUpLine,
   RiArrowDropDownLine,
@@ -212,13 +214,19 @@ const ProductDetails = ({ params }: { params: any }) => {
                   <FaRegHeart className="text-xl" /> 23
                 </button>
                 <button className="flex flex-row gap-2 items-center ">
-                  <BsChatSquareDots className="text-xl" /> 32
+                  <Image
+                    src="/images/message2.svg"
+                    alt="icon"
+                    width={25}
+                    height={25}
+                  />
+                  32
                 </button>
               </div>
               <HiOutlineUpload className="text-2xl" />
             </div>
             {Array.from({ length: 2 }).map((_, index) => (
-              <div className="border border-[#EBE9E0] p-3 my-3 ">
+              <div className="border-b border-[#EBE9E0] p-3 my-3 ">
                 <h3 className="uppercase text-semibold text-sm text-[#0D0106]">
                   Name SurName
                 </h3>
@@ -235,9 +243,31 @@ const ProductDetails = ({ params }: { params: any }) => {
                     <span className="text-[#463F3A]"> 23</span>
                   </button>
                   <button className="flex flex-row gap-2 items-center ">
-                    <BsChatSquareDots className="text-xl" />{" "}
+                    <CgMailReply className="text-xl" />{" "}
                     <span className="text-[#463F3A]"> 35</span>
                   </button>
+                </div>
+                <div className=" p-3 pl-8 my-3 ">
+                  <h3 className="uppercase text-semibold text-sm text-[#0D0106]">
+                    Name SurName
+                  </h3>
+                  <p className="text-xs py-3 text-[#919089]">
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    Veritatis facilis non dolorum veniam odit quasi odio earum,
+                    fugit suscipit maxime eaque fugiat reiciendis voluptates id
+                    voluptatibus nam, mollitia distinctio necessitatibus!
+                  </p>
+
+                  <div className="flex flex-row gap-6  text-[#919089]">
+                    <button className="flex flex-row gap-2 items-center ">
+                      <FaRegHeart className="text-xl]" />{" "}
+                      <span className="text-[#463F3A]"> 23</span>
+                    </button>
+                    <button className="flex flex-row gap-2 items-center ">
+                      <CgMailReply className="text-xl" />{" "}
+                      <span className="text-[#463F3A]"> 35</span>
+                    </button>
+                  </div>
                 </div>
               </div>
             ))}
@@ -353,7 +383,7 @@ const ProductDetails = ({ params }: { params: any }) => {
                         </button>
                       </div>
                       <Image
-                        src="/images/products/p1.png"
+                        src="/images/products/p5.png"
                         alt={p.title}
                         width={150}
                         className="w-full h-full object-contain object-center transform hover:scale-105 transition duration-500 ease-in-out"

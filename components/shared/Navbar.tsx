@@ -10,11 +10,11 @@ import SignUp from "./Signup";
 const navlinks = [
   { title: "Home", link: "/" },
   { title: "Product", link: "/products" },
-  { title: "Seller", link: "/sellers" },
+  { title: "Sellers", link: "/sellers" },
   { title: "Forum", link: "/forum" },
   { title: "Fairs & Events", link: "/events" },
   { title: "Live Presentation", link: "/presentation" },
-  { title: "Blog", link: "/blog" },
+  { title: "Blogs", link: "/blog" },
   { title: "About Us", link: "/aboutus" },
   { title: "Become a Seller", link: "#" },
 ];

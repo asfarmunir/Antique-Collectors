@@ -5,6 +5,11 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useBlogDetails } from "@/hooks/useBlogs";
 import { useBlogs } from "@/hooks/useBlogs";
+import { FaRegHeart } from "react-icons/fa";
+import { CgMailReply } from "react-icons/cg";
+import { HiOutlineUpload } from "react-icons/hi";
+import { BsEmojiSmile } from "react-icons/bs";
+import { VscSend } from "react-icons/vsc";
 
 const BlogDetails = ({ params }: { params: any }) => {
   const { blog } = useBlogs();
@@ -55,13 +60,7 @@ const BlogDetails = ({ params }: { params: any }) => {
             </h1>
           </div>
 
-          <p className="text-[#666666] text-sm">
-            Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
-            nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam.
-            Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
-            nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam.
-            Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
-            nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam.
+          <p className="text-[#666666] text-sm pb-4 border-b border-[#EBE9E0] ">
             Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
             nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam.
             Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
@@ -143,11 +142,106 @@ const BlogDetails = ({ params }: { params: any }) => {
             nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam.
           </p>
         </div>
+        <div className="flex px-8 gap-4 flex-col md:flex-row ">
+          <div className=" px-8 w-full mx-4">
+            {/* Left Side: Like and Comment */}
+            <div className="flex items-center bg-[#F9F8F3] p-5 justify-between">
+              <div className="flex flex-row gap-6 ">
+                <button className="flex flex-row gap-2 items-center ">
+                  <FaRegHeart className="text-xl" /> 23
+                </button>
+                <button className="flex flex-row gap-2 items-center ">
+                  <Image
+                    src="/images/message2.svg"
+                    alt="icon"
+                    width={25}
+                    height={25}
+                  />
+                  32
+                </button>
+              </div>
+              <HiOutlineUpload className="text-2xl" />
+            </div>
+            {Array.from({ length: 1 }).map((_, index) => (
+              <div className=" p-3 my-3 ">
+                <h3 className="uppercase text-semibold text-sm text-[#0D0106]">
+                  Name SurName
+                </h3>
+                <p className="text-xs py-3 text-[#919089]">
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                  Veritatis facilis non dolorum veniam odit quasi odio earum,
+                  fugit suscipit maxime eaque fugiat reiciendis voluptates id
+                  voluptatibus nam, mollitia distinctio necessitatibus!
+                </p>
+
+                <div className="flex flex-row gap-6  text-[#919089]">
+                  <button className="flex flex-row gap-2 items-center ">
+                    <FaRegHeart className="text-xl]" />{" "}
+                    <span className="text-[#463F3A]"> 23</span>
+                  </button>
+                  <button className="flex flex-row gap-2 items-center ">
+                    <CgMailReply className="text-xl" />{" "}
+                    <span className="text-[#463F3A]"> 35</span>
+                  </button>
+                </div>
+                <div className=" p-3 pl-8 my-3 ">
+                  <h3 className="uppercase text-semibold text-sm text-[#0D0106]">
+                    Name SurName
+                  </h3>
+                  <p className="text-xs py-3 text-[#919089]">
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    Veritatis facilis non dolorum veniam odit quasi odio earum,
+                    fugit suscipit maxime eaque fugiat reiciendis voluptates id
+                    voluptatibus nam, mollitia distinctio necessitatibus!
+                  </p>
+
+                  <div className="flex flex-row gap-6  text-[#919089]">
+                    <button className="flex flex-row gap-2 items-center ">
+                      <FaRegHeart className="text-xl]" />{" "}
+                      <span className="text-[#463F3A]"> 23</span>
+                    </button>
+                    <button className="flex flex-row gap-2 items-center ">
+                      <CgMailReply className="text-xl" />{" "}
+                      <span className="text-[#463F3A]"> 35</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            ))}
+            <div className="flex mb-5 items-center justify-between border-t pt-4 border-[#EBE9E0]">
+              <div className=" inline-flex items-center gap-2 ">
+                <BsEmojiSmile className="text-balance text-lg" />
+                <input
+                  type="text"
+                  placeholder="Write a comment"
+                  className="w-full  p-2"
+                />
+              </div>
+              <button className=" text-[#919089]">
+                <VscSend />
+              </button>
+            </div>
+          </div>
+          <div className=" bg-[#F9F8F3] p-6 w-full space-y-3 h-full md:w-[35%]">
+            <h3 className="text-2xl font-playfair">
+              Want to share your knowledge in Antiques?
+            </h3>
+            <p className="text-[#919089] text-sm 2xl:text-base">
+              Lorem ipsum dolor sit amet consectetur. Sed amet bibendum at
+              venenatis faucibus mi fringilla viverra. In nulla aliquam magna
+              orci neque penatibus neque eget. Commodo scelerisque cursus purus
+              id fermentum lorem nisi sit malesuada.
+            </p>
+            <button className="bg-black uppercase text-white text-xs py-3 w-full px-4 mt-4">
+              Write a blog posr
+            </button>
+          </div>
+        </div>
 
         <section className="bg-white">
           <div className=" py-6 border-y border-[#EBE9E0] px-4 md:px-6 lg:px-12 flex items-center font-playfair justify-between">
             <h2 className="text-lg md:text-[20px] uppercase ">
-              Other Blog Posts
+              Similar Blog Posts
             </h2>
             <Link href={"/blog"} className="text-sm ">
               VIEW ALL
@@ -155,7 +249,7 @@ const BlogDetails = ({ params }: { params: any }) => {
           </div>
         </section>
 
-        <section className="px-4 md:px-6 lg:px-12 ">
+        <section className="px-4 border-b border-[#EBE9E0]  md:px-6 lg:px-12 ">
           <div className="grid  sm:grid-cols-2 md:grid-cols-3 gap-4 w-full mt-6">
             {blog.slice(0, 3).map((b) => (
               <div
