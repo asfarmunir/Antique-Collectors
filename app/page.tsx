@@ -18,7 +18,6 @@ import { FaRegCommentDots } from "react-icons/fa";
 
 const page = () => {
   const [subEmail, setSubEmail] = useState();
-
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isLogin, setIsLogin] = useState(false);
   const { products, isFavorite, toggleFavorite } = useProducts();
