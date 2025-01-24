@@ -75,7 +75,7 @@ const page = () => {
     <>
       <main>
         <section className="w-full h-[600px]  lg:h-screen flex items-center justify-center flex-col  relative">
-          <div className="w-[150px] h-[140px] md:min-w-[220px] md:min-h-[250px] absolute top-0 ,">
+          <div className="w-[150px] h-[140px] md:min-w-[180px] md:min-h-[220px] 2xl:min-w-[220px] 2xl:min-h-[240px] absolute top-0 ,">
             <Image
               src="/images/hero1.svg"
               alt="hero"
@@ -114,7 +114,7 @@ const page = () => {
             />
           </div>
 
-          <div className=" absolute right-0 bottom-16 md:bottom-36 w-[120px] h-[120px] md:min-w-[150px] md:min-h-[150px]">
+          <div className=" absolute right-0 bottom-16 md:bottom-28 2xl:bottom-36 w-[120px] h-[120px] md:min-w-[120px]  md:min-h-[120px] 2xl:min-w-[150px] 2xl:min-h-[150px]">
             <Image
               src="/images/hero6.svg"
               alt="hero"
@@ -124,7 +124,7 @@ const page = () => {
             />
           </div>
 
-          <div className=" absolute sm:block hidden  bottom-0 right-72 2xl:right-80 min-h-[200px] min-w-[200px]">
+          <div className=" absolute sm:block hidden  -bottom-4 right-64 2xl:right-80 min-h-[200px] min-w-[200px]">
             <Image
               src="/images/hero5.svg"
               alt="hero"
@@ -134,7 +134,7 @@ const page = () => {
             />
           </div>
           <div className="mt-6">
-            <h2 className="text-3xl md:text-5xl leading-normal text-center font-playfair ">
+            <h2 className="text-3xl md:text-5xl md:leading-snug text-center font-playfair ">
               Welcome to <br />{" "}
               <span className=" italic">The Antique Collector</span>
             </h2>
@@ -225,19 +225,22 @@ const page = () => {
             </div>
 
             <div className=" w-full md:w-[50%] flex flex-col pt-8 items-center">
-              <h2 className="text-2xl md:text-4xl lg:text-6xl   text-center font-playfair ">
-                Featured Sellers
-              </h2>
-              <p className="text-center max-w-xl px-6 text-sm text-[#463F3A] text-[14px] 2xl:text-base my-6">
-                Lorem ipsum dolor sit amet consectetur. Ullamcorper habitasse
-                eget elit sit magna et diam faucibus elit. Scelerisque nec in
-                semper ac pellentesque arcu iaculis mauris sed. Nunc arcu
-                scelerisque tellus erat purus. Dui scelerisque semper aliquam
-                risus lacinia sit amet a.
-              </p>
-              <button className=" py-3 2xl:py-4 px-16 hover:opacity-80 bg-black text-xs 2xl:text-sm text-white ">
-                BECOME A SELLER
-              </button>
+              <div className="flex flex-col items-center px-5 md:px-0 md:items-start">
+                <h2 className="text-2xl md:text-4xl lg:text-6xl   text-center font-playfair ">
+                  Featured Sellers
+                </h2>
+                <p className="text-center md:text-start max-w-xl  text-sm text-[#463F3A] text-[14px] 2xl:text-base my-6">
+                  Lorem ipsum dolor sit amet consectetur. Ullamcorper habitasse
+                  eget elit sit magna et diam faucibus elit. Scelerisque nec in
+                  semper ac pellentesque arcu iaculis mauris sed. Nunc arcu
+                  scelerisque tellus erat purus. Dui scelerisque semper aliquam
+                  risus lacinia sit amet a.
+                </p>
+                <button className=" py-3 2xl:py-4 px-16 hover:opacity-80 bg-black text-xs 2xl:text-sm text-white ">
+                  BECOME A SELLER
+                </button>
+              </div>
+
               <Table className=" w-full mt-12">
                 <TableBody>
                   <TableRow className=" bg-[#EBE9E0]">
@@ -323,9 +326,19 @@ const page = () => {
         </section>
 
         <section className="pb-12">
-          <div className="py-6 px-4 md:px-6 lg:px-16 border-b border-[#EBE9E0]  flex items-center font-playfair justify-between">
-            <h2 className="text-lg md:text-[24px]">LATEST PRODUCTS</h2>
-            <Link className="text-sm font-sans" href={"/products"}>
+          <div className="py-6 px-4 md:px-6 lg:px-16 border-b border-[#EBE9E0]  flex items-center  justify-between">
+            <div>
+              <h2 className="text-2xl font-playfair mb-2 2xl:text-3xl  ">
+                New Arrivals
+              </h2>
+              <p className=" font-light text-sm 2xl:text-base text-slate-700">
+                All the latest pieces land here in real time. <br />{" "}
+                <span className="font-semibold underline">Sign up</span> for an
+                account to create your own custom feed, and only see products
+                from sellers you follow
+              </p>
+            </div>
+            <Link className="text-sm font-sans " href={"/products"}>
               VIEW ALL
             </Link>
           </div>
@@ -400,7 +413,7 @@ const page = () => {
           </div>
         </section>
         <section
-          className="  relative h-[80svh] md:h-[130svh] w-full flex-col flex items-center justify-center"
+          className="  relative h-[80svh] md:h-[140svh] w-full flex-col flex items-center justify-center"
           style={{
             backgroundImage: "url(/images/bg.svg)",
             backgroundSize: "cover",
@@ -408,14 +421,14 @@ const page = () => {
           }}
         >
           <Image
-            src="/images/post1.svg"
+            src="/images/p1.png"
             alt="hero"
             width={280}
             height={280}
             className=" absolute top-12 2xl:top-16 left-16 md:block hidden"
           />
           <Image
-            src="/images/post2.svg"
+            src="/images/p2.png"
             alt="hero"
             width={280}
             height={280}
@@ -634,7 +647,7 @@ const page = () => {
                       alt="interest"
                       width={80}
                       height={80}
-                      className=" "
+                      className=" opacity-60 "
                     />
                   </div>
                 </div>

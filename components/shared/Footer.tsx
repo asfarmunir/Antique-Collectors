@@ -37,7 +37,7 @@ const Footer = () => {
             Subscribe to our Newsletter
           </h1>
 
-          <div className="flex flex-row items-center gap-3 justify-center">
+          <div className="flex flex-row items-center  justify-center">
             <InputField
               placeholder="Your Email Address"
               className="border border-[#EBE9E0] md:min-w-64 text-xs 2xl:text-sm text-[#919089] placeholder:text-[#919089] px-4 py-2.5 "
@@ -45,11 +45,12 @@ const Footer = () => {
               value={subEmail}
               onChange={(e) => setSubEmail(e.target.value)}
             />
-            <Button
+            <button
               onClick={handleSubscribe}
-              label="Subscribe"
-              className="uppercase text-xs"
-            />
+              className="uppercase text-xs px-5 py-2.5 2xl:py-3 bg-black text-white "
+            >
+              Subscribe
+            </button>
           </div>
         </div>
 
@@ -149,9 +150,9 @@ const Footer = () => {
         {/* copy right */}
 
         <div className="border-t border-[#EBE9E0] py-4">
-          <p className="text-xs text-[#919089] text-center">
+          <p className="text-xs text-[#0D0106] text-center">
             Copyright © 2025 The Antique Collector | All Rights Reserved |
-            <span className="text-[#0D0106]">
+            <span className=" text-[#919089]">
               {" "}
               Terms and Conditions | Privacy Policy
             </span>

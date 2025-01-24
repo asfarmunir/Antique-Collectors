@@ -56,7 +56,7 @@ const Navbar = () => {
           />
           <button
             onClick={handleLogin}
-            className="py-3 2xl:py-3.5 px-9 2xl:px-12 bg-black text-xs 2xl:text-sm text-white"
+            className="py-3 2xl:py-3.5 px-12 2xl:px-16 bg-black text-xs 2xl:text-sm text-white"
           >
             LOG IN
           </button>
@@ -105,7 +105,7 @@ const Navbar = () => {
           <div className=" w-full">
             <button
               onClick={handleLogin}
-              className=" py-3 px-6 bg-black text-white text-sm w-full "
+              className=" py-3 px-10 bg-black text-white text-sm w-full "
             >
               LOG IN
             </button>
@@ -115,9 +115,9 @@ const Navbar = () => {
 
       {/* Horizontal Menu (Desktop/Large Screens) */}
       <div
-        className={`hidden md:flex items-center justify-between py-3 px-9 2xl:px-12 border-y border-[#EBE9E0]`}
+        className={`hidden md:flex items-center justify-between py-3.5 2xl:py-5 px-9 2xl:px-12 border-y border-[#EBE9E0]`}
       >
-        <ul className="flex items-center gap-5 py-2">
+        <ul className="flex items-center gap-5 2xl:gap-6 py-2">
           {navlinks.map((navlink, index) => (
             <li key={index}>
               <a
@@ -133,6 +133,11 @@ const Navbar = () => {
             </li>
           ))}
         </ul>
+        <input
+          type="text"
+          placeholder="Search"
+          className="border border-[#EBE9E0] w-[300px] h-[45px]  px-4"
+        />
       </div>
 
       {isLoginOpen && <SignUp onClose={() => setIsLoginOpen(false)} />}

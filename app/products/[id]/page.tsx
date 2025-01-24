@@ -1,10 +1,9 @@
 "use client";
 import React, { useState, useEffect } from "react";
-import { CiHeart } from "react-icons/ci";
 import Button from "@/components/ui/Button";
-import { LuReply } from "react-icons/lu";
 import Image from "next/image";
-import { FaHeart } from "react-icons/fa";
+import { FaHeart, FaRegHeart } from "react-icons/fa";
+import { BsChatSquareDots } from "react-icons/bs";
 import {
   RiArrowDropUpLine,
   RiArrowDropDownLine,
@@ -17,6 +16,7 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 import useProducts from "@/hooks/useProducts";
 import { useProductDetails } from "@/hooks/useProducts";
+import { HiOutlineUpload } from "react-icons/hi";
 
 const ProductDetails = ({ params }: { params: any }) => {
   //  const [products, setProducts] = useState<any>(null); // Full product list
@@ -165,7 +165,7 @@ const ProductDetails = ({ params }: { params: any }) => {
               </p>
 
               {/* Product Specifications */}
-              <div className="flex flex-wrap justify-between py-3 gap-4  text-gray-800">
+              <div className="flex flex-wrap justify-between py-3 gap-4 px-4 bg-[#F9F8F3] ">
                 <div className="text-[12px] ">
                   <p className="text-[#919089] uppercase">Price</p>
                   <p className="mt-2">$ {productDetails?.price}</p>
@@ -188,15 +188,15 @@ const ProductDetails = ({ params }: { params: any }) => {
               </div>
 
               {/* Action Buttons */}
-              <div className="flex gap-4 mt-6">
+              <div className="flex gap-3 mt-6">
                 <Button
                   label="Add to favorite"
-                  icon={<CiHeart className="text-xl" />}
-                  className="bg-white uppercase text-xs hover:bg-black hover:text-white text-nowrap md:text-sm border border-black text-black w-full py-2 "
+                  icon={<FaRegHeart className="text-xl" />}
+                  className="bg-white uppercase text-xs hover:bg-black hover:text-white text-nowrap 2xl:text-sm border border-black text-black w-[70%]  py-2.5 "
                 />
                 <Button
                   label="Send a Query"
-                  className="bg-[#0D0106] uppercase border text-xs md:text-sm border-black text-white w-full py-2 hover:bg-gray-800"
+                  className="bg-[#0D0106] uppercase border text-xs 2xl:text-sm border-black text-white w-full py-2.5 hover:bg-gray-800"
                 />
               </div>
             </div>
@@ -206,13 +206,16 @@ const ProductDetails = ({ params }: { params: any }) => {
         <div className="md:px-8 grid grid-cols-1 md:grid-cols-7 md:mb-8  mt-4">
           <div className=" md:col-span-3 mx-4">
             {/* Left Side: Like and Comment */}
-            <div className="flex flex-row gap-6 border-b pb-2 border-[#EBE9E0]">
-              <button className="flex flex-row gap-2 items-center ">
-                <CiHeart className="text-xl" /> 23
-              </button>
-              <button className="flex flex-row gap-2 items-center ">
-                <FaRegCommentDots className="text-xl" /> 32
-              </button>
+            <div className="flex items-center justify-between">
+              <div className="flex flex-row gap-6 border-b pb-2 border-[#EBE9E0]">
+                <button className="flex flex-row gap-2 items-center ">
+                  <FaRegHeart className="text-xl" /> 23
+                </button>
+                <button className="flex flex-row gap-2 items-center ">
+                  <BsChatSquareDots className="text-xl" /> 32
+                </button>
+              </div>
+              <HiOutlineUpload className="text-2xl" />
             </div>
             {Array.from({ length: 2 }).map((_, index) => (
               <div className="border border-[#EBE9E0] p-3 my-3 ">
@@ -228,11 +231,11 @@ const ProductDetails = ({ params }: { params: any }) => {
 
                 <div className="flex flex-row gap-6  text-[#919089]">
                   <button className="flex flex-row gap-2 items-center ">
-                    <CiHeart className="text-xl]" />{" "}
+                    <FaRegHeart className="text-xl]" />{" "}
                     <span className="text-[#463F3A]"> 23</span>
                   </button>
                   <button className="flex flex-row gap-2 items-center ">
-                    <LuReply className="text-xl" />{" "}
+                    <BsChatSquareDots className="text-xl" />{" "}
                     <span className="text-[#463F3A]"> 35</span>
                   </button>
                 </div>
@@ -271,7 +274,7 @@ const ProductDetails = ({ params }: { params: any }) => {
                             {isFavorited ? (
                               <FaHeart className="text-red-500" /> // Filled heart for favorited
                             ) : (
-                              <CiHeart className="text-gray-500" /> // Outline heart for non-favorited
+                              <FaRegHeart className="text-gray-500" /> // Outline heart for non-favorited
                             )}
                           </button>
                         </div>
@@ -286,7 +289,7 @@ const ProductDetails = ({ params }: { params: any }) => {
                         {/* Likes and Comments Overlay on Hover */}
                         <div className="absolute inset-0 bg-white bg-opacity-80   flex flex-row gap-4 items-center justify-center text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                           <p className="text-sm text-black flex items-center gap-4">
-                            <CiHeart className="text-lg" /> {p.likes || 34}
+                            <FaRegHeart className="text-lg" /> {p.likes || 34}
                           </p>
                           <p className="text-sm text-black flex items-center gap-4">
                             <FaRegCommentDots className="text-lg" />{" "}
@@ -345,7 +348,7 @@ const ProductDetails = ({ params }: { params: any }) => {
                           {isFavorited ? (
                             <FaHeart className="text-red-500" /> // Filled heart for favorited
                           ) : (
-                            <CiHeart className="text-gray-500" /> // Outline heart for non-favorited
+                            <FaRegHeart className="text-gray-500" /> // Outline heart for non-favorited
                           )}
                         </button>
                       </div>
@@ -360,7 +363,7 @@ const ProductDetails = ({ params }: { params: any }) => {
                       {/* Likes and Comments Overlay on Hover */}
                       <div className="absolute inset-0 bg-white bg-opacity-80   flex flex-row gap-4 items-center justify-center text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                         <p className="text-sm text-black flex items-center gap-4">
-                          <CiHeart className="text-lg" /> {p.likes || 34}
+                          <FaRegHeart className="text-lg" /> {p.likes || 34}
                         </p>
                         <p className="text-sm text-black flex items-center gap-4">
                           <FaRegCommentDots className="text-lg" />{" "}
