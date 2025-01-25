@@ -7,8 +7,16 @@ import { useSellerAccountDetails, SellerData } from "@/hooks/useSellerAccount";
 import { toast } from "react-toastify";
 import { useRouter } from "next/navigation";
 
-const SellerAccountFinish = ({ onClose, sellerData }: { onClose: any, sellerData: SellerData }) => {
-  const { formData, setFormData, handleUpdate } = useSellerAccountDetails({ initialData: sellerData });
+const SellerAccountFinish = ({
+  onClose,
+  sellerData,
+}: {
+  onClose: any;
+  sellerData: SellerData;
+}) => {
+  const { formData, setFormData, handleUpdate } = useSellerAccountDetails({
+    initialData: sellerData,
+  });
   const [isDialogOpen, setIsDialogOpen] = useState(true); // Manage dialog state locally
   const router = useRouter();
 
@@ -17,13 +25,11 @@ const SellerAccountFinish = ({ onClose, sellerData }: { onClose: any, sellerData
     onClose(); // Notify parent component
   };
 
-
   const handleFinish = () => {
     onClose();
     toast.success("account setup completed");
-    router.push('/');
-};
-
+    router.push("/");
+  };
 
   return (
     <div className="relative">
@@ -33,7 +39,10 @@ const SellerAccountFinish = ({ onClose, sellerData }: { onClose: any, sellerData
           if (!isOpen) handleDialogClose();
         }}
       >
-        <DialogContent className="font-playfair max-h-[90vh] overflow-y-auto" customWidth="max-w-2xl md:my-4 overflow-x-auto">
+        <DialogContent
+          className="font-playfair max-h-[90vh] overflow-y-auto"
+          customWidth="max-w-lg md:my-4 overflow-x-auto"
+        >
           <DialogHeader className="font-playfair text-xl border-b border-[#EBE9E0] pb-2">
             <DialogTitle>
               <Button
@@ -42,7 +51,9 @@ const SellerAccountFinish = ({ onClose, sellerData }: { onClose: any, sellerData
                 label=""
                 className="bg-transparent absolute right-0 top-4"
               />
-              <h1 className="font-playfair text-base uppercase text-start">Apply for seller</h1>
+              <h1 className="font-playfair text-base uppercase text-start">
+                Apply for seller
+              </h1>
             </DialogTitle>
           </DialogHeader>
 
@@ -61,8 +72,12 @@ const SellerAccountFinish = ({ onClose, sellerData }: { onClose: any, sellerData
                   }))
                 }
               />
-              <label htmlFor="notifications" className="text-[11px] uppercase font-sans tracking-wider">
-                Enable email notifications to get updates on items matching your preferences.
+              <label
+                htmlFor="notifications"
+                className="text-[11px] uppercase font-sans tracking-wider"
+              >
+                Enable email notifications to get updates on items matching your
+                preferences.
               </label>
             </div>
 

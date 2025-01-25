@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 import {
   Dialog,
   DialogClose,
@@ -7,41 +7,41 @@ import {
   DialogDescription,
   DialogTitle,
   DialogHeader,
-} from '../ui/Dialog';
-import Button from '../ui/Button';
-import Dropdown from '../ui/DropDown';
-import Image from 'next/image';
-import { RxCross2 } from 'react-icons/rx';
-import { LuUpload } from 'react-icons/lu';
-import InputField from '../ui/InputField';
-import { FcGoogle } from 'react-icons/fc';
-import { FaApple } from 'react-icons/fa';
-import Checkbox1 from '../ui/tickbox';
-import { intrests } from '@/lib/data';
+} from "../ui/Dialog";
+import Button from "../ui/Button";
+import Dropdown from "../ui/DropDown";
+import Image from "next/image";
+import { RxCross2 } from "react-icons/rx";
+import { LuUpload } from "react-icons/lu";
+import InputField from "../ui/InputField";
+import { FcGoogle } from "react-icons/fc";
+import { FaApple } from "react-icons/fa";
+import Checkbox1 from "../ui/tickbox";
+import { intrests } from "@/lib/data";
 
 const checkboxLabels = [
-  'Roman - 753 BC - 476 AD',
-  'Elizabethan - 1558 - 1603',
-  'Baroque - 1600 - 1750',
-  'Victorian - 1837 - 1901',
-  'Art Deco - 1920s - 1930s',
-  'Mid-Century Modern - 1933 - 1965',
+  "Roman - 753 BC - 476 AD",
+  "Elizabethan - 1558 - 1603",
+  "Baroque - 1600 - 1750",
+  "Victorian - 1837 - 1901",
+  "Art Deco - 1920s - 1930s",
+  "Mid-Century Modern - 1933 - 1965",
 ];
 
 const sortData = [
-  'Latest',
-  'A to Z',
-  'Low to Higher Price',
-  'Higher to Low Price',
-  'Highest Sale Products',
+  "Latest",
+  "A to Z",
+  "Low to Higher Price",
+  "Higher to Low Price",
+  "Highest Sale Products",
 ];
 
 export const BuyerAccountSetting = ({ onClose }: { onClose: any }) => {
   const [step, setStep] = useState(1);
   const [openDropdown, setOpenDropdown] = useState<number | null>(null);
   const [formData, setFormData] = useState({
-    country: '',
-    buyFromCountries: '',
+    country: "",
+    buyFromCountries: "",
     selectedInterests: [],
     enableNotifications: false,
   });
@@ -76,7 +76,10 @@ export const BuyerAccountSetting = ({ onClose }: { onClose: any }) => {
   return (
     <div className="relative">
       <Dialog open onOpenChange={onClose}>
-        <DialogContent className="font-playfair max-h-[90vh] overflow-y-auto" customWidth="max-w-3xl">
+        <DialogContent
+          className="font-playfair max-h-[90vh] overflow-y-auto"
+          customWidth="max-w-lg"
+        >
           <DialogHeader className="font-playfair text-xl border-b border-[#EBE9E0] pb-2">
             <DialogTitle>
               <Button
@@ -91,40 +94,46 @@ export const BuyerAccountSetting = ({ onClose }: { onClose: any }) => {
             </DialogTitle>
           </DialogHeader>
 
-
           {step === 1 && (
             <div className="flex flex-col px-2 md:px-6">
               <h1 className="text-3xl md:text-4xl">Location Preferences</h1>
               <p className="text-xs py-2 font-sans">
-                Personalize your experience by sharing a few details about your location preferences.
+                Personalize your experience by sharing a few details about your
+                location preferences.
               </p>
 
               <form>
                 <div className="py-3">
-                  <p className="text-xs pb-2 font-sans uppercase">What is your country of residence?</p>
+                  <p className="text-xs pb-2 font-sans uppercase">
+                    What is your country of residence?
+                  </p>
                   <div>
                     <Dropdown
                       label="-Select-"
                       items={sortData}
-                      onSelect={(item) => handleSelect('country', item)}
+                      onSelect={(item) => handleSelect("country", item)}
                       isOpen={openDropdown === 1}
                       toggleDropdown={() => toggleDropdown(1)}
                       className="bg-white border border-[#EBE9E0] font-sans"
                     />
                   </div>
-
                 </div>
 
                 <div className="py-3">
-                  <p className="text-xs pb-2 font-sans uppercase">Do you have a preference for countries you would like to buy from?</p>
+                  <p className="text-xs pb-2 font-sans uppercase">
+                    Do you have a preference for countries you would like to buy
+                    from?
+                  </p>
                   <div>
                     <Dropdown
                       label="-Select-"
                       items={sortData}
-                      onSelect={(item) => handleSelect('buyFromCountries', item)}
+                      onSelect={(item) =>
+                        handleSelect("buyFromCountries", item)
+                      }
                       isOpen={openDropdown === 2}
                       toggleDropdown={() => toggleDropdown(2)}
-                      className='bg-white border border-[#EBE9E0] font-sans'
+                      className="bg-white border border-[#EBE9E0] font-sans"
                     />
                   </div>
                 </div>
@@ -132,7 +141,7 @@ export const BuyerAccountSetting = ({ onClose }: { onClose: any }) => {
                 <div className="flex flex-col md:flex-row gap-3">
                   <Button
                     label="I'll Do It Later"
-                    className="w-full font-sans bg-white uppercase text-xs text-black"
+                    className="w-full font-sans md:w-[40%] bg-white uppercase text-xs text-black"
                   />
                   <Button
                     onClick={handleNext}
@@ -145,18 +154,21 @@ export const BuyerAccountSetting = ({ onClose }: { onClose: any }) => {
             </div>
           )}
 
-
           {step === 2 && (
             <div className="flex flex-col px-2 md:px-6">
               <h1 className="text-2xl md:text-3xl">What Interests You</h1>
               <p className="text-xs font-sans">
-                Personalize your experience by sharing a few details about your interests.
+                Personalize your experience by sharing a few details about your
+                interests.
               </p>
 
               <div className="font-sans mt-6">
-                <h3 className="uppercase text-sm">1. What Kind of Antiques Do You Love?</h3>
+                <h3 className="uppercase text-sm">
+                  1. What Kind of Antiques Do You Love?
+                </h3>
                 <p className="text-gray-500 text-xs">
-                  Choose your favorite categories to see more of what you’re passionate about.
+                  Choose your favorite categories to see more of what you’re
+                  passionate about.
                 </p>
 
                 <div className="flex my-3 px-5 py-6 flex-wrap gap-4 bg-[#F9F8F3]">
@@ -180,7 +192,8 @@ export const BuyerAccountSetting = ({ onClose }: { onClose: any }) => {
               <div className="font-sans mt-6">
                 <h3 className="uppercase text-sm">2. What's your style?</h3>
                 <p className="text-gray-500 text-xs">
-                  Select the eras and styles that inspire you most, from Art Deco to Victorian.
+                  Select the eras and styles that inspire you most, from Art
+                  Deco to Victorian.
                 </p>
 
                 <div className="flex flex-wrap gap-3 bg-[#F9F8F3] p-6 h-40 overflow-y-auto">
@@ -211,7 +224,6 @@ export const BuyerAccountSetting = ({ onClose }: { onClose: any }) => {
             </div>
           )}
 
-
           {step === 3 && (
             <div className="px-2 md:px-6">
               <h1 className="text-3xl">Stay in the Loop</h1>
@@ -229,7 +241,8 @@ export const BuyerAccountSetting = ({ onClose }: { onClose: any }) => {
                   }
                 />
                 <label className="text-[10px] uppercase font-sans">
-                  Enable email notifications to get updates on items matching your preferences.
+                  Enable email notifications to get updates on items matching
+                  your preferences.
                 </label>
               </div>
 
@@ -251,13 +264,16 @@ export const BuyerAccountSetting = ({ onClose }: { onClose: any }) => {
 
               <div className="mt-3">
                 <p className="py-4 text-sm">
-                  We have started you off with a few default sellers in your feed. Visit the Sellers page to choose more.
+                  We have started you off with a few default sellers in your
+                  feed. Visit the Sellers page to choose more.
                 </p>
                 <p className="py-2 text-sm">
-                  Use filters to find dealers by country or type, or search by typing their name or browsing their profiles.
+                  Use filters to find dealers by country or type, or search by
+                  typing their name or browsing their profiles.
                 </p>
                 <p className="py-2 text-sm">
-                  Search for pieces on the Search page or explore the directory for types.
+                  Search for pieces on the Search page or explore the directory
+                  for types.
                 </p>
               </div>
 

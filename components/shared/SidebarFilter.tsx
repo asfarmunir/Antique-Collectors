@@ -1,9 +1,17 @@
-import React, { useState } from 'react';
-import { TiMinus, TiPlus } from 'react-icons/ti';
-import Checkbox1 from '../ui/tickbox';
-import Dropdown from '../ui/DropDown';
-import { categoriesData } from '@/lib/data';
-import CategoryDropdown from '../ui/SubDropdown';
+import React, { useState } from "react";
+import { TiMinus, TiPlus } from "react-icons/ti";
+import Checkbox1 from "../ui/tickbox";
+import Dropdown from "../ui/DropDown";
+import { categoriesData } from "@/lib/data";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
+
+import CategoryDropdown from "../ui/SubDropdown";
+import { Checkbox } from "../ui/checkbox";
 
 interface FilterComponentProps {
   checkboxlablel: string[];
@@ -66,19 +74,56 @@ const FilterComponent: React.FC<FilterComponentProps> = ({
 
   return (
     <div>
-      {filtersToShow.includes('category') && (
+      {filtersToShow.includes("category") && (
         <div className="border border-[#EBE9E0] p-3 mb-4 ">
           <div className="flex flex-row items-center justify-between gap-4">
             <h1 className="custom-border font-playfair text-lg ">Categories</h1>
-            <div onClick={() => handleToggle('category')}>
-              {openFilters.category ? <TiMinus className="mr-3" /> : <TiPlus className="mr-3" />}
+            <div onClick={() => handleToggle("category")}>
+              {openFilters.category ? (
+                <TiMinus className="mr-3" />
+              ) : (
+                <TiPlus className="mr-3" />
+              )}
             </div>
           </div>
           {openFilters.category && (
             <div className="flex flex-col gap-2 mt-2 w-full max-w-md mx-auto text-[#463F3A]">
               {Object.entries(categoriesData).map(([name, items]) => (
                 <div key={name} className="w-full">
-                  <CategoryDropdown category={{ name, items }} />
+                  {/* <CategoryDropdown category={{ name, items }} /> */}
+                  <Accordion type="single" collapsible>
+                    <AccordionItem value="item-1">
+                      <AccordionTrigger className="border-none">
+                        {name}
+                      </AccordionTrigger>
+                      <AccordionContent>
+                        <div className="flex flex-col gap-2 mt-2 pl-4 w-full max-w-md mx-auto text-[#463F3A]">
+                          {items.map((item) => (
+                            <div
+                              key={item}
+                              className="flex flex-row items-center gap-3 py-2"
+                            >
+                              <Checkbox
+                                name={item}
+                                checked={selectedFilters.category.includes(
+                                  item
+                                )}
+                                onChange={() =>
+                                  handleCheckboxChange("category", item)
+                                }
+                              />
+                              <label
+                                htmlFor={item}
+                                className="text-xs text-[#463F3A]"
+                              >
+                                {item}
+                              </label>
+                            </div>
+                          ))}
+                        </div>
+                      </AccordionContent>
+                    </AccordionItem>
+                  </Accordion>
                 </div>
               ))}
             </div>
@@ -86,23 +131,31 @@ const FilterComponent: React.FC<FilterComponentProps> = ({
         </div>
       )}
 
-      {filtersToShow.includes('eraPeriod') && (
+      {filtersToShow.includes("eraPeriod") && (
         <div className="border border-[#EBE9E0] p-3 mb-4">
           <div className="flex flex-row items-center justify-between gap-4">
-            <h1 className="custom-border font-playfair text-lg text-[#463F3A]">Era/Period</h1>
-            <div onClick={() => handleToggle('eraPeriod')}>
-              {openFilters.eraPeriod ? <TiMinus className="mr-3" /> : <TiPlus className="mr-3" />}
+            <h1 className="custom-border font-playfair text-lg text-[#463F3A]">
+              Era/Period
+            </h1>
+            <div onClick={() => handleToggle("eraPeriod")}>
+              {openFilters.eraPeriod ? (
+                <TiMinus className="mr-3" />
+              ) : (
+                <TiPlus className="mr-3" />
+              )}
             </div>
           </div>
           {openFilters.eraPeriod && (
-            <div className='mt-2'>
+            <div className="mt-2">
               {checkboxlablel.map((item) => (
-                <div key={item} className="flex flex-row items-center gap-3 py-2">
+                <div
+                  key={item}
+                  className="flex flex-row items-center gap-3 py-2"
+                >
                   <Checkbox1
                     name={item}
-                   
                     checked={selectedFilters.eraPeriod.includes(item)}
-                    onChange={() => handleCheckboxChange('eraPeriod', item)}
+                    onChange={() => handleCheckboxChange("eraPeriod", item)}
                   />
                   <label htmlFor={item} className="text-xs text-[#463F3A]">
                     {item}
@@ -114,22 +167,31 @@ const FilterComponent: React.FC<FilterComponentProps> = ({
         </div>
       )}
 
-      {filtersToShow.includes('condition') && (
+      {filtersToShow.includes("condition") && (
         <div className="border border-[#EBE9E0] p-3 mb-4">
           <div className="flex flex-row items-center justify-between gap-4">
-            <h1 className="custom-border font-playfair text-lg text-[#463F3A]">Condition</h1>
-            <div onClick={() => handleToggle('condition')}>
-              {openFilters.condition ? <TiMinus className="mr-3" /> : <TiPlus className="mr-3" />}
+            <h1 className="custom-border font-playfair text-lg text-[#463F3A]">
+              Condition
+            </h1>
+            <div onClick={() => handleToggle("condition")}>
+              {openFilters.condition ? (
+                <TiMinus className="mr-3" />
+              ) : (
+                <TiPlus className="mr-3" />
+              )}
             </div>
           </div>
           {openFilters.condition && (
-            <div className='mt-2'>
+            <div className="mt-2">
               {checkboxlablel1.map((item) => (
-                <div key={item} className="flex flex-row items-center gap-3 py-2">
+                <div
+                  key={item}
+                  className="flex flex-row items-center gap-3 py-2"
+                >
                   <Checkbox1
                     name={item}
                     checked={selectedFilters.condition.includes(item)}
-                    onChange={() => handleCheckboxChange('condition', item)}
+                    onChange={() => handleCheckboxChange("condition", item)}
                   />
                   <label htmlFor={item} className="text-xs text-[#463F3A]">
                     {item}
@@ -141,22 +203,33 @@ const FilterComponent: React.FC<FilterComponentProps> = ({
         </div>
       )}
 
-      {filtersToShow.includes('sellerLocation') && (
+      {filtersToShow.includes("sellerLocation") && (
         <div className="border border-[#EBE9E0] p-3 mb-4">
           <div className="flex flex-row items-center justify-between gap-4">
-            <h1 className="custom-border font-playfair text-lg text-[#463F3A]">Seller Location</h1>
-            <div onClick={() => handleToggle('sellerLocation')}>
-              {openFilters.sellerLocation ? <TiMinus className="mr-3" /> : <TiPlus className="mr-3" />}
+            <h1 className="custom-border font-playfair text-lg text-[#463F3A]">
+              Seller Location
+            </h1>
+            <div onClick={() => handleToggle("sellerLocation")}>
+              {openFilters.sellerLocation ? (
+                <TiMinus className="mr-3" />
+              ) : (
+                <TiPlus className="mr-3" />
+              )}
             </div>
           </div>
           {openFilters.sellerLocation && (
             <div className="flex flex-col gap-4 mt-4">
-              {['USA', 'Europe', 'Asia', 'Australia'].map((location) => (
-                <div key={location} className="flex flex-row items-center gap-3">
+              {["USA", "Europe", "Asia", "Australia"].map((location) => (
+                <div
+                  key={location}
+                  className="flex flex-row items-center gap-3"
+                >
                   <Checkbox1
                     name={location}
                     checked={selectedFilters.sellerLocation.includes(location)}
-                    onChange={() => handleCheckboxChange('sellerLocation', location)}
+                    onChange={() =>
+                      handleCheckboxChange("sellerLocation", location)
+                    }
                   />
                   <label htmlFor={location} className="text-xs text-[#463F3A]">
                     {location}

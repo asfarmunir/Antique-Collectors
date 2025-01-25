@@ -3,7 +3,7 @@ import React, { useState, useEffect } from "react";
 import Button from "@/components/ui/Button";
 import Image from "next/image";
 import { FaHeart, FaRegHeart } from "react-icons/fa";
-import { BsChatSquareDots } from "react-icons/bs";
+import { BsChatSquareDots, BsEmojiSmile } from "react-icons/bs";
 import { CgMailReply } from "react-icons/cg";
 
 import {
@@ -19,6 +19,7 @@ import { useRouter } from "next/navigation";
 import useProducts from "@/hooks/useProducts";
 import { useProductDetails } from "@/hooks/useProducts";
 import { HiOutlineUpload } from "react-icons/hi";
+import { VscSend } from "react-icons/vsc";
 
 const ProductDetails = ({ params }: { params: any }) => {
   //  const [products, setProducts] = useState<any>(null); // Full product list
@@ -271,6 +272,19 @@ const ProductDetails = ({ params }: { params: any }) => {
                 </div>
               </div>
             ))}
+            <div className="flex mb-5 items-center justify-between ">
+              <div className=" inline-flex items-center gap-2 ">
+                <BsEmojiSmile className="text-balance text-lg" />
+                <input
+                  type="text"
+                  placeholder="Write a comment"
+                  className="w-full  p-2"
+                />
+              </div>
+              <button className=" text-[#919089]">
+                <VscSend />
+              </button>
+            </div>
           </div>
           <div className="md:col-span-4">
             <div className="flex flex-row flex-wrap items-center justify-between gap-2 mx-4 md:ml-10 my-2 border-b pb-3 border-[#EBE9E0]">

@@ -230,7 +230,7 @@ const Product = () => {
                             </button>
                           </div>
                           <Image
-                            src="/images/products/p2.png"
+                            src="/images/products/p5.png"
                             alt={p.title}
                             width={150}
                             height={150}
@@ -238,7 +238,7 @@ const Product = () => {
                           />
 
                           {/* Likes and Comments Overlay on Hover */}
-                          <div className="absolute inset-0 bg-white bg-opacity-80   flex flex-row gap-4 items-center justify-center text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                          {/* <div className="absolute inset-0 bg-white bg-opacity-80   flex flex-row gap-4 items-center justify-center text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                             <p className="text-sm text-black flex items-center gap-4">
                               <CiHeart className="text-lg" /> {p.likes || 34}
                             </p>
@@ -246,16 +246,16 @@ const Product = () => {
                               <FaRegCommentDots className="text-lg" />{" "}
                               {p.comments || 34}
                             </p>
-                          </div>
+                          </div> */}
                         </div>
                         <div className="w-full pt-4 flex flex-col justify-between">
-                          <div className="text-sm flex flex-row justify-between gap-4">
-                            <p className="text-[#919089] mb-1">{p.brand}</p>
-                            <p className="text-[#919089]">FOLLOW</p>
-                          </div>
-                          <h2 className="text-sm pt-2 md:text-[14px] uppercase">
+                          <h2 className="text-sm pt-2 md:text-[12px] uppercase">
                             {p.title}
                           </h2>
+                          <div className="text-sm flex flex-row pt-2 justify-between gap-4">
+                            <p className="text-[#919089] ">{p.brand}</p>
+                            <p className="text-[#919089]">FOLLOW</p>
+                          </div>
                         </div>
                       </div>
                     );
@@ -330,11 +330,14 @@ const Product = () => {
         {/* Live Presentation section */}
         <div className="bg-[#463F3A] px-12 py-10 md:block hidden">
           <div className="grid grid-cols-3">
-            <div className="col-span-2 text-white py-20">
+            <div className="col-span-2 text-white py-20 space-y-4">
               <h1 className="font-playfair text-base sm:text-xl md:text-3xl lg:text-5xl">
                 Live Presentations
               </h1>
-              <p className="text-sm py-8">
+              <p className="text-[#EBE9E0]">
+                Set a reminder, and book a virtual seat!
+              </p>
+              <p className="text-sm text-[#EBE9E0]">
                 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magnam
                 esse eos doloremque a natus! Quibusdam eum perferendis
                 perspiciatis deleniti, maiores voluptate odit quis est soluta
@@ -343,13 +346,13 @@ const Product = () => {
 
               <Button
                 label="See Upcoming live shows"
-                className="uppercase text-sm px-6 py-4 hover:bg-[#2D2D2D] hover:text-white bg-white text-[#2D2D2D]"
+                className="uppercase text-xs 2xl:text-sm px-7 py-4 hover:bg-[#2D2D2D] hover:text-white bg-white text-[#2D2D2D]"
               />
             </div>
 
             <div className="col-span-1">
-              <div className="bg-[#FFFFFF] p-2">
-                <div className="bg-black text-white py-2 px-1 text-xs flex flex-row justify-between gap-4">
+              <div className="bg-[#ffffff65] p-4">
+                <div className=" bg-[#F9F8F3] text-white py-2 px-1 text-xs flex flex-row justify-between gap-4">
                   <p>12.23.2025</p>
                   <p>5.00 pm (UTC)</p>
                 </div>
@@ -368,18 +371,18 @@ const Product = () => {
                   />
                 </div>
 
-                <h3 className="text-[#463F3A] font-playfair text-[20px]">
+                <h3 className="text-white font-playfair text-[20px]">
                   Antique Showcase Live: Unveiling Rare jewelry Finds in Real
                   Time
                 </h3>
-                <p className="text-[#8B8683] py-2 text-sm">
+                <p className="text-slate-50 py-2 text-sm">
                   Patrick Boyd Carpenter
                 </p>
 
                 <div className="mt-5">
                   <Button
                     label="Set a reminder"
-                    className="uppercase text-sm w-full hover:opacity-80"
+                    className="uppercase text-sm bg-[#463F3A] w-full hover:opacity-80"
                   />
                 </div>
               </div>
