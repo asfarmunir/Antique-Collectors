@@ -15,6 +15,8 @@ import { FaHeart } from "react-icons/fa";
 import useProducts from "@/hooks/useProducts";
 import usePosts from "@/hooks/usePosts";
 import { FaRegCommentDots } from "react-icons/fa";
+import localFont from "next/font/local";
+const playfair = localFont({ src: "../fonts/PlayfairDisplay-Italic.ttf" });
 
 const page = () => {
   const [subEmail, setSubEmail] = useState();
@@ -134,18 +136,20 @@ const page = () => {
             />
           </div>
           <div className="mt-6">
-            <h2 className="text-3xl md:text-5xl md:leading-snug text-center font-playfair ">
+            <h2 className="text-3xl md:text-5xl 2xl:text-6xl md:leading-snug 2xl:leading-snug text-center font-playfair ">
               Welcome to <br />{" "}
-              <span className=" italic">The Antique Collector</span>
+              <span className={`${playfair.className}`}>
+                The Antique Collector
+              </span>
             </h2>
-            <p className="text-center max-w-lg text-sm 2xl:text-base my-5">
-              A new and exciting global platform where potential buyers can
-              interact with the world's premiere antique and jewelry dealers,
-              and peruse and buy their latest stock.
+            <p className="text-center text-[#463F3A] max-w-lg 2xl:max-w-xl text-sm 2xl:text-base my-5">
+              The new and exciting global marketplace where antique and jewelry
+              lovers can connect with the world’s premiere dealers, view their
+              inventories, and buy their latest pieces.
             </p>
 
             <div className="   flex items-center justify-center text-xs">
-              <button className=" py-3 mb-8 2xl:py-4 px-16 2xl:px-20 bg-black  2xl:text-sm text-white ">
+              <button className=" py-3 uppercase mb-8 2xl:py-4 px-16 2xl:px-20 bg-black  2xl:text-sm text-white ">
                 Start browsing
               </button>
             </div>
@@ -376,15 +380,15 @@ const page = () => {
 
                     {/* Product Image */}
                     <Image
-                      src="/images/products/p1.png"
+                      src="/images/products/p5.png"
                       alt={p.title}
                       width={150}
-                      className="w-full h-full object-contain object-center transform hover:scale-105 hover:blur-md transition duration-500 ease-in-out"
+                      className="w-full h-full object-contain object-center transform hover:scale-105  transition duration-500 ease-in-out"
                       height={150}
                     />
 
                     {/* Likes and Comments Overlay on Hover */}
-                    <div className="absolute inset-0 bg-white bg-opacity-80   flex flex-row gap-4 items-center justify-center text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    {/* <div className="absolute inset-0 bg-white bg-opacity-80   flex flex-row gap-4 items-center justify-center text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                       <p className="text-sm text-black flex items-center gap-4">
                         <CiHeart className="text-lg" /> {p.likes || 34}
                       </p>
@@ -392,11 +396,15 @@ const page = () => {
                         <FaRegCommentDots className="text-lg" />{" "}
                         {p.comments || 34}
                       </p>
-                    </div>
+                    </div> */}
                   </div>
 
                   {/* Product Details */}
                   <div className="w-full mt-4">
+                    <h2 className="text-[14px] md:text-base uppercase">
+                      {p.title}
+                    </h2>
+
                     <div className="flex flex-row gap-4 justify-between">
                       <p className="text-[#919089] mb-1 text-[12px]">
                         {p.brand}
@@ -405,7 +413,6 @@ const page = () => {
                         FOLLOW
                       </Link>
                     </div>
-                    <h2 className="text-[14px] md:text-base">{p.title}</h2>
                   </div>
                 </div>
               );
@@ -462,7 +469,7 @@ const page = () => {
 
         <section className=" bg-[#F9F8F3] p-8 md:p-10  lg:px-16 lg:py-16">
           <h1 className="text-3xl lg:text-5xl font-playfair mb-16">
-            Find your interest
+            Browse by Category
           </h1>
           <div className="flex flex-row flex-wrap justify-start md:justify-between gap-[32px]">
             {intrests.map((intrest, index) => (
@@ -476,7 +483,7 @@ const page = () => {
                     alt="interest"
                     width={60}
                     height={60}
-                    className=" "
+                    className=" 2xl:w-[80px] 2xl:h-[80px] "
                   />
                 </div>
                 <h2 className="uppercase text-xs">{intrest.name}</h2>
@@ -487,7 +494,7 @@ const page = () => {
 
         <section className="bg-white">
           <div className=" py-6 border-b border-[#EBE9E0] px-4 md:px-6 lg:px-16 flex items-center font-playfair justify-between">
-            <h2 className="text-lg md:text-[24px]">PERIODS</h2>
+            <h2 className="text-lg md:text-[24px]">Eras</h2>
             <Link href={"#"} className="text-sm font-sans">
               VIEW ALL
             </Link>
@@ -498,15 +505,17 @@ const page = () => {
           <div className="grid md:grid-cols-4">
             <div className="md:col-span-3 flex flex-col justify-center ">
               <div className="text-3xl md:text-[48px] space-y-4 font-playfair ">
-                <h1 className="italic leading-[12px] md:leading-[50px] tracking-tighter">
+                <h1
+                  className={` ${playfair.className} leading-[12px] md:leading-[50px] tracking-tighter`}
+                >
                   Victorian Elegance:
                 </h1>
-                <h1 className="tracking-normal">
+                <h1 className={`tracking-normal`}>
                   A Journey Through 19th Century Artistry
                 </h1>
               </div>
 
-              <p className="py-10 pr-1 text-[14px]">
+              <p className="py-10 pr-1 text-[14px] text-[#919089] max-w-2xl 2xl:max-w-4xl">
                 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Soluta
                 exercitationem harum magnam eaque cupiditate natus. Maxime
                 possimus perspiciatis id sed illum reprehenderit natus alias
@@ -533,17 +542,15 @@ const page = () => {
                 alt="img"
                 layout="responsive"
               />
-
-              <div className="text-sm text-[#919089] flex flex-row gap-2 justify-between flex-nowrap mt-3">
+              <p className="text-[#0D0106] font-playfair text-[14px] 2xl:text-lg mt-3">
+                NATIVE IRON CHAIR
+              </p>
+              <div className="text-sm text-[#919089] flex flex-row gap-2 justify-between flex-nowrap mt-2">
                 <h1>Seller Name</h1>
                 <Link href={"#"} className="uppercase text-[12px]">
                   Follow
                 </Link>
               </div>
-
-              <p className="text-[#0D0106] text-[14px] mt-2">
-                NATIVE IRON CHAIR
-              </p>
             </div>
           </div>
         </section>
@@ -563,7 +570,7 @@ const page = () => {
             {posts.map((b) => (
               <div
                 key={b.id}
-                className="w-full py-3 md:py-5 md:pr-4  border-b last:border-b-0 md:border-r border-[#DFDEDB] last:border-r-0"
+                className="w-full py-3 md:py-5 md:pr-4  border-b-0  md:border-r border-[#DFDEDB] last:border-r-0"
               >
                 <Image
                   src="/images/blogs/b1.png" //replacce with original image
@@ -593,11 +600,11 @@ const page = () => {
         <section className="bg-[#F9F8F3] pt-10 pb-12 md:pb-28 md:px-8">
           <div className="flex flex-col items-center  px-6">
             <h1 className="text-[64px] font-playfair">How it works</h1>
-            <p className="uppercase tracking-widest py-4 text-xs text-center">
-              we are specialized in adornments, that bring charm to any
-              environment.
+            <p className="uppercase tracking-widest py-4 text-xs text-center max-w-lg">
+              We are here to help you with your global hunt for the finest and
+              quirkiest jewelry and antiques!
             </p>
-            <p className="md:w-[500px] text-center ">
+            <p className="md:w-[550px]  text-pretty text-center text-[#919089]">
               Lorem ipsum dolor sit amet consectetur. In laoreet viverra sed
               auctor amet nec senectus porta. Ac commodo cum ut quam vitae
               sollicitudin aenean. Sit volutpat nunc et aenean. Sed condimentum
@@ -605,6 +612,16 @@ const page = () => {
               orci mollis. Consequat commodo tellus varius purus quam nulla.
               Enim tellus ac convallis enim convallis sed. Augue amet morbi
               penatibus.
+            </p>
+            <p className="md:w-[550px]  text-pretty my-3 text-center text-[#919089]">
+              As part of{" "}
+              <span className="text-black px-0.5">The AC Community</span> you
+              will have access to
+              <span className="text-black px-0.5">Forums,</span>
+              <span className="text-black px-0.5">Blogs</span> and
+              <span className="text-black px-0.5"> ‘Lives’,</span> as well as
+              news on all the latest
+              <span className="text-black px-0.5">Fairs and Events.</span>
             </p>
 
             <Button
@@ -616,25 +633,27 @@ const page = () => {
 
           <div className="bg-[#463F3A] py-10  text-white px-4">
             <div className="flex flex-col items-center justify-between">
-              <h1 className="text-2xl md:text-[48px] leading-[50px] tracking-tight font-light font-playfair italic">
+              <h1
+                className={`text-2xl md:text-[48px] leading-[50px] tracking-tight font-light font-playfair ${playfair.className} `}
+              >
                 Stay in the Loop:
               </h1>
               <h1 className="text-2xl text-center font-light md:text-[48px] font-playfair mt-3">
                 Discover Exclusive Antiques & Insights
               </h1>
 
-              <div className="w-full md:w-1/3 my-12 flex flex-row  gap-1">
+              <div className="w-full md:w-1/3 my-12 flex flex-row  ">
                 <InputField
                   type="email"
                   value={subEmail}
                   onChange={(e) => setSubEmail(e.target.value)}
-                  className="flex-1 w-3/4 md:w-3/4  placeholder:text-xs md:placeholder:text-sm text-xs md:text-sm py-2 px-3"
+                  className="flex-1 w-3/4 md:w-3/4  placeholder:text-xs md:placeholder:text-sm text-xs md:text-sm py-3 px-3"
                   placeholder="Enter Email Address"
                 />
                 <Button
                   onClick={handleSubscribe}
                   label="Subscribe"
-                  className=" w-1/4 md:w-1/4 py-2.5 px-4 uppercase text-xs md:text-sm"
+                  className=" w-1/4 md:w-1/4 py-3 px-4 uppercase text-xs md:text-sm"
                 />
               </div>
             </div>
