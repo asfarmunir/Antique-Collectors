@@ -10,7 +10,7 @@ import { TiMinus, TiPlus } from "react-icons/ti";
 import FilterComponent from "@/components/shared/SidebarFilter";
 import Button from "@/components/ui/Button";
 import { CiHeart } from "react-icons/ci";
-import { FaRegCommentDots } from "react-icons/fa";
+import { FaRegCommentDots, FaRegHeart } from "react-icons/fa";
 import Link from "next/link";
 import { categoriesData } from "@/lib/data";
 import { useParams, useRouter } from "next/navigation";
@@ -94,7 +94,7 @@ const Product = () => {
             {/* Filter button */}
             <div
               onClick={() => setFilterOpen(!filterOpen)}
-              className=" inline-flex cursor-pointer flex-row items-center gap-2 py-3 px-8 md:px-16 2xl:px-20 bg-[#EBE9E0]"
+              className=" inline-flex cursor-pointer flex-row items-center gap-2 py-3 px-8 md:px-24 2xl:px-28 bg-[#EBE9E0]"
             >
               <BiCandles className="text-lg text-[#0D0106]" />
               <p className="text-xs text-[#0D0106] ">FILTER</p>
@@ -168,7 +168,7 @@ const Product = () => {
         )}
 
         <div
-          className={`px-4 md:px-6 lg:px-12 grid grid-cols-1 md:grid-cols-${
+          className={`px-4 md:px-6 lg:px-12 grid gap-12 grid-cols-1 md:grid-cols-${
             filterOpen ? 4 : 4
           }`}
         >
@@ -265,7 +265,7 @@ const Product = () => {
             ) : (
               <div className="py-6 text-[#0D0106] px-4">
                 {products.slice(0, gridProductCount).map((item) => (
-                  <div className="mb-10" key={item.id}>
+                  <div className="mb-10 md:mb-16" key={item.id}>
                     <div className="flex  flex-row items-center justify-between border-b pb-2 border-[#EBE9E0]">
                       <div className="flex flex-row items-center text-sm gap-3">
                         <div className="bg-[#EBE9E0] p-2 rounded-full w-8 h-8 flex items-center justify-center">
@@ -296,29 +296,58 @@ const Product = () => {
                         />
                       </div>
 
-                      <div className="flex flex-row items-center gap-6 mt-2">
-                        <button className="flex flex-row gap-2 items-center">
-                          <CiHeart className="text-xl" /> {item.likes || "23"}
-                        </button>
-                        <button className="flex flex-row gap-2 items-center">
-                          <FaRegCommentDots className="text-xl" />{" "}
-                          {item.comments || "23"}
-                        </button>
+                      <div className="flex flex-row  justify-between items-center gap-6 mt-2 border-b pb-2 border-[#EBE9E0]">
+                        <div className="flex flex-row gap-4 items-center ">
+                          <button className="flex flex-row gap-2 items-center">
+                            <FaRegHeart className="text-xl" />{" "}
+                            {item.likes || "23"}
+                          </button>
+                          <button className="flex flex-row gap-2 items-center">
+                            <Image
+                              src="/images/message2.svg"
+                              alt="icon"
+                              width={25}
+                              height={25}
+                            />
+                            {item.comments || "23"}
+                          </button>
+                        </div>
+
+                        <Image
+                          src="/export.svg"
+                          alt="icon"
+                          width={25}
+                          height={25}
+                        />
                       </div>
 
-                      <div>
-                        <p className="py-2 uppercase">{item.title}</p>
-                        <p className="text-sm text-[#463F3A]">
+                      <div className="pt-2">
+                        <div className="flex items-center justify-between">
+                          <p className="py-3 uppercase font-playfair text-lg 2xl:text-xl">
+                            {item.title}
+                          </p>
+                          <p className="py-3 uppercase   2xl:text-lg">
+                            $ 1.500
+                          </p>
+                        </div>
+                        <p className="text-sm text-[#919089]">
                           {item.description}
                         </p>
                       </div>
-
-                      <button
-                        onClick={() => handleProductDetails(item.id)}
-                        className="uppercase text-sm text-start pt-5"
-                      >
-                        READ MORE
-                      </button>
+                      <div className="flex items-center justify-between pt-4 gap-4">
+                        <button
+                          onClick={() => handleProductDetails(item.id)}
+                          className="uppercase text-sm  text-black p-3 2xl:p-4 border border-black w-full text-center "
+                        >
+                          View Details
+                        </button>
+                        <button
+                          onClick={() => handleProductDetails(item.id)}
+                          className="uppercase text-sm  bg-black border border-black p-3 2xl:p-4 text-white w-full text-center "
+                        >
+                          Send enquiry
+                        </button>
+                      </div>
                     </div>
                   </div>
                 ))}
@@ -432,7 +461,7 @@ const Product = () => {
                           </button>
                         </div>
                         <Image
-                          src="/images/products/p1.png"
+                          src="/images/products/p5.png"
                           alt={p.title}
                           width={150}
                           height={150}
@@ -440,7 +469,7 @@ const Product = () => {
                         />
 
                         {/* Likes and Comments Overlay on Hover */}
-                        <div className="absolute inset-0 bg-white bg-opacity-80   flex flex-row gap-4 items-center justify-center text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        {/* <div className="absolute inset-0 bg-white bg-opacity-80   flex flex-row gap-4 items-center justify-center text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                           <p className="text-sm text-black flex items-center gap-4">
                             <CiHeart className="text-lg" /> {p.likes || 34}
                           </p>
@@ -448,7 +477,7 @@ const Product = () => {
                             <FaRegCommentDots className="text-lg" />{" "}
                             {p.comments || 34}
                           </p>
-                        </div>
+                        </div> */}
                       </div>
                       <div className="w-full pt-4 flex flex-col justify-between">
                         <div className="text-sm flex flex-row justify-between gap-4">

@@ -105,12 +105,12 @@ const FilterComponent: React.FC<FilterComponentProps> = ({
                             >
                               <Checkbox
                                 name={item}
-                                checked={selectedFilters.category.includes(
-                                  item
-                                )}
-                                onChange={() =>
-                                  handleCheckboxChange("category", item)
-                                }
+                                // checked={selectedFilters.category.includes(
+                                //   item
+                                // )}
+                                // onChange={() =>
+                                //   handleCheckboxChange("category", item)
+                                // }
                               />
                               <label
                                 htmlFor={item}

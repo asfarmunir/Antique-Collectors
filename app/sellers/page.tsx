@@ -67,7 +67,7 @@ const Seller = () => {
           <div className="flex flex-wrap gap-5 flex-row justify-between items-center">
             <div
               onClick={() => setFilterOpen(!filterOpen)}
-              className="inline-flex cursor-pointer flex-row items-center gap-2 py-3 px-8 bg-[#EBE9E0]"
+              className="inline-flex cursor-pointer flex-row items-center gap-2 py-3 px-8 md:px-24 bg-[#EBE9E0]"
             >
               <BiCandles className="text-lg text-[#0D0106]" />
               <p className="text-xs text-[#0D0106]">FILTER</p>
@@ -194,15 +194,16 @@ const Seller = () => {
                     <div className=" bg-[#F9F8F3] p-4">
                       <div className="uppercase text-xs flex flex-row justify-between items-center">
                         <p>{item.product_count} products</p>
-                        <Link href={"#"}>Shop All</Link>
+                        <Link href={"#"}>View All</Link>
                       </div>
-                      <div className="flex flex-row items-center gap-2 py-2 overflow-x-auto">
+                      <div className="flex flex-row items-center  py-2 overflow-x-auto">
                         {Array.from({ length: 6 }).map((_, index) => (
                           <Image
                             src="/images/products/p2.png"
                             width={120}
                             height={120}
                             alt="images"
+                            className=" w-full border border-[#0d01060b] "
                             key={index}
                           />
                         ))}

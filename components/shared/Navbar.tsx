@@ -9,12 +9,12 @@ import SignUp from "./Signup";
 
 const navlinks = [
   { title: "Home", link: "/" },
-  { title: "Product", link: "/products" },
+  { title: "Products", link: "/products" },
   { title: "Sellers", link: "/sellers" },
   { title: "Forum", link: "/forum" },
   { title: "Fairs & Events", link: "/events" },
   { title: "Live Presentation", link: "/presentation" },
-  { title: "Blogs", link: "/blog" },
+  { title: "Blog", link: "/blog" },
   { title: "About Us", link: "/aboutus" },
   { title: "Become a Seller", link: "#" },
 ];

@@ -135,14 +135,7 @@ const SignUp = ({ onClose }: { onClose: any }) => {
 
             {currentStep === 2 && (
               <div className="flex flex-col px-2 md:px-6 py-4">
-                <h1 className="text-[32px]">
-                  Welcome to The Antique Collector
-                </h1>
-                <p className="text-xs text-[#919089] font-sans pt-2">
-                  Discover a world of timeless treasures, crafted to match your
-                  unique tastes.
-                </p>
-
+                <h1 className="text-[32px] mb-4">Create your account</h1>
                 <div className="my-4">
                   <form onSubmit={handleSubmit}>
                     <div className="space-y-2">
@@ -255,12 +248,12 @@ const SignUp = ({ onClose }: { onClose: any }) => {
                     <Button
                       icon={<FcGoogle />}
                       label="Continue with google"
-                      className="w-full hover:bg-gray-100 font-semibold text-nowrap font-sans bg-white uppercase  border border-[#919089] flex text-xs text-black flex-row "
+                      className="w-full hover:bg-gray-100 text-nowrap font-sans bg-white uppercase  border border-[#919089] flex text-xs text-black flex-row "
                     />
                     <Button
                       icon={<FaApple />}
                       label="Continue with apple"
-                      className="w-full hover:bg-gray-100 font-semibold uppercase text-nowrap font-sans bg-white border border-[#919089] text-xs flex flex-row text-black "
+                      className="w-full hover:bg-gray-100 uppercase text-nowrap font-sans bg-white border border-[#919089] text-xs flex flex-row text-black "
                     />
                   </div>
                 </div>
