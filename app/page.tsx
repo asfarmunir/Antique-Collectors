@@ -77,16 +77,16 @@ const page = () => {
     <>
       <main>
         <section className="w-full h-[600px]  lg:h-screen flex items-center justify-center flex-col  relative">
-          <div className="w-[150px] h-[140px] md:min-w-[180px] md:min-h-[220px] 2xl:min-w-[220px] 2xl:min-h-[240px] absolute top-0 ,">
+          <div className="w-[150px] h-[140px] md:min-w-[180px] md:min-h-[140px] 2xl:min-w-[240px]  2xl:min-h-[180px] absolute top-0 ">
             <Image
               src="/images/hero1.svg"
               alt="hero"
               width={200}
               height={230}
-              className=" "
+              className=" w-full h-full  "
             />
           </div>
-          <div className="absolute top-32 md:top-20 w-[90px] h-[90px] md:w-[120px] md:h-[120px] md:min-w-[150px] md:min-h-[150px] left-0 md:left-8 ">
+          <div className="absolute top-32 md:top-20 w-[90px] h-[90px] md:w-[120px] md:h-[120px] md:min-w-[150px] md:min-h-[150px] 2xl:min-w-[200px]  2xl:min-h-[180px] left-0 md:left-8 2xl:left-12 ">
             <Image
               src="/images/hero2.svg"
               alt="hero"
@@ -96,7 +96,7 @@ const page = () => {
               className=" "
             />
           </div>
-          <div className=" absolute w-[100px] h-[100px] top-24 md:min-w-[150px] md:min-h-[150px] right-0 md:right-10 ">
+          <div className=" absolute w-[100px] h-[100px] top-24 md:min-w-[150px] md:min-h-[150px] right-0 md:right-10 2xl:right-20 ">
             <Image
               src="/images/hero3.svg"
               alt="hero"
@@ -106,13 +106,13 @@ const page = () => {
             />
           </div>
 
-          <div className=" absolute bottom-0 md:bottom-16   left-0 h-[160px] w-[170px] md:min-w-[270px] md:min-h-[250px]">
+          <div className=" absolute bottom-0 md:bottom-10 2xl:bottom-1   left-0 h-[160px] w-[170px] md:min-w-[300px] md:min-h-[250px] 2xl:min-w-[400px]    2xl:min-h-[370px]">
             <Image
               src="/images/hero4.svg"
               alt="hero"
               width={340}
               height={340}
-              className=" "
+              className=" w-full "
             />
           </div>
 
@@ -126,13 +126,13 @@ const page = () => {
             />
           </div>
 
-          <div className=" absolute sm:block hidden  -bottom-4 right-64 2xl:right-80 min-h-[200px] min-w-[200px]">
+          <div className=" absolute sm:block hidden  -bottom-2  right-64 2xl:right-80   w-[120px] h-[120px] md:min-h-[200px] md:min-w-[200px] 2xl:min-w-[240px]  2xl:min-h-[240px]">
             <Image
               src="/images/hero5.svg"
               alt="hero"
               width={200}
               height={200}
-              className=" "
+              className=" w-full h-full "
             />
           </div>
           <div className="mt-6">

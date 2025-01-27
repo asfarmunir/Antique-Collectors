@@ -160,7 +160,7 @@ const Blog = () => {
             <div className="flex flex-row flex-wrap justify-between gap-4 items-center">
               <div
                 onClick={() => setFilterOpen(!filterOpen)}
-                className="inline-flex flex-row items-center gap-2 py-3 px-8 bg-[#EBE9E0]"
+                className="inline-flex flex-row md:w-56 2xl:w-72 justify-center items-center gap-2 py-3 px-8 bg-[#EBE9E0]"
               >
                 <BiCandles className="text-lg text-[#0D0106]" />
                 <p className="text-xs text-[#0D0106] ">FILTER</p>
@@ -214,7 +214,7 @@ const Blog = () => {
 
           {/* Main content start from here */}
           <div className="py-4 px-4 md:px-12 md:grid md:grid-cols-5">
-            <div className="md:col-span-1 py-6">
+            <div className="md:col-span-1  md:w-56 2xl:w-72 py-6">
               <div className="md:block hidden">
                 <FilterComponent
                   checkboxlablel={checkboxLabels}

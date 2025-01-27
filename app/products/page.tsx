@@ -94,7 +94,7 @@ const Product = () => {
             {/* Filter button */}
             <div
               onClick={() => setFilterOpen(!filterOpen)}
-              className=" inline-flex cursor-pointer flex-row items-center gap-2 py-3 px-8 md:px-24 2xl:px-28 bg-[#EBE9E0]"
+              className=" inline-flex cursor-pointer md:w-64 2xl:w-80 flex-row items-center gap-2 py-3 px-8 md:px-24 2xl:px-28 bg-[#EBE9E0]"
             >
               <BiCandles className="text-lg text-[#0D0106]" />
               <p className="text-xs text-[#0D0106] ">FILTER</p>
@@ -174,7 +174,7 @@ const Product = () => {
         >
           {/* Filter Sidebar */}
           {filterOpen && (
-            <div className="md:col-span-1 py-6 md:block hidden">
+            <div className="md:col-span-1 md:w-64 2xl:w-80 py-6 md:block hidden">
               <FilterComponent
                 checkboxlablel={checkboxLabels}
                 checkboxlablel1={conditionLabels}
