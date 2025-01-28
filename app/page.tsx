@@ -11,7 +11,7 @@ import { CiHeart } from "react-icons/ci";
 import { useRouter } from "next/navigation";
 import Login from "@/components/shared/Login";
 import { slides } from "@/lib/data";
-import { FaHeart } from "react-icons/fa";
+import { FaHeart, FaRegHeart } from "react-icons/fa";
 import useProducts from "@/hooks/useProducts";
 import usePosts from "@/hooks/usePosts";
 import { FaRegCommentDots } from "react-icons/fa";
@@ -76,8 +76,15 @@ const page = () => {
   return (
     <>
       <main>
-        <section className="w-full h-[600px]  lg:h-screen flex items-center justify-center flex-col  relative">
-          <div className="w-[150px] h-[140px] md:min-w-[180px] md:min-h-[140px] 2xl:min-w-[240px]  2xl:min-h-[180px] absolute top-0 ">
+        <section
+          className="w-full h-[600px]  lg:h-screen flex items-center justify-center flex-col  relative"
+          style={{
+            backgroundImage: "url(/heroBg.png)",
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+          }}
+        >
+          {/* <div className="w-[150px] h-[140px] md:min-w-[180px] md:min-h-[140px] 2xl:min-w-[240px]  2xl:min-h-[180px] absolute top-0 ">
             <Image
               src="/images/hero1.svg"
               alt="hero"
@@ -134,7 +141,7 @@ const page = () => {
               height={200}
               className=" w-full h-full "
             />
-          </div>
+          </div> */}
           <div className="mt-6">
             <h2 className="text-3xl md:text-5xl 2xl:text-6xl md:leading-snug 2xl:leading-snug text-center font-playfair ">
               Welcome to <br />{" "}
@@ -149,7 +156,7 @@ const page = () => {
             </p>
 
             <div className="   flex items-center justify-center text-xs">
-              <button className=" py-3 uppercase mb-8 2xl:py-4 px-16 2xl:px-20 bg-black  2xl:text-sm text-white ">
+              <button className=" hover:opacity-80 py-3 uppercase mb-8 2xl:py-4 px-16 2xl:px-20 bg-black  2xl:text-sm text-white ">
                 Start browsing
               </button>
             </div>
@@ -157,9 +164,12 @@ const page = () => {
         </section>
 
         <section className=" bg-[#F9F8F3]">
-          <div className="py-6 border-b border-[#EBE9E0] px-4 md:px-6 lg:px-16 flex items-center font-playfair justify-between">
+          <div className="py-6 2xl:py-8 border-b border-[#EBE9E0] px-4 md:px-6 lg:px-16 flex items-center font-playfair justify-between">
             <h2 className="text-lg 2xl:text-2xl  ">SELLERS</h2>
-            <Link href={"/sellers"} className="text-sm font-sans">
+            <Link
+              href={"/sellers"}
+              className="text-sm text-[#463F3A] font-sans"
+            >
               VIEW ALL
             </Link>
           </div>
@@ -229,7 +239,7 @@ const page = () => {
             </div>
 
             <div className=" w-full md:w-[50%] flex flex-col pt-8 items-center">
-              <div className="flex flex-col items-center px-5 md:px-0 md:items-start">
+              <div className="flex flex-col items-center  px-5 md:px-0 md:items-start">
                 <h2 className="text-2xl md:text-4xl lg:text-6xl   text-center font-playfair ">
                   Featured Sellers
                 </h2>
@@ -249,7 +259,7 @@ const page = () => {
                 <TableBody>
                   <TableRow className=" bg-[#EBE9E0]">
                     <TableCell className=" text-center font-playfair text-lg  border-y border-[#EBE9E0]">
-                      <div className="flex justify-center flex-row items-center gap-3">
+                      <div className="flex justify-center 2xl:justify-start flex-row items-center gap-3 2xl:pl-24">
                         <div className="bg-[#919089] p-2 rounded-full w-8 h-8 flex items-center justify-center">
                           <Image
                             src="/"
@@ -262,13 +272,13 @@ const page = () => {
                         <p className="text-[20px]">Antique Animal Jewelry</p>
                       </div>
                     </TableCell>
-                    <TableCell className="text-center text-sm border-y border-[#EBE9E0] text-[#0D0106]">
+                    <TableCell className="text-center text-sm uppercase border-y border-[#EBE9E0] text-[#463F3A]">
                       Follow
                     </TableCell>
                   </TableRow>
                   <TableRow className=" ">
                     <TableCell className=" text-center font-playfair text-lg  border-y border-[#EBE9E0]">
-                      <div className="flex justify-center flex-row items-center gap-3">
+                      <div className="flex justify-center 2xl:justify-start flex-row items-center gap-3 2xl:pl-24">
                         <div className="bg-[#EBE9E0] p-2 rounded-full w-8 h-8 flex items-center justify-center">
                           <Image
                             src="/"
@@ -281,13 +291,13 @@ const page = () => {
                         <p className="text-[20px]">Patrick Boyd Carpenter</p>
                       </div>
                     </TableCell>
-                    <TableCell className="text-center text-sm border-y border-[#EBE9E0] text-[#0D0106]">
+                    <TableCell className="text-center text-sm uppercase border-y border-[#EBE9E0] text-[#463F3A]">
                       Follow
                     </TableCell>
                   </TableRow>
                   <TableRow className=" ">
                     <TableCell className=" text-center font-playfair text-lg  border-y border-[#EBE9E0]">
-                      <div className="flex justify-center flex-row items-center gap-3">
+                      <div className="flex justify-center 2xl:justify-start flex-row items-center gap-3 2xl:pl-24">
                         <div className="bg-[#EBE9E0] p-2 rounded-full w-8 h-8 flex items-center justify-center">
                           <Image
                             src="/"
@@ -300,13 +310,13 @@ const page = () => {
                         <p className="text-[20px]">Inezstodel Cloth House</p>
                       </div>
                     </TableCell>
-                    <TableCell className="text-center text-sm  border-y border-[#EBE9E0] text-[#0D0106]">
+                    <TableCell className="text-center text-sm uppercase border-y border-[#EBE9E0] text-[#463F3A]">
                       Follow
                     </TableCell>
                   </TableRow>
                   <TableRow className=" ">
                     <TableCell className=" text-center font-playfair text-lg  border-y border-[#EBE9E0]">
-                      <div className="flex justify-center flex-row items-center gap-3">
+                      <div className="flex justify-center 2xl:justify-start flex-row items-center gap-3 2xl:pl-24">
                         <div className="bg-[#EBE9E0] p-2 rounded-full w-8 h-8 flex items-center justify-center">
                           <Image
                             src="/"
@@ -319,7 +329,7 @@ const page = () => {
                         <p className="text-[20px]">Inezstodel Cloth House</p>
                       </div>
                     </TableCell>
-                    <TableCell className="text-center text-sm  border-y border-[#EBE9E0] text-[#0D0106]">
+                    <TableCell className="text-center text-sm uppercase border-y border-[#EBE9E0] text-[#463F3A]">
                       Follow
                     </TableCell>
                   </TableRow>
@@ -330,23 +340,26 @@ const page = () => {
         </section>
 
         <section className="pb-12">
-          <div className="py-6 px-4 md:px-6 lg:px-16 border-b border-[#EBE9E0]  flex items-center  justify-between">
+          <div className="py-6 2xl:py-8 px-4 md:px-6 lg:px-16 border-b border-[#EBE9E0]  flex items-center  justify-between">
             <div>
-              <h2 className="text-2xl font-playfair mb-2 2xl:text-3xl  ">
+              <h2 className="text-2xl uppercase  font-playfair mb-2 2xl:text-3xl  ">
                 New Arrivals
               </h2>
-              <p className=" font-light text-sm 2xl:text-base text-slate-700">
+              <p className=" font-light text-sm 2xl:text-base text-[#0D0106]">
                 All the latest pieces land here in real time. <br />{" "}
                 <span className="font-semibold underline">Sign up</span> for an
                 account to create your own custom feed, and only see products
                 from sellers you follow
               </p>
             </div>
-            <Link className="text-sm font-sans " href={"/products"}>
+            <Link
+              className="text-sm font-sans text-[#463F3A] "
+              href={"/products"}
+            >
               VIEW ALL
             </Link>
           </div>
-          <div className="flex flex-row flex-nowrap md:flex-wrap overflow-x-auto py-6 md:py-10 px-4 md:px-6 lg:px-10">
+          <div className="flex flex-row flex-nowrap md:flex-wrap overflow-x-auto gap-y-3 2xl:gap-y-4 py-6 md:py-10 px-4 md:px-6 lg:px-10">
             {product.map((p, index) => {
               const isLastRow =
                 Math.floor(index / 4) === Math.floor((product.length - 1) / 4);
@@ -356,7 +369,7 @@ const page = () => {
               return (
                 <div
                   key={p.id}
-                  className={`flex-shrink-0 w-full md:w-1/4 flex flex-col md:py-6 relative px-6 ${
+                  className={`flex-shrink-0 w-full md:w-1/4 flex flex-col md:py-6  relative px-6 ${
                     !isLastRow ? "md:border-b md:border-[#EBE9E0]" : ""
                   } ${!isLastColumn ? "border-r border-[#EBE9E0]" : ""}`}
                   onClick={() => handleProductDetails(p.id)}
@@ -388,15 +401,21 @@ const page = () => {
                     />
 
                     {/* Likes and Comments Overlay on Hover */}
-                    {/* <div className="absolute inset-0 bg-white bg-opacity-80   flex flex-row gap-4 items-center justify-center text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                      <p className="text-sm text-black flex items-center gap-4">
-                        <CiHeart className="text-lg" /> {p.likes || 34}
+                    <div className="absolute inset-0 bg-white bg-opacity-80   flex flex-row gap-4 items-center justify-center text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                      <p className="text-sm text-black flex items-center gap-2">
+                        <CiHeart className="text-2xl" /> {p.likes || 34}
                       </p>
-                      <p className="text-sm text-black flex items-center gap-4">
-                        <FaRegCommentDots className="text-lg" />{" "}
+                      <p className="text-sm text-black flex items-center gap-2">
+                        <Image
+                          src="/images/message2.svg"
+                          width={20}
+                          height={20}
+                          alt="comment"
+                          className="w-5 h-5"
+                        />
                         {p.comments || 34}
                       </p>
-                    </div> */}
+                    </div>
                   </div>
 
                   {/* Product Details */}
@@ -444,11 +463,13 @@ const page = () => {
           <h2 className=" text-3xl lg:text-5xl text-white mt-6  text-center font-playfair ">
             Live Presentations
           </h2>
-          <p className="text-center px-6 max-w-xl 2xl:max-w-3xl text-[#FFFFFF] text-sm 2xl:text-base my-6">
-            Lorem ipsum dolor sit amet consectetur. Sed amet bibendum at
-            venenatis faucibus mi fringilla viverra. In nulla aliquam magna orci
-            neque penatibus neque eget. Commodo scelerisque cursus purus id
-            fermentum lorem nisi sit malesuada.
+          <p className="text-center px-6 max-w-md uppercase font-thin 2xl:max-w-lg text-[#FFFFFF] text-sm 2xl:text-base mt-6">
+            Set a reminder, and book a virtual seat!
+          </p>
+          <p className="text-center px-6 max-w-[26rem] 2xl:max-w-[32rem] text-[#FFFFFF] text-sm 2xl:text-base my-6">
+            It’s time for a Live Presentation. Be first in line. Watch a Seller
+            present their latest finds via the medium of video, get all the
+            latest gossip and buy directly, right then and there!
           </p>
           <button
             onClick={handleLiveShows}
@@ -459,16 +480,16 @@ const page = () => {
         </section>
 
         <section className="bg-white">
-          <div className=" py-6 border-b border-[#EBE9E0] px-4 md:px-6 lg:px-16 flex items-center font-playfair justify-between">
+          <div className=" py-6 2xl:py-8 border-b border-[#EBE9E0] px-4 md:px-6 lg:px-16 flex items-center font-playfair justify-between">
             <h2 className="text-lg md:text-[24px] ">CATEGORIES</h2>
-            <Link href={"#"} className="text-sm font-sans">
+            <Link href={"#"} className="text-sm font-sans text-[#463F3A]">
               VIEW ALL
             </Link>
           </div>
         </section>
 
         <section className=" bg-[#F9F8F3] p-8 md:p-10  lg:px-16 lg:py-16">
-          <h1 className="text-3xl lg:text-5xl font-playfair mb-16">
+          <h1 className="text-3xl lg:text-5xl text-[#463F3A] font-playfair mb-16">
             Browse by Category
           </h1>
           <div className="flex flex-row flex-wrap justify-start md:justify-between gap-[32px]">
@@ -493,9 +514,9 @@ const page = () => {
         </section>
 
         <section className="bg-white">
-          <div className=" py-6 border-b border-[#EBE9E0] px-4 md:px-6 lg:px-16 flex items-center font-playfair justify-between">
-            <h2 className="text-lg md:text-[24px]">Eras</h2>
-            <Link href={"#"} className="text-sm font-sans">
+          <div className=" py-6 2xl:py-8 border-b border-[#EBE9E0] px-4 md:px-6 lg:px-16 flex items-center font-playfair justify-between">
+            <h2 className="text-lg md:text-[26px]">Eras</h2>
+            <Link href={"#"} className="text-sm font-sans text-[#463F3A]">
               VIEW ALL
             </Link>
           </div>
@@ -531,21 +552,22 @@ const page = () => {
               </Link>
             </div>
 
-            <div className="md:col-span-1  relative py-3 mt-8 md:mt-0  bg-[#EBE9E0] p-[20px] pb-[24px]">
-              <div className="absolute top-5 right-7 ">
+            <div className="md:col-span-1  relative py-3 mt-8 md:mt-0  bg-[#EBE9E0] p-[10px] pb-[24px]">
+              <div className="absolute top-7 right-9 ">
                 <CiHeart />
               </div>
               <Image
-                src="/images/products/p1.png"
+                src="/images/products/p5.png"
                 width={140}
                 height={100}
                 alt="img"
                 layout="responsive"
+                className="bg-white"
               />
-              <p className="text-[#0D0106] font-playfair text-[14px] 2xl:text-lg mt-3">
+              <p className="text-[#0D0106] px-2 font-playfair text-[14px] 2xl:text-lg mt-3">
                 NATIVE IRON CHAIR
               </p>
-              <div className="text-sm text-[#919089] flex flex-row gap-2 justify-between flex-nowrap mt-2">
+              <div className="text-sm px-2 text-[#919089] flex flex-row gap-2 justify-between flex-nowrap mt-2">
                 <h1>Seller Name</h1>
                 <Link href={"#"} className="uppercase text-[12px]">
                   Follow
@@ -556,9 +578,9 @@ const page = () => {
         </section>
 
         <section className="bg-white">
-          <div className=" py-6 border-b border-[#EBE9E0] px-4 md:px-6 lg:px-16 flex items-center font-playfair justify-between">
+          <div className=" py-6 2xl:py-8 border-b border-[#EBE9E0] px-4 md:px-6 lg:px-16 flex items-center font-playfair justify-between">
             <h2 className="text-lg md:text-[24px]  ">Blog</h2>
-            <Link href={"/blog"} className="text-sm font-sans">
+            <Link href={"/blog"} className="text-sm font-sans text-[#463F3A] ">
               VIEW ALL
             </Link>
           </div>
@@ -582,7 +604,7 @@ const page = () => {
                 <h1 className="text-[24px] font-playfair py-3 capitalize tracking-tight">
                   {b.title}
                 </h1>
-                <p className="text-sm text-[#463F3A] line-clamp-6">{b.body}</p>
+                <p className="text-sm text-[#919089] line-clamp-6">{b.body}</p>
 
                 <button
                   onClick={() => handleReadMore(b.id)}
@@ -597,21 +619,21 @@ const page = () => {
 
         {/* how to work section */}
 
-        <section className="bg-[#F9F8F3] pt-10 pb-12 md:pb-28 md:px-8">
-          <div className="flex flex-col items-center  px-6">
+        <section className="bg-[#F9F8F3] pt-10 pb-0 md:pt-16 ">
+          <div className="flex flex-col items-center  px-6 pb-12">
             <h1 className="text-[64px] font-playfair">How it works</h1>
             <p className="uppercase tracking-widest py-4 text-xs text-center max-w-lg">
               We are here to help you with your global hunt for the finest and
               quirkiest jewelry and antiques!
             </p>
-            <p className="md:w-[550px]  text-pretty text-center text-[#919089]">
-              Lorem ipsum dolor sit amet consectetur. In laoreet viverra sed
-              auctor amet nec senectus porta. Ac commodo cum ut quam vitae
-              sollicitudin aenean. Sit volutpat nunc et aenean. Sed condimentum
-              felis at rhoncus. Gravida placerat senectus tortor id vitae nullam
-              orci mollis. Consequat commodo tellus varius purus quam nulla.
-              Enim tellus ac convallis enim convallis sed. Augue amet morbi
-              penatibus.
+            <p className="md:w-[600px] py-2 text-balance text-center  text-[#919089]">
+              By creating an account you will be able to follow all your
+              favourite sellers, and see all their latest finds, here on the
+              website, and also on the accompanying app. You will also receive
+              live notifications in real time from the app so that you never
+              miss that dream piece ever again. You will be able to save all the
+              pieces you have your eye on onto your own wall, for later
+              reference.
             </p>
             <p className="md:w-[550px]  text-pretty my-3 text-center text-[#919089]">
               As part of{" "}
@@ -657,7 +679,7 @@ const page = () => {
                 />
               </div>
             </div>
-            <div className="px-4 flex  flex-row flex-wrap  justify-between items-center gap-2 ">
+            <div className="px-4 pt-4 flex  flex-row flex-wrap  justify-around items-center   ">
               {intrests.map((intrest, index) => (
                 <div key={index} className="">
                   <div className="mb-3">
