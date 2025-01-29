@@ -67,7 +67,7 @@ const Seller = () => {
           <div className="flex flex-wrap gap-5 flex-row justify-between items-center">
             <div
               onClick={() => setFilterOpen(!filterOpen)}
-              className="inline-flex md:w-64 2xl:w-80 cursor-pointer flex-row items-center gap-2 py-3 px-8 md:px-24 bg-[#EBE9E0]"
+              className="inline-flex justify-center md:w-64 2xl:w-80 cursor-pointer flex-row items-center gap-2 py-3 px-8 md:px-24 bg-[#EBE9E0]"
             >
               <BiCandles className="text-lg text-[#0D0106]" />
               <p className="text-xs text-[#0D0106]">FILTER</p>
@@ -191,8 +191,8 @@ const Seller = () => {
                     key={item.id}
                     onClick={handleSellerDetails}
                   >
-                    <div className=" bg-[#F9F8F3] p-4">
-                      <div className="uppercase text-xs flex flex-row justify-between items-center">
+                    <div className=" bg-[#F9F8F3] ">
+                      <div className="uppercase p-4 text-xs flex flex-row justify-between items-center">
                         <p>{item.product_count} products</p>
                         <Link href={"#"}>View All</Link>
                       </div>
@@ -208,7 +208,7 @@ const Seller = () => {
                           />
                         ))}
                       </div>
-                      <div className="flex flex-row items-center justify-between gap-4 my-3">
+                      <div className="flex p-4 flex-row items-center justify-between gap-4 my-3">
                         <div className="flex flex-row items-center gap-2">
                           <Image
                             src="/images/sellers/s1.png"
@@ -228,10 +228,12 @@ const Seller = () => {
                           Follow
                         </Link>
                       </div>
-                      <h2 className="pt-2 text-[#919089]">
+                      <h2 className="pt-2 px-4 text-[#919089]">
                         {item.seller.location}
                       </h2>
-                      <p className="py-3 text-sm">{item.seller.description}</p>
+                      <p className="py-3 px-4 text-sm">
+                        {item.seller.description}
+                      </p>
                     </div>
                   </div>
                 ))}

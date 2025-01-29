@@ -10,7 +10,8 @@ import Link from "next/link";
 import { CiHeart } from "react-icons/ci";
 import { VscVerifiedFilled } from "react-icons/vsc";
 import Button from "../ui/Button";
-
+import InboxModal from "./InboxModal";
+import { useRouter } from "next/navigation";
 const navlinks = [
   { title: "Forum", link: "/forum" },
   { title: "Fairs & Events", link: "/events" },
@@ -22,19 +23,19 @@ const navlinks = [
 
 const productOptions = [
   { title: "View All", link: "/products" },
-  { title: "Most Popular ", link: "#" },
-  { title: "Featured Products", link: "#" },
-  { title: "Most Recent ", link: "#" },
-  { title: "By Category", link: "#" },
-  { title: "By Collections", link: "#" },
-  { title: "By Period", link: "#" },
+  { title: "Most Popular ", link: "/products" },
+  { title: "Featured Products", link: "/products" },
+  { title: "Most Recent ", link: "/products" },
+  { title: "By Category", link: "/products" },
+  { title: "By Collections", link: "/products" },
+  { title: "By Period", link: "/products" },
 ];
 
 const sellerOptions = [
   { title: "View All", link: "/sellers" },
-  { title: "Featured Sellers", link: "#" },
-  { title: "Seller List A to Z ", link: "#" },
-  { title: "Followed Sellers", link: "#" },
+  { title: "Featured Sellers", link: "/sellers" },
+  { title: "Seller List A to Z ", link: "/sellers" },
+  { title: "Followed Sellers", link: "/sellers" },
 ];
 
 const Navbar = () => {
@@ -42,6 +43,7 @@ const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isLoginOpen, setIsLoginOpen] = useState(false);
   const [openNav, setOpenNav] = useState("");
+  const router = useRouter();
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
@@ -62,12 +64,7 @@ const Navbar = () => {
           </button>
         </div>
         <div className="hidden md:flex items-center gap-3">
-          <Image
-            src={"/images/message.svg"}
-            alt="icon"
-            width={25}
-            height={25}
-          />
+          <InboxModal />
           <Image
             src={"/images/notification.svg"}
             alt="icon"
@@ -153,7 +150,7 @@ const Navbar = () => {
               href={"/"}
               className={`${
                 pathname === "/" ? "text-black font-bold" : "text-black"
-              } text-sm 2xl:text-base`}
+              } text-sm 2xl:text-base hover:font-bold hover:scale-105 transition-all duration-200`}
             >
               Home
             </a>
@@ -162,7 +159,10 @@ const Navbar = () => {
             onClick={() =>
               openNav === "products" ? setOpenNav("") : setOpenNav("products")
             }
-            className="text-sm 2xl:text-base hover:font-bold hover:scale-105 transition-all duration-200"
+            className={`text-sm 2xl:text-base hover:font-bold hover:scale-105 transition-all duration-200
+              ${
+                openNav === "products" ? "text-black font-bold" : "text-black"
+              }`}
           >
             Products
           </button>
@@ -170,7 +170,8 @@ const Navbar = () => {
             onClick={() =>
               openNav === "sellers" ? setOpenNav("") : setOpenNav("sellers")
             }
-            className="text-sm 2xl:text-base hover:font-bold hover:scale-105 transition-all duration-200"
+            className={`text-sm 2xl:text-base hover:font-bold hover:scale-105 transition-all duration-200
+              ${openNav === "sellers" ? "text-black font-bold" : "text-black"}`}
           >
             Sellers
           </button>
@@ -211,9 +212,15 @@ const Navbar = () => {
                 hover:font-bold transition-all duration-200
               `}
               >
-                <Link href={items.link} className=" ">
+                <button
+                  className=" "
+                  onClick={() => {
+                    router.push(items.link);
+                    setOpenNav("");
+                  }}
+                >
                   {items.title}
-                </Link>
+                </button>
               </div>
             ))}
           </div>
@@ -284,9 +291,15 @@ const Navbar = () => {
                 hover:font-bold transition-all duration-200
               `}
               >
-                <Link href={items.link} className=" ">
+                <button
+                  className=" "
+                  onClick={() => {
+                    router.push(items.link);
+                    setOpenNav("");
+                  }}
+                >
                   {items.title}
-                </Link>
+                </button>
               </div>
             ))}
           </div>

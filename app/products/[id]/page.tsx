@@ -20,6 +20,7 @@ import useProducts from "@/hooks/useProducts";
 import { useProductDetails } from "@/hooks/useProducts";
 import { HiOutlineUpload } from "react-icons/hi";
 import { VscSend } from "react-icons/vsc";
+import EnquiryModal from "@/components/shared/EnquiryModal";
 
 const ProductDetails = ({ params }: { params: any }) => {
   //  const [products, setProducts] = useState<any>(null); // Full product list
@@ -197,10 +198,7 @@ const ProductDetails = ({ params }: { params: any }) => {
                   icon={<FaRegHeart className="text-xl" />}
                   className="bg-white uppercase text-xs hover:bg-black hover:text-white text-nowrap 2xl:text-sm border border-black text-black w-[70%]  py-2.5 "
                 />
-                <Button
-                  label="Send a Query"
-                  className="bg-[#0D0106] uppercase border text-xs 2xl:text-sm border-black text-white w-full py-2.5 hover:bg-gray-800"
-                />
+                <EnquiryModal />
               </div>
             </div>
           </div>

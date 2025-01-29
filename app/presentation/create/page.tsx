@@ -100,7 +100,7 @@ const page: React.FC = () => {
           <h1 className="text-xs">
             Home / Live Presentation / Create a Live Presentation
           </h1>
-          <h1 className="font-playfair pt-4 uppercase text-xl ">
+          <h1 className="font-playfair pt-4 uppercase text-xl 2xl:text-2xl ">
             Create a Live Presentation
           </h1>
         </div>

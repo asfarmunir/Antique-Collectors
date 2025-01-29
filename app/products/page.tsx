@@ -83,7 +83,7 @@ const Product = () => {
       <div>
         <div className="py-4 px-4 md:px-6 lg:px-12">
           <h1 className="text-xs">Home / Products / New Arrivals</h1>
-          <h1 className="font-playfair pt-4 uppercase text-xl ">
+          <h1 className="font-playfair pt-4 uppercase text-xl 2xl:text-2xl ">
             Latest Products
           </h1>
         </div>
@@ -94,7 +94,7 @@ const Product = () => {
             {/* Filter button */}
             <div
               onClick={() => setFilterOpen(!filterOpen)}
-              className=" inline-flex cursor-pointer md:w-64 2xl:w-80 flex-row items-center gap-2 py-3 px-8 md:px-24 2xl:px-28 bg-[#EBE9E0]"
+              className=" inline-flex justify-center   cursor-pointer md:w-64 2xl:w-80 flex-row items-center gap-2 py-3 px-8 md:px-24 2xl:px-28 bg-[#EBE9E0]"
             >
               <BiCandles className="text-lg text-[#0D0106]" />
               <p className="text-xs text-[#0D0106] ">FILTER</p>
@@ -249,7 +249,7 @@ const Product = () => {
                           </div> */}
                         </div>
                         <div className="w-full pt-4 flex flex-col justify-between">
-                          <h2 className="text-sm pt-2 md:text-[12px] uppercase">
+                          <h2 className="text-sm pt-2 md:text-[12px] 2xl:text-base uppercase">
                             {p.title}
                           </h2>
                           <div className="text-sm flex flex-row pt-2 justify-between gap-4">
@@ -263,7 +263,11 @@ const Product = () => {
                 </div>
               </>
             ) : (
-              <div className="py-6 text-[#0D0106] px-4">
+              <div
+                className={`
+                ${filterOpen ? " w-[80%]" : " w-[50%] mx-auto"}
+              py-6 w-[50%]  text-[#0D0106] px-4`}
+              >
                 {products.slice(0, gridProductCount).map((item) => (
                   <div className="mb-10 md:mb-16" key={item.id}>
                     <div className="flex  flex-row items-center justify-between border-b pb-2 border-[#EBE9E0]">
@@ -363,25 +367,24 @@ const Product = () => {
               <h1 className="font-playfair text-base sm:text-xl md:text-3xl lg:text-5xl">
                 Live Presentations
               </h1>
-              <p className="text-[#EBE9E0]">
+              <p className="text-[#EBE9E0] font-thin uppercase">
                 Set a reminder, and book a virtual seat!
               </p>
-              <p className="text-sm text-[#EBE9E0]">
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magnam
-                esse eos doloremque a natus! Quibusdam eum perferendis
-                perspiciatis deleniti, maiores voluptate odit quis est soluta
-                adipisci, magni debitis? Unde, natus?
+              <p className="text-sm text-[#EBE9E0] pb-5 max-w-3xl">
+                It’s time for a Live Presentation. Be first in line. Watch a
+                Seller present their latest finds via the medium of video, get
+                all the latest gossip and buy directly, right then and there!
               </p>
 
               <Button
                 label="See Upcoming live shows"
-                className="uppercase text-xs 2xl:text-sm px-7 py-4 hover:bg-[#2D2D2D] hover:text-white bg-white text-[#2D2D2D]"
+                className="uppercase text-xs mt-4 2xl:text-sm px-7 py-4 hover:bg-[#2D2D2D] hover:text-white bg-white text-[#2D2D2D]"
               />
             </div>
 
             <div className="col-span-1">
               <div className="bg-[#ffffff65] p-4">
-                <div className=" bg-[#F9F8F3] text-white py-2 px-1 text-xs flex flex-row justify-between gap-4">
+                <div className=" bg-[#F9F8F3] text-black py-2 px-1 text-xs flex flex-row justify-between gap-4">
                   <p>12.23.2025</p>
                   <p>5.00 pm (UTC)</p>
                 </div>
