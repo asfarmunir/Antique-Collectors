@@ -164,11 +164,11 @@ const page = () => {
         </section>
 
         <section className=" bg-[#F9F8F3]">
-          <div className="py-6 2xl:py-8 border-b border-[#EBE9E0] px-4 md:px-6 lg:px-16 flex items-center font-playfair justify-between">
-            <h2 className="text-lg 2xl:text-2xl  ">SELLERS</h2>
+          <div className="py-6 xl:py-[32px] 2xl:py-8 border-b border-[#EBE9E0] px-4 md:px-6 lg:px-16 flex items-center font-playfair justify-between">
+            <h2 className="text-lg xl:text-[24px]  ">SELLERS</h2>
             <Link
               href={"/sellers"}
-              className="text-sm text-[#463F3A] font-sans"
+              className="text-sm xl:text-[12px] font-openSans  text-[#463F3A] "
             >
               VIEW ALL
             </Link>
@@ -240,15 +240,13 @@ const page = () => {
 
             <div className=" w-full md:w-[50%] flex flex-col pt-8 items-center">
               <div className="flex flex-col items-center  px-5 md:px-0 md:items-start">
-                <h2 className="text-2xl md:text-4xl lg:text-6xl   text-center font-playfair ">
+                <h2 className="text-2xl md:text-4xl xl:text-[48px] 2xl:text-6xl   text-center font-playfair ">
                   Featured Sellers
                 </h2>
-                <p className="text-center md:text-start max-w-xl  text-sm text-[#463F3A] text-[14px] 2xl:text-base my-6">
-                  Lorem ipsum dolor sit amet consectetur. Ullamcorper habitasse
-                  eget elit sit magna et diam faucibus elit. Scelerisque nec in
-                  semper ac pellentesque arcu iaculis mauris sed. Nunc arcu
-                  scelerisque tellus erat purus. Dui scelerisque semper aliquam
-                  risus lacinia sit amet a.
+                <p className="text-center md:text-start max-w-xl  text-sm text-[#463F3A] text-[14px] xl:text-[16px] 2xl:text-base my-6">
+                  Every month we showcase several dealers and their galleries in
+                  this section. This is a great way for you to discover new
+                  people to follow, and new pieces to fall in love with!
                 </p>
                 <button className=" py-3 2xl:py-4 px-16 hover:opacity-80 bg-black text-xs 2xl:text-sm text-white ">
                   BECOME A SELLER
@@ -259,7 +257,7 @@ const page = () => {
                 <TableBody>
                   <TableRow className=" bg-[#EBE9E0]">
                     <TableCell className=" text-center font-playfair text-lg  border-y border-[#EBE9E0]">
-                      <div className="flex justify-center 2xl:justify-start flex-row items-center gap-3 2xl:pl-24">
+                      <div className="flex justify-center xl:justify-start flex-row items-center gap-3 xl:pl-16">
                         <div className="bg-[#919089] p-2 rounded-full w-8 h-8 flex items-center justify-center">
                           <Image
                             src="/"
@@ -272,13 +270,13 @@ const page = () => {
                         <p className="text-[20px]">Antique Animal Jewelry</p>
                       </div>
                     </TableCell>
-                    <TableCell className="text-center text-sm uppercase border-y border-[#EBE9E0] text-[#463F3A]">
+                    <TableCell className="text-center text-sm xl:text-[12px] uppercase border-y border-[#EBE9E0] text-[#463F3A]">
                       Follow
                     </TableCell>
                   </TableRow>
                   <TableRow className=" ">
                     <TableCell className=" text-center font-playfair text-lg  border-y border-[#EBE9E0]">
-                      <div className="flex justify-center 2xl:justify-start flex-row items-center gap-3 2xl:pl-24">
+                      <div className="flex justify-center xl:justify-start flex-row items-center gap-3 xl:pl-16">
                         <div className="bg-[#EBE9E0] p-2 rounded-full w-8 h-8 flex items-center justify-center">
                           <Image
                             src="/"
@@ -291,13 +289,13 @@ const page = () => {
                         <p className="text-[20px]">Patrick Boyd Carpenter</p>
                       </div>
                     </TableCell>
-                    <TableCell className="text-center text-sm uppercase border-y border-[#EBE9E0] text-[#463F3A]">
+                    <TableCell className="text-center text-sm xl:text-[12px] uppercase border-y border-[#EBE9E0] text-[#463F3A]">
                       Follow
                     </TableCell>
                   </TableRow>
                   <TableRow className=" ">
                     <TableCell className=" text-center font-playfair text-lg  border-y border-[#EBE9E0]">
-                      <div className="flex justify-center 2xl:justify-start flex-row items-center gap-3 2xl:pl-24">
+                      <div className="flex justify-center xl:justify-start flex-row items-center gap-3 xl:pl-[3.9rem]">
                         <div className="bg-[#EBE9E0] p-2 rounded-full w-8 h-8 flex items-center justify-center">
                           <Image
                             src="/"
@@ -310,13 +308,13 @@ const page = () => {
                         <p className="text-[20px]">Inezstodel Cloth House</p>
                       </div>
                     </TableCell>
-                    <TableCell className="text-center text-sm uppercase border-y border-[#EBE9E0] text-[#463F3A]">
+                    <TableCell className="text-center text-sm xl:text-[12px] uppercase border-y border-[#EBE9E0] text-[#463F3A]">
                       Follow
                     </TableCell>
                   </TableRow>
                   <TableRow className=" ">
                     <TableCell className=" text-center font-playfair text-lg  border-y border-[#EBE9E0]">
-                      <div className="flex justify-center 2xl:justify-start flex-row items-center gap-3 2xl:pl-24">
+                      <div className="flex justify-center xl:justify-start flex-row items-center gap-3 xl:pl-16">
                         <div className="bg-[#EBE9E0] p-2 rounded-full w-8 h-8 flex items-center justify-center">
                           <Image
                             src="/"
@@ -329,7 +327,7 @@ const page = () => {
                         <p className="text-[20px]">Inezstodel Cloth House</p>
                       </div>
                     </TableCell>
-                    <TableCell className="text-center text-sm uppercase border-y border-[#EBE9E0] text-[#463F3A]">
+                    <TableCell className="text-center text-sm xl:text-[12px] uppercase border-y border-[#EBE9E0] text-[#463F3A]">
                       Follow
                     </TableCell>
                   </TableRow>
@@ -340,20 +338,22 @@ const page = () => {
         </section>
 
         <section className="pb-12">
-          <div className="py-6 2xl:py-8 px-4 md:px-6 lg:px-16 border-b border-[#EBE9E0]  flex items-center  justify-between">
+          <div className="py-6 xl:py-[32px] 2xl:py-8 px-4 md:px-6 lg:px-16 border-b border-[#EBE9E0]  flex items-center  justify-between">
             <div>
-              <h2 className="text-2xl uppercase  font-playfair mb-2 2xl:text-3xl  ">
+              <h2 className="text-2xl xl:text-[24px] uppercase  font-playfair mb-2 2xl:text-3xl  ">
                 New Arrivals
               </h2>
-              <p className=" font-light text-sm 2xl:text-base text-[#0D0106]">
+              <p className=" font-light text-sm xl:text-[16px] 2xl:text-base text-[#919089]">
                 All the latest pieces land here in real time. <br />{" "}
-                <span className="font-semibold underline">Sign up</span> for an
-                account to create your own custom feed, and only see products
-                from sellers you follow
+                <span className="font-semibold underline text-black">
+                  Sign up
+                </span>{" "}
+                for an account to create your own custom feed, and only see
+                products from sellers you follow
               </p>
             </div>
             <Link
-              className="text-sm font-sans text-[#463F3A] "
+              className="text-sm xl:text-[12px] font-openSans  text-[#463F3A] "
               href={"/products"}
             >
               VIEW ALL
@@ -480,16 +480,19 @@ const page = () => {
         </section>
 
         <section className="bg-white">
-          <div className=" py-6 2xl:py-8 border-b border-[#EBE9E0] px-4 md:px-6 lg:px-16 flex items-center font-playfair justify-between">
-            <h2 className="text-lg md:text-[24px] ">CATEGORIES</h2>
-            <Link href={"#"} className="text-sm font-sans text-[#463F3A]">
+          <div className=" py-6 xl:py-[32px] 2xl:py-8 border-b border-[#EBE9E0] px-4 md:px-6 lg:px-16 flex items-center font-playfair justify-between">
+            <h2 className="text-lg xl:text-[24px]   ">CATEGORIES</h2>
+            <Link
+              href={"#"}
+              className="text-sm xl:text-[12px] font-openSans  text-[#463F3A] "
+            >
               VIEW ALL
             </Link>
           </div>
         </section>
 
         <section className=" bg-[#F9F8F3] p-8 md:p-10  lg:px-16 lg:py-16">
-          <h1 className="text-3xl lg:text-5xl text-[#463F3A] font-playfair mb-16">
+          <h1 className="text-3xl lg:text-5xl xl:text-[48px] text-[#463F3A] font-playfair mb-16">
             Browse by Category
           </h1>
           <div className="flex flex-row flex-wrap justify-start md:justify-between gap-[32px]">
@@ -504,19 +507,24 @@ const page = () => {
                     alt="interest"
                     width={60}
                     height={60}
-                    className=" 2xl:w-[80px] 2xl:h-[80px] "
+                    className=" xl:w-[80px] xl:h-[80px] "
                   />
                 </div>
-                <h2 className="uppercase text-xs">{intrest.name}</h2>
+                <h2 className="uppercase text-xs xl:text-[14px]">
+                  {intrest.name}
+                </h2>
               </div>
             ))}
           </div>
         </section>
 
         <section className="bg-white">
-          <div className=" py-6 2xl:py-8 border-b border-[#EBE9E0] px-4 md:px-6 lg:px-16 flex items-center font-playfair justify-between">
-            <h2 className="text-lg md:text-[26px]">Eras</h2>
-            <Link href={"#"} className="text-sm font-sans text-[#463F3A]">
+          <div className=" py-6 xl:py-[32px] 2xl:py-8 border-b border-[#EBE9E0] px-4 md:px-6 lg:px-16 flex items-center font-playfair justify-between">
+            <h2 className="text-lg xl:text-[24px]  ">Eras</h2>
+            <Link
+              href={"#"}
+              className="text-sm xl:text-[12px] font-openSans  text-[#463F3A] "
+            >
               VIEW ALL
             </Link>
           </div>
@@ -536,7 +544,7 @@ const page = () => {
                 </h1>
               </div>
 
-              <p className="py-10 pr-1 text-[14px] text-[#919089] max-w-2xl 2xl:max-w-4xl">
+              <p className="py-10 xl:py-16 pr-1 text-[14px] text-[#919089] max-w-2xl 2xl:max-w-4xl">
                 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Soluta
                 exercitationem harum magnam eaque cupiditate natus. Maxime
                 possimus perspiciatis id sed illum reprehenderit natus alias
@@ -578,9 +586,12 @@ const page = () => {
         </section>
 
         <section className="bg-white">
-          <div className=" py-6 2xl:py-8 border-b border-[#EBE9E0] px-4 md:px-6 lg:px-16 flex items-center font-playfair justify-between">
-            <h2 className="text-lg md:text-[24px]  ">Blog</h2>
-            <Link href={"/blog"} className="text-sm font-sans text-[#463F3A] ">
+          <div className=" py-6 xl:py-[32px] 2xl:py-8 border-b border-[#EBE9E0] px-4 md:px-6 lg:px-16 flex items-center font-playfair justify-between">
+            <h2 className="text-lg xl:text-[24px]    ">Blog</h2>
+            <Link
+              href={"/blog"}
+              className="text-sm xl:text-[12px] font-openSans  text-[#463F3A] "
+            >
               VIEW ALL
             </Link>
           </div>
@@ -626,7 +637,7 @@ const page = () => {
               We are here to help you with your global hunt for the finest and
               quirkiest jewelry and antiques!
             </p>
-            <p className="md:w-[600px] py-2 text-balance text-center  text-[#919089]">
+            <p className="md:w-[600px] xl:text-[14px] py-2 text-balance text-center  text-[#919089]">
               By creating an account you will be able to follow all your
               favourite sellers, and see all their latest finds, here on the
               website, and also on the accompanying app. You will also receive
@@ -635,7 +646,7 @@ const page = () => {
               pieces you have your eye on onto your own wall, for later
               reference.
             </p>
-            <p className="md:w-[550px]  text-pretty my-3 text-center text-[#919089]">
+            <p className="md:w-[550px]  xl:text-[14px]  text-pretty my-3 text-center text-[#919089]">
               As part of{" "}
               <span className="text-black px-0.5">The AC Community</span> you
               will have access to

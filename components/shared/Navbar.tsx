@@ -144,13 +144,13 @@ const Navbar = () => {
       <div
         className={`hidden z-50 md:flex items-center justify-between py-3.5 2xl:py-5 px-9 2xl:px-12 border-b border-[#EBE9E0]`}
       >
-        <ul className="flex items-center gap-5 2xl:gap-[32px] py-2">
+        <ul className="flex items-center gap-5 xl:gap-[32px] py-2">
           <li>
             <a
               href={"/"}
               className={`${
                 pathname === "/" ? "text-black font-bold" : "text-black"
-              } text-sm 2xl:text-base hover:font-bold hover:scale-105 transition-all duration-200`}
+              } text-sm xl:text-[14px] 2xl:text-base hover:font-bold hover:scale-105 transition-all duration-200`}
             >
               Home
             </a>
@@ -159,7 +159,7 @@ const Navbar = () => {
             onClick={() =>
               openNav === "products" ? setOpenNav("") : setOpenNav("products")
             }
-            className={`text-sm 2xl:text-base hover:font-bold hover:scale-105 transition-all duration-200
+            className={`text-sm xl:text-[14px] 2xl:text-base hover:font-bold hover:scale-105 transition-all duration-200
               ${
                 openNav === "products" ? "text-black font-bold" : "text-black"
               }`}
@@ -170,7 +170,7 @@ const Navbar = () => {
             onClick={() =>
               openNav === "sellers" ? setOpenNav("") : setOpenNav("sellers")
             }
-            className={`text-sm 2xl:text-base hover:font-bold hover:scale-105 transition-all duration-200
+            className={`text-sm xl:text-[14px] 2xl:text-base hover:font-bold hover:scale-105 transition-all duration-200
               ${openNav === "sellers" ? "text-black font-bold" : "text-black"}`}
           >
             Sellers
@@ -183,7 +183,7 @@ const Navbar = () => {
                   pathname === navlink.link
                     ? "text-black font-bold"
                     : "text-black"
-                } text-sm 2xl:text-base hover:font-bold hover:scale-105 transition-all duration-200`}
+                } text-sm xl:text-[14px] 2xl:text-base hover:font-bold hover:scale-105 transition-all duration-200`}
               >
                 {navlink.title}
               </a>

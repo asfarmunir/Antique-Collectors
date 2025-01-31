@@ -81,7 +81,7 @@ const Product = () => {
   return (
     <>
       <div>
-        <div className="py-4 px-4 md:px-6 lg:px-12">
+        <div className="py-4 xl:py-[32px] px-4 md:px-6 lg:px-12">
           <h1 className="text-xs">Home / Products / New Arrivals</h1>
           <h1 className="font-playfair pt-4 uppercase text-xl 2xl:text-2xl ">
             Latest Products

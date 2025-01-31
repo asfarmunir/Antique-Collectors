@@ -82,19 +82,22 @@ const Seller = () => {
           </h1>
         </div>
 
-        <div className="relative md:px-6 pb-4">
-          <div className="relative z-10 top-14 flex items-center justify-center md:justify-start md:left-5">
+        <div className="relative md:px-6 md:-mt-6 mb-4 xl:px-[80px] pb-4">
+          <div className="relative z-10 top-16 flex items-center justify-center md:justify-start md:left-6">
             <Image
               src="/images/sellers/s1.png"
               alt="seller logo"
               width={110}
               height={110}
+              className="xl:w-[150px] xl:h-[150px] "
             />
           </div>
 
-          <div className="bg-[#F9F8F3] text-[#0D0106] w-full capitalize p-4 relative pt-16 ">
+          <div className="bg-[#F9F8F3] text-[#0D0106] w-full capitalize p-5 relative pt-16 xl:pt-[74px] ">
             <div className="flex flex-col md:flex-row w-full  items-center text-center justify-between  md:text-left gap-2 pt-1">
-              <h1 className="font-playfair text-2xl">Antique Animal Jewelry</h1>
+              <h1 className="font-playfair text-2xl xl:text-[32px]">
+                Antique Animal Jewelry
+              </h1>
 
               <div className="flex flex-col  md:flex-row gap-3">
                 <Button
@@ -107,10 +110,10 @@ const Seller = () => {
                 />
               </div>
             </div>
-            <p className="capitalize text-xs pt-2 text-center md:text-left">
+            <p className="capitalize text-xs xl:text-[16px] pt-4 text-center md:text-left">
               Location, UK
             </p>
-            <p className="py-2 text-xs text-center md:text-left">
+            <p className="py-4 text-xs xl:text-[16px] text-center md:text-left">
               Lorem, ipsum dolor sit amet consectetur adipisicing elit. Est
               assumenda blanditiis beatae voluptatem cumque placeat adipisci
               voluptatibus, ea quae quod laudantium eligendi repudiandae, enim,
@@ -125,7 +128,7 @@ const Seller = () => {
           </div>
         </div>
 
-        <section className="bg-[#F9F8F3] py-4 px-4 md:px-6 lg:px-12 ">
+        <section className="bg-[#F9F8F3] py-4 px-4 md:px-6 lg:px-12 xl:px-[80px] ">
           <div className="flex flex-wrap gap-5 flex-row justify-between items-center">
             {/* Filter button */}
             <div
@@ -204,12 +207,12 @@ const Seller = () => {
         )}
 
         <div
-          className={`px-4 md:px-6 lg:px-12 md:grid py-6 md:grid-cols-${
+          className={`px-4 md:px-6 lg:px-12 xl:px-[80px] md:grid py-6 md:grid-cols-${
             filterOpen ? 4 : 4
           }`}
         >
           {filterOpen && (
-            <div className="md:col-span-1 md:w-64 2xl:w-80 md:block hidden">
+            <div className="md:col-span-1 md:w-64 2xl:w-80   md:block hidden">
               <FilterComponent
                 checkboxlablel={checkboxLabels}
                 checkboxlablel1={conditionLabels}
@@ -244,7 +247,7 @@ const Seller = () => {
                       <div
                         key={index}
                         className={`flex  gap-4 md:gap-0 flex-col stroke-black  px-6 cursor-pointer border-[#EBE9E0]
-                                        ${!isLastRow ? "md:border-b" : ""} 
+                                        ${!isLastRow ? "md:border-b pb-4" : ""} 
                                         ${
                                           !isLastColumn
                                             ? "md:border-r -mr-[3px]"

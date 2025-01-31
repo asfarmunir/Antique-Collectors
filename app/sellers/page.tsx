@@ -58,7 +58,7 @@ const Seller = () => {
   return (
     <>
       <div>
-        <div className="py-4 px-4 md:px-6 lg:px-12">
+        <div className="py-4 xl:py-[32px] px-4 md:px-6 lg:px-12">
           <h1 className="text-xs">Home / Sellers / A-Z Sellers</h1>
           <h1 className="font-playfair pt-4 uppercase text-xl">Sellers</h1>
         </div>
@@ -151,15 +151,16 @@ const Seller = () => {
                     className="relative flex flex-col items-center hover:scale-105 transition duration-500 ease-in-out"
                     onClick={() => handleSellerDetails(items.id)} // Pass the correct ID to the handler
                   >
-                    <div className="relative z-30 top-9">
+                    <div className="relative z-30 top-[3.5rem]">
                       <Image
                         src={items.src}
                         alt={items.title}
                         width={80}
+                        className="xl:w-[112px] xl:h-[112px]"
                         height={80}
                       />
                     </div>
-                    <div className="bg-[#F9F8F3] w-full capitalize flex flex-col gap-1 items-center relative pt-9 pb-3 z-10">
+                    <div className="bg-[#F9F8F3] w-full capitalize flex flex-col gap-1 items-center relative pt-[60px] pb-[16px] z-10">
                       <div className="flex flex-row items-center gap-2 pt-1">
                         <h1 className="font-playfair text-[20px] ">
                           Seller Name
@@ -203,7 +204,7 @@ const Seller = () => {
                             width={120}
                             height={120}
                             alt="images"
-                            className=" w-full border border-[#0d01060b] "
+                            className=" w-full border border-[#0d01060b]  "
                             key={index}
                           />
                         ))}

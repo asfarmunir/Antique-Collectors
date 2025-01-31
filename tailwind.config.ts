@@ -90,6 +90,7 @@ const config: Config = {
         averia: ["var(--font-averia)"],
         playfair: ["var(--font-playfair-display)"],
         poppins: ["var(--font-poppins)"],
+        openSans : ["var(--font-open-sans)"],
       },
       backgroundImage: {
         "hero-img": "url('/assets/images/hero.png')",

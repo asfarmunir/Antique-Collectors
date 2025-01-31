@@ -83,10 +83,10 @@ const Blog = () => {
   return (
     <>
       <div>
-        <div className="flex relative flex-col-reverse gap-5 bg-[#F9F8F3] md:flex-row h-[480px] md:h-[500px] border-b border-[#EBE9E0]">
+        <div className="flex relative flex-col-reverse gap-5 bg-[#F9F8F3] md:flex-row h-[480px] md:h-[500px] xl:h-[680px] border-b border-[#EBE9E0]">
           {/* Text Section */}
           <div className="w-full px-6 md:px-12 flex flex-col my-auto justify-center h-full">
-            <h1 className="text-3xl md:text-4xl 2xl:text-5xl font-playfair italic">
+            <h1 className="text-3xl xl:text-[48px] xl:leading-snug md:text-4xl 2xl:text-5xl font-playfair italic">
               Discovering the Timeless <br /> Beauty of Antiques
             </h1>
             <div className="flex mt-4 text-[#919089] items-center gap-2">
@@ -101,7 +101,7 @@ const Blog = () => {
                 Oliver Bennett 18 <span className="text-4xl ">.</span> Jan 2022
               </p>
             </div>
-            <p className="text-sm md:text-[14px] text-[#463F3A]  text-justify py-2">
+            <p className="text-sm md:text-[14px] text-[#463F3A]  text-justify py-4">
               Lorem ipsum dolor sit amet consectetur, adipisicing elit. Neque
               alias, beatae, iste totam molestias placeat molestiae laudantium
               hic consequuntur possimus explicabo voluptatum! Error consequuntur
@@ -116,7 +116,7 @@ const Blog = () => {
           {/* Image Section */}
           <div className="w-full relative h-full md:h-auto px-4 md:px-8">
             {/* Top Image */}
-            <div className="absolute top-0 right-0 w-[150px] md:min-w-[250px]">
+            <div className="absolute top-0 right-0 w-[150px] md:min-w-[250px] xl:min-w-[300px]">
               <Image
                 src="/images/blogs/bt.png"
                 alt="top left"
@@ -138,7 +138,7 @@ const Blog = () => {
             </div>
 
             {/* Bottom Image */}
-            <div className="absolute bottom-0 left-1/2 -translate-x-1/2 transform w-[120px] md:min-w-[260px] 2xl:min-w-[300px]">
+            <div className="absolute bottom-0 left-1/2 -translate-x-1/2 transform w-[120px] md:min-w-[260px] xl:min-w-[400px]">
               <Image
                 src="/images/blogs/bb.png"
                 alt="bottom center"
@@ -151,7 +151,7 @@ const Blog = () => {
         </div>
 
         <div>
-          <div className="py-4 px-6 md:px-12">
+          <div className="py-4 xl:py-[32px] px-6 md:px-12">
             <h1 className="text-xs">Home / Products / New Arrivals</h1>
             <h1 className="font-playfair pt-4 uppercase text-xl ">Blog</h1>
           </div>
@@ -160,7 +160,7 @@ const Blog = () => {
             <div className="flex flex-row flex-wrap justify-between gap-4 items-center">
               <div
                 onClick={() => setFilterOpen(!filterOpen)}
-                className="inline-flex flex-row md:w-56 2xl:w-72 justify-center items-center gap-2 py-3 px-8 bg-[#EBE9E0]"
+                className="inline-flex flex-row md:w-56 xl:w-72 justify-center items-center gap-2 py-3 px-8 bg-[#EBE9E0]"
               >
                 <BiCandles className="text-lg text-[#0D0106]" />
                 <p className="text-xs text-[#0D0106] ">FILTER</p>
@@ -214,7 +214,7 @@ const Blog = () => {
 
           {/* Main content start from here */}
           <div className="py-4 px-4 md:px-12 md:grid md:grid-cols-5">
-            <div className="md:col-span-1  md:w-56 2xl:w-72 py-6">
+            <div className="md:col-span-1  md:w-56 xl:w-72 py-6">
               <div className="md:block hidden">
                 <FilterComponent
                   checkboxlablel={checkboxLabels}
@@ -230,7 +230,11 @@ const Blog = () => {
                     key={p.title}
                     className="flex flex-row items-end  gap-4 mt-3 text-[16px]"
                   >
-                    <div className="w-[50px] h-[50px] bg-[#7C7C7C] overflow-hidden">
+                    <div
+                      className="w-[50px] h-[50px]
+                    xl:w-[80px] xl:h-[80px]
+                     bg-[#7C7C7C] overflow-hidden"
+                    >
                       <Image
                         src={p.src}
                         alt={p.title}
@@ -240,7 +244,10 @@ const Blog = () => {
                       />
                     </div>
                     <div>
-                      <Link href="#" className="text-sm font-playfair">
+                      <Link
+                        href="#"
+                        className="text-sm xl:text-[16px] font-playfair"
+                      >
                         {p.title}
                       </Link>
                       <p className="font-light text-xs mt-2 text-[#9F9F9F]">
@@ -252,7 +259,7 @@ const Blog = () => {
               </div>
             </div>
 
-            <div className="md:px-4 col-span-4 space-y-5">
+            <div className="md:px-4 xl:px-[80px] col-span-4 space-y-5">
               {filteredBlogs.slice(0, visibleBlogs).map((blogs: any) => (
                 <div
                   key={blogs.userId}

@@ -74,7 +74,7 @@ const Presentations = () => {
   return (
     <>
       <div>
-        <div className="py-4 px-4 md:px-6 lg:px-12 border-b border-[#EBE9E0] flex flex-row flex-wrap gap-4 justify-between items-center">
+        <div className="py-4 xl:py-[32px] px-4 md:px-6 lg:px-12 border-b border-[#EBE9E0] flex flex-row flex-wrap gap-4 justify-between items-center">
           <div>
             <p className="text-xs">Home / Live Presentations</p>
             <h1 className="font-playfair pt-4 uppercase text-base md:text-[24px] ">
@@ -85,18 +85,18 @@ const Presentations = () => {
           <div>
             <Link
               href={"/presentation/create"}
-              className="text-xs 2xl:text-sm hover:opacity-80 py-3 px-4 text-white bg-black uppercase"
+              className="text-xs xl:text-[12px] 2xl:text-sm hover:opacity-80 py-3 px-4 text-white bg-black uppercase"
             >
               Create a live presentation
             </Link>
           </div>
         </div>
 
-        <section className="py-4 px-4 md:px-6 lg:px-12 lg:z-10">
-          <h1 className="text-[32px] md:text-[44px] font-playfair capitalize">
+        <section className="py-4 px-4 md:px-6 lg:z-10">
+          <h1 className="text-[32px] md:text-[44px] xl:text-[48px]  font-playfair capitalize">
             Discover Upcoming Live Showcases
           </h1>
-          <p className="text-[14px] py-3 ">
+          <p className="text-[14px] text-[#919089] py-3 ">
             Explore our schedule of live presentations where sellers unveil
             unique antiques, share their stories, and answer your questions in
             real time. Don’t miss the chance to connect and find your next
@@ -146,16 +146,16 @@ const Presentations = () => {
           </div>
         </section>
 
-        <section className="py-4 px-8 md:block hidden">
-          <h1 className="text-[44px] font-playfair capitalize">Time Table</h1>
-          <p className="text-sm py-3">
+        <section className="py-4 px-8 lg:px-12  md:block hidden">
+          <h1 className="text-[48px] font-playfair capitalize">Time Table</h1>
+          <p className="text-sm xl:text-[16px] text-[#919089] py-3">
             Explore our schedule of live presentations where sellers unveil
             unique antiques, share their stories, and answer your questions in
             real time. Don’t miss the chance to connect and find your next
             treasure.
           </p>
 
-          <div className="p-4">
+          <div className="py-6">
             <Table className="border  border-[#EBE9E0] shadow-md text-[#0D0106]">
               <TableHeader>
                 <TableRow>
@@ -223,7 +223,7 @@ const Presentations = () => {
         </section>
 
         <section className="py-4 px-4 md:px-6 lg:px-12">
-          <h1 className="text-[32px] md:text-[44px] font-playfair capitalize">
+          <h1 className="text-[32px] md:text-[48px] font-playfair capitalize">
             Catch Up on Recent Showcases
           </h1>
           <p className="text-[14px] py-4 text-[#919089] mb-3">

@@ -33,7 +33,7 @@ const Footer = () => {
     <>
       <section className="py-5 px-4 md:px-8">
         <div className=" flex pb-4 flex-row flex-wrap items-center justify-between gap-4 ">
-          <h1 className="text-2xl 2xl:text-4xl capitalize font-playfair py-6">
+          <h1 className="text-2xl xl:text-[32px] 2xl:text-4xl capitalize font-playfair py-6">
             Subscribe to our Newsletter
           </h1>
 

@@ -44,8 +44,8 @@ const SignUp = ({ onClose }: { onClose: any }) => {
       <div className="relative ">
         <Dialog open onOpenChange={onClose}>
           <DialogContent
-            className="font-playfair  max-h-[90vh] overflow-y-auto"
-            customWidth="max-w-lg"
+            className="font-playfair  max-h-[95svh] overflow-y-auto"
+            customWidth="max-w-lg "
           >
             <DialogHeader className="font-playfair text-xl border-b border-[#EBE9E0] pb-2">
               <DialogTitle>
