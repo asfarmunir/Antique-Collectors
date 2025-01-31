@@ -4,13 +4,13 @@ import React from "react";
 const page = () => {
   return (
     <>
-      <div className="py-6 px-6 md:px-12">
+      <div className="py-4 xl:py-[32px] px-4 md:px-6 lg:px-12 border-b border-[#EBE9E0]">
         <h1 className="text-xs">Home / Fairs & Events</h1>
         <h1 className="font-playfair pt-4 uppercase text-xl ">
           fairs & events
         </h1>
       </div>
-      <div className=" w-full  p-5 md:p-12 space-y-16 2xl:space-y-20">
+      <div className=" w-full  p-5 md:p-12 space-y-16 2xl:space-y-20 border-b border-[#EBE9E0] md:pb-20">
         <div className=" w-full flex flex-col md:flex-row items-end justify-between gap-6 md:gap-16">
           <div className=" w-full relative flex justify-center">
             <Image

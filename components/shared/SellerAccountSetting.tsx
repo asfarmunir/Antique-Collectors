@@ -92,7 +92,8 @@ const SellerAccountSetting = ({
             {step === 1 && (
               <div className="flex flex-col  md:px-6">
                 <h1 className="text-xl md:text-3xl  font-playfair">
-                  Become a Seller on The Antique Collector
+                  Become a Seller on <br />{" "}
+                  <span className=" italic ">The Antique Collector</span>
                 </h1>
 
                 <p className="text-xs py-4 md:py-6 font-sans">
@@ -105,15 +106,15 @@ const SellerAccountSetting = ({
                   your collection.
                 </p>
 
-                <div className="bg-[#F9F8F3] p-3 text-xs font-sans">
-                  <p>
+                <div className="bg-[#F9F8F3] text-[#919089] p-3 text-xs font-sans">
+                  <p className=" text-[14px]">
                     To maintain the integrity and quality of our marketplace,
                     becoming a seller requires an application and approval
                     process:
                   </p>
                   <ul className="list-disc space-y-2 pt-2">
                     <li>
-                      <span className="uppercase">
+                      <span className="uppercase text-black">
                         &#x2022; Submit Your Application:
                       </span>{" "}
                       Provide details about your expertise, offerings, and
@@ -121,7 +122,7 @@ const SellerAccountSetting = ({
                     </li>
 
                     <li>
-                      <span className="uppercase">
+                      <span className="uppercase text-black">
                         &#x2022; Review Process:
                       </span>{" "}
                       Our team will carefully evaluate your application to
@@ -130,7 +131,7 @@ const SellerAccountSetting = ({
                     </li>
 
                     <li>
-                      <span className="uppercase">
+                      <span className="uppercase text-black">
                         &#x2022; Approval or Rejection:
                       </span>{" "}
                       You’ll receive a response within a few business days with
@@ -151,7 +152,7 @@ const SellerAccountSetting = ({
                 </p>
 
                 <div className="py-3 font-sans">
-                  <p className="text-xs text-[#0D0106] font-sans pb-2 uppercase">
+                  <p className="text-xs text-[#919089] font-sans pb-2 uppercase">
                     What is you Country of residence?
                   </p>
 
@@ -187,7 +188,7 @@ const SellerAccountSetting = ({
 
             {step === 3 && (
               <div className="flex flex-col px-1 md:px-6">
-                <h1 className="text-2xl md:text-4xl">
+                <h1 className="text-2xl xl:text-[32px] py-6 2xl:text-4xl">
                   Tell us a bit about yourself and your collection.
                 </h1>
 
@@ -269,11 +270,11 @@ const SellerAccountSetting = ({
 
             {step === 2 && (
               <div>
-                <h2 className="text-4xl font-playfair">
+                <h1 className="text-2xl xl:text-[32px] py-6 2xl:text-4xl">
                   Tell us a bit about yourself and your collection.
-                </h2>
+                </h1>
 
-                <p className="text-xs font-sans py-2 text-[#0D0106]">
+                <p className="text-xs font-sans py-2 text-[#919089]">
                   Add a short bio and information about your products to let
                   buyers know who you are and what makes your collection
                   special.
@@ -410,11 +411,11 @@ const SellerAccountSetting = ({
 
             {step === 4 && (
               <div className="">
-                <h1 className="text-[44px]">
+                <h1 className="text-[32px] ">
                   Application Submitted Successfully!
                 </h1>
 
-                <p className="text-[16px] py-4">
+                <p className="text-[16px] text-[#463F3A] py-4">
                   {" "}
                   Thank you for applying to become a seller. Our team will
                   review your application and get back to you within a few
@@ -424,7 +425,7 @@ const SellerAccountSetting = ({
                 <div className="bg-[#F9F8F3] px-3 py-3 font-sans">
                   <p className="text-sm pb-2">Please note:</p>
 
-                  <div className="px-2 space-y-2">
+                  <div className="px-2 space-y-2 text-[#919089]">
                     <p className="text-xs">
                       &#x2022; Your account is currently inactive and you will
                       not be able to post products or message buyers until your

@@ -7,7 +7,7 @@ const Aboutus = () => {
   return (
     <>
       <div>
-        <div className="py-4 px-4 md:px-6 lg:px-12 border-b border-[#EBE9E0]">
+        <div className="py-4 xl:py-[32px] px-4 md:px-6 lg:px-12 border-b border-[#EBE9E0]">
           <h1 className="text-xs">Home / About Us</h1>
           <h1 className="font-playfair pt-4 uppercase text-xl ">About Us</h1>
         </div>
@@ -20,14 +20,20 @@ const Aboutus = () => {
                 width={190}
                 height={100}
                 alt="about pic1"
+                className="
+                xl:w-[250px] 
+                "
               />
             </div>
-            <div className="absolute md:-bottom-8 md:block hidden">
+            <div className="absolute md:-bottom-8 xl:-bottom-16 md:block hidden">
               <Image
                 src="/images/about/about2.png"
                 width={200}
                 height={80}
                 alt="about pic1"
+                className="
+                xl:w-[220px] 
+                "
               />
             </div>
 
@@ -37,6 +43,8 @@ const Aboutus = () => {
                 width={140}
                 height={80}
                 alt="about pic1"
+                className="
+                "
               />
             </div>
           </div>

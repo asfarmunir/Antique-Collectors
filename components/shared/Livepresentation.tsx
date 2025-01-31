@@ -50,7 +50,7 @@ export function LivePresentation({ onClose }: { onClose: any }) {
       <Dialog open onOpenChange={onClose}>
         <DialogContent
           className="font-playfair max-h-[90vh] overflow-y-auto"
-          customWidth="max-w-2xl"
+          customWidth="max-w-xl"
         >
           <DialogHeader className="font-playfair text-xl border-b border-[#EBE9E0] pb-2">
             <DialogTitle>
@@ -64,7 +64,7 @@ export function LivePresentation({ onClose }: { onClose: any }) {
             </DialogTitle>
           </DialogHeader>
 
-          <div className="mt-2">
+          <div className="mt-2 px-6 p-4">
             <p className="bg-[#EBE9E0] text-center text-sm py-1 font-sans uppercase">
               Available to watch for another 14 hours
             </p>
