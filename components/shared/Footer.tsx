@@ -54,104 +54,106 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="  md:grid md:grid-cols-5 gap-8 border-t border-[#EBE9E0] px-4 pt-3 2xl:pt-5 pb-10">
+        <div className="  flex items-start justify-between w-full gap-8 md:gap-24 border-t border-[#EBE9E0] px-4 pt-5 xl:pt-8  pb-10">
           <div className="flex flex-col justify-center items-start">
             <Image
               src="/images/footerlogo.svg"
               width={100}
               height={100}
               alt="footer logo"
-              className="2xl:w-40 2xl:h-40"
+              className="xl:w-[170px] xl:h-[168px] 2xl:w-40 2xl:h-40"
             />
-            <p className="text-[#463F3A] py-2 text-[12px] w-52">
+            <p className="text-[#463F3A] py-2 text-[12px] xl:text-[16px] w-52 xl:w-80">
               Join the hunt for the most beautiful, most unusual antiques and
               jewelry
             </p>
 
-            <div className="flex flex-row gap-2 py-3">
+            <div className="flex flex-row gap-2 py-4">
               <FaFacebookF
                 key="facebook"
-                className="bg-[#EBE9E0] text-xl text-[#919089] p-1 cursor-pointer"
+                className="bg-[#EBE9E0] text-[36px] text-[#919089] p-1.5 cursor-pointer"
                 href="#"
               />
               <AiFillInstagram
                 key="instagram"
-                className="bg-[#EBE9E0] text-xl text-[#919089] p-1 cursor-pointer"
+                className="bg-[#EBE9E0] text-[36px] text-[#919089] p-1.5 cursor-pointer"
                 href="#"
               />
             </div>
           </div>
-          <div className="md:block hidden">
-            <p className="text-[#0D0106] text-xs 2xl:text-sm uppercase pb-2">
-              Products
-            </p>
+          <div className=" md:grid md:grid-cols-4 gap-4 xl:gap-8 w-full justify-items-end ">
+            <div className="md:block hidden">
+              <p className="text-[#0D0106] text-xs xl:text-[14px]  uppercase pb-4">
+                Products
+              </p>
 
-            <div className="space-y-2">
-              {productsLink.map((items) => (
-                <div key={items.label} className="text-xs 2xl:text-sm ">
-                  <Link
-                    href={items.label}
-                    className="text-[#919089] text-[10px] 2xl:text-xs"
-                  >
-                    {items.label}
-                  </Link>
-                </div>
-              ))}
+              <div className="space-y-4">
+                {productsLink.map((items) => (
+                  <div key={items.label} className=" ">
+                    <Link
+                      href={items.label}
+                      className="text-[#919089]  text-[14px] "
+                    >
+                      {items.label}
+                    </Link>
+                  </div>
+                ))}
+              </div>
             </div>
-          </div>
-          <div className="md:block hidden">
-            <p className="text-[#0D0106] text-xs 2xl:text-sm uppercase pb-2">
-              Sellers
-            </p>
+            <div className="md:block hidden">
+              <p className="text-[#0D0106] text-xs xl:text-[14px]  uppercase pb-4">
+                Sellers
+              </p>
 
-            <div className="space-y-2">
-              {sellersLink.map((items) => (
-                <div key={items.label} className="text-xs 2xl:text-sm ">
-                  <Link
-                    href={items.label}
-                    className="text-[#919089] text-[10px] 2xl:text-xs"
-                  >
-                    {items.label}
-                  </Link>
-                </div>
-              ))}
+              <div className="space-y-4">
+                {sellersLink.map((items) => (
+                  <div key={items.label} className=" ">
+                    <Link
+                      href={items.label}
+                      className="text-[#919089]  text-[14px]"
+                    >
+                      {items.label}
+                    </Link>
+                  </div>
+                ))}
+              </div>
             </div>
-          </div>
 
-          <div className="md:block hidden">
-            <p className="text-[#0D0106] text-xs 2xl:text-sm uppercase pb-2">
-              Forum
-            </p>
+            <div className="md:block hidden">
+              <p className="text-[#0D0106] text-xs xl:text-[14px] uppercase pb-4">
+                Forum
+              </p>
 
-            <div className="space-y-2">
-              {forumLink.map((items) => (
-                <div key={items.label} className="text-xs 2xl:text-sm ">
-                  <Link
-                    href={items.label}
-                    className="text-[#0D0106] uppercase text-[10px] 2xl:text-xs"
-                  >
-                    {items.label}
-                  </Link>
-                </div>
-              ))}
+              <div className="space-y-4">
+                {forumLink.map((items) => (
+                  <div key={items.label} className="text-xs  ">
+                    <Link
+                      href={items.label}
+                      className="text-[#0D0106] uppercase  text-[12px] "
+                    >
+                      {items.label}
+                    </Link>
+                  </div>
+                ))}
+              </div>
             </div>
-          </div>
-          <div className="md:block hidden">
-            <p className="text-[#0D0106] text-xs 2xl:text-sm uppercase pb-2">
-              My Account
-            </p>
+            <div className="md:block hidden">
+              <p className="text-[#0D0106]  text-xs xl:text-[14px] uppercase pb-4">
+                My Account
+              </p>
 
-            <div className="space-y-2">
-              {myaccountLink.map((items) => (
-                <div key={items.label} className="text-xs 2xl:text-sm ">
-                  <Link
-                    href={items.label}
-                    className="text-[#919089] text-[10px] 2xl:text-xs"
-                  >
-                    {items.label}
-                  </Link>
-                </div>
-              ))}
+              <div className="space-y-4">
+                {myaccountLink.map((items) => (
+                  <div key={items.label} className="">
+                    <Link
+                      href={items.label}
+                      className="text-[#919089]  text-[14px] "
+                    >
+                      {items.label}
+                    </Link>
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
         </div>
@@ -161,7 +163,7 @@ const Footer = () => {
         <div className="border-t border-[#EBE9E0] py-4">
           <p className="text-xs 2xl:text-sm text-[#0D0106] text-center">
             Copyright © 2025 The Antique Collector | All Rights Reserved |
-            <span className=" text-[#919089]">
+            <span className=" underline text-[#919089]">
               {" "}
               Terms and Conditions | Privacy Policy
             </span>

@@ -231,7 +231,7 @@ const page = () => {
                   <div
                     key={index}
                     onClick={() => handleDotClick(index)}
-                    className={`w-8 xl:w-12 rounded-sm h-1 mx-2 cursor-pointer ${
+                    className={`w-8 xl:w-12  h-1 mx-2 cursor-pointer ${
                       currentIndex === index ? "bg-[#919089]" : "bg-[#EBE9E0]"
                     }`}
                   ></div>
@@ -474,7 +474,7 @@ const page = () => {
           </p>
           <button
             onClick={handleLiveShows}
-            className=" py-3 uppercase 2xl:py-4 px-16  bg-white hover:bg-gray-900 text-xs 2xl:text-sm hover:text-white text-black "
+            className=" py-3 uppercase xl:py-[16px] px-[24px]  bg-white hover:bg-gray-900 text-xs 2xl:text-sm hover:text-white text-black "
           >
             see upcoming live shows
           </button>
@@ -563,10 +563,10 @@ const page = () => {
 
             <div className="md:col-span-1  relative py-3 mt-8 md:mt-0  bg-[#EBE9E0] p-[10px] pb-[24px]">
               <div className="absolute top-7 right-9 ">
-                <CiHeart />
+                <IoIosHeartEmpty />
               </div>
               <Image
-                src="/images/products/p5.png"
+                src="/images/products/p1.png"
                 width={140}
                 height={100}
                 alt="img"
@@ -577,7 +577,7 @@ const page = () => {
                 NATIVE IRON CHAIR
               </p>
               <div className="text-sm px-2 text-[#919089] flex flex-row gap-2 justify-between flex-nowrap mt-2">
-                <h1>Seller Name</h1>
+                <h1>Antique Animal Jewelry</h1>
                 <Link href={"#"} className="uppercase text-[12px]">
                   Follow
                 </Link>
@@ -614,7 +614,8 @@ const page = () => {
                   alt={b.title}
                 />
                 <h1 className="text-[24px] font-playfair py-3 capitalize tracking-tight">
-                  {b.title}
+                  Unlocking the Past: How to Identify Authentic Victorian
+                  Antiques
                 </h1>
                 <p className="text-sm text-[#919089] line-clamp-6">{b.body}</p>
 
@@ -682,7 +683,7 @@ const page = () => {
                   value={subEmail}
                   onChange={(e) => setSubEmail(e.target.value)}
                   className="flex-1 w-3/4 md:w-3/4  placeholder:text-xs md:placeholder:text-sm text-xs md:text-sm py-3 px-3"
-                  placeholder="Enter Email Address"
+                  placeholder="Your Email Address"
                 />
                 <Button
                   onClick={handleSubscribe}
