@@ -16,6 +16,7 @@ import useProducts from "@/hooks/useProducts";
 import usePosts from "@/hooks/usePosts";
 import { FaRegCommentDots } from "react-icons/fa";
 import localFont from "next/font/local";
+import { IoIosHeartEmpty } from "react-icons/io";
 const playfair = localFont({ src: "../fonts/PlayfairDisplay-Italic.ttf" });
 
 const page = () => {
@@ -156,7 +157,7 @@ const page = () => {
             </p>
 
             <div className="   flex items-center justify-center text-xs">
-              <button className=" hover:opacity-80 py-3 uppercase mb-8 2xl:py-4 px-16 2xl:px-20 bg-black  2xl:text-sm text-white ">
+              <button className=" hover:opacity-80 py-3 uppercase mb-8 2xl:py-4 px-16 xl:py-[16px] 2xl:px-20 bg-black xl:text-[14px] xl:tracking-wide  2xl:text-sm text-white ">
                 Start browsing
               </button>
             </div>
@@ -175,7 +176,7 @@ const page = () => {
           </div>
 
           <div className=" w-full flex flex-col-reverse md:flex-row flex-wrap ">
-            <div className=" w-full md:w-[50%] px-6 md:px-16  py-6 md:pt-10 border-r border-[#EBE9E0]">
+            <div className=" w-full md:w-[50%] px-6 md:px-16  py-6 xl:pb-9 md:pt-10 border-r border-[#EBE9E0]">
               <div className=" relative overflow-hidden">
                 <div
                   className="transition-transform duration-700 ease-in-out flex flex-row"
@@ -225,12 +226,12 @@ const page = () => {
                 </div>
               </div>
 
-              <div className="flex flex-row justify-center mt-8">
+              <div className="flex flex-row justify-center mt-8 xl:mt-12">
                 {slides.map((_, index) => (
                   <div
                     key={index}
                     onClick={() => handleDotClick(index)}
-                    className={`w-8 rounded-sm h-1 mx-2 cursor-pointer ${
+                    className={`w-8 xl:w-12 rounded-sm h-1 mx-2 cursor-pointer ${
                       currentIndex === index ? "bg-[#919089]" : "bg-[#EBE9E0]"
                     }`}
                   ></div>
@@ -238,7 +239,7 @@ const page = () => {
               </div>
             </div>
 
-            <div className=" w-full md:w-[50%] flex flex-col pt-8 items-center">
+            <div className=" w-full md:w-[50%] flex flex-col justify-between pt-8 items-center">
               <div className="flex flex-col items-center  px-5 md:px-0 md:items-start">
                 <h2 className="text-2xl md:text-4xl xl:text-[48px] 2xl:text-6xl   text-center font-playfair ">
                   Featured Sellers
@@ -248,16 +249,16 @@ const page = () => {
                   this section. This is a great way for you to discover new
                   people to follow, and new pieces to fall in love with!
                 </p>
-                <button className=" py-3 2xl:py-4 px-16 hover:opacity-80 bg-black text-xs 2xl:text-sm text-white ">
+                <button className=" py-3 xl:w-[175px] xl:py-[15px] 2xl:py-4  hover:opacity-80 bg-black text-xs xl:text-[12px]  text-white ">
                   BECOME A SELLER
                 </button>
               </div>
 
               <Table className=" w-full mt-12">
                 <TableBody>
-                  <TableRow className=" bg-[#EBE9E0]">
+                  <TableRow className=" bg-[#EBE9E0] ">
                     <TableCell className=" text-center font-playfair text-lg  border-y border-[#EBE9E0]">
-                      <div className="flex justify-center xl:justify-start flex-row items-center gap-3 xl:pl-16">
+                      <div className="flex justify-center py-[14px] xl:justify-start flex-row items-center gap-3 xl:pl-16">
                         <div className="bg-[#919089] p-2 rounded-full w-8 h-8 flex items-center justify-center">
                           <Image
                             src="/"
@@ -276,7 +277,7 @@ const page = () => {
                   </TableRow>
                   <TableRow className=" ">
                     <TableCell className=" text-center font-playfair text-lg  border-y border-[#EBE9E0]">
-                      <div className="flex justify-center xl:justify-start flex-row items-center gap-3 xl:pl-16">
+                      <div className="flex py-[14px] justify-center xl:justify-start flex-row items-center gap-3 xl:pl-16">
                         <div className="bg-[#EBE9E0] p-2 rounded-full w-8 h-8 flex items-center justify-center">
                           <Image
                             src="/"
@@ -295,7 +296,7 @@ const page = () => {
                   </TableRow>
                   <TableRow className=" ">
                     <TableCell className=" text-center font-playfair text-lg  border-y border-[#EBE9E0]">
-                      <div className="flex justify-center xl:justify-start flex-row items-center gap-3 xl:pl-[3.9rem]">
+                      <div className="flex py-[14px] justify-center xl:justify-start flex-row items-center gap-3 xl:pl-[3.9rem]">
                         <div className="bg-[#EBE9E0] p-2 rounded-full w-8 h-8 flex items-center justify-center">
                           <Image
                             src="/"
@@ -314,7 +315,7 @@ const page = () => {
                   </TableRow>
                   <TableRow className=" ">
                     <TableCell className=" text-center font-playfair text-lg  border-y border-[#EBE9E0]">
-                      <div className="flex justify-center xl:justify-start flex-row items-center gap-3 xl:pl-16">
+                      <div className="flex py-[14px] justify-center xl:justify-start flex-row items-center gap-3 xl:pl-16">
                         <div className="bg-[#EBE9E0] p-2 rounded-full w-8 h-8 flex items-center justify-center">
                           <Image
                             src="/"
@@ -386,7 +387,7 @@ const page = () => {
                         {isFavorited ? (
                           <FaHeart className="text-red-500" />
                         ) : (
-                          <CiHeart className="text-gray-500" />
+                          <IoIosHeartEmpty className="text-gray-500" />
                         )}
                       </button>
                     </div>
@@ -520,7 +521,7 @@ const page = () => {
 
         <section className="bg-white">
           <div className=" py-6 xl:py-[32px] 2xl:py-8 border-b border-[#EBE9E0] px-4 md:px-6 lg:px-16 flex items-center font-playfair justify-between">
-            <h2 className="text-lg xl:text-[24px]  ">Eras</h2>
+            <h2 className="text-lg xl:text-[24px] uppercase  ">Eras</h2>
             <Link
               href={"#"}
               className="text-sm xl:text-[12px] font-openSans  text-[#463F3A] "
@@ -587,7 +588,7 @@ const page = () => {
 
         <section className="bg-white">
           <div className=" py-6 xl:py-[32px] 2xl:py-8 border-b border-[#EBE9E0] px-4 md:px-6 lg:px-16 flex items-center font-playfair justify-between">
-            <h2 className="text-lg xl:text-[24px]    ">Blog</h2>
+            <h2 className="text-lg xl:text-[24px] uppercase    ">Blog</h2>
             <Link
               href={"/blog"}
               className="text-sm xl:text-[12px] font-openSans  text-[#463F3A] "
@@ -631,8 +632,8 @@ const page = () => {
         {/* how to work section */}
 
         <section className="bg-[#F9F8F3] pt-10 pb-0 md:pt-16 ">
-          <div className="flex flex-col items-center  px-6 pb-12">
-            <h1 className="text-[64px] font-playfair">How it works</h1>
+          <div className="flex flex-col items-center  px-6 pt-4 pb-16">
+            <h1 className="text-[48px] font-playfair">How it works</h1>
             <p className="uppercase tracking-widest py-4 text-xs text-center max-w-lg">
               We are here to help you with your global hunt for the finest and
               quirkiest jewelry and antiques!
@@ -664,7 +665,7 @@ const page = () => {
             />
           </div>
 
-          <div className="bg-[#463F3A] py-10  text-white px-4">
+          <div className="bg-[#463F3A] py-12 xl:py-16 text-white px-4">
             <div className="flex flex-col items-center justify-between">
               <h1
                 className={`text-2xl md:text-[48px] leading-[50px] tracking-tight font-light font-playfair ${playfair.className} `}

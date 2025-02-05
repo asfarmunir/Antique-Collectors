@@ -47,7 +47,7 @@ const Footer = () => {
             />
             <button
               onClick={handleSubscribe}
-              className="uppercase text-xs px-5 py-2.5 2xl:py-3 bg-black text-white hover:opacity-80 "
+              className="uppercase text-xs px-5 xl:px-10 py-2.5 2xl:py-3 bg-black text-white hover:opacity-80 "
             >
               Subscribe
             </button>
@@ -63,7 +63,7 @@ const Footer = () => {
               alt="footer logo"
               className="2xl:w-40 2xl:h-40"
             />
-            <p className="text-[#919089] py-2 text-[12px] w-52">
+            <p className="text-[#463F3A] py-2 text-[12px] w-52">
               Join the hunt for the most beautiful, most unusual antiques and
               jewelry
             </p>

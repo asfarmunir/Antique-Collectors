@@ -91,7 +91,7 @@ const Navbar = () => {
             <a
               href={"/"}
               className={`${
-                pathname === "/" ? "text-black font-bold" : "text-black"
+                pathname === "/" ? "text-[#0D0106] font-bold" : "text-[#0D0106]"
               } text-sm 2xl:text-base`}
             >
               Home
@@ -103,8 +103,8 @@ const Navbar = () => {
                 href={navlink.link}
                 className={`${
                   pathname === navlink.link
-                    ? "text-black font-bold"
-                    : "text-black"
+                    ? "text-[#0D0106] font-bold"
+                    : "text-[#0D0106]"
                 } text-sm 2xl:text-base`}
               >
                 {navlink.title}
@@ -149,7 +149,7 @@ const Navbar = () => {
             <a
               href={"/"}
               className={`${
-                pathname === "/" ? "text-black font-bold" : "text-black"
+                pathname === "/" ? "text-[#0D0106] font-bold" : "text-[#0D0106]"
               } text-sm xl:text-[14px] 2xl:text-base hover:font-bold hover:scale-105 transition-all duration-200`}
             >
               Home
@@ -161,7 +161,9 @@ const Navbar = () => {
             }
             className={`text-sm xl:text-[14px] 2xl:text-base hover:font-bold hover:scale-105 transition-all duration-200
               ${
-                openNav === "products" ? "text-black font-bold" : "text-black"
+                openNav === "products"
+                  ? "text-[#0D0106] font-bold"
+                  : "text-[#0D0106]"
               }`}
           >
             Products
@@ -171,7 +173,11 @@ const Navbar = () => {
               openNav === "sellers" ? setOpenNav("") : setOpenNav("sellers")
             }
             className={`text-sm xl:text-[14px] 2xl:text-base hover:font-bold hover:scale-105 transition-all duration-200
-              ${openNav === "sellers" ? "text-black font-bold" : "text-black"}`}
+              ${
+                openNav === "sellers"
+                  ? "text-[#0D0106] font-bold"
+                  : "text-[#0D0106]"
+              }`}
           >
             Sellers
           </button>
@@ -181,8 +187,8 @@ const Navbar = () => {
                 href={navlink.link}
                 className={`${
                   pathname === navlink.link
-                    ? "text-black font-bold"
-                    : "text-black"
+                    ? "text-[#0D0106] font-bold"
+                    : "text-[#0D0106]"
                 } text-sm xl:text-[14px] 2xl:text-base hover:font-bold hover:scale-105 transition-all duration-200`}
               >
                 {navlink.title}
