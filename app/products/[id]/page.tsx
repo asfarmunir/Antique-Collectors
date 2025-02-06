@@ -21,6 +21,7 @@ import { useProductDetails } from "@/hooks/useProducts";
 import { HiOutlineUpload } from "react-icons/hi";
 import { VscSend } from "react-icons/vsc";
 import EnquiryModal from "@/components/shared/EnquiryModal";
+import { IoIosHeartEmpty } from "react-icons/io";
 
 const ProductDetails = ({ params }: { params: any }) => {
   //  const [products, setProducts] = useState<any>(null); // Full product list
@@ -195,7 +196,7 @@ const ProductDetails = ({ params }: { params: any }) => {
               <div className="flex gap-3 mt-6">
                 <Button
                   label="Add to favorite"
-                  icon={<FaRegHeart className="text-xl" />}
+                  icon={<IoIosHeartEmpty className="text-xl" />}
                   className="bg-white uppercase text-xs hover:bg-black hover:text-white text-nowrap 2xl:text-sm border border-black text-black w-[70%]  py-2.5 "
                 />
                 <EnquiryModal />

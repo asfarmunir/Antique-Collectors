@@ -17,6 +17,7 @@ import { useParams, useRouter } from "next/navigation";
 import useProducts from "@/hooks/useProducts";
 import { checkboxLabels, conditionLabels, sortOptions } from "@/lib/constants";
 import { FaHeart } from "react-icons/fa";
+import { IoIosHeartEmpty } from "react-icons/io";
 
 const Product = () => {
   const { products, toggleFavorite, isFavorite } = useProducts();
@@ -134,7 +135,7 @@ const Product = () => {
                     onSelect={handleSelect}
                     isOpen={openDropdown === 1}
                     toggleDropdown={() => toggleDropdown(1)}
-                    className="bg-white w-full border md:w-40 border-[#EBE9E0]"
+                    className="bg-white w-full border xl:w-[186px] xl:p-[16px] border-[#EBE9E0]"
                   />
                 </div>
               </div>
@@ -225,7 +226,7 @@ const Product = () => {
                               {isFavorited ? (
                                 <FaHeart className="text-red-500" /> // Filled heart for favorited
                               ) : (
-                                <CiHeart className="text-gray-500" /> // Outline heart for non-favorited
+                                <IoIosHeartEmpty className="text-gray-500" /> // Outline heart for non-favorited
                               )}
                             </button>
                           </div>
