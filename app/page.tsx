@@ -239,8 +239,8 @@ const page = () => {
               </div>
             </div>
 
-            <div className=" w-full md:w-[50%] flex flex-col justify-between pt-8 items-center">
-              <div className="flex flex-col items-center  px-5 md:px-0 md:items-start">
+            <div className=" w-full md:w-[50%] flex flex-col justify-between pt-8 items-center xl:items-start">
+              <div className="flex flex-col items-start  px-5 md:px-0 md:items-start xl:pl-[4.8rem]">
                 <h2 className="text-2xl md:text-4xl xl:text-[48px] 2xl:text-6xl   text-center font-playfair ">
                   Featured Sellers
                 </h2>
@@ -258,8 +258,8 @@ const page = () => {
                 <TableBody>
                   <TableRow className=" bg-[#EBE9E0] ">
                     <TableCell className=" text-center font-playfair text-lg  border-y border-[#EBE9E0]">
-                      <div className="flex justify-center py-[14px] xl:justify-start flex-row items-center gap-3 xl:pl-16">
-                        <div className="bg-[#919089] p-2 rounded-full w-8 h-8 flex items-center justify-center">
+                      <div className="flex justify-center py-[14px] xl:justify-start flex-row items-center gap-3 xl:pl-14">
+                        <div className="bg-[#919089] p-2 rounded-full w-8 h-8 xl:w-10 xl:h-10 flex items-center justify-center">
                           <Image
                             src="/"
                             width={10}
@@ -277,8 +277,8 @@ const page = () => {
                   </TableRow>
                   <TableRow className=" ">
                     <TableCell className=" text-center font-playfair text-lg  border-y border-[#EBE9E0]">
-                      <div className="flex py-[14px] justify-center xl:justify-start flex-row items-center gap-3 xl:pl-16">
-                        <div className="bg-[#EBE9E0] p-2 rounded-full w-8 h-8 flex items-center justify-center">
+                      <div className="flex py-[14px] justify-center  xl:justify-start flex-row items-center gap-3 xl:pl-14">
+                        <div className="bg-[#EBE9E0] p-2 rounded-full w-8 h-8 xl:w-10 xl:h-10 flex items-center justify-center">
                           <Image
                             src="/"
                             width={10}
@@ -296,8 +296,8 @@ const page = () => {
                   </TableRow>
                   <TableRow className=" ">
                     <TableCell className=" text-center font-playfair text-lg  border-y border-[#EBE9E0]">
-                      <div className="flex py-[14px] justify-center xl:justify-start flex-row items-center gap-3 xl:pl-[3.9rem]">
-                        <div className="bg-[#EBE9E0] p-2 rounded-full w-8 h-8 flex items-center justify-center">
+                      <div className="flex py-[14px] justify-center xl:justify-start flex-row items-center gap-3 xl:pl-14">
+                        <div className="bg-[#EBE9E0] p-2 rounded-full w-8 h-8 xl:w-10 xl:h-10 flex items-center justify-center">
                           <Image
                             src="/"
                             width={10}
@@ -315,8 +315,8 @@ const page = () => {
                   </TableRow>
                   <TableRow className=" ">
                     <TableCell className=" text-center font-playfair text-lg  border-y border-[#EBE9E0]">
-                      <div className="flex py-[14px] justify-center xl:justify-start flex-row items-center gap-3 xl:pl-16">
-                        <div className="bg-[#EBE9E0] p-2 rounded-full w-8 h-8 flex items-center justify-center">
+                      <div className="flex py-[14px] justify-center xl:justify-start flex-row items-center gap-3 xl:pl-14">
+                        <div className="bg-[#EBE9E0] p-2 rounded-full w-8 h-8 xl:w-10 xl:h-10 flex items-center justify-center">
                           <Image
                             src="/"
                             width={10}
@@ -492,7 +492,7 @@ const page = () => {
           </div>
         </section>
 
-        <section className=" bg-[#F9F8F3] p-8 md:p-10  lg:px-16 lg:py-16">
+        <section className=" bg-[#F9F8F3] p-8 md:p-10  lg:px-16 lg:py-16 xl:py-[80px]">
           <h1 className="text-3xl lg:text-5xl xl:text-[48px] text-[#463F3A] font-playfair mb-16">
             Browse by Category
           </h1>
@@ -536,7 +536,7 @@ const page = () => {
             <div className="md:col-span-3 flex flex-col justify-center ">
               <div className="text-3xl md:text-[48px] space-y-4 font-playfair ">
                 <h1
-                  className={` ${playfair.className} leading-[12px] md:leading-[50px] tracking-tighter`}
+                  className={` ${playfair.className} leading-[12px] md:leading-[50px] `}
                 >
                   Victorian Elegance:
                 </h1>
@@ -545,7 +545,7 @@ const page = () => {
                 </h1>
               </div>
 
-              <p className="py-10 xl:py-16 pr-1 text-[14px] text-[#919089] max-w-2xl 2xl:max-w-4xl">
+              <p className="py-10 xl:py-16 pr-1 text-[14px] text-[#919089] max-w-2xl xl:max-w-4xl">
                 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Soluta
                 exercitationem harum magnam eaque cupiditate natus. Maxime
                 possimus perspiciatis id sed illum reprehenderit natus alias
@@ -613,7 +613,7 @@ const page = () => {
                   width={120}
                   alt={b.title}
                 />
-                <h1 className="text-[24px] font-playfair py-3 capitalize tracking-tight">
+                <h1 className="text-[24px] font-playfair pt-3 pb-4 capitalize tracking-tight">
                   Unlocking the Past: How to Identify Authentic Victorian
                   Antiques
                 </h1>
@@ -621,7 +621,7 @@ const page = () => {
 
                 <button
                   onClick={() => handleReadMore(b.id)}
-                  className=" pt-4 pb-6 text-sm text-[#0D0106]"
+                  className=" pt-5 pb-6 text-sm text-[#0D0106]"
                 >
                   READ MORE
                 </button>
