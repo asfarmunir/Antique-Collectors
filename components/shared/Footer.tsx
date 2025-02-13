@@ -31,8 +31,8 @@ const Footer = () => {
   };
   return (
     <>
-      <section className="py-5 px-4 md:px-8">
-        <div className=" flex pb-4 flex-row flex-wrap items-center justify-between gap-4 ">
+      <section className="py-5 px-4 md:px-12">
+        <div className=" flex py-8 flex-row flex-wrap items-center justify-between gap-4 ">
           <h1 className="text-2xl xl:text-[32px] 2xl:text-4xl capitalize font-playfair py-6">
             Subscribe to our Newsletter
           </h1>
@@ -40,14 +40,14 @@ const Footer = () => {
           <div className="flex flex-row items-center  justify-center">
             <InputField
               placeholder="Your Email Address"
-              className="border border-[#EBE9E0] md:min-w-64 text-xs 2xl:text-sm text-[#919089] placeholder:text-[#919089] px-4 py-2.5 "
+              className="border border-[#EBE9E0] md:min-w-64 text-xs 2xl:text-sm text-[#919089] placeholder:text-[#919089] px-4 py-[16px] "
               type="email"
               value={subEmail}
               onChange={(e) => setSubEmail(e.target.value)}
             />
             <button
               onClick={handleSubscribe}
-              className="uppercase text-xs px-5 xl:px-10 py-2.5 2xl:py-3 bg-black text-white hover:opacity-80 "
+              className="uppercase text-xs px-5 xl:px-10 py-[16px] bg-black text-white hover:opacity-80 "
             >
               Subscribe
             </button>
@@ -71,12 +71,12 @@ const Footer = () => {
             <div className="flex flex-row gap-2 py-4">
               <FaFacebookF
                 key="facebook"
-                className="bg-[#EBE9E0] text-[36px] text-[#919089] p-1.5 cursor-pointer"
+                className="bg-[#EBE9E0] text-[36px] text-black p-1.5 cursor-pointer"
                 href="#"
               />
               <AiFillInstagram
                 key="instagram"
-                className="bg-[#EBE9E0] text-[36px] text-[#919089] p-1.5 cursor-pointer"
+                className="bg-[#EBE9E0] text-[36px] text-[black] p-1.5 cursor-pointer"
                 href="#"
               />
             </div>
@@ -160,8 +160,8 @@ const Footer = () => {
 
         {/* copy right */}
 
-        <div className="border-t border-[#EBE9E0] py-4">
-          <p className="text-xs 2xl:text-sm text-[#0D0106] text-center">
+        <div className="border-t border-[#EBE9E0] py-6 pt-9">
+          <p className="text-xs xl:text-[18px] text-[#0D0106] text-center">
             Copyright © 2025 The Antique Collector | All Rights Reserved |
             <span className=" underline text-[#919089]">
               {" "}

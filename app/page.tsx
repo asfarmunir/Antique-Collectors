@@ -78,7 +78,7 @@ const page = () => {
     <>
       <main>
         <section
-          className="w-full h-[600px]  lg:h-screen flex items-center justify-center flex-col  relative"
+          className="w-full h-[713px]  lg:h-screen flex items-center justify-center flex-col  relative"
           style={{
             backgroundImage: "url(/heroBg.png)",
             backgroundSize: "cover",
@@ -240,7 +240,7 @@ const page = () => {
             </div>
 
             <div className=" w-full md:w-[50%] flex flex-col justify-between pt-8 items-center xl:items-start">
-              <div className="flex flex-col items-start  px-5 md:px-0 md:items-start xl:pl-[4.8rem]">
+              <div className="flex flex-col items-start  px-5 md:px-16 md:items-start xl:pl-[4.8rem]">
                 <h2 className="text-2xl md:text-4xl xl:text-[48px] 2xl:text-6xl   text-center font-playfair ">
                   Featured Sellers
                 </h2>
@@ -249,7 +249,7 @@ const page = () => {
                   this section. This is a great way for you to discover new
                   people to follow, and new pieces to fall in love with!
                 </p>
-                <button className=" py-3 xl:w-[175px] xl:py-[15px] 2xl:py-4  hover:opacity-80 bg-black text-xs xl:text-[12px]  text-white ">
+                <button className=" py-3 w-[175px] xl:py-[15px] 2xl:py-4  hover:opacity-80 bg-black text-xs xl:text-[12px]  text-white ">
                   BECOME A SELLER
                 </button>
               </div>
@@ -440,7 +440,7 @@ const page = () => {
           </div>
         </section>
         <section
-          className="  relative h-[80svh] md:h-[140svh] w-full flex-col flex items-center justify-center"
+          className="  relative h-[80svh] md:h-[140svh] xl:h-[1080px] w-full flex-col flex items-center justify-center"
           style={{
             backgroundImage: "url(/images/bg.svg)",
             backgroundSize: "cover",
@@ -604,7 +604,7 @@ const page = () => {
             {posts.map((b) => (
               <div
                 key={b.id}
-                className="w-full py-3 md:py-5 md:pr-4  border-b-0  md:border-r border-[#DFDEDB] last:border-r-0"
+                className="w-full py-3 md:py-5 md:pt-[55px] md:pr-4  border-b-0  md:border-r border-[#DFDEDB] last:border-r-0"
               >
                 <Image
                   src="/images/blogs/b1.png" //replacce with original image
@@ -662,7 +662,7 @@ const page = () => {
             <Button
               onClick={handleLogin}
               label="Create a Free Account"
-              className="uppercase my-8 text-sm py-4 px-8  hover:opacity-80"
+              className="uppercase my-8 text-sm xl:text-[12px] py-4 px-8  hover:opacity-80"
             />
           </div>
 
