@@ -244,7 +244,7 @@ const page = () => {
                 <h2 className="text-2xl md:text-4xl xl:text-[48px] 2xl:text-6xl   text-center font-playfair ">
                   Featured Sellers
                 </h2>
-                <p className="text-center md:text-start max-w-xl  text-sm text-[#463F3A] text-[14px] xl:text-[16px] 2xl:text-base my-6">
+                <p className="text-center md:text-start max-w-xl  text-sm text-[#463F3A] text-[14px] xl:text-[16px] 2xl:text-base my-[24px]">
                   Every month we showcase several dealers and their galleries in
                   this section. This is a great way for you to discover new
                   people to follow, and new pieces to fall in love with!
@@ -258,7 +258,7 @@ const page = () => {
                 <TableBody>
                   <TableRow className=" bg-[#EBE9E0] ">
                     <TableCell className=" text-center font-playfair text-lg  border-y border-[#EBE9E0]">
-                      <div className="flex justify-center py-[14px] xl:justify-start flex-row items-center gap-3 xl:pl-14">
+                      <div className="flex justify-center py-[14px] xl:justify-start flex-row items-center gap-3 xl:pl-[60px]">
                         <div className="bg-[#919089] p-2 rounded-full w-8 h-8 xl:w-10 xl:h-10 flex items-center justify-center">
                           <Image
                             src="/"
@@ -277,7 +277,7 @@ const page = () => {
                   </TableRow>
                   <TableRow className=" ">
                     <TableCell className=" text-center font-playfair text-lg  border-y border-[#EBE9E0]">
-                      <div className="flex py-[14px] justify-center  xl:justify-start flex-row items-center gap-3 xl:pl-14">
+                      <div className="flex py-[14px] justify-center  xl:justify-start flex-row items-center gap-3 xl:pl-[60px]">
                         <div className="bg-[#EBE9E0] p-2 rounded-full w-8 h-8 xl:w-10 xl:h-10 flex items-center justify-center">
                           <Image
                             src="/"
@@ -296,7 +296,7 @@ const page = () => {
                   </TableRow>
                   <TableRow className=" ">
                     <TableCell className=" text-center font-playfair text-lg  border-y border-[#EBE9E0]">
-                      <div className="flex py-[14px] justify-center xl:justify-start flex-row items-center gap-3 xl:pl-14">
+                      <div className="flex py-[14px] justify-center xl:justify-start flex-row items-center gap-3 xl:pl-[60px]">
                         <div className="bg-[#EBE9E0] p-2 rounded-full w-8 h-8 xl:w-10 xl:h-10 flex items-center justify-center">
                           <Image
                             src="/"
@@ -315,7 +315,7 @@ const page = () => {
                   </TableRow>
                   <TableRow className=" ">
                     <TableCell className=" text-center font-playfair text-lg  border-y border-[#EBE9E0]">
-                      <div className="flex py-[14px] justify-center xl:justify-start flex-row items-center gap-3 xl:pl-14">
+                      <div className="flex py-[14px] justify-center xl:justify-start flex-row items-center gap-3 xl:pl-[60px]">
                         <div className="bg-[#EBE9E0] p-2 rounded-full w-8 h-8 xl:w-10 xl:h-10 flex items-center justify-center">
                           <Image
                             src="/"
@@ -344,13 +344,11 @@ const page = () => {
               <h2 className="text-2xl xl:text-[24px] uppercase  font-playfair mb-2 2xl:text-3xl  ">
                 New Arrivals
               </h2>
-              <p className=" font-light text-sm xl:text-[16px] 2xl:text-base text-[#919089]">
+              <p className=" font-light font-openSans text-sm xl:text-[16px] 2xl:text-base text-[#919089]">
                 All the latest pieces land here in real time. <br />{" "}
-                <span className="font-semibold underline text-black">
-                  Sign up
-                </span>{" "}
-                for an account to create your own custom feed, and only see
-                products from sellers you follow
+                <span className=" underline text-black">Sign up</span> for an
+                account to create your own custom feed, and only see products
+                from sellers you follow
               </p>
             </div>
             <Link
@@ -461,20 +459,20 @@ const page = () => {
             height={280}
             className=" absolute bottom-12  right-16 md:block hidden "
           />
-          <h2 className=" text-3xl lg:text-5xl text-white mt-6  text-center font-playfair ">
+          <h2 className=" text-[48px] text-white mt-6  text-center font-playfair ">
             Live Presentations
           </h2>
-          <p className="text-center px-6 max-w-md uppercase font-thin 2xl:max-w-lg text-[#FFFFFF] text-sm 2xl:text-base mt-6">
+          <p className="text-center px-6 max-w-md uppercase font-light 2xl:max-w-lg text-[#EBE9E0] text-[16px] tracking-wide mt-6">
             Set a reminder, and book a virtual seat!
           </p>
-          <p className="text-center px-6 max-w-[26rem] 2xl:max-w-[32rem] text-[#FFFFFF] text-sm 2xl:text-base my-6">
+          <p className="text-center px-6 max-w-[26rem] xl:max-w-[32rem] text-[#FFFFFF] text-[16px] my-6">
             It’s time for a Live Presentation. Be first in line. Watch a Seller
             present their latest finds via the medium of video, get all the
             latest gossip and buy directly, right then and there!
           </p>
           <button
             onClick={handleLiveShows}
-            className=" py-3 uppercase xl:py-[16px] px-[24px]  bg-white hover:bg-gray-900 text-xs 2xl:text-sm hover:text-white text-black "
+            className=" py-3 uppercase xl:py-[16px] xl:tracking-wide px-[24px]  bg-white hover:bg-gray-900 text-xs 2xl:text-sm hover:text-white text-black "
           >
             see upcoming live shows
           </button>
@@ -520,7 +518,7 @@ const page = () => {
         </section>
 
         <section className="bg-white">
-          <div className=" py-6 xl:py-[32px] 2xl:py-8 border-b border-[#EBE9E0] px-4 md:px-6 lg:px-16 flex items-center font-playfair justify-between">
+          <div className=" py-6 xl:py-[32px] 2xl:py-8 border-y border-[#EBE9E0] px-4 md:px-6 lg:px-16 flex items-center font-playfair justify-between">
             <h2 className="text-lg xl:text-[24px] uppercase  ">Eras</h2>
             <Link
               href={"#"}
@@ -617,7 +615,9 @@ const page = () => {
                   Unlocking the Past: How to Identify Authentic Victorian
                   Antiques
                 </h1>
-                <p className="text-sm text-[#919089] line-clamp-6">{b.body}</p>
+                <p className="text-[14px] font-openSans text-[#919089] line-clamp-6">
+                  {b.body}
+                </p>
 
                 <button
                   onClick={() => handleReadMore(b.id)}
@@ -639,7 +639,7 @@ const page = () => {
               We are here to help you with your global hunt for the finest and
               quirkiest jewelry and antiques!
             </p>
-            <p className="md:w-[600px] xl:text-[14px] py-2 text-balance text-center  text-[#919089]">
+            <p className="md:w-[610px] xl:text-[14px] font-openSans py-2 text-balance text-center  text-[#919089]">
               By creating an account you will be able to follow all your
               favourite sellers, and see all their latest finds, here on the
               website, and also on the accompanying app. You will also receive
@@ -648,7 +648,7 @@ const page = () => {
               pieces you have your eye on onto your own wall, for later
               reference.
             </p>
-            <p className="md:w-[550px]  xl:text-[14px]  text-pretty my-3 text-center text-[#919089]">
+            <p className="md:w-[550px]  xl:text-[14px]  text-pretty my-3 font-openSans text-center text-[#919089]">
               As part of{" "}
               <span className="text-black px-0.5">The AC Community</span> you
               will have access to

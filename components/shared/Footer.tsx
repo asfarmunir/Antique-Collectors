@@ -47,7 +47,7 @@ const Footer = () => {
             />
             <button
               onClick={handleSubscribe}
-              className="uppercase text-xs px-5 xl:px-10 py-[16px] bg-black text-white hover:opacity-80 "
+              className="uppercase text-xs 2xl:text-sm px-5 xl:px-10 py-[16px] border border-black bg-black text-white hover:opacity-80 "
             >
               Subscribe
             </button>
@@ -161,7 +161,7 @@ const Footer = () => {
         {/* copy right */}
 
         <div className="border-t border-[#EBE9E0] py-6 pt-9">
-          <p className="text-xs xl:text-[18px] text-[#0D0106] text-center">
+          <p className="text-xs xl:text-[18px] text-[#0D0106] text-center font-openSans">
             Copyright © 2025 The Antique Collector | All Rights Reserved |
             <span className=" underline text-[#919089]">
               {" "}
