@@ -5,8 +5,8 @@ const page = () => {
   return (
     <>
       <div className="py-4 xl:py-[32px] px-4 md:px-6 lg:px-12 border-b border-[#EBE9E0]">
-        <h1 className="text-xs">Home / Fairs & Events</h1>
-        <h1 className="font-playfair pt-4 uppercase text-xl ">
+        <h1 className="text-xs text-[#919089]">Home / Fairs & Events</h1>
+        <h1 className="font-playfair pt-4 uppercase text-[24px] ">
           fairs & events
         </h1>
       </div>

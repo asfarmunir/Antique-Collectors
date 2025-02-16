@@ -24,8 +24,10 @@ const BlogDetails = ({ params }: { params: any }) => {
     <>
       <div>
         <div className="py-4 px-4 md:px-12 border border-[#EBE9E0]">
-          <h1 className="text-xs">Home / Blog / Blog Post Title</h1>
-          <h1 className="font-playfair pt-4 uppercase text-xl 2xl:text-2xl ">
+          <h1 className="text-xs text-[#919089]">
+            Home / Blog / Blog Post Title
+          </h1>
+          <h1 className="font-playfair pt-4 uppercase text-[24px] 2xl:text-2xl ">
             {blogDetails?.title}
           </h1>
         </div>

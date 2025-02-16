@@ -11,8 +11,8 @@ const PersonalInfo = () => {
   return (
     <div className="px-5 md:px-12">
       <div className="py-6 xl:py-[32px] border-b border-[#EBE9E0] pb-5 mb-9">
-        <h1 className="text-xs">Home / Forum</h1>
-        <h1 className="font-playfair pt-4 uppercase text-xl ">FORUM</h1>
+        <h1 className="text-xs text-[#919089]">Home / Forum</h1>
+        <h1 className="font-playfair pt-4 uppercase text-[24px] ">FORUM</h1>
       </div>
       <div className=" w-full flex flex-col sm:flex-row items-start gap-5 md:gap-8   ">
         <div className=" w-full sm:w-1/4">

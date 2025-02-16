@@ -65,7 +65,7 @@ const ProductDetails = ({ params }: { params: any }) => {
     <>
       <div>
         <div className="py-4 px-4 md:px-6 lg:px-12 border-y border-[#EBE9E0]">
-          <h1 className="text-xs">
+          <h1 className="text-xs text-[#919089]">
             Home / Products / {productDetails?.category}
           </h1>
           <h1 className="font-playfair pt-4 uppercase text-[24px] ">
@@ -160,13 +160,14 @@ const ProductDetails = ({ params }: { params: any }) => {
               </div>
 
               {/* Product Title */}
-              <h1 className="text-lg md:text-xl uppercase font-playfair my-4">
+              <h1 className="text-[20px] md:text-xl uppercase font-playfair my-4">
                 {productDetails?.title}
               </h1>
 
               {/* Product Description */}
-              <p className="text-[#919089]  mb-4 text-sm md:text-sm">
-                {productDetails?.description}
+              <p className="text-[#919089]  mb-4 text-sm md:text-[16px]">
+                {productDetails?.description} Lorem ipsum dolor sit amet
+                consectetur adipisicing elit. Est, nemo labore, culpa
               </p>
 
               {/* Product Specifications */}
@@ -415,13 +416,13 @@ const ProductDetails = ({ params }: { params: any }) => {
                       </div>
                     </div>
                     <div className="w-full mt-4">
+                      <h2 className="text-sm md:text-[16px] mb-2">{p.title}</h2>
                       <div className="flex flex-row gap-4 justify-between">
                         <p className="text-[#919089] mb-1 text-sm">{p.brand}</p>
                         <Link href={"#"} className="text-[#919089] text-sm">
                           FOLLOW
                         </Link>
                       </div>
-                      <h2 className="text-sm md:text-base">{p.title}</h2>
                     </div>
                   </div>
                 );

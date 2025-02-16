@@ -153,6 +153,11 @@ const Footer = () => {
                     </Link>
                   </div>
                 ))}
+                <div className="">
+                  <Link href={"/login"} className="text-black text-[14px] ">
+                    BECOME A SELLER
+                  </Link>
+                </div>
               </div>
             </div>
           </div>

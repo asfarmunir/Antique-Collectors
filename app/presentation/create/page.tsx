@@ -97,10 +97,10 @@ const page: React.FC = () => {
     <>
       <div className="px-5 md:px-12">
         <div className="py-6 border-b border border-[#EBE9E0] pb-5 mb-9">
-          <h1 className="text-xs">
+          <h1 className="text-xs text-[#919089]">
             Home / Live Presentation / Create a Live Presentation
           </h1>
-          <h1 className="font-playfair pt-4 uppercase text-xl 2xl:text-2xl ">
+          <h1 className="font-playfair pt-4 uppercase text-[24px] 2xl:text-2xl ">
             Create a Live Presentation
           </h1>
         </div>
@@ -280,7 +280,7 @@ const page: React.FC = () => {
       {/* Filter and Sort Section */}
 
       <div className="px-5 md:px-12 mt-8 md:mt-12 ">
-        <h1 className="font-playfair pt-4 uppercase text-xl ">
+        <h1 className="font-playfair pt-4 uppercase text-[24px] ">
           Products to Showcase (Optional)
         </h1>
         <p className="text-sm text-[#ebe3bd]">

@@ -83,8 +83,10 @@ const Product = () => {
     <>
       <div>
         <div className="py-4 xl:py-[32px] px-4 md:px-6 lg:px-12">
-          <h1 className="text-xs">Home / Products / New Arrivals</h1>
-          <h1 className="font-playfair pt-4 uppercase text-xl 2xl:text-2xl ">
+          <h1 className="text-xs text-[#919089]">
+            Home / Products / New Arrivals
+          </h1>
+          <h1 className="font-playfair pt-4 uppercase text-[24px] 2xl:text-2xl ">
             Latest Products
           </h1>
         </div>
@@ -100,7 +102,10 @@ const Product = () => {
               <BiCandles className="text-lg text-[#0D0106]" />
               <p className="text-xs text-[#0D0106] ">FILTER</p>
             </div>
-            <p className="uppercase text-xs md:hidden">
+            <p
+              className="uppercase text-xs 
+text-[#463F3A] md:hidden"
+            >
               Showing {products.length} Results
             </p>
 
@@ -250,7 +255,7 @@ const Product = () => {
                           </div> */}
                         </div>
                         <div className="w-full pt-4 flex flex-col justify-between">
-                          <h2 className="text-sm pt-2 md:text-[12px] 2xl:text-base uppercase">
+                          <h2 className="text-sm pt-2 md:text-[12px] xl:text-[14px] 2xl:text-base uppercase">
                             {p.title}
                           </h2>
                           <div className="text-sm flex flex-row pt-2 justify-between gap-4">
@@ -365,13 +370,13 @@ const Product = () => {
         <div className="bg-[#463F3A] px-12 py-10 md:block hidden">
           <div className="grid grid-cols-3">
             <div className="col-span-2 text-white py-20 space-y-4">
-              <h1 className="font-playfair text-base sm:text-xl md:text-3xl lg:text-5xl">
+              <h1 className="font-playfair text-base sm:text-xl md:text-3xl xl:text-[48px] ">
                 Live Presentations
               </h1>
-              <p className="text-[#EBE9E0] font-thin uppercase">
+              <p className="text-[#EBE9E0] xl:text-[14px] py-4 font-thin uppercase">
                 Set a reminder, and book a virtual seat!
               </p>
-              <p className="text-sm text-[#EBE9E0] pb-5 max-w-3xl">
+              <p className="text-[14px] text-[#EBE9E0] pb-6 max-w-3xl">
                 It’s time for a Live Presentation. Be first in line. Watch a
                 Seller present their latest finds via the medium of video, get
                 all the latest gossip and buy directly, right then and there!
@@ -379,7 +384,7 @@ const Product = () => {
 
               <Button
                 label="See Upcoming live shows"
-                className="uppercase text-xs mt-4 2xl:text-sm px-7 py-4 hover:bg-[#2D2D2D] hover:text-white bg-white text-[#2D2D2D]"
+                className="uppercase text-xs mt-4 xl:text-[12px] px-7 py-4 hover:bg-[#2D2D2D] hover:text-white bg-white text-[#2D2D2D]"
               />
             </div>
 
@@ -404,18 +409,18 @@ const Product = () => {
                   />
                 </div>
 
-                <h3 className="text-white font-playfair text-[20px]">
+                <h3 className="text-white font-playfair mt-3 text-[20px]">
                   Antique Showcase Live: Unveiling Rare jewelry Finds in Real
                   Time
                 </h3>
-                <p className="text-slate-50 py-2 text-sm">
+                <p className="text-[#EBE9E0] py-2 text-sm">
                   Patrick Boyd Carpenter
                 </p>
 
                 <div className="mt-5">
                   <Button
                     label="Set a reminder"
-                    className="uppercase text-sm bg-[#463F3A] w-full hover:opacity-80"
+                    className="uppercase text-[12px] bg-[#463F3A] w-full hover:opacity-80"
                   />
                 </div>
               </div>
@@ -560,11 +565,11 @@ const Product = () => {
         </div>
 
         <div className="">
-          <div className="flex flex-row justify-center items-center py-6">
+          <div className="flex flex-row justify-center items-center py-10">
             <Button
               onClick={handleViewToggle}
               label={isViewMore ? "View More" : "View Less"}
-              className="uppercase border border-[#0D0106] hover:bg-[#0D0106] hover:text-white py-3 px-8 md:px-24 text-sm   bg-white text-[#0D0106] "
+              className="uppercase border border-[#0D0106] hover:bg-[#0D0106] hover:text-white py-3 px-12 md:px-24 text-[12px]   bg-white text-[#0D0106] "
             />
           </div>
         </div>

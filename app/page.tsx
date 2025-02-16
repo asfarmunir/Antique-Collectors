@@ -241,10 +241,10 @@ const page = () => {
 
             <div className=" w-full md:w-[50%] flex flex-col justify-between pt-8 items-center xl:items-start">
               <div className="flex flex-col items-start  px-5 md:px-16 md:items-start xl:pl-[4.8rem]">
-                <h2 className="text-2xl md:text-4xl xl:text-[48px] 2xl:text-6xl   text-center font-playfair ">
+                <h2 className="text-2xl md:text-4xl xl:text-[48px] 2xl:text-6xl text-[#463F3A]   text-center font-playfair ">
                   Featured Sellers
                 </h2>
-                <p className="text-center md:text-start max-w-xl  text-sm text-[#463F3A] text-[14px] xl:text-[16px] 2xl:text-base my-[24px]">
+                <p className="text-center md:text-start max-w-xl  text-sm text-[#463F3A] text-[14px] xl:text-[16px] 2xl:text-base my-[26px]">
                   Every month we showcase several dealers and their galleries in
                   this section. This is a great way for you to discover new
                   people to follow, and new pieces to fall in love with!
@@ -679,17 +679,18 @@ const page = () => {
 
               <div className="w-full md:w-1/3 my-12 flex flex-row  ">
                 <InputField
+                  placeholder="Your Email Address"
+                  className="border border-[#EBE9E0] md:min-w-64 text-xs 2xl:text-sm text-[#919089] placeholder:text-[#919089] px-4 py-[16px] "
                   type="email"
                   value={subEmail}
                   onChange={(e) => setSubEmail(e.target.value)}
-                  className="flex-1 w-3/4 md:w-3/4  placeholder:text-xs md:placeholder:text-sm text-xs md:text-sm py-3 px-3"
-                  placeholder="Your Email Address"
                 />
-                <Button
+                <button
                   onClick={handleSubscribe}
-                  label="Subscribe"
-                  className=" w-1/4 md:w-1/4 py-3 px-4 uppercase text-xs md:text-sm"
-                />
+                  className="uppercase text-xs 2xl:text-sm px-5 xl:px-10 py-[16px] border border-black bg-black text-white hover:opacity-80 "
+                >
+                  Subscribe
+                </button>
               </div>
             </div>
             <div className="px-4 pt-4 flex  flex-row flex-wrap  justify-around items-center   ">

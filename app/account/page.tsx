@@ -48,8 +48,10 @@ const page = () => {
   return (
     <div>
       <div className="py-6 px-6 md:px-12">
-        <h1 className="text-xs">Home / My Account</h1>
-        <h1 className="font-playfair pt-4 uppercase text-xl ">My account</h1>
+        <h1 className="text-xs text-[#919089]">Home / My Account</h1>
+        <h1 className="font-playfair pt-4 uppercase text-[24px] ">
+          My account
+        </h1>
       </div>
       <div className="  px-6 md:px-12 py-7">
         <h2 className=" text-3xl font-playfair">My Account</h2>

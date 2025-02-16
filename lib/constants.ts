@@ -52,6 +52,5 @@ export  const sortOptions = [
   export const myaccountLink = [
     { label: "My Favorites", href:"#" },
     { label: "Help & Support", href: "#"},
-    { label: "BECOME A SELLER", href: "#"}
   ];
   

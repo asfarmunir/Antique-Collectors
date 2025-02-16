@@ -13,6 +13,7 @@ import { blog as blogData } from "@/lib/data";
 import { useRouter } from "next/navigation";
 import { checkboxLabels, conditionLabels, sortOptions } from "@/lib/constants";
 import { useBlogs } from "@/hooks/useBlogs";
+import localFont from "next/font/local";
 
 const post = [
   {
@@ -36,6 +37,7 @@ const post = [
     date: "03 AUG 2022",
   },
 ];
+const playfair = localFont({ src: "../../fonts/PlayfairDisplay-Italic.ttf" });
 
 const Blog = () => {
   const { blog, error } = useBlogs();
@@ -86,7 +88,9 @@ const Blog = () => {
         <div className="flex relative flex-col-reverse gap-5 bg-[#F9F8F3] md:flex-row h-[480px] md:h-[500px] xl:h-[680px] border-b border-[#EBE9E0]">
           {/* Text Section */}
           <div className="w-full px-6 md:px-12 flex flex-col my-auto justify-center h-full">
-            <h1 className="text-3xl xl:text-[48px] xl:leading-snug md:text-4xl 2xl:text-5xl font-playfair italic">
+            <h1
+              className={`text-3xl xl:text-[48px] xl:leading-snug md:text-4xl 2xl:text-5xl font-playfair italic ${playfair.className}`}
+            >
               Discovering the Timeless <br /> Beauty of Antiques
             </h1>
             <div className="flex mt-4 text-[#919089] items-center gap-2">
@@ -152,8 +156,10 @@ const Blog = () => {
 
         <div>
           <div className="py-4 xl:py-[32px] px-6 md:px-12">
-            <h1 className="text-xs">Home / Products / New Arrivals</h1>
-            <h1 className="font-playfair pt-4 uppercase text-xl ">Blog</h1>
+            <h1 className="text-xs text-[#919089]">
+              Home / Products / New Arrivals
+            </h1>
+            <h1 className="font-playfair pt-4 uppercase text-[24px] ">Blog</h1>
           </div>
 
           <section className="bg-[#F9F8F3] py-4 px-6 md:px-12">

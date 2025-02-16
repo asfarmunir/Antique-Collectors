@@ -59,8 +59,10 @@ const Seller = () => {
     <>
       <div>
         <div className="py-4 xl:py-[32px] px-4 md:px-6 lg:px-12">
-          <h1 className="text-xs">Home / Sellers / A-Z Sellers</h1>
-          <h1 className="font-playfair pt-4 uppercase text-xl">Sellers</h1>
+          <h1 className="text-xs text-[#919089]">
+            Home / Sellers / A-Z Sellers
+          </h1>
+          <h1 className="font-playfair pt-4 uppercase text-[24px]">Sellers</h1>
         </div>
 
         <section className="bg-[#F9F8F3] py-4 px-4 lg:px-12 md:px-6">
@@ -72,7 +74,10 @@ const Seller = () => {
               <BiCandles className="text-lg text-[#0D0106]" />
               <p className="text-xs text-[#0D0106]">FILTER</p>
             </div>
-            <p className="uppercase text-xs md:hidden">
+            <p
+              className="uppercase text-xs 
+text-[#463F3A] md:hidden"
+            >
               Showing {sellers.length} Results
             </p>
 

@@ -8,8 +8,10 @@ const Aboutus = () => {
     <>
       <div>
         <div className="py-4 xl:py-[32px] px-4 md:px-6 lg:px-12 border-b border-[#EBE9E0]">
-          <h1 className="text-xs">Home / About Us</h1>
-          <h1 className="font-playfair pt-4 uppercase text-xl ">About Us</h1>
+          <h1 className="text-xs text-[#919089]">Home / About Us</h1>
+          <h1 className="font-playfair pt-4 uppercase text-[24px] ">
+            About Us
+          </h1>
         </div>
 
         <div className=" bg-[#F9F8F3] flex flex-col  pt-20 pb-16 px-4 relative">
