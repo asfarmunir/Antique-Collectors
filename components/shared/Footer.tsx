@@ -47,7 +47,7 @@ const Footer = () => {
             />
             <button
               onClick={handleSubscribe}
-              className="uppercase text-xs 2xl:text-sm px-5 xl:px-10 py-[16px] border border-black bg-black text-white hover:opacity-80 "
+              className="uppercase text-xs xl:text-[12px] px-5 xl:px-10 py-[16px] border border-black bg-black text-white hover:opacity-80 "
             >
               Subscribe
             </button>

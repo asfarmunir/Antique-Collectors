@@ -143,8 +143,8 @@ const page = () => {
               className=" w-full h-full "
             />
           </div> */}
-          <div className="mt-6">
-            <h2 className="text-3xl md:text-5xl 2xl:text-6xl md:leading-snug 2xl:leading-snug text-center font-playfair ">
+          <div className="mt-8 xl:mt-16">
+            <h2 className="text-3xl md:text-5xl xl:text-[64px] md:leading-snug 2xl:leading-snug text-center font-playfair ">
               Welcome to <br />{" "}
               <span className={`${playfair.className}`}>
                 The Antique Collector
@@ -157,7 +157,7 @@ const page = () => {
             </p>
 
             <div className="   flex items-center justify-center text-xs">
-              <button className=" hover:opacity-80 py-3 uppercase mb-8 2xl:py-4 px-16 xl:py-[16px] 2xl:px-20 bg-black xl:text-[14px] xl:tracking-wide  2xl:text-sm text-white ">
+              <button className=" hover:opacity-80 py-3 uppercase mb-8 2xl:py-4 px-16 xl:py-[16px] 2xl:px-20 bg-[#0D0106] xl:text-[14px] xl:tracking-wide  2xl:text-sm text-white ">
                 Start browsing
               </button>
             </div>
@@ -166,7 +166,7 @@ const page = () => {
 
         <section className=" bg-[#F9F8F3]">
           <div className="py-6 xl:py-[32px] 2xl:py-8 border-b border-[#EBE9E0] px-4 md:px-6 lg:px-16 flex items-center font-playfair justify-between">
-            <h2 className="text-lg xl:text-[24px]  ">SELLERS</h2>
+            <h2 className="text-lg xl:text-[24px] text-[#0D0106]  ">SELLERS</h2>
             <Link
               href={"/sellers"}
               className="text-sm xl:text-[12px] font-openSans  text-[#463F3A] "
@@ -194,8 +194,12 @@ const page = () => {
                       style={{ width: `${100 / slides.length}%` }}
                     >
                       <div className=" w-full items-center justify-between flex">
-                        <h2>{slide.productsCount} Products</h2>
-                        <Link href={"#"}>SHOP ALL</Link>
+                        <h2 className="text-[12px] text-[#0D0106] uppercase">
+                          {slide.productsCount} Products
+                        </h2>
+                        <Link href={"#"} className="text-[12px] text-[#0D0106]">
+                          SHOP ALL
+                        </Link>
                       </div>
                       <div className=" w-full grid grid-cols-3 my-4 gap-2">
                         {slide.products.map((product) => (
@@ -462,17 +466,17 @@ const page = () => {
           <h2 className=" text-[48px] text-white mt-6  text-center font-playfair ">
             Live Presentations
           </h2>
-          <p className="text-center px-6 max-w-md uppercase font-light 2xl:max-w-lg text-[#EBE9E0] text-[16px] tracking-wide mt-6">
+          <p className="text-center px-6 max-w-md uppercase font-light 2xl:max-w-lg text-[#EBE9E0] text-[14px] tracking-wide mt-6">
             Set a reminder, and book a virtual seat!
           </p>
-          <p className="text-center px-6 max-w-[26rem] xl:max-w-[32rem] text-[#FFFFFF] text-[16px] my-6">
+          <p className="text-center px-6 max-w-[26rem] xl:max-w-[32rem] text-[#FFFFFF] text-[14px] my-6">
             It’s time for a Live Presentation. Be first in line. Watch a Seller
             present their latest finds via the medium of video, get all the
             latest gossip and buy directly, right then and there!
           </p>
           <button
             onClick={handleLiveShows}
-            className=" py-3 uppercase xl:py-[16px] xl:tracking-wide px-[24px]  bg-white hover:bg-gray-900 text-xs 2xl:text-sm hover:text-white text-black "
+            className=" py-3 uppercase xl:py-[16px] xl:tracking-wide px-[24px]  bg-white hover:bg-gray-900 text-xs xl:text-[12px] hover:text-white text-black "
           >
             see upcoming live shows
           </button>
@@ -554,7 +558,7 @@ const page = () => {
                 laborum voluptas?
               </p>
 
-              <Link href={"#"} className="text-sm uppercase">
+              <Link href={"#"} className="text-[14px] uppercase">
                 See Collection
               </Link>
             </div>
@@ -571,7 +575,7 @@ const page = () => {
                 layout="responsive"
                 className="bg-white"
               />
-              <p className="text-[#0D0106] px-2 font-playfair text-[14px] 2xl:text-lg mt-3">
+              <p className="text-[#0D0106] px-2   text-[16px] mt-3">
                 NATIVE IRON CHAIR
               </p>
               <div className="text-sm px-2 text-[#919089] flex flex-row gap-2 justify-between flex-nowrap mt-2">
@@ -621,7 +625,7 @@ const page = () => {
 
                 <button
                   onClick={() => handleReadMore(b.id)}
-                  className=" pt-5 pb-6 text-sm text-[#0D0106]"
+                  className=" pt-5 pb-6 text-[12px] text-[#0D0106]"
                 >
                   READ MORE
                 </button>
@@ -677,17 +681,17 @@ const page = () => {
                 Discover Exclusive Antiques & Insights
               </h1>
 
-              <div className="w-full md:w-1/3 my-12 flex flex-row  ">
+              <div className="w-full md:w-1/3 xl:w-[486px] bg-red-50 my-12 flex flex-row  ">
                 <InputField
                   placeholder="Your Email Address"
-                  className="border border-[#EBE9E0] md:min-w-64 text-xs 2xl:text-sm text-[#919089] placeholder:text-[#919089] px-4 py-[16px] "
+                  className="border border-[#EBE9E0] w-full md:min-w-64 text-xs 2xl:text-sm text-[#919089] placeholder:text-[#919089] px-4 py-[16px] "
                   type="email"
                   value={subEmail}
                   onChange={(e) => setSubEmail(e.target.value)}
                 />
                 <button
                   onClick={handleSubscribe}
-                  className="uppercase text-xs 2xl:text-sm px-5 xl:px-10 py-[16px] border border-black bg-black text-white hover:opacity-80 "
+                  className="uppercase text-xs xl:w-[175px] 2xl:text-sm px-5 xl:px-[24px] py-[16px] border border-black bg-black text-white hover:opacity-80 "
                 >
                   Subscribe
                 </button>

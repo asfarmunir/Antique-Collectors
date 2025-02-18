@@ -73,7 +73,7 @@ const Navbar = () => {
           />
           <button
             onClick={handleLogin}
-            className="py-3 2xl:py-3.5 px-12 2xl:px-16 bg-black text-xs 2xl:text-sm text-white hover:opacity-80 "
+            className="py-3 2xl:py-3.5 px-12 2xl:px-16 bg-[#0D0106] text-xs 2xl:text-sm text-white hover:opacity-80 "
           >
             LOG IN
           </button>
@@ -132,7 +132,7 @@ const Navbar = () => {
           <div className=" w-full">
             <button
               onClick={handleLogin}
-              className=" py-3 px-10 bg-black text-white text-sm w-full hover:opacity-80 "
+              className=" py-3 px-10 bg-[#0D0106] text-white text-sm w-full hover:opacity-80 "
             >
               LOG IN
             </button>
