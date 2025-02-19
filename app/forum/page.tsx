@@ -24,14 +24,14 @@ const PersonalInfo = () => {
           />
           <div className="border mb-4 flex items-center justify-between border-[#EBE9E0] w-full py-3 text-xs px-5">
             <p className="text-lg font-playfair">
-              <span className="h-2 w-0.5 bg-black p-[0.08rem] mr-2.5"></span>
+              <span className="h-2 w-0.5 bg-[#0D0106] p-[0.08rem] mr-2.5"></span>
               Question
             </p>
             <span className="text-xl font-bold">+</span>
           </div>
           <div className="border mb-4 flex items-center justify-between border-[#EBE9E0] w-full py-3 text-xs px-5">
             <p className="text-lg font-playfair">
-              <span className="h-2 w-0.5 bg-black p-[0.08rem] mr-2.5"></span>
+              <span className="h-2 w-0.5 bg-[#0D0106] p-[0.08rem] mr-2.5"></span>
               Tags
             </p>
             <span className="text-xl font-bold">+</span>
@@ -73,7 +73,7 @@ const PersonalInfo = () => {
                 type="text"
                 placeholder="Add tags with #"
               />
-              <button className="px-12 py-3 text-xs 2xl:text-sm bg-black text-white  hover:bg-gray-800">
+              <button className="px-12 py-3 text-xs 2xl:text-sm bg-[#0D0106] text-white  hover:bg-gray-800">
                 SEND
               </button>
             </div>

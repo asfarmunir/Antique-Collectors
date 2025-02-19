@@ -100,7 +100,7 @@ const Product = () => {
               className=" inline-flex justify-center   cursor-pointer md:w-64 2xl:w-80 flex-row items-center gap-2 py-3 px-8 md:px-24 2xl:px-28 bg-[#EBE9E0]"
             >
               <BiCandles className="text-lg text-[#0D0106]" />
-              <p className="text-xs text-[#0D0106] ">FILTER</p>
+              <p className="text-[12px] text-[#0D0106] ">FILTER</p>
             </div>
             <p
               className="uppercase text-xs 
@@ -111,20 +111,20 @@ text-[#463F3A] md:hidden"
 
             <div className="w-full md:w-auto flex flex-row justify-between gap-4 items-center">
               <div className="lg:flex flex-row items-center gap-4 md:block hidden">
-                <p className="uppercase text-nowrap text-xs">
+                <p className="uppercase text-nowrap text-[12px]">
                   Showing {products.length} Results
                 </p>
 
                 <div className="flex flex-row gap-2 items-center ">
                   <HiViewGrid
                     className={`text-lg cursor-pointer ${
-                      isGridView ? "text-black" : "text-gray-400"
+                      isGridView ? "text-[#0D0106]" : "text-gray-400"
                     }`}
                     onClick={handleGridView}
                   />
                   <TbLayoutDistributeHorizontal
                     className={`text-lg cursor-pointer ${
-                      !isGridView ? "text-black" : "text-gray-400"
+                      !isGridView ? "text-[#0D0106]" : "text-gray-400"
                     }`}
                     onClick={handleHorizontalView}
                   />
@@ -132,7 +132,7 @@ text-[#463F3A] md:hidden"
               </div>
 
               <div className="w-full flex flex-row items-center gap-5">
-                <p className="uppercase text-xs text-nowrap">Sort by</p>
+                <p className="uppercase text-[12px] text-nowrap">Sort by</p>
                 <div className="w-full md:w-full">
                   <Dropdown
                     label="Sort it"
@@ -140,7 +140,7 @@ text-[#463F3A] md:hidden"
                     onSelect={handleSelect}
                     isOpen={openDropdown === 1}
                     toggleDropdown={() => toggleDropdown(1)}
-                    className="bg-white w-full border xl:w-[186px] xl:p-[16px] border-[#EBE9E0]"
+                    className="bg-white w-full border xl:w-[186px] xl:p-[16px] text-[14px] border-[#EBE9E0]"
                   />
                 </div>
               </div>
@@ -216,7 +216,7 @@ text-[#463F3A] md:hidden"
                     return (
                       <div
                         key={p.id}
-                        className={`flex flex-col stroke-black md:py-6 px-6 cursor-pointer border-[#EBE9E0]
+                        className={`flex flex-col stroke-[#0D0106] md:py-6 px-6 cursor-pointer border-[#EBE9E0]
                           ${!isLastRow ? "md:border-b" : ""} 
                           ${!isLastColumn ? "md:border-r -mr-[3px]" : ""}`}
                         onClick={() => handleProductDetails(p.id)}
@@ -245,10 +245,10 @@ text-[#463F3A] md:hidden"
 
                           {/* Likes and Comments Overlay on Hover */}
                           {/* <div className="absolute inset-0 bg-white bg-opacity-80   flex flex-row gap-4 items-center justify-center text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                            <p className="text-sm text-black flex items-center gap-4">
+                            <p className="text-sm text-[#0D0106] flex items-center gap-4">
                               <CiHeart className="text-lg" /> {p.likes || 34}
                             </p>
-                            <p className="text-sm text-black flex items-center gap-4">
+                            <p className="text-sm text-[#0D0106] flex items-center gap-4">
                               <FaRegCommentDots className="text-lg" />{" "}
                               {p.comments || 34}
                             </p>
@@ -333,27 +333,27 @@ text-[#463F3A] md:hidden"
 
                       <div className="pt-2">
                         <div className="flex items-center justify-between">
-                          <p className="py-3 uppercase font-playfair text-lg 2xl:text-xl">
+                          <p className="py-3 uppercase font-playfair text-[20px]">
                             {item.title}
                           </p>
                           <p className="py-3 uppercase   2xl:text-lg">
                             $ 1.500
                           </p>
                         </div>
-                        <p className="text-sm text-[#919089]">
+                        <p className="text-[14px] text-[#919089]">
                           {item.description}
                         </p>
                       </div>
                       <div className="flex items-center justify-between pt-4 gap-4">
                         <button
                           onClick={() => handleProductDetails(item.id)}
-                          className="uppercase text-sm  text-black p-3 2xl:p-4 border border-black w-full text-center "
+                          className="uppercase text-[12px] py-[16px]  text-[#0D0106] p-3 2xl:p-4 border border-[#0D0106] w-full text-center "
                         >
                           View Details
                         </button>
                         <button
                           onClick={() => handleProductDetails(item.id)}
-                          className="uppercase text-sm  bg-black border border-black p-3 2xl:p-4 text-white w-full text-center "
+                          className="uppercase text-[12px] py-[16px]  bg-[#0D0106] border border-[#0D0106] p-3 2xl:p-4 text-white w-full text-center "
                         >
                           Send enquiry
                         </button>
@@ -367,10 +367,10 @@ text-[#463F3A] md:hidden"
         </div>
 
         {/* Live Presentation section */}
-        <div className="bg-[#463F3A] px-12 py-10 md:block hidden">
+        <div className="bg-[#463F3A] px-12 xl:px-[80px] py-10 md:block hidden">
           <div className="grid grid-cols-3">
-            <div className="col-span-2 text-white py-20 space-y-4">
-              <h1 className="font-playfair text-base sm:text-xl md:text-3xl xl:text-[48px] ">
+            <div className="col-span-2  py-20 space-y-4">
+              <h1 className="font-playfair text-white text-base sm:text-xl md:text-3xl xl:text-[48px] ">
                 Live Presentations
               </h1>
               <p className="text-[#EBE9E0] xl:text-[14px] py-4 font-thin uppercase">
@@ -384,13 +384,13 @@ text-[#463F3A] md:hidden"
 
               <Button
                 label="See Upcoming live shows"
-                className="uppercase text-xs mt-4 xl:text-[12px] px-7 py-4 hover:bg-[#2D2D2D] hover:text-white bg-white text-[#2D2D2D]"
+                className="uppercase text-xs mt-4 xl:text-[12px] tracking-wide px-7 py-4 hover:bg-[#2D2D2D] hover:text-white bg-white text-[#2D2D2D]"
               />
             </div>
 
             <div className="col-span-1">
               <div className="bg-[#ffffff65] p-4">
-                <div className=" bg-[#F9F8F3] text-black py-2 px-1 text-xs flex flex-row justify-between gap-4">
+                <div className=" bg-[#F9F8F3] text-[#0D0106] py-2 px-1 text-xs flex flex-row justify-between gap-4">
                   <p>12.23.2025</p>
                   <p>5.00 pm (UTC)</p>
                 </div>
@@ -420,7 +420,7 @@ text-[#463F3A] md:hidden"
                 <div className="mt-5">
                   <Button
                     label="Set a reminder"
-                    className="uppercase text-[12px] bg-[#463F3A] w-full hover:opacity-80"
+                    className="uppercase text-[12px] py-[16px] bg-[#463F3A] w-full hover:opacity-80"
                   />
                 </div>
               </div>
@@ -450,7 +450,7 @@ text-[#463F3A] md:hidden"
                   return (
                     <div
                       key={p.id}
-                      className={`flex flex-col stroke-black md:py-6 px-6 cursor-pointer border-[#EBE9E0]
+                      className={`flex flex-col stroke-[#0D0106] md:py-6 px-6 cursor-pointer border-[#EBE9E0]
                 ${!isLastRow ? "border-b" : ""} 
                 ${!isLastColumn ? "border-r -mr-[3px]" : ""}`}
                       onClick={() => handleProductDetails(p.id)}
@@ -479,10 +479,10 @@ text-[#463F3A] md:hidden"
 
                         {/* Likes and Comments Overlay on Hover */}
                         {/* <div className="absolute inset-0 bg-white bg-opacity-80   flex flex-row gap-4 items-center justify-center text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                          <p className="text-sm text-black flex items-center gap-4">
+                          <p className="text-sm text-[#0D0106] flex items-center gap-4">
                             <CiHeart className="text-lg" /> {p.likes || 34}
                           </p>
-                          <p className="text-sm text-black flex items-center gap-4">
+                          <p className="text-sm text-[#0D0106] flex items-center gap-4">
                             <FaRegCommentDots className="text-lg" />{" "}
                             {p.comments || 34}
                           </p>

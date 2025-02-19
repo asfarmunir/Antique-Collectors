@@ -85,7 +85,7 @@ const Presentations = () => {
           <div>
             <Link
               href={"/presentation/create"}
-              className="text-xs xl:text-[12px] 2xl:text-sm hover:opacity-80 py-3 px-4 text-white bg-black uppercase"
+              className="text-xs xl:text-[12px] 2xl:text-sm hover:opacity-80 py-3 px-4 text-white bg-[#0D0106] uppercase"
             >
               Create a live presentation
             </Link>
@@ -302,7 +302,7 @@ const Presentations = () => {
                       />
                     ))}
                   </div>
-                  <button className=" w-full bg-black py-3 text-white">
+                  <button className=" w-full bg-[#0D0106] py-3 text-white">
                     Watch Now
                   </button>
                 </div>

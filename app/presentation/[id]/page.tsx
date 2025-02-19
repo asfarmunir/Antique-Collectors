@@ -54,7 +54,7 @@ const page: React.FC = () => {
         <div>
           <Link
             href={"/presentation/create"}
-            className="text-xs 2xl:text-sm hover:opacity-80 py-3 px-4 text-white bg-black uppercase"
+            className="text-xs 2xl:text-sm hover:opacity-80 py-3 px-4 text-white bg-[#0D0106] uppercase"
           >
             Create a live presentation
           </Link>

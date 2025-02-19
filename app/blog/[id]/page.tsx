@@ -234,7 +234,7 @@ const BlogDetails = ({ params }: { params: any }) => {
               orci neque penatibus neque eget. Commodo scelerisque cursus purus
               id fermentum lorem nisi sit malesuada.
             </p>
-            <button className="bg-black uppercase text-white text-xs py-3 w-full px-4 mt-4">
+            <button className="bg-[#0D0106] uppercase text-white text-xs py-3 w-full px-4 mt-4">
               Write a blog posr
             </button>
           </div>

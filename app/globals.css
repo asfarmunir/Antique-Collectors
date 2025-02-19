@@ -96,6 +96,25 @@
   cursor: pointer;
 }
 
+:root {
+  --custom-black: #0D0106;
+}
+
+body {
+  color: var(--custom-black);
+}
+
+/* Replace other instances of black */
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+a {
+  color: var(--custom-black);
+}
+
 body {
   font-family: var(--font-open-sans);
 }

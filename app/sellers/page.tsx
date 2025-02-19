@@ -90,7 +90,7 @@ text-[#463F3A] md:hidden"
                   <HiViewGrid
                     className={`text-lg cursor-pointer ${
                       isGridView
-                        ? "text-black opacity-100"
+                        ? "text-[#0D0106] opacity-100"
                         : "text-gray-400 opacity-50"
                     }`}
                     onClick={handleGridView}
@@ -98,7 +98,7 @@ text-[#463F3A] md:hidden"
                   <TbLayoutDistributeHorizontal
                     className={`text-lg cursor-pointer ${
                       isHorizontalView
-                        ? "text-black opacity-100"
+                        ? "text-[#0D0106] opacity-100"
                         : "text-gray-400 opacity-50"
                     }`}
                     onClick={handleHorizontalView}
@@ -260,7 +260,7 @@ text-[#463F3A] md:hidden"
                 : "View Less"
             }
             onClick={isGridView ? handleGridToggle : handleHorizontalToggle}
-            className="uppercase border border-[#0D0106] py-2 px-8  hover:bg-black hover:text-white text-xs 2xl:text-sm bg-white text-[#0D0106]"
+            className="uppercase border border-[#0D0106] py-2 px-8  hover:bg-[#0D0106] hover:text-white text-xs 2xl:text-sm bg-white text-[#0D0106]"
           />
         </div>
       </div>

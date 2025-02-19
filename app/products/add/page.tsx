@@ -433,7 +433,7 @@ const page = () => {
               </div>
             </label>
           </div>
-          <button className=" text-xs 2xl:text-sm w-full bg-black text-white uppercase py-3.5 px-6">
+          <button className=" text-xs 2xl:text-sm w-full bg-[#0D0106] text-white uppercase py-3.5 px-6">
             PUBLISH PRODUCT
           </button>
         </div>
@@ -539,11 +539,11 @@ const page = () => {
               <Button
                 label="Add to favorite"
                 icon={<CiHeart className="text-xl" />}
-                className="bg-white uppercase text-xs hover:bg-black hover:text-white text-nowrap 2xl:text-sm border border-black text-black w-full py-2.5 "
+                className="bg-white uppercase text-xs hover:bg-[#0D0106] hover:text-white text-nowrap 2xl:text-sm border border-[#0D0106] text-[#0D0106] w-full py-2.5 "
               />
               <Button
                 label="Send a Query"
-                className="bg-[#0D0106] uppercase border text-xs 2xl:text-sm border-black text-white w-full py-2.5 hover:bg-gray-800"
+                className="bg-[#0D0106] uppercase border text-xs 2xl:text-sm border-[#0D0106] text-white w-full py-2.5 hover:bg-gray-800"
               />
             </div>
           </div>

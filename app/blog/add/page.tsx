@@ -275,14 +275,14 @@ const page: React.FC = () => {
             <button
               type="button"
               onClick={addSection}
-              className="border font-semibold border-black text-black px-4 py-3 mt-4 text-xs uppercase"
+              className="border font-semibold border-[#0D0106] text-[#0D0106] px-4 py-3 mt-4 text-xs uppercase"
             >
               + Add Another Section
             </button>
             {/* Submit Button */}
             <button
               type="submit"
-              className="w-full bg-black text-white py-3
+              className="w-full bg-[#0D0106] text-white py-3
              px-4 text-xs 2xl:text-sm uppercase font-thin  shadow-sm  focus:ring-2  focus:ring-offset-2"
             >
               PUBLISH blog post

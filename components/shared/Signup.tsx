@@ -51,7 +51,7 @@ const SignUp = ({ onClose }: { onClose: any }) => {
               <DialogTitle>
                 <Button
                   onClick={onClose}
-                  icon={<RxCross2 className="text-black" />}
+                  icon={<RxCross2 className="text-[#0D0106]" />}
                   label=""
                   className="bg-transparent absolute right-0 top-4"
                 />
@@ -119,12 +119,12 @@ const SignUp = ({ onClose }: { onClose: any }) => {
                     <Button
                       icon={<FcGoogle />}
                       label="Continue with google"
-                      className="w-full font-semibold hover:bg-gray-100 font-sans bg-white uppercase  border border-[#919089] text-nowrap flex text-xs text-black flex-row "
+                      className="w-full font-semibold hover:bg-gray-100 font-sans bg-white uppercase  border border-[#919089] text-nowrap flex text-xs text-[#0D0106] flex-row "
                     />
                     <Button
                       icon={<FaApple />}
                       label="Continue with apple"
-                      className="w-full font-semibold  hover:bg-gray-100 uppercase font-sans bg-white border border-[#919089] text-nowrap text-xs flex flex-row text-black "
+                      className="w-full font-semibold  hover:bg-gray-100 uppercase font-sans bg-white border border-[#919089] text-nowrap text-xs flex flex-row text-[#0D0106] "
                     />
                   </div>
                 </div>
@@ -143,7 +143,7 @@ const SignUp = ({ onClose }: { onClose: any }) => {
                         use your email address to sign up or login
                       </label>
                       <InputField
-                        className="text-sm font-sans text-black placeholder:text-sm  w-full border-b border-[#919089]"
+                        className="text-sm font-sans text-[#0D0106] placeholder:text-sm  w-full border-b border-[#919089]"
                         placeholder="email@gmail.com"
                         value={formData.email}
                         type="email"
@@ -248,12 +248,12 @@ const SignUp = ({ onClose }: { onClose: any }) => {
                     <Button
                       icon={<FcGoogle />}
                       label="Continue with google"
-                      className="w-full hover:bg-gray-100 text-nowrap font-sans bg-white uppercase  border border-[#919089] flex text-xs text-black flex-row "
+                      className="w-full hover:bg-gray-100 text-nowrap font-sans bg-white uppercase  border border-[#919089] flex text-xs text-[#0D0106] flex-row "
                     />
                     <Button
                       icon={<FaApple />}
                       label="Continue with apple"
-                      className="w-full hover:bg-gray-100 uppercase text-nowrap font-sans bg-white border border-[#919089] text-xs flex flex-row text-black "
+                      className="w-full hover:bg-gray-100 uppercase text-nowrap font-sans bg-white border border-[#919089] text-xs flex flex-row text-[#0D0106] "
                     />
                   </div>
                 </div>
@@ -277,7 +277,7 @@ const SignUp = ({ onClose }: { onClose: any }) => {
                   </p>
 
                   <InputField
-                    className="text-sm text-black font-sans placeholder:text-sm  w-full border-b border-[#919089]"
+                    className="text-sm text-[#0D0106] font-sans placeholder:text-sm  w-full border-b border-[#919089]"
                     placeholder="email@gmail.com"
                     value={formData.email}
                     type="email"

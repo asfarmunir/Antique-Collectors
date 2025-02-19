@@ -65,7 +65,7 @@ const EnquiryModal = () => {
             <h2 className="text-xl px-5 2xl:text-2xl font-playfair uppercase ">
               Messages
             </h2>
-            <DialogClose className="text-gray-600 px-5 hover:text-black">
+            <DialogClose className="text-gray-600 px-5 hover:text-[#0D0106]">
               {" "}
               ✖{" "}
             </DialogClose>
@@ -82,7 +82,7 @@ const EnquiryModal = () => {
                     {messages.length}
                   </span>
                 </h2>
-                <button className="bg-black text-white p-4 ">
+                <button className="bg-[#0D0106] text-white p-4 ">
                   <Plus className="w-4 h-4" />
                 </button>
               </div>

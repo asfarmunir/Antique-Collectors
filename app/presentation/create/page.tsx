@@ -218,7 +218,7 @@ const page: React.FC = () => {
                 {/* Submit Button */}
                 <button
                   type="submit"
-                  className="w-full bg-black text-white py-3  text-sm font-medium hover:bg-gray-800 focus:ring-2 focus:ring-primary-50 focus:ring-offset-2"
+                  className="w-full bg-[#0D0106] text-white py-3  text-sm font-medium hover:bg-gray-800 focus:ring-2 focus:ring-primary-50 focus:ring-offset-2"
                 >
                   Schedule Live Presentation
                 </button>
@@ -310,13 +310,13 @@ const page: React.FC = () => {
               <div className="flex flex-row gap-2 items-center ">
                 <HiViewGrid
                   className={`text-lg cursor-pointer ${
-                    isGridView ? "text-black" : "text-gray-400"
+                    isGridView ? "text-[#0D0106]" : "text-gray-400"
                   }`}
                   onClick={handleGridView}
                 />
                 <TbLayoutDistributeHorizontal
                   className={`text-lg cursor-pointer ${
-                    !isGridView ? "text-black" : "text-gray-400"
+                    !isGridView ? "text-[#0D0106]" : "text-gray-400"
                   }`}
                   onClick={handleHorizontalView}
                 />
@@ -358,7 +358,7 @@ const page: React.FC = () => {
                 return (
                   <div
                     key={p.id}
-                    className={`flex flex-col stroke-black md:py-6 px-6 cursor-pointer border-[#EBE9E0]
+                    className={`flex flex-col stroke-[#0D0106] md:py-6 px-6 cursor-pointer border-[#EBE9E0]
                                       ${!isLastRow ? "md:border-b" : ""} 
                                       ${
                                         !isLastColumn
@@ -391,10 +391,10 @@ const page: React.FC = () => {
 
                       {/* Likes and Comments Overlay on Hover */}
                       <div className="absolute inset-0 bg-white bg-opacity-80   flex flex-row gap-4 items-center justify-center text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                        <p className="text-sm text-black flex items-center gap-4">
+                        <p className="text-sm text-[#0D0106] flex items-center gap-4">
                           <CiHeart className="text-lg" /> {p.likes || 34}
                         </p>
-                        <p className="text-sm text-black flex items-center gap-4">
+                        <p className="text-sm text-[#0D0106] flex items-center gap-4">
                           <FaRegCommentDots className="text-lg" />{" "}
                           {p.comments || 34}
                         </p>

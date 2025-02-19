@@ -17,7 +17,7 @@ const page = () => {
     <div className="px-4 md:px-6 lg:px-12">
       <div className="py-4  border-b border-[#EBE9E0] flex flex-row flex-wrap gap-4 justify-start items-start">
         <Link href={"/presentation/1"}>
-          <HiArrowSmallLeft className="text-black text-2xl cursor-pointer" />
+          <HiArrowSmallLeft className="text-[#0D0106] text-2xl cursor-pointer" />
         </Link>
         <div>
           <p className="text-xs">

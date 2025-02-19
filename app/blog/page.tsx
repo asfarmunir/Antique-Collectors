@@ -306,7 +306,7 @@ const Blog = () => {
                 <Button
                   onClick={handleViewMoreOrLess}
                   label={showAll ? "View Less" : "View More"}
-                  className="uppercase border border-[#0D0106] hover:bg-black hover:text-white py-2 px-8 bg-white text-[#0D0106]"
+                  className="uppercase border border-[#0D0106] hover:bg-[#0D0106] hover:text-white py-2 px-8 bg-white text-[#0D0106]"
                 />
               </div>
             </div>

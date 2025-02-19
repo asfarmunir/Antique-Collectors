@@ -110,14 +110,14 @@ const Subscription = ({
                   <div
                     key={plan.name}
                     className={`border relative min-w-52 h-[650px] rounded-sm p-4 bg-[#FFFFFF8F] flex flex-col justify-between gap-3 items-center  border-[#EBE9E0] ${
-                      plan.name === "Silver" ? "border-2 border-black" : ""
+                      plan.name === "Silver" ? "border-2 border-[#0D0106]" : ""
                     }`}
                   >
                     <div className="mt-6 space-y-3  text-center flex flex-col items-center">
                       <p
                         className={`${
                           plan.name === "Silver"
-                            ? "bg-black flex items-center justify-center absolute top-0 py-1 w-full "
+                            ? "bg-[#0D0106] flex items-center justify-center absolute top-0 py-1 w-full "
                             : ""
                         }   text-white text-[10px] `}
                       >
@@ -154,7 +154,7 @@ const Subscription = ({
                         <Button
                           label="Select"
                           onClick={() => updateSubscriptionPlan(plan.name)}
-                          className="py-2 w-3/4  text-xs uppercase text-black bg-white border-[1.5px] font-semibold border-black"
+                          className="py-2 w-3/4  text-xs uppercase text-[#0D0106] bg-white border-[1.5px] font-semibold border-[#0D0106]"
                         />
                       </div>
                     </div>

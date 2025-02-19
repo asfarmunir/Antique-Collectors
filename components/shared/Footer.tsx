@@ -47,7 +47,7 @@ const Footer = () => {
             />
             <button
               onClick={handleSubscribe}
-              className="uppercase text-xs xl:text-[12px] px-5 xl:px-10 py-[16px] border border-black bg-black text-white hover:opacity-80 "
+              className="uppercase text-xs xl:text-[12px] px-5 xl:px-10 py-[16px] border border-[#0D0106] bg-[#0D0106] text-white hover:opacity-80 "
             >
               Subscribe
             </button>
@@ -71,7 +71,7 @@ const Footer = () => {
             <div className="flex flex-row gap-2 py-4">
               <FaFacebookF
                 key="facebook"
-                className="bg-[#EBE9E0] text-[36px] text-black p-1.5 cursor-pointer"
+                className="bg-[#EBE9E0] text-[36px] text-[#0D0106] p-1.5 cursor-pointer"
                 href="#"
               />
               <AiFillInstagram
@@ -154,7 +154,7 @@ const Footer = () => {
                   </div>
                 ))}
                 <div className="">
-                  <Link href={"/login"} className="text-black text-[14px] ">
+                  <Link href={"/login"} className="text-[#0D0106] text-[14px] ">
                     BECOME A SELLER
                   </Link>
                 </div>

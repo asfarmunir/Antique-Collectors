@@ -47,7 +47,7 @@ const SellerAccountFinish = ({
             <DialogTitle>
               <Button
                 onClick={handleDialogClose}
-                icon={<RxCross2 className="text-black" />}
+                icon={<RxCross2 className="text-[#0D0106]" />}
                 label=""
                 className="bg-transparent absolute right-0 top-4"
               />

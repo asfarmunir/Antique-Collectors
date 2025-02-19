@@ -198,7 +198,7 @@ const ProductDetails = ({ params }: { params: any }) => {
                 <Button
                   label="Add to favorite"
                   icon={<IoIosHeartEmpty className="text-xl" />}
-                  className="bg-white uppercase text-xs hover:bg-black hover:text-white text-nowrap 2xl:text-sm border border-black text-black w-[70%]  py-2.5 "
+                  className="bg-white uppercase text-xs hover:bg-[#0D0106] hover:text-white text-nowrap 2xl:text-[12px] py-[16px] border border-[#0D0106] text-[#0D0106] w-[70%]   "
                 />
                 <EnquiryModal />
               </div>
@@ -228,10 +228,10 @@ const ProductDetails = ({ params }: { params: any }) => {
             </div>
             {Array.from({ length: 2 }).map((_, index) => (
               <div className="border-b border-[#EBE9E0] p-3 my-3 ">
-                <h3 className="uppercase text-semibold text-sm text-[#0D0106]">
-                  Name SurName
+                <h3 className="uppercase text-semibold text-[14px] text-[#0D0106]">
+                  Anna J.
                 </h3>
-                <p className="text-xs py-3 text-[#919089]">
+                <p className="text-[12px] py-3 text-[#919089]">
                   Lorem ipsum dolor sit, amet consectetur adipisicing elit.
                   Veritatis facilis non dolorum veniam odit quasi odio earum,
                   fugit suscipit maxime eaque fugiat reiciendis voluptates id
@@ -249,10 +249,10 @@ const ProductDetails = ({ params }: { params: any }) => {
                   </button>
                 </div>
                 <div className=" p-3 pl-8 my-3 ">
-                  <h3 className="uppercase text-semibold text-sm text-[#0D0106]">
-                    Name SurName
+                  <h3 className="uppercase text-semibold text-[14px] text-[#0D0106]">
+                    Anna J.
                   </h3>
-                  <p className="text-xs py-3 text-[#919089]">
+                  <p className="text-[12px] py-3 text-[#919089]">
                     Lorem ipsum dolor sit, amet consectetur adipisicing elit.
                     Veritatis facilis non dolorum veniam odit quasi odio earum,
                     fugit suscipit maxime eaque fugiat reiciendis voluptates id
@@ -293,7 +293,7 @@ const ProductDetails = ({ params }: { params: any }) => {
               </p>
               <Link
                 href={"/sellers"}
-                className="uppercase text-[#463F3A] text-sm"
+                className="uppercase text-[#463F3A] text-[12px]"
               >
                 View All
               </Link>
@@ -332,25 +332,28 @@ const ProductDetails = ({ params }: { params: any }) => {
 
                         {/* Likes and Comments Overlay on Hover */}
                         <div className="absolute inset-0 bg-white bg-opacity-80   flex flex-row gap-4 items-center justify-center text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                          <p className="text-sm text-black flex items-center gap-4">
+                          <p className="text-sm text-[#0D0106] flex items-center gap-4">
                             <FaRegHeart className="text-lg" /> {p.likes || 34}
                           </p>
-                          <p className="text-sm text-black flex items-center gap-4">
+                          <p className="text-sm text-[#0D0106] flex items-center gap-4">
                             <FaRegCommentDots className="text-lg" />{" "}
                             {p.comments || 34}
                           </p>
                         </div>
                       </div>
                       <div className="w-full mt-4">
+                        <h2 className="text-[14px] md:text-base">{p.title}</h2>
                         <div className="flex flex-row gap-4 justify-between">
-                          <p className="text-[#919089] mb-1 text-sm">
+                          <p className="text-[#919089] mb-1 text-[14px]">
                             {p.brand}
                           </p>
-                          <Link href={"#"} className="text-[#919089] text-sm">
+                          <Link
+                            href={"#"}
+                            className="text-[#919089] text-[14px]"
+                          >
                             FOLLOW
                           </Link>
                         </div>
-                        <h2 className="text-sm md:text-base">{p.title}</h2>
                       </div>
                     </div>
                   );
@@ -367,7 +370,7 @@ const ProductDetails = ({ params }: { params: any }) => {
             <h2 className="text-sm md:text-[20px] font-playfair uppercase">
               Recommedned Product for you
             </h2>
-            <Link href={"/products"} className="text-sm ">
+            <Link href={"/products"} className="text-[12px] ">
               VIEW ALL
             </Link>
           </div>
@@ -406,20 +409,24 @@ const ProductDetails = ({ params }: { params: any }) => {
 
                       {/* Likes and Comments Overlay on Hover */}
                       <div className="absolute inset-0 bg-white bg-opacity-80   flex flex-row gap-4 items-center justify-center text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                        <p className="text-sm text-black flex items-center gap-4">
+                        <p className="text-sm text-[#0D0106] flex items-center gap-4">
                           <FaRegHeart className="text-lg" /> {p.likes || 34}
                         </p>
-                        <p className="text-sm text-black flex items-center gap-4">
+                        <p className="text-sm text-[#0D0106] flex items-center gap-4">
                           <FaRegCommentDots className="text-lg" />{" "}
                           {p.comments || 34}
                         </p>
                       </div>
                     </div>
                     <div className="w-full mt-4">
-                      <h2 className="text-sm md:text-[16px] mb-2">{p.title}</h2>
+                      <h2 className="text-[14px] md:text-[16px] mb-2">
+                        {p.title}
+                      </h2>
                       <div className="flex flex-row gap-4 justify-between">
-                        <p className="text-[#919089] mb-1 text-sm">{p.brand}</p>
-                        <Link href={"#"} className="text-[#919089] text-sm">
+                        <p className="text-[#919089] mb-1 text-[14px]">
+                          {p.brand}
+                        </p>
+                        <Link href={"#"} className="text-[#919089] text-[14px]">
                           FOLLOW
                         </Link>
                       </div>

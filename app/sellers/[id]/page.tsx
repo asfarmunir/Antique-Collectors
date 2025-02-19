@@ -151,7 +151,7 @@ const Seller = () => {
                   <HiViewGrid
                     className={`text-lg cursor-pointer ${
                       gridView
-                        ? "text-black opacity-100"
+                        ? "text-[#0D0106] opacity-100"
                         : "text-gray-400 opacity-50"
                     }`}
                     onClick={() => setGridView(true)}
@@ -160,7 +160,7 @@ const Seller = () => {
                   <TbLayoutDistributeHorizontal
                     className={`text-lg cursor-pointer ${
                       !gridView
-                        ? "text-black opacity-100"
+                        ? "text-[#0D0106] opacity-100"
                         : "text-gray-400 opacity-50"
                     }`}
                     onClick={() => setGridView(false)}
@@ -248,7 +248,7 @@ const Seller = () => {
                     return (
                       <div
                         key={index}
-                        className={`flex  gap-4 md:gap-0 flex-col stroke-black  px-6 cursor-pointer border-[#EBE9E0]
+                        className={`flex  gap-4 md:gap-0 flex-col stroke-[#0D0106]  px-6 cursor-pointer border-[#EBE9E0]
                                         ${!isLastRow ? "md:border-b pb-4" : ""} 
                                         ${
                                           !isLastColumn
@@ -281,23 +281,25 @@ const Seller = () => {
 
                           {/* Likes and Comments Overlay on Hover */}
                           <div className="absolute inset-0 bg-white bg-opacity-80   flex flex-row gap-4 items-center justify-center text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                            <p className="text-sm text-black flex items-center gap-4">
+                            <p className="text-sm text-[#0D0106] flex items-center gap-4">
                               <CiHeart className="text-lg" /> {p.likes || 34}
                             </p>
-                            <p className="text-sm text-black flex items-center gap-4">
+                            <p className="text-sm text-[#0D0106] flex items-center gap-4">
                               <FaRegCommentDots className="text-lg" />{" "}
                               {p.comments || 34}
                             </p>
                           </div>
                         </div>
                         <div className=" w-full pt-4 flex flex-col  justify-between">
-                          <div className="text-xs flex flex-row justify-between gap-4">
-                            <p className="text-[#919089] mb-1 ">Seller Name</p>
-                            <p className="text-[#919089] ">FOLLOW</p>
-                          </div>
-                          <h2 className="text-xs md:text-sm">
+                          <h2 className="text-[14px] md:text-sm">
                             NATIVE IRON CHAIR
                           </h2>
+                          <div className="text-[14px] flex flex-row justify-between gap-4">
+                            <p className="text-[#919089] mb-1 ">Seller Name</p>
+                            <p className="text-[12px] text-[#919089] ">
+                              FOLLOW
+                            </p>
+                          </div>
                         </div>
                       </div>
                     );
@@ -322,7 +324,7 @@ const Seller = () => {
                     return (
                       <div
                         key={index}
-                        className={`flex  gap-4 md:gap-0 flex-col stroke-black  px-6 cursor-pointer border-[#EBE9E0]
+                        className={`flex  gap-4 md:gap-0 flex-col stroke-[#0D0106]  px-6 cursor-pointer border-[#EBE9E0]
                                         ${!isLastRow ? "md:border-b" : ""} 
                                         ${
                                           !isLastColumn
@@ -355,10 +357,10 @@ const Seller = () => {
 
                           {/* Likes and Comments Overlay on Hover */}
                           <div className="absolute inset-0 bg-white bg-opacity-80   flex flex-row gap-4 items-center justify-center text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                            <p className="text-sm text-black flex items-center gap-4">
+                            <p className="text-sm text-[#0D0106] flex items-center gap-4">
                               <CiHeart className="text-lg" /> {p.likes || 34}
                             </p>
-                            <p className="text-sm text-black flex items-center gap-4">
+                            <p className="text-sm text-[#0D0106] flex items-center gap-4">
                               <FaRegCommentDots className="text-lg" />{" "}
                               {p.comments || 34}
                             </p>
@@ -367,7 +369,9 @@ const Seller = () => {
                         <div className=" w-full pt-4 flex flex-col  justify-between">
                           <div className="text-xs flex flex-row justify-between gap-4">
                             <p className="text-[#919089] mb-1 ">Seller Name</p>
-                            <p className="text-[#919089] ">FOLLOW</p>
+                            <p className="text-[12px] text-[#919089] ">
+                              FOLLOW
+                            </p>
                           </div>
                           <h2 className="text-xs md:text-sm">
                             NATIVE IRON CHAIR
@@ -387,7 +391,7 @@ const Seller = () => {
             <Button
               label={showAll ? "View Less" : "View More"}
               onClick={handleViewMore}
-              className="uppercase border border-[#0D0106] py-2 px-8 bg-white text-[#0D0106]"
+              className="uppercase border border-[#0D0106] py-[16px] text-[12px] xl:w-[348px] px-[24px] bg-white text-[#0D0106]"
             />
           </div>
         </div>

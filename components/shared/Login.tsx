@@ -1,5 +1,10 @@
 import React, { useState } from "react";
-import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/Dialog";
+import {
+  Dialog,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+} from "@/components/ui/Dialog";
 import Image from "next/image";
 import Button from "../ui/Button";
 import { RxCross2 } from "react-icons/rx";
@@ -7,7 +12,7 @@ import { LuUpload } from "react-icons/lu";
 import InputField from "../ui/InputField";
 import { FcGoogle } from "react-icons/fc";
 import { FaApple } from "react-icons/fa";
-import { ToastContainer } from 'react-toastify';
+import { ToastContainer } from "react-toastify";
 import { useLogin } from "@/hooks/useLogin";
 import Link from "next/link";
 
@@ -24,8 +29,6 @@ const Login = ({ onClose }: { onClose: any }) => {
     handleAppleSignIn,
   } = useLogin();
 
-
-
   return (
     <>
       <div className="relative">
@@ -35,13 +38,13 @@ const Login = ({ onClose }: { onClose: any }) => {
               <DialogTitle>
                 <Button
                   onClick={onClose}
-                  icon={<RxCross2 className="text-black" />}
+                  icon={<RxCross2 className="text-[#0D0106]" />}
                   label=""
                   className="bg-transparent absolute right-0 top-4"
                 />
                 <h1 className="font-playfair text-base uppercase text-start">
-                  {step === 1 && (<p>Login or Sign Up</p>)}
-                  {step === 2 && (<p>Login</p>)}
+                  {step === 1 && <p>Login or Sign Up</p>}
+                  {step === 2 && <p>Login</p>}
                 </h1>
               </DialogTitle>
             </DialogHeader>
@@ -49,9 +52,12 @@ const Login = ({ onClose }: { onClose: any }) => {
             <div className="flex flex-col px-6">
               {step === 1 && (
                 <>
-                  <h1 className="text-[32px]">Welcome to The Antique Collector</h1>
+                  <h1 className="text-[32px]">
+                    Welcome to The Antique Collector
+                  </h1>
                   <p className="text-sm text-[#919089] pt-2 font-sans">
-                    Discover a world of timeless treasures, crafted to match your unique tastes.
+                    Discover a world of timeless treasures, crafted to match
+                    your unique tastes.
                   </p>
 
                   <div className="my-4">
@@ -72,7 +78,6 @@ const Login = ({ onClose }: { onClose: any }) => {
                           label="Continue"
                           className="text-sm capitalize w-full font-sans hover:opacity-80"
                         />
-
                       </div>
                     </form>
                   </div>
@@ -93,13 +98,13 @@ const Login = ({ onClose }: { onClose: any }) => {
                         icon={<FcGoogle />}
                         label="Continue with Google"
                         onClick={handleGoogleSignIn}
-                        className="w-full font-semibold font-sans bg-white hover:bg-gray-100 uppercase  border border-[#919089] flex text-xs text-black flex-row"
+                        className="w-full font-semibold font-sans bg-white hover:bg-gray-100 uppercase  border border-[#919089] flex text-xs text-[#0D0106] flex-row"
                       />
                       <Button
                         icon={<FaApple />}
                         label="Continue with Apple"
                         onClick={handleAppleSignIn}
-                        className="w-full font-semibold uppercase font-sans bg-white hover:bg-gray-100 border border-[#919089] text-xs flex flex-row text-black"
+                        className="w-full font-semibold uppercase font-sans bg-white hover:bg-gray-100 border border-[#919089] text-xs flex flex-row text-[#0D0106]"
                       />
                     </div>
                   </div>
@@ -120,7 +125,7 @@ const Login = ({ onClose }: { onClose: any }) => {
                           Use your email address to sign up or login
                         </label>
                         <InputField
-                          className="text-sm font-sans placeholder:text-sm w-full text-black border-b border-[#919089]"
+                          className="text-sm font-sans placeholder:text-sm w-full text-[#0D0106] border-b border-[#919089]"
                           value={email}
                           type="email"
                           readOnly
@@ -128,7 +133,9 @@ const Login = ({ onClose }: { onClose: any }) => {
                       </div>
 
                       <div className="mt-4">
-                        <label className="block text-xs uppercase font-sans pb-2">Password</label>
+                        <label className="block text-xs uppercase font-sans pb-2">
+                          Password
+                        </label>
                         <InputField
                           className="text-sm font-sans placeholder:text-sm text-[#919089] w-full border border-[#EBE9E0]"
                           placeholder="*******"
@@ -138,17 +145,19 @@ const Login = ({ onClose }: { onClose: any }) => {
                         />
                       </div>
 
-                      <div className="my-2 text-end">         
-                        <Link href={"#"} className="text-xs my-2 uppercase font-sans text-[#919089]">
-                        Forgot password
-                      </Link>
+                      <div className="my-2 text-end">
+                        <Link
+                          href={"#"}
+                          className="text-xs my-2 uppercase font-sans text-[#919089]"
+                        >
+                          Forgot password
+                        </Link>
                       </div>
                       <Button
                         type="submit" // Ensure this is a submit button
                         label="Continue"
                         className="text-sm capitalize w-full font-sans hover:opacity-80"
                       />
-
                     </form>
                   </div>
 
@@ -168,21 +177,19 @@ const Login = ({ onClose }: { onClose: any }) => {
                         icon={<FcGoogle />}
                         label="Continue with Google"
                         onClick={handleGoogleSignIn}
-                        className="w-full font-semibold font-sans bg-white hover:bg-gray-100 uppercase  border border-[#919089] flex text-xs text-black flex-row"
+                        className="w-full font-semibold font-sans bg-white hover:bg-gray-100 uppercase  border border-[#919089] flex text-xs text-[#0D0106] flex-row"
                       />
                       <Button
                         icon={<FaApple />}
                         label="Continue with Apple"
                         onClick={handleAppleSignIn}
-                        className="w-full font-semibold uppercase font-sans bg-white hover:bg-gray-100  border border-[#919089] text-xs flex flex-row text-black"
+                        className="w-full font-semibold uppercase font-sans bg-white hover:bg-gray-100  border border-[#919089] text-xs flex flex-row text-[#0D0106]"
                       />
                     </div>
                   </div>
                 </>
               )}
             </div>
-
-
           </DialogContent>
         </Dialog>
       </div>

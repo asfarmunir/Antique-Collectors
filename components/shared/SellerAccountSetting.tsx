@@ -77,7 +77,7 @@ const SellerAccountSetting = ({
               <DialogTitle>
                 <Button
                   onClick={onClose}
-                  icon={<RxCross2 className="text-black" />}
+                  icon={<RxCross2 className="text-[#0D0106]" />}
                   label=""
                   className="bg-transparent absolute right-0 top-4"
                 />
@@ -114,7 +114,7 @@ const SellerAccountSetting = ({
                   </p>
                   <ul className="list-disc space-y-2 pt-2">
                     <li>
-                      <span className="uppercase text-black">
+                      <span className="uppercase text-[#0D0106]">
                         &#x2022; Submit Your Application:
                       </span>{" "}
                       Provide details about your expertise, offerings, and
@@ -122,7 +122,7 @@ const SellerAccountSetting = ({
                     </li>
 
                     <li>
-                      <span className="uppercase text-black">
+                      <span className="uppercase text-[#0D0106]">
                         &#x2022; Review Process:
                       </span>{" "}
                       Our team will carefully evaluate your application to
@@ -131,7 +131,7 @@ const SellerAccountSetting = ({
                     </li>
 
                     <li>
-                      <span className="uppercase text-black">
+                      <span className="uppercase text-[#0D0106]">
                         &#x2022; Approval or Rejection:
                       </span>{" "}
                       You’ll receive a response within a few business days with
@@ -174,12 +174,12 @@ const SellerAccountSetting = ({
                   <div className="flex flex-col md:flex-row  gap-3">
                     <Button
                       label="I'LL Do IT later"
-                      className="w-1/2 font-semibold font-sans bg-white uppercase   flex text-xs text-black flex-row "
+                      className="w-1/2 font-semibold font-sans bg-white uppercase   flex text-xs text-[#0D0106] flex-row "
                     />
                     <Button
                       onClick={handleNext}
                       label="Continue"
-                      className="w-full font-semibold uppercase font-sans bg-[#F9F8F3]  text-xs flex flex-row text-black "
+                      className="w-full font-semibold uppercase font-sans bg-[#F9F8F3]  text-xs flex flex-row text-[#0D0106] "
                     />
                   </div>
                 </div>
@@ -257,12 +257,12 @@ const SellerAccountSetting = ({
                 <div className="flex flex-col md:flex-row  gap-3">
                   <Button
                     label="I'LL Do IT later"
-                    className="w-1/2 font-semibold font-sans bg-white uppercase   flex text-xs text-black flex-row "
+                    className="w-1/2 font-semibold font-sans bg-white uppercase   flex text-xs text-[#0D0106] flex-row "
                   />
                   <Button
                     onClick={handleNext}
                     label="Continue"
-                    className="w-full font-semibold uppercase font-sans bg-[#F9F8F3]  text-xs flex flex-row text-black "
+                    className="w-full font-semibold uppercase font-sans bg-[#F9F8F3]  text-xs flex flex-row text-[#0D0106] "
                   />
                 </div>
               </div>
@@ -396,12 +396,12 @@ const SellerAccountSetting = ({
                 <div className="flex flex-col md:flex-row mt-5 gap-3">
                   <Button
                     label="I'LL Do IT later"
-                    className="w-1/2 font-semibold font-sans bg-white uppercase   flex text-xs text-black flex-row "
+                    className="w-1/2 font-semibold font-sans bg-white uppercase   flex text-xs text-[#0D0106] flex-row "
                   />
                   <Button
                     label="Continue"
                     onClick={handleNext}
-                    className="w-full font-semibold uppercase font-sans bg-[#F9F8F3]  text-xs flex flex-row text-black "
+                    className="w-full font-semibold uppercase font-sans bg-[#F9F8F3]  text-xs flex flex-row text-[#0D0106] "
                   />
                 </div>
               </div>

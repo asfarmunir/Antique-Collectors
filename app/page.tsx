@@ -166,7 +166,7 @@ const page = () => {
 
         <section className=" bg-[#F9F8F3]">
           <div className="py-6 xl:py-[32px] 2xl:py-8 border-b border-[#EBE9E0] px-4 md:px-6 lg:px-16 flex items-center font-playfair justify-between">
-            <h2 className="text-lg xl:text-[24px] text-[#0D0106]  ">SELLERS</h2>
+            <h2 className="text-lg xl:text-[24px]   ">SELLERS</h2>
             <Link
               href={"/sellers"}
               className="text-sm xl:text-[12px] font-openSans  text-[#463F3A] "
@@ -253,7 +253,7 @@ const page = () => {
                   this section. This is a great way for you to discover new
                   people to follow, and new pieces to fall in love with!
                 </p>
-                <button className=" py-3 w-[175px] xl:py-[15px] 2xl:py-4  hover:opacity-80 bg-black text-xs xl:text-[12px]  text-white ">
+                <button className=" py-3 w-[175px] xl:py-[15px] 2xl:py-4  hover:opacity-80 bg-[#0D0106] text-xs xl:text-[12px]  text-white ">
                   BECOME A SELLER
                 </button>
               </div>
@@ -350,7 +350,7 @@ const page = () => {
               </h2>
               <p className=" font-light font-openSans text-sm xl:text-[16px] 2xl:text-base text-[#919089]">
                 All the latest pieces land here in real time. <br />{" "}
-                <span className=" underline text-black">Sign up</span> for an
+                <span className=" underline text-[#0D0106]">Sign up</span> for an
                 account to create your own custom feed, and only see products
                 from sellers you follow
               </p>
@@ -405,10 +405,10 @@ const page = () => {
 
                     {/* Likes and Comments Overlay on Hover */}
                     <div className="absolute inset-0 bg-white bg-opacity-80   flex flex-row gap-4 items-center justify-center text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                      <p className="text-sm text-black flex items-center gap-2">
+                      <p className="text-sm text-[#0D0106] flex items-center gap-2">
                         <CiHeart className="text-2xl" /> {p.likes || 34}
                       </p>
-                      <p className="text-sm text-black flex items-center gap-2">
+                      <p className="text-sm text-[#0D0106] flex items-center gap-2">
                         <Image
                           src="/images/message2.svg"
                           width={20}
@@ -476,7 +476,7 @@ const page = () => {
           </p>
           <button
             onClick={handleLiveShows}
-            className=" py-3 uppercase xl:py-[16px] xl:tracking-wide px-[24px]  bg-white hover:bg-gray-900 text-xs xl:text-[12px] hover:text-white text-black "
+            className=" py-3 uppercase xl:py-[16px] xl:tracking-wide px-[24px]  bg-white hover:bg-gray-900 text-xs xl:text-[12px] hover:text-white text-[#0D0106] "
           >
             see upcoming live shows
           </button>
@@ -654,13 +654,13 @@ const page = () => {
             </p>
             <p className="md:w-[550px]  xl:text-[14px]  text-pretty my-3 font-openSans text-center text-[#919089]">
               As part of{" "}
-              <span className="text-black px-0.5">The AC Community</span> you
+              <span className="text-[#0D0106] px-0.5">The AC Community</span> you
               will have access to
-              <span className="text-black px-0.5">Forums,</span>
-              <span className="text-black px-0.5">Blogs</span> and
-              <span className="text-black px-0.5"> ‘Lives’,</span> as well as
+              <span className="text-[#0D0106] px-0.5">Forums,</span>
+              <span className="text-[#0D0106] px-0.5">Blogs</span> and
+              <span className="text-[#0D0106] px-0.5"> ‘Lives’,</span> as well as
               news on all the latest
-              <span className="text-black px-0.5">Fairs and Events.</span>
+              <span className="text-[#0D0106] px-0.5">Fairs and Events.</span>
             </p>
 
             <Button
@@ -670,14 +670,14 @@ const page = () => {
             />
           </div>
 
-          <div className="bg-[#463F3A] py-12 xl:py-16 text-white px-4">
+          <div className="bg-[#463F3A] py-12 xl:py-16  px-4">
             <div className="flex flex-col items-center justify-between">
               <h1
-                className={`text-2xl md:text-[48px] leading-[50px] tracking-tight font-light font-playfair ${playfair.className} `}
+                className={`text-2xl text-white md:text-[48px] leading-[50px] tracking-tight font-light font-playfair ${playfair.className} `}
               >
                 Stay in the Loop:
               </h1>
-              <h1 className="text-2xl text-center font-light md:text-[48px] font-playfair mt-3">
+              <h1 className="text-2xl text-center text-white font-light md:text-[48px] font-playfair mt-3">
                 Discover Exclusive Antiques & Insights
               </h1>
 
@@ -691,7 +691,7 @@ const page = () => {
                 />
                 <button
                   onClick={handleSubscribe}
-                  className="uppercase text-xs xl:w-[175px] 2xl:text-sm px-5 xl:px-[24px] py-[16px] border border-black bg-black text-white hover:opacity-80 "
+                  className="uppercase text-xs xl:w-[175px] 2xl:text-sm px-5 xl:px-[24px] py-[16px] border border-[#0D0106] bg-[#0D0106] text-white hover:opacity-80 "
                 >
                   Subscribe
                 </button>

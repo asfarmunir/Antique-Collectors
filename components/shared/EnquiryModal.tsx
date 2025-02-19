@@ -23,7 +23,7 @@ const EnquiryModal = () => {
       <DialogTrigger asChild>
         <Button
           label="Send a Query"
-          className="bg-[#0D0106] uppercase border text-xs 2xl:text-sm border-black text-white w-full py-2.5 hover:bg-gray-800"
+          className="bg-[#0D0106] uppercase border text-xs xl:text-[12px] border-[#0D0106] text-white w-full py-[16px] hover:bg-gray-800"
         />
       </DialogTrigger>
       <DialogContent className=" md:min-w-[800px]">
@@ -33,7 +33,7 @@ const EnquiryModal = () => {
             <h2 className="text-xl 2xl:text-2xl font-playfair ">
               SEND ENQUIRY
             </h2>
-            <DialogClose className="text-gray-600 hover:text-black">
+            <DialogClose className="text-gray-600 hover:text-[#0D0106]">
               {" "}
               ✖{" "}
             </DialogClose>
