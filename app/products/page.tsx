@@ -83,7 +83,7 @@ const Product = () => {
     <>
       <div>
         <div className="py-4 xl:py-[32px] px-4 md:px-6 lg:px-12">
-          <h1 className="text-xs text-[#919089]">
+          <h1 className="text-[14px] text-[#919089]">
             Home / Products / New Arrivals
           </h1>
           <h1 className="font-playfair pt-4 uppercase text-[24px] 2xl:text-2xl ">
@@ -92,14 +92,14 @@ const Product = () => {
         </div>
 
         {/* Filter and Sort Section */}
-        <section className="bg-[#F9F8F3] py-4 px-4 md:px-6 lg:px-12">
+        <section className="bg-[#F9F8F3] border-t border-[#EBE9E0] py-4 px-4 md:px-6 lg:px-12">
           <div className=" flex flex-wrap flex-row gap-5 justify-between items-center">
             {/* Filter button */}
             <div
               onClick={() => setFilterOpen(!filterOpen)}
               className=" inline-flex justify-center   cursor-pointer md:w-64 2xl:w-80 flex-row items-center gap-2 py-3 px-8 md:px-24 2xl:px-28 bg-[#EBE9E0]"
             >
-              <BiCandles className="text-lg text-[#0D0106]" />
+              <Image src={"/candle.svg"} width={15} height={15} alt="icon" />
               <p className="text-[12px] text-[#0D0106] ">FILTER</p>
             </div>
             <p
@@ -226,7 +226,7 @@ text-[#463F3A] md:hidden"
                             <button
                               onClick={() => toggleFavorite(p.id)}
                               aria-label={`Add ${p.title} to favorites`}
-                              className="text-xl font-semibold focus:outline-none"
+                              className="text-[18px] font-semibold focus:outline-none"
                             >
                               {isFavorited ? (
                                 <FaHeart className="text-red-500" /> // Filled heart for favorited
@@ -260,7 +260,9 @@ text-[#463F3A] md:hidden"
                           </h2>
                           <div className="text-sm flex flex-row pt-2 justify-between gap-4">
                             <p className="text-[#919089] ">{p.brand}</p>
-                            <p className="text-[#919089]">FOLLOW</p>
+                            <p className="text-[#919089] text-[12px] ">
+                              FOLLOW
+                            </p>
                           </div>
                         </div>
                       </div>
@@ -276,7 +278,7 @@ text-[#463F3A] md:hidden"
               >
                 {products.slice(0, gridProductCount).map((item) => (
                   <div className="mb-10 md:mb-16" key={item.id}>
-                    <div className="flex  flex-row items-center justify-between border-b pb-2 border-[#EBE9E0]">
+                    <div className="flex  flex-row items-center justify-between border-b pb-[16px] border-[#EBE9E0]">
                       <div className="flex flex-row items-center text-sm gap-3">
                         <div className="bg-[#EBE9E0] p-2 rounded-full w-8 h-8 flex items-center justify-center">
                           <Image
@@ -291,7 +293,7 @@ text-[#463F3A] md:hidden"
                           {item.brand}
                         </h1>
                       </div>
-                      <h1 className="text-[#0D0106] text-sm">FOLLOW</h1>
+                      <h1 className="text-[#0D0106] text-[12px]">FOLLOW</h1>
                     </div>
 
                     <div className="flex flex-col">
@@ -336,7 +338,7 @@ text-[#463F3A] md:hidden"
                           <p className="py-3 uppercase font-playfair text-[20px]">
                             {item.title}
                           </p>
-                          <p className="py-3 uppercase   2xl:text-lg">
+                          <p className="py-3 uppercase   text-[14px]">
                             $ 1.500
                           </p>
                         </div>
@@ -369,11 +371,11 @@ text-[#463F3A] md:hidden"
         {/* Live Presentation section */}
         <div className="bg-[#463F3A] px-12 xl:px-[80px] py-10 md:block hidden">
           <div className="grid grid-cols-3">
-            <div className="col-span-2  py-20 space-y-4">
+            <div className="col-span-2  py-20 space-y-3">
               <h1 className="font-playfair text-white text-base sm:text-xl md:text-3xl xl:text-[48px] ">
                 Live Presentations
               </h1>
-              <p className="text-[#EBE9E0] xl:text-[14px] py-4 font-thin uppercase">
+              <p className="text-[#EBE9E0] xl:text-[14px] py-2.5 font-thin xl:tracking-wide uppercase">
                 Set a reminder, and book a virtual seat!
               </p>
               <p className="text-[14px] text-[#EBE9E0] pb-6 max-w-3xl">
@@ -389,7 +391,7 @@ text-[#463F3A] md:hidden"
             </div>
 
             <div className="col-span-1">
-              <div className="bg-[#ffffff65] p-4">
+              <div className="bg-[#FFFFFF4D] p-4">
                 <div className=" bg-[#F9F8F3] text-[#0D0106] py-2 px-1 text-xs flex flex-row justify-between gap-4">
                   <p>12.23.2025</p>
                   <p>5.00 pm (UTC)</p>
@@ -413,7 +415,7 @@ text-[#463F3A] md:hidden"
                   Antique Showcase Live: Unveiling Rare jewelry Finds in Real
                   Time
                 </h3>
-                <p className="text-[#EBE9E0] py-2 text-sm">
+                <p className="text-[#EBE9E0] py-2 text-[12px] uppercase">
                   Patrick Boyd Carpenter
                 </p>
 
@@ -491,7 +493,7 @@ text-[#463F3A] md:hidden"
                       <div className="w-full pt-4 flex flex-col justify-between">
                         <div className="text-sm flex flex-row justify-between gap-4">
                           <p className="text-[#919089] mb-1">{p.brand}</p>
-                          <p className="text-[#919089]">FOLLOW</p>
+                          <p className="text-[#919089] text-[12px] ">FOLLOW</p>
                         </div>
                         <h2 className="text-sm md:text-[14px] uppercase pt-2">
                           {p.title}
@@ -505,7 +507,7 @@ text-[#463F3A] md:hidden"
               <div className="py-6 text-[#0D0106] px-4">
                 {products.slice(gridProductCount).map((item) => (
                   <div className="mb-10" key={item.id}>
-                    <div className="flex flex-row   items-center justify-between border-b pb-2 border-[#EBE9E0]">
+                    <div className="flex flex-row   items-center justify-between border-b pb-[16px] border-[#EBE9E0]">
                       <div className="flex flex-row items-center text-sm gap-3">
                         <div className="bg-[#EBE9E0] p-2 rounded-full w-8 h-8 flex items-center justify-center">
                           <Image
@@ -520,7 +522,7 @@ text-[#463F3A] md:hidden"
                           {item.brand || "Seller Name"}
                         </h1>
                       </div>
-                      <h1 className="text-[#0D0106] text-sm">FOLLOW</h1>
+                      <h1 className="text-[#0D0106] text-[12px]">FOLLOW</h1>
                     </div>
 
                     <div className="flex flex-col">
@@ -569,7 +571,7 @@ text-[#463F3A] md:hidden"
             <Button
               onClick={handleViewToggle}
               label={isViewMore ? "View More" : "View Less"}
-              className="uppercase border border-[#0D0106] hover:bg-[#0D0106] hover:text-white py-3 px-12 md:px-24 text-[12px]   bg-white text-[#0D0106] "
+              className="uppercase border border-[#0D0106] hover:bg-[#0D0106] hover:text-white py-3 px-12 md:px-24 xl:w-[343px] text-[12px]   bg-white text-[#0D0106] "
             />
           </div>
         </div>

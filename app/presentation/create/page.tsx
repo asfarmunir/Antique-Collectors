@@ -97,7 +97,7 @@ const page: React.FC = () => {
     <>
       <div className="px-5 md:px-12">
         <div className="py-6 border-b border border-[#EBE9E0] pb-5 mb-9">
-          <h1 className="text-xs text-[#919089]">
+          <h1 className="text-[14px] text-[#919089]">
             Home / Live Presentation / Create a Live Presentation
           </h1>
           <h1 className="font-playfair pt-4 uppercase text-[24px] 2xl:text-2xl ">

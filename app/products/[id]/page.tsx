@@ -65,7 +65,7 @@ const ProductDetails = ({ params }: { params: any }) => {
     <>
       <div>
         <div className="py-4 px-4 md:px-6 lg:px-12 border-y border-[#EBE9E0]">
-          <h1 className="text-xs text-[#919089]">
+          <h1 className="text-[14px] text-[#919089]">
             Home / Products / {productDetails?.category}
           </h1>
           <h1 className="font-playfair pt-4 uppercase text-[24px] ">
@@ -85,14 +85,14 @@ const ProductDetails = ({ params }: { params: any }) => {
                   onClick={handleMoveUp}
                 >
                   {" "}
-                  <span className="hidden lg:block">
+                  <span className="hidden text-gray-600 lg:block">
                     <RiArrowDropUpLine />
                   </span>
-                  <span className="block lg:hidden">
+                  <span className="block text-gray-600  lg:hidden">
                     <RiArrowLeftLine className="text-sm" />
                   </span>
                 </button>
-                <div className="flex  lg:flex-col gap-4  max-h-40 md:max-h-none">
+                <div className="flex  lg:flex-col  gap-4  max-h-40 md:max-h-none">
                   {images.map((image, index) => (
                     <Image
                       key={index}
@@ -123,14 +123,23 @@ const ProductDetails = ({ params }: { params: any }) => {
               </div>
 
               {/* Main Image */}
-              <div className="w-full py-3 flex h-auto ">
+              <div className="w-full py-3 flex h-auto  relative ">
                 <Image
                   src={images[selectedImageIndex]}
                   alt="Selected image"
                   width={350}
                   height={350}
-                  className=""
+                  className=" w-full h-full object-contain object-center"
                 />
+                <button>
+                  <Image
+                    src="/magnify.svg"
+                    alt="icon"
+                    width={25}
+                    height={25}
+                    className="absolute top-3 right-3"
+                  />
+                </button>
               </div>
             </div>
           </div>
@@ -139,7 +148,7 @@ const ProductDetails = ({ params }: { params: any }) => {
           <div className=" md:col-span-4 md:h-[350px] mt-12 md:mt-0">
             <div className="flex flex-col px-4 md:px-6 lg:px-10">
               {/* Seller Info */}
-              <div className="flex items-center justify-between border-b pb-2 border-[#EBE9E0]">
+              <div className="flex items-center justify-between border-b pb-[16px] border-[#EBE9E0]">
                 <div className="flex items-center text-sm gap-3">
                   <div className="bg-[#EBE9E0] p-2 rounded-full w-8 h-8 flex items-center justify-center">
                     <Image
@@ -196,9 +205,9 @@ const ProductDetails = ({ params }: { params: any }) => {
               {/* Action Buttons */}
               <div className="flex gap-3 mt-6">
                 <Button
-                  label="Add to favorite"
+                  label="add to favorites"
                   icon={<IoIosHeartEmpty className="text-xl" />}
-                  className="bg-white uppercase text-xs hover:bg-[#0D0106] hover:text-white text-nowrap 2xl:text-[12px] py-[16px] border border-[#0D0106] text-[#0D0106] w-[70%]   "
+                  className="bg-white uppercase font-openSans text-xs hover:bg-[#0D0106] hover:text-white text-nowrap 2xl:text-[12px] py-[16px] border border-[#0D0106] text-[#0D0106] w-[70%]   "
                 />
                 <EnquiryModal />
               </div>
@@ -209,10 +218,10 @@ const ProductDetails = ({ params }: { params: any }) => {
         <div className="md:px-8 grid grid-cols-1 md:grid-cols-7 md:mb-8  mt-4">
           <div className=" md:col-span-3 mx-4">
             {/* Left Side: Like and Comment */}
-            <div className="flex items-center justify-between">
-              <div className="flex flex-row gap-6 border-b pb-2 border-[#EBE9E0]">
+            <div className="flex items-center justify-between  border-b pb-[16px] border-[#EBE9E0]">
+              <div className="flex flex-row gap-6">
                 <button className="flex flex-row gap-2 items-center ">
-                  <FaRegHeart className="text-xl" /> 23
+                  <FaRegHeart className="text-xl text-gray-700" /> 23
                 </button>
                 <button className="flex flex-row gap-2 items-center ">
                   <Image
@@ -224,7 +233,7 @@ const ProductDetails = ({ params }: { params: any }) => {
                   32
                 </button>
               </div>
-              <HiOutlineUpload className="text-2xl" />
+              <Image src="/export.svg" alt="icon" width={25} height={25} />
             </div>
             {Array.from({ length: 2 }).map((_, index) => (
               <div className="border-b border-[#EBE9E0] p-3 my-3 ">
@@ -249,9 +258,12 @@ const ProductDetails = ({ params }: { params: any }) => {
                   </button>
                 </div>
                 <div className=" p-3 pl-8 my-3 ">
-                  <h3 className="uppercase text-semibold text-[14px] text-[#0D0106]">
-                    Anna J.
-                  </h3>
+                  <div className="flex items-center gap-2">
+                    <p className="w-6 h-6 rounded-full bg-[#EBE9E0]"></p>
+                    <h3 className="uppercase text-semibold text-[14px] text-[#0D0106]">
+                      Anna J.
+                    </h3>
+                  </div>
                   <p className="text-[12px] py-3 text-[#919089]">
                     Lorem ipsum dolor sit, amet consectetur adipisicing elit.
                     Veritatis facilis non dolorum veniam odit quasi odio earum,

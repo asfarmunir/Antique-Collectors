@@ -59,7 +59,7 @@ const Seller = () => {
     <>
       <div>
         <div className="py-4 xl:py-[32px] px-4 md:px-6 lg:px-12">
-          <h1 className="text-xs text-[#919089]">
+          <h1 className="text-[14px] text-[#919089]">
             Home / Sellers / A-Z Sellers
           </h1>
           <h1 className="font-playfair pt-4 uppercase text-[24px]">Sellers</h1>
@@ -71,7 +71,7 @@ const Seller = () => {
               onClick={() => setFilterOpen(!filterOpen)}
               className="inline-flex justify-center md:w-64 2xl:w-80 cursor-pointer flex-row items-center gap-2 py-3 px-8 md:px-24 bg-[#EBE9E0]"
             >
-              <BiCandles className="text-lg text-[#0D0106]" />
+              <Image src={"/candle.svg"} width={15} height={15} alt="icon" />
               <p className="text-xs text-[#0D0106]">FILTER</p>
             </div>
             <p
@@ -148,7 +148,7 @@ text-[#463F3A] md:hidden"
               <div
                 className={`grid grid-cols-1 sm:grid-cols-2 md:grid-cols-${
                   filterOpen ? 3 : 4
-                } gap-4`}
+                } gap-x-2`}
               >
                 {sellers.slice(0, visibleGridUsers).map((items) => (
                   <div
@@ -193,28 +193,28 @@ text-[#463F3A] md:hidden"
               <div className="">
                 {sellerdata.slice(0, visibleHorizontalUsers).map((item) => (
                   <div
-                    className="bg-[#EBE9E0] p-4 my-6"
+                    className="bg-[#EBE9E0] p-4 xl:p-[24px] my-6"
                     key={item.id}
                     onClick={handleSellerDetails}
                   >
                     <div className=" bg-[#F9F8F3] ">
-                      <div className="uppercase p-4 text-xs flex flex-row justify-between items-center">
+                      <div className="uppercase p-4 xl:py-[8px] text-xs flex flex-row justify-between items-center">
                         <p>{item.product_count} products</p>
                         <Link href={"#"}>View All</Link>
                       </div>
                       <div className="flex flex-row items-center  py-2 overflow-x-auto">
                         {Array.from({ length: 6 }).map((_, index) => (
                           <Image
-                            src="/images/products/p2.png"
+                            src="/images/products/p5.png"
                             width={120}
                             height={120}
                             alt="images"
-                            className=" w-full border border-[#0d01060b]  "
+                            className=" w-full bg-white border border-[#0d01060b]  "
                             key={index}
                           />
                         ))}
                       </div>
-                      <div className="flex p-4 flex-row items-center justify-between gap-4 my-3">
+                      <div className="flex px-[22px] flex-row items-center justify-between gap-4 my-3">
                         <div className="flex flex-row items-center gap-2">
                           <Image
                             src="/images/sellers/s1.png"
@@ -223,21 +223,21 @@ text-[#463F3A] md:hidden"
                             alt="hehe"
                             className="rounded-full"
                           />
-                          <h1 className="text-[20px] md:text-[24px] font-playfair">
+                          <h1 className="text-[20px] xl:text-[20px] font-playfair">
                             Antique Animal Jewelry
                           </h1>
                         </div>
                         <Link
                           href={"#"}
-                          className="text-sm uppercase text-[#463F3A]"
+                          className="text-[12px] uppercase text-[#463F3A]"
                         >
                           Follow
                         </Link>
                       </div>
-                      <h2 className="pt-2 px-4 text-[#919089]">
+                      <h2 className="py-2 px-[22px] text-[#919089]">
                         {item.seller.location}
                       </h2>
-                      <p className="py-3 px-4 text-sm">
+                      <p className="pb-[26px] px-[22px] text-sm">
                         {item.seller.description}
                       </p>
                     </div>
@@ -260,7 +260,7 @@ text-[#463F3A] md:hidden"
                 : "View Less"
             }
             onClick={isGridView ? handleGridToggle : handleHorizontalToggle}
-            className="uppercase border border-[#0D0106] py-2 px-8  hover:bg-[#0D0106] hover:text-white text-xs 2xl:text-sm bg-white text-[#0D0106]"
+            className="uppercase border border-[#0D0106] py-2 px-8 xl:w-[126px] xl:h-[56px] xl:px-0  hover:bg-[#0D0106] hover:text-white text-[12px] bg-white text-[#0D0106]"
           />
         </div>
       </div>

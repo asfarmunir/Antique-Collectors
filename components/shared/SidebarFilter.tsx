@@ -75,7 +75,7 @@ const FilterComponent: React.FC<FilterComponentProps> = ({
   return (
     <div>
       {filtersToShow.includes("category") && (
-        <div className="border border-[#EBE9E0] p-3 mb-4 ">
+        <div className="border-[1.5px] border-[#EBE9E0] p-3 xl:p-[24px] mb-4 ">
           <div className="flex flex-row items-center  justify-between gap-4">
             <h1 className="custom-border font-playfair text-[20px]  text-[#463F3A] ">
               Categories
@@ -134,7 +134,7 @@ const FilterComponent: React.FC<FilterComponentProps> = ({
       )}
 
       {filtersToShow.includes("eraPeriod") && (
-        <div className="border border-[#EBE9E0] p-3 mb-4">
+        <div className="border border-[#EBE9E0] p-3 xl:p-[24px] mb-4">
           <div className="flex flex-row items-center justify-between gap-4">
             <h1 className="custom-border font-playfair text-[20px]  text-[#463F3A] ">
               Era/Period
@@ -170,7 +170,7 @@ const FilterComponent: React.FC<FilterComponentProps> = ({
       )}
 
       {filtersToShow.includes("condition") && (
-        <div className="border border-[#EBE9E0] p-3 mb-4">
+        <div className="border border-[#EBE9E0] p-3 xl:p-[24px] mb-4">
           <div className="flex flex-row items-center justify-between gap-4">
             <h1 className="custom-border font-playfair text-[20px]  text-[#463F3A] ">
               Condition
@@ -206,7 +206,7 @@ const FilterComponent: React.FC<FilterComponentProps> = ({
       )}
 
       {filtersToShow.includes("sellerLocation") && (
-        <div className="border border-[#EBE9E0] p-3 mb-4">
+        <div className="border border-[#EBE9E0] p-3 xl:p-[24px] mb-4">
           <div className="flex flex-row items-center justify-between gap-4">
             <h1 className="custom-border font-playfair text-[20px]  text-[#463F3A] ">
               Seller Location

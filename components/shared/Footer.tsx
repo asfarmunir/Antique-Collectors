@@ -40,14 +40,14 @@ const Footer = () => {
           <div className="flex flex-row items-center  justify-center">
             <InputField
               placeholder="Your Email Address"
-              className="border border-[#EBE9E0] md:min-w-64 text-xs 2xl:text-sm text-[#919089] placeholder:text-[#919089] px-4 py-[16px] "
+              className="border border-[#EBE9E0] md:min-w-64 xl:min-w-[311px] text-xs 2xl:text-sm text-[#919089] placeholder:text-[#919089] px-4 py-[16px] "
               type="email"
               value={subEmail}
               onChange={(e) => setSubEmail(e.target.value)}
             />
             <button
               onClick={handleSubscribe}
-              className="uppercase text-xs xl:text-[12px] px-5 xl:px-10 py-[16px] border border-[#0D0106] bg-[#0D0106] text-white hover:opacity-80 "
+              className="uppercase text-xs xl:text-[12px] px-5 xl:px-10 xl:w-[175px] py-[16px] border border-[#0D0106] bg-[#0D0106] text-white hover:opacity-80 "
             >
               Subscribe
             </button>
@@ -61,9 +61,9 @@ const Footer = () => {
               width={100}
               height={100}
               alt="footer logo"
-              className="xl:w-[170px] xl:h-[168px] 2xl:w-40 2xl:h-40"
+              className="xl:w-[170px] xl:h-[218px] "
             />
-            <p className="text-[#463F3A] py-2 text-[12px] xl:text-[16px] w-52 xl:w-80">
+            <p className="text-[#919089] py-2 text-[12px] xl:text-[16px] w-52 xl:w-80">
               Join the hunt for the most beautiful, most unusual antiques and
               jewelry
             </p>

@@ -76,7 +76,7 @@ const Seller = () => {
     <>
       <div>
         <div className="py-4 px-8 border-b border-[#EBE9E0]">
-          <h1 className="text-xs text-[#919089]">
+          <h1 className="text-[14px] text-[#919089]">
             Home / Sellers / A-Z Sellers
           </h1>
           <h1 className="font-playfair pt-4 uppercase text-[24px] 2xl:text-2xl ">
@@ -137,7 +137,7 @@ const Seller = () => {
               onClick={() => setFilterOpen(!filterOpen)}
               className="inline-flex cursor-pointer flex-row md:w-64 2xl:w-80 justify-center items-center gap-2 py-3 px-8 bg-[#EBE9E0]"
             >
-              <BiCandles className="text-lg text-[#0D0106]" />
+              <Image src={"/candle.svg"} width={15} height={15} alt="icon" />
               <p className="text-xs text-[#0D0106] ">FILTER</p>
             </div>
             <p className="uppercase text-xs md:hidden">Showing 23 Results</p>

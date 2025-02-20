@@ -156,7 +156,7 @@ const Blog = () => {
 
         <div>
           <div className="py-4 xl:py-[32px] px-6 md:px-12">
-            <h1 className="text-xs text-[#919089]">
+            <h1 className="text-[14px] text-[#919089]">
               Home / Products / New Arrivals
             </h1>
             <h1 className="font-playfair pt-4 uppercase text-[24px] ">Blog</h1>
@@ -168,7 +168,7 @@ const Blog = () => {
                 onClick={() => setFilterOpen(!filterOpen)}
                 className="inline-flex flex-row md:w-56 xl:w-72 justify-center items-center gap-2 py-3 px-8 bg-[#EBE9E0]"
               >
-                <BiCandles className="text-lg text-[#0D0106]" />
+                <Image src={"/candle.svg"} width={15} height={15} alt="icon" />
                 <p className="text-xs text-[#0D0106] ">FILTER</p>
               </div>
 
