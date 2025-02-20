@@ -76,7 +76,7 @@ const Presentations = () => {
       <div>
         <div className="py-4 xl:py-[32px] px-4 md:px-6 lg:px-12 border-b border-[#EBE9E0] flex flex-row flex-wrap gap-4 justify-between items-center">
           <div>
-            <p className="text-xs">Home / Live Presentations</p>
+            <p className="text-[14px]">Home / Live Presentations</p>
             <h1 className="font-playfair pt-4 uppercase text-base md:text-[24px] ">
               Live Presentations
             </h1>
@@ -85,18 +85,18 @@ const Presentations = () => {
           <div>
             <Link
               href={"/presentation/create"}
-              className="text-xs xl:text-[12px] 2xl:text-sm hover:opacity-80 py-3 px-4 text-white bg-[#0D0106] uppercase"
+              className="text-xs xl:text-[12px] xl:w-[237px] xl:h-[48px] 2xl:text-sm hover:opacity-80 py-3 px-4 xl:px-6 text-white bg-[#0D0106] uppercase"
             >
               Create a live presentation
             </Link>
           </div>
         </div>
 
-        <section className="py-4 px-4 md:px-6 lg:z-10">
+        <section className="py-4 px-4 md:px-6 lg:px-12 lg:z-10">
           <h1 className="text-[32px] md:text-[44px] xl:text-[48px]  font-playfair capitalize">
             Discover Upcoming Live Showcases
           </h1>
-          <p className="text-[14px] text-[#919089] py-3 ">
+          <p className="text-[16px] text-[#919089] py-3 ">
             Explore our schedule of live presentations where sellers unveil
             unique antiques, share their stories, and answer your questions in
             real time. Don’t miss the chance to connect and find your next
@@ -107,9 +107,9 @@ const Presentations = () => {
           <div className="grid grid-cols-1 md:grid-cols-4  py-5">
             {Array.from({ length: 8 }).map((items) => (
               <div className="bg-[#FFFFFF] border border-[#EBE9E0] p-3">
-                <div className="bg-[#463F3A] text-white py-2 px-1 text-xs flex flex-row justify-between gap-4">
-                  <p>12.23.2025</p>
-                  <p>5.00 pm (UTC)</p>
+                <div className="bg-[#463F3A] text-white py-2 px-[8px] text-xs flex flex-row justify-between gap-4">
+                  <p className="text-[12px] text-white">12.23.2025</p>
+                  <p className="text-[12px] text-white">5.00 pm (UTC)</p>
                 </div>
                 <div
                   style={{
@@ -126,11 +126,11 @@ const Presentations = () => {
                   />
                 </div>
 
-                <h3 className="text-[#463F3A] font-playfair text-[18px] pt-2">
+                <h3 className="text-[#463F3A] font-playfair text-[20px] pt-2">
                   Antique Showcase Live: Unveiling Rare jewelry Finds in Real
                   Time
                 </h3>
-                <p className="text-[#8B8683] pt-2 text-sm">
+                <p className="text-[#919089] uppercase pt-2 text-[12px]">
                   Patrick Boyd Carpenter
                 </p>
 
@@ -138,7 +138,7 @@ const Presentations = () => {
                   <Button
                     label="Set a reminder"
                     onClick={handleDialog}
-                    className="uppercase w-full bg-[#463F3A] py-3 text-xs 2xl:text-sm hover:opacity-80"
+                    className="uppercase w-full bg-[#463F3A] py-[16px]  text-[12px] hover:opacity-80"
                   />
                 </div>
               </div>
@@ -178,7 +178,7 @@ const Presentations = () => {
                   <TableRow key={index}>
                     <TableCell className="border-r  border-[#EBE9E0]">
                       <div className="flex flex-row items-center text-sm gap-2 ">
-                        <div className="bg-[#EBE9E0] p-2 rounded-full w-8 h-8 flex items-center justify-center">
+                        <div className="bg-[#EBE9E0] p-2 rounded-full w-10 h-10 flex items-center justify-center">
                           <Image
                             src="/"
                             width={10}
@@ -188,19 +188,21 @@ const Presentations = () => {
                           />
                         </div>
                         <div>
-                          <h1 className="text-xs uppercase text-[#919089]">
+                          <h1 className="text-[14px] uppercase text-[#919089]">
                             {row.sellername}
                           </h1>
                           <Button
                             label="Follow"
-                            className="uppercase text-[10px] p-0 bg-transparent text-[#0D0106]"
+                            className="uppercase text-[12px] p-0 bg-transparent text-[#0D0106]"
                           />
                         </div>
                       </div>
                     </TableCell>
                     <TableCell className=" border-r  border-[#EBE9E0]">
-                      <p className="font-playfair text-[16px]">{row.title}</p>
-                      <p className="text-gray-400 text-xs mt-1">Description</p>
+                      <p className="font-playfair text-[20px]">{row.title}</p>
+                      <p className="text-gray-400 text-[14px] mt-1">
+                        Description
+                      </p>
                     </TableCell>
                     <TableCell className="border-r text-[14px]  border-[#EBE9E0] text-[#0D0106]">
                       {row.date}
@@ -212,7 +214,7 @@ const Presentations = () => {
                     <TableCell>
                       <Button
                         label="Set a reminder"
-                        className="uppercase text-sm text-white w-full hover:opacity-80"
+                        className="uppercase text-[12px] text-white w-full hover:opacity-80"
                       />
                     </TableCell>
                   </TableRow>
@@ -226,16 +228,16 @@ const Presentations = () => {
           <h1 className="text-[32px] md:text-[48px] font-playfair capitalize">
             Catch Up on Recent Showcases
           </h1>
-          <p className="text-[14px] py-4 text-[#919089] mb-3">
+          <p className="text-[16px] py-4 text-[#919089] mb-3">
             Missed a live session? Watch the highlights and explore featured
             antiques from the past 24 hours before they’re gone.
           </p>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {Array.from({ length: 2 }).map((item) => (
               <div className="md:mx-2 ">
                 <div className="border-b border-[#EBE9E0] pb-4">
-                  <p className=" w-full bg-[#EBE9E0] py-2 items-center text-xs text-center">
+                  <p className=" w-full bg-[#EBE9E0] py-2 items-center text-[12px] text-center">
                     Available to watch for another 14 hours
                   </p>
                   <div
@@ -258,11 +260,16 @@ const Presentations = () => {
                       Home Decor originating from Italy
                     </h1>
                     <button>
-                      <LuUpload className="text-lg" />{" "}
+                      <Image
+                        src="/export.svg"
+                        width={23}
+                        height={23}
+                        alt="upload"
+                      />
                     </button>
                   </div>
 
-                  <p className="text-sm">Streamed 22 hours ago</p>
+                  <p className="text-[14px]">Streamed 22 hours ago</p>
                 </div>
 
                 <div>
@@ -288,7 +295,7 @@ const Presentations = () => {
                       className="uppercase text-[12px] p-0 bg-transparent text-[#0D0106]"
                     />
                   </div>
-                  <h2 className="text-lg mt-2 font-playfair">
+                  <h2 className="text-[16px] mt-2 font-playfair">
                     Featured Products in the Live
                   </h2>
                   <div className="flex items-center gap-2">
@@ -302,7 +309,7 @@ const Presentations = () => {
                       />
                     ))}
                   </div>
-                  <button className=" w-full bg-[#0D0106] py-3 text-white">
+                  <button className=" w-full bg-[#0D0106] py-[16px] text-[12px] text-white">
                     Watch Now
                   </button>
                 </div>

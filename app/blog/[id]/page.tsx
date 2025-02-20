@@ -23,7 +23,7 @@ const BlogDetails = ({ params }: { params: any }) => {
   return (
     <>
       <div>
-        <div className="py-4 px-4 md:px-12 border border-[#EBE9E0]">
+        <div className="py-5 xl:py-[32px] px-4 md:px-12 border border-[#EBE9E0]">
           <h1 className="text-[14px] text-[#919089]">
             Home / Blog / Blog Post Title
           </h1>
@@ -32,7 +32,7 @@ const BlogDetails = ({ params }: { params: any }) => {
           </h1>
         </div>
         <div className="p-4 md:py-8 md:px-12">
-          <div className="relative w-full min-h-80 mx-auto">
+          <div className="relative w-full h-[409px] mx-auto">
             <Image
               src="/images/post/post4.jpeg"
               alt="imag"
@@ -42,7 +42,7 @@ const BlogDetails = ({ params }: { params: any }) => {
             />
           </div>
 
-          <h1 className="text-[40px] font-playfair capitalize py-3">
+          <h1 className="text-[48px] font-playfair capitalize py-3">
             {blogDetails?.title}
           </h1>
           <div className="flex flex-row items-center text-sm gap-3 pb-3">
@@ -55,24 +55,25 @@ const BlogDetails = ({ params }: { params: any }) => {
                 alt=""
               />
             </div>
-            <h1 className="text-xs uppercase text-[#404040]">Oliver bennett</h1>
-            <span className="w-1 h-1 bg-[#404040] rounded-full"></span>
-            <h1 className="text-[#404040] uppercase text-xs">
+            <h1 className="text-[14px] uppercase text-[#463F3A]">
+              Oliver bennett
+            </h1>
+            <span className="w-1 h-1 bg-[#463F3A] rounded-full"></span>
+            <h1 className="text-[#463F3A] uppercase text-[14px]">
               {blogDetails?.date || "23 JAN 2023"}
             </h1>
           </div>
 
-          <p className="text-[#666666] text-sm pb-4 border-b border-[#EBE9E0] ">
-            Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
-            nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam.
-            Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
-            nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam.
-            Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
-            nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam.
+          <p className="text-[#463F3A] text-[16px] pb-4 border-b border-[#EBE9E0] ">
+            Antiques are more than just objects; they are windows into the past,
+            stories captured in time, and treasures that connect generations. At
+            The Antique Collector, we believe every antique has a tale to tell,
+            and we’re here to help you uncover those stories while celebrating
+            the artistry and craftsmanship of bygone eras.
           </p>
 
-          <h1 className="text-[#3D3D3D] py-3 text-lg font-playfair">
-            Lorem Heading
+          <h1 className=" mb-3 py-3 text-lg xl:text-[32px] font-playfair">
+            Why Collect Antiques?
           </h1>
           <p className="text-[#666666] text-sm">
             Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
@@ -150,7 +151,7 @@ const BlogDetails = ({ params }: { params: any }) => {
             <div className="flex items-center bg-[#F9F8F3] p-5 justify-between">
               <div className="flex flex-row gap-6 ">
                 <button className="flex flex-row gap-2 items-center ">
-                  <FaRegHeart className="text-xl" /> 23
+                  <FaRegHeart className="text-xl text-gray-600" /> 23
                 </button>
                 <button className="flex flex-row gap-2 items-center ">
                   <Image
@@ -162,14 +163,17 @@ const BlogDetails = ({ params }: { params: any }) => {
                   32
                 </button>
               </div>
-              <HiOutlineUpload className="text-2xl" />
+              <button className="text-[#463F3A] text-[12px] inline-flex items-center gap-2">
+                SHARE
+                <Image src="/export.svg" alt="icon" width={20} height={20} />
+              </button>
             </div>
             {Array.from({ length: 1 }).map((_, index) => (
               <div className=" p-3 my-3 ">
-                <h3 className="uppercase text-semibold text-sm text-[#0D0106]">
+                <h3 className="uppercase text-semibold text-[14px] text-[#0D0106]">
                   Name SurName
                 </h3>
-                <p className="text-xs py-3 text-[#919089]">
+                <p className="text-[14px] py-3 text-[#919089]">
                   Lorem ipsum dolor sit, amet consectetur adipisicing elit.
                   Veritatis facilis non dolorum veniam odit quasi odio earum,
                   fugit suscipit maxime eaque fugiat reiciendis voluptates id
@@ -187,10 +191,10 @@ const BlogDetails = ({ params }: { params: any }) => {
                   </button>
                 </div>
                 <div className=" p-3 pl-8 my-3 ">
-                  <h3 className="uppercase text-semibold text-sm text-[#0D0106]">
+                  <h3 className="uppercase text-semibold text-[14px] text-[#0D0106]">
                     Name SurName
                   </h3>
-                  <p className="text-xs py-3 text-[#919089]">
+                  <p className="text-[14px] py-3 text-[#919089]">
                     Lorem ipsum dolor sit, amet consectetur adipisicing elit.
                     Veritatis facilis non dolorum veniam odit quasi odio earum,
                     fugit suscipit maxime eaque fugiat reiciendis voluptates id
@@ -224,39 +228,39 @@ const BlogDetails = ({ params }: { params: any }) => {
               </button>
             </div>
           </div>
-          <div className=" bg-[#F9F8F3] p-6 w-full space-y-3 h-full md:w-[35%]">
-            <h3 className="text-2xl font-playfair">
+          <div className=" bg-[#F9F8F3] p-[24px] w-full space-y-3 h-full md:w-[35%]">
+            <h3 className="text-[24px] font-playfair pb-2">
               Want to share your knowledge in Antiques?
             </h3>
-            <p className="text-[#919089] text-sm 2xl:text-base">
+            <p className="text-[#919089] text-sm xl:text-[16px] pb-6">
               Lorem ipsum dolor sit amet consectetur. Sed amet bibendum at
               venenatis faucibus mi fringilla viverra. In nulla aliquam magna
               orci neque penatibus neque eget. Commodo scelerisque cursus purus
               id fermentum lorem nisi sit malesuada.
             </p>
-            <button className="bg-[#0D0106] uppercase text-white text-xs py-3 w-full px-4 mt-4">
-              Write a blog posr
+            <button className="bg-[#0D0106] uppercase text-white text-xs py-[16px] w-full px-4 mt-4">
+              Write a blog post
             </button>
           </div>
         </div>
 
         <section className="bg-white">
-          <div className=" py-6 border-y border-[#EBE9E0] px-4 md:px-6 lg:px-12 flex items-center font-playfair justify-between">
-            <h2 className="text-lg md:text-[20px] uppercase ">
+          <div className=" py-[32px] border-y border-[#EBE9E0] px-4 md:px-6 lg:px-12 flex items-center font-playfair justify-between">
+            <h2 className="text-lg md:text-[24px] uppercase ">
               Similar Blog Posts
             </h2>
-            <Link href={"/blog"} className="text-sm ">
+            <Link href={"/blog"} className="text-[12px] text-[#463F3A] ">
               VIEW ALL
             </Link>
           </div>
         </section>
 
         <section className="px-4 border-b border-[#EBE9E0]  md:px-6 lg:px-12 ">
-          <div className="grid  sm:grid-cols-2 md:grid-cols-3 gap-4 w-full mt-6">
+          <div className="grid   sm:grid-cols-2 md:grid-cols-3 gap-6 w-full mt-6">
             {blog.slice(0, 3).map((b) => (
               <div
                 key={b.id}
-                className="w-full py-3 md:py-5 md:pr-4  last:border-r-0"
+                className="w-full py-3 border-r border-[#EBE9E0] md:py-5 md:pr-4  last:border-r-0"
               >
                 <Image
                   src="/images/blogs/b1.png" //replacce with original image
@@ -265,12 +269,14 @@ const BlogDetails = ({ params }: { params: any }) => {
                   width={120}
                   alt={b.title}
                 />
-                <h1 className="text-xl font-playfair py-3">{b.title}</h1>
-                <p className="text-sm text-[#463F3A] line-clamp-6">{b.body}</p>
+                <h1 className="text-[24px] font-playfair py-3">{b.title}</h1>
+                <p className="text-[14px] text-[#919089] line-clamp-6">
+                  {b.body}
+                </p>
 
                 <button
                   onClick={() => handleReadMore(b.id)}
-                  className=" pt-4 pb-6 text-sm text-[#0D0106]"
+                  className=" pt-4 pb-6 text-[12px] text-[#0D0106]"
                 >
                   READ MORE
                 </button>

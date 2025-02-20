@@ -87,25 +87,25 @@ const Blog = () => {
       <div>
         <div className="flex relative flex-col-reverse gap-5 bg-[#F9F8F3] md:flex-row h-[480px] md:h-[500px] xl:h-[680px] border-b border-[#EBE9E0]">
           {/* Text Section */}
-          <div className="w-full px-6 md:px-12 flex flex-col my-auto justify-center h-full">
+          <div className="w-full px-6 md:px-12 xl:pl-[80px] flex flex-col my-auto justify-center h-full">
             <h1
-              className={`text-3xl xl:text-[48px] xl:leading-snug md:text-4xl 2xl:text-5xl font-playfair italic ${playfair.className}`}
+              className={`text-3xl xl:text-[48px] xl:leading-[63px] md:text-4xl 2xl:text-5xl font-playfair italic ${playfair.className}`}
             >
               Discovering the Timeless <br /> Beauty of Antiques
             </h1>
             <div className="flex mt-4 text-[#919089] items-center gap-2">
               <Image
-                src="/images/hero1.svg"
+                src="/images/hero2.svg"
                 alt="line"
                 width={50}
                 height={50}
                 className=" rounded-full w-[30px] h-[30px]"
               />
-              <p className="-mt-4">
+              <p className="-mt-4 uppercase text-[12px] text-[#919089]">
                 Oliver Bennett 18 <span className="text-4xl ">.</span> Jan 2022
               </p>
             </div>
-            <p className="text-sm md:text-[14px] text-[#463F3A]  text-justify py-4">
+            <p className="text-sm xl:text-[16px] text-[#463F3A]  text-justify py-4">
               Lorem ipsum dolor sit amet consectetur, adipisicing elit. Neque
               alias, beatae, iste totam molestias placeat molestiae laudantium
               hic consequuntur possimus explicabo voluptatum! Error consequuntur
@@ -113,7 +113,7 @@ const Blog = () => {
             </p>
             <Button
               label="Read article"
-              className="w-1/2 md:w-1/2 lg:w-1/3 text-sm text-white hover:opacity-80 mt-4 uppercase py-4"
+              className="w-1/2 md:w-1/2 lg:w-1/3 text-[12px] xl:w-[175px] xl:h-[48px] text-white hover:opacity-80 mt-4 uppercase py-4"
             />
           </div>
 
@@ -156,9 +156,7 @@ const Blog = () => {
 
         <div>
           <div className="py-4 xl:py-[32px] px-6 md:px-12">
-            <h1 className="text-[14px] text-[#919089]">
-              Home / Products / New Arrivals
-            </h1>
+            <h1 className="text-[14px]">Home / Blog</h1>
             <h1 className="font-playfair pt-4 uppercase text-[24px] ">Blog</h1>
           </div>
 
@@ -180,10 +178,10 @@ const Blog = () => {
                 placeholder="Search"
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                className="text-sm placeholder:text-sm w-full md:w-1/3 border border-[#EBE9E0]"
+                className="text-sm placeholder:text-sm w-full md:w-[311px] border border-[#EBE9E0]"
               />
               <div className="w-full md:w-auto flex flex-row gap-2 items-center">
-                <p className="uppercase text-xs text-[#463F3A] md:block hidden text-nowrap">
+                <p className="uppercase text-[12px] pr-12 text-[#463F3A] md:block hidden text-nowrap">
                   Showing {blog.length} Results
                 </p>
                 <div className="w-full flex flex-row items-center gap-5">
@@ -195,7 +193,7 @@ const Blog = () => {
                       onSelect={handleSelect}
                       isOpen={openDropdown === 1}
                       toggleDropdown={() => toggleDropdown(1)}
-                      className="bg-white w-full"
+                      className="bg-white w-full xl:h-[40px]"
                     />
                   </div>
                 </div>
@@ -229,12 +227,12 @@ const Blog = () => {
                 />
               </div>
 
-              <div className="md:block hidden mt-2">
-                <h2 className="text-[24px] font-playfair">Recent Posts</h2>
+              <div className="md:block  hidden mt-2">
+                <h2 className="text-[24px] font-playfair mb-4">Recent Posts</h2>
                 {post.map((p) => (
                   <div
                     key={p.title}
-                    className="flex flex-row items-end  gap-4 mt-3 text-[16px]"
+                    className="flex flex-row items-end py-2   gap-4 mt-3 text-[16px]"
                   >
                     <div
                       className="w-[50px] h-[50px]
@@ -256,7 +254,7 @@ const Blog = () => {
                       >
                         {p.title}
                       </Link>
-                      <p className="font-light text-xs mt-2 text-[#9F9F9F]">
+                      <p className="font-light text-[12px] mt-2 text-[#9F9F9F]">
                         {p.date}
                       </p>
                     </div>
@@ -265,11 +263,11 @@ const Blog = () => {
               </div>
             </div>
 
-            <div className="md:px-4 xl:px-[80px] col-span-4 space-y-5">
+            <div className="md:px-4 xl:px-[80px]  col-span-4 space-y-5">
               {filteredBlogs.slice(0, visibleBlogs).map((blogs: any) => (
                 <div
                   key={blogs.userId}
-                  className="md:border md:border-[#d9d9d960]"
+                  className="md:border md:border-[#F9F8F3]"
                 >
                   <div className="w-full py-4 md:px-10 md:py-5">
                     <div className="h-80 relative">
@@ -281,12 +279,23 @@ const Blog = () => {
                       />
                     </div>
 
-                    <div className="text-xs text-[#9F9F9F] flex flex-row justify-between gap-6 mt-2">
-                      <p>{blogs.date || "03 AUG 2002"}</p>
-                      <p>Writer Name</p>
+                    <div className=" text-[#9F9F9F] flex flex-row justify-between gap-6 py-[8px]">
+                      <p className="text-[12px] text-[#919089] uppercase inline-flex items-center gap-2">
+                        <Image
+                          src="/images/hero1.svg"
+                          width={15}
+                          height={15}
+                          alt="icon"
+                          className="rounded-full"
+                        />
+                        Oliver Bennett
+                      </p>
+                      <p className="text-[12px] text-[#919089] uppercase">
+                        {blogs.date || "03 AUG 2002"}
+                      </p>
                     </div>
 
-                    <h1 className="text-[24px] font-playfair mt-2">
+                    <h1 className="text-[24px] font-playfair mb-2 ">
                       {blogs.title}
                     </h1>
                     <p className="mt-2 text-[#919089] text-[14px] lime-clamp-5">
@@ -296,7 +305,7 @@ const Blog = () => {
                     <Button
                       label="Read More"
                       onClick={() => handleReadMore(blogs.id)}
-                      className="uppercase bg-transparent text-[#0D0106] text-sm mt-4 p-0"
+                      className="uppercase bg-transparent text-[#0D0106] text-[12px]  mt-2 p-0"
                     />
                   </div>
                 </div>

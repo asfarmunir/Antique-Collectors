@@ -294,7 +294,7 @@ const page: React.FC = () => {
             onClick={() => setFilterOpen(!filterOpen)}
             className=" inline-flex cursor-pointer flex-row items-center gap-2 py-3 px-8 bg-[#EBE9E0]"
           >
-            <BiCandles className="text-lg text-[#0D0106]" />
+            <Image src={"/candle.svg"} width={15} height={15} alt="icon" />
             <p className="text-xs text-[#0D0106] ">FILTER</p>
           </div>
           <p className="uppercase text-xs md:hidden">

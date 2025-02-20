@@ -86,11 +86,16 @@ export function LivePresentation({ onClose }: { onClose: any }) {
                 </div>
 
                 <div className="flex flex-row items-center gap-4 py-2 justify-between">
-                  <h1 className="font-playfair text-[20px]">
+                  <h1 className="font-playfair text-[24px]">
                     Home Decor originating from Italy
                   </h1>
                   <button>
-                    <LuUpload className="text-lg" />
+                    <Image
+                      src="/export.svg"
+                      width={20}
+                      height={20}
+                      alt="heart"
+                    />
                   </button>
                 </div>
               </div>
@@ -107,17 +112,17 @@ export function LivePresentation({ onClose }: { onClose: any }) {
                     />
                   </div>
 
-                  <h1 className="text-xs uppercase text-[#919089] font-sans">
+                  <h1 className="text-[14px] uppercase text-[#919089] font-sans">
                     Seller Name
                   </h1>
                 </div>
 
                 <Button
                   label="Follow"
-                  className="uppercase font-sans text-[10px] p-0 bg-transparent text-[#0D0106]"
+                  className="uppercase font-sans text-[12px] p-0 bg-transparent text-[#0D0106]"
                 />
               </div>
-              <h2 className="text-lg mt-2 font-playfair">
+              <h2 className="text-[16px] mt-2 font-playfair">
                 Featured Products in the Live
               </h2>
               <div className="flex items-center gap-2">
@@ -132,15 +137,12 @@ export function LivePresentation({ onClose }: { onClose: any }) {
                 ))}
               </div>
             </div>
-          </div>
-
-          <DialogFooter>
             <Button
               onClick={onClose}
               label="Watch Now"
-              className="text-sm uppercase font-sans hover:opacity-80 w-full"
+              className="text-sm py-[16px] text-[12px] uppercase font-sans hover:opacity-80 w-full"
             />
-          </DialogFooter>
+          </div>
         </DialogContent>
       </Dialog>
     </div>
