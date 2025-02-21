@@ -58,14 +58,14 @@ const Seller = () => {
   return (
     <>
       <div>
-        <div className="py-4 xl:py-[32px] px-4 md:px-6 lg:px-12">
+        <div className="py-4 xl:py-[32px] px-4 md:px-6 lg:px-12 xl:px-[80px]">
           <h1 className="text-[14px] text-[#919089]">
             Home / Sellers / A-Z Sellers
           </h1>
           <h1 className="font-playfair pt-4 uppercase text-[24px]">Sellers</h1>
         </div>
 
-        <section className="bg-[#F9F8F3] py-4 px-4 lg:px-12 md:px-6">
+        <section className="bg-[#F9F8F3] py-4 px-4 lg:px-12 xl:px-[80px] md:px-6">
           <div className="flex flex-wrap gap-5 flex-row justify-between items-center">
             <div
               onClick={() => setFilterOpen(!filterOpen)}
@@ -122,7 +122,7 @@ text-[#463F3A] md:hidden"
         </section>
 
         <div
-          className={`px-4 md:px-6 lg:px-12 grid gap-6 grid-cols-1 md:grid-cols-${
+          className={`px-4 md:px-6 lg:px-12 xl:px-[80px] grid gap-6 grid-cols-1 md:grid-cols-${
             filterOpen ? 4 : 4
           }`}
         >

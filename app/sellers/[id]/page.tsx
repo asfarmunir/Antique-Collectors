@@ -75,7 +75,7 @@ const Seller = () => {
   return (
     <>
       <div>
-        <div className="py-4 px-8 lg:px-12 border-b border-[#EBE9E0]">
+        <div className="py-4 px-8 lg:px-12 xl:px-[80px] border-b border-[#EBE9E0]">
           <h1 className="text-[14px] text-[#919089]">
             Home / Sellers / A-Z Sellers
           </h1>
@@ -84,7 +84,7 @@ const Seller = () => {
           </h1>
         </div>
 
-        <div className="relative md:px-6 md:-mt-6 mb-4 lg:px-12 pb-4">
+        <div className="relative md:px-6 md:-mt-6 mb-4 lg:px-12 xl:px-[80px] pb-4">
           <div className="relative z-10 top-16 flex items-center justify-center md:justify-start md:left-6">
             <Image
               src="/images/sellers/s1.png"
@@ -130,7 +130,7 @@ const Seller = () => {
           </div>
         </div>
 
-        <section className="bg-[#F9F8F3] py-4 px-4 md:px-6 lg:px-12 xl:px-[80px] ">
+        <section className="bg-[#F9F8F3] py-4 px-4 md:px-6 lg:px-12 xl:px-[80px] xl:px-[80px] ">
           <div className="flex flex-wrap gap-5 flex-row justify-between items-center">
             {/* Filter button */}
             <div
@@ -209,7 +209,7 @@ const Seller = () => {
         )}
 
         <div
-          className={`px-4 md:px-6 lg:px-12 xl:px-[80px] md:grid py-6 md:grid-cols-${
+          className={`px-4 md:px-6 lg:px-12 xl:px-[80px] xl:px-[80px] md:grid py-6 md:grid-cols-${
             filterOpen ? 4 : 4
           }`}
         >

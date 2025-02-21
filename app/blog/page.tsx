@@ -87,7 +87,7 @@ const Blog = () => {
       <div>
         <div className="flex relative flex-col-reverse gap-5 bg-[#F9F8F3] md:flex-row h-[480px] md:h-[500px] xl:h-[680px] border-b border-[#EBE9E0]">
           {/* Text Section */}
-          <div className="w-full px-6 md:px-12  flex flex-col my-auto justify-center h-full">
+          <div className="w-full px-6 md:px-12 xl:px-[80px]  flex flex-col my-auto justify-center h-full">
             <h1
               className={`text-3xl xl:text-[48px] xl:leading-[63px] md:text-4xl 2xl:text-5xl font-playfair italic ${playfair.className}`}
             >
@@ -120,7 +120,7 @@ const Blog = () => {
           </div>
 
           {/* Image Section */}
-          <div className="w-full relative h-full md:h-auto px-4 md:px-8">
+          <div className="w-full relative h-full md:h-auto px-4 md:px-8 ">
             {/* Top Image */}
             <div className="absolute top-0 right-0 w-[150px] md:min-w-[250px] xl:min-w-[300px]">
               <Image
@@ -157,12 +157,12 @@ const Blog = () => {
         </div>
 
         <div>
-          <div className="py-4 xl:py-[32px] px-6 md:px-12">
+          <div className="py-4 xl:py-[32px] px-6 md:px-12 xl:px-[80px]">
             <h1 className="text-[14px]">Home / Blog</h1>
             <h1 className="font-playfair pt-4 uppercase text-[24px] ">Blog</h1>
           </div>
 
-          <section className="bg-[#F9F8F3] py-4 px-6 md:px-12">
+          <section className="bg-[#F9F8F3] py-4 px-6 md:px-12 xl:px-[80px]">
             <div className="flex flex-row flex-wrap justify-between gap-4 items-center">
               <div
                 onClick={() => setFilterOpen(!filterOpen)}
@@ -219,8 +219,8 @@ const Blog = () => {
           )}
 
           {/* Main content start from here */}
-          <div className="py-4 px-4 md:px-12 md:grid md:grid-cols-5">
-            <div className="md:col-span-1  md:w-56 xl:w-72 py-6">
+          <div className=" px-4 md:px-12 xl:px-[80px] py-[40px] xl:py-[80px] md:grid md:grid-cols-5">
+            <div className="md:col-span-1  md:w-56 xl:w-72 ">
               <div className="md:block hidden">
                 <FilterComponent
                   checkboxlablel={checkboxLabels}
@@ -265,7 +265,7 @@ const Blog = () => {
               </div>
             </div>
 
-            <div className="md:px-4 xl:px-[80px]  col-span-4 space-y-5">
+            <div className="md:px-4 xl:px-[80px]  col-span-4 space-y-[32px]">
               {filteredBlogs.slice(0, visibleBlogs).map((blogs: any) => (
                 <div
                   key={blogs.userId}
@@ -282,16 +282,18 @@ const Blog = () => {
                     </div>
 
                     <div className=" text-[#9F9F9F] flex flex-row justify-between gap-6 py-[8px]">
-                      <p className="text-[12px] text-[#919089] uppercase inline-flex items-center gap-2">
-                        <Image
-                          src="/images/hero1.svg"
-                          width={18}
-                          height={18}
-                          alt="icon"
-                          className="rounded-full"
-                        />
-                        Oliver Bennett
-                      </p>
+                      <div className="text-[12px]  uppercase inline-flex items-center gap-2">
+                        <div className=" w-6 h-6 rounded-full">
+                          <Image
+                            src="/images/hero1.svg"
+                            width={18}
+                            height={18}
+                            alt="icon"
+                            className="rounded-full object-cover object-center w-full h-full"
+                          />
+                        </div>
+                        <p className="text-[#919089]">Oliver Bennett</p>
+                      </div>
                       <p className="text-[12px] text-[#919089] uppercase">
                         {blogs.date || "03 AUG 2002"}
                       </p>

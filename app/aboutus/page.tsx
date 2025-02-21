@@ -7,7 +7,7 @@ const Aboutus = () => {
   return (
     <>
       <div>
-        <div className="py-4 xl:py-[32px] px-4 md:px-6 lg:px-12 border-b border-[#EBE9E0]">
+        <div className="py-4 xl:py-[32px] px-4 md:px-6 lg:px-12 xl:px-[80px] border-b border-[#EBE9E0]">
           <h1 className="text-[14px] text-[#919089]">Home / About Us</h1>
           <h1 className="font-playfair pt-4 uppercase text-[24px] ">
             About Us
@@ -73,7 +73,7 @@ const Aboutus = () => {
           </div>
         </div>
 
-        <section className="py-4 px-4 md:px-6 lg:px-12 flex flex-col-reverse md:flex-row gap-4 pt-20">
+        <section className="py-4 px-4 md:px-6 lg:px-12 xl:px-[80px] flex flex-col-reverse md:flex-row gap-4 pt-20">
           <div className="w-full md:w-1/2">
             <Image
               src="/images/about/about3.png"
@@ -97,7 +97,7 @@ const Aboutus = () => {
           </div>
         </section>
 
-        <section className="px-4 md:px-6 lg:px-12  pt-10">
+        <section className="px-4 md:px-6 lg:px-12 xl:px-[80px]  pt-10">
           <div>
             <h1 className="text-[26px] md:text-[32px] font-playfair">
               Follow your favorite dealers
@@ -129,7 +129,7 @@ const Aboutus = () => {
           </div>
         </section>
 
-        <section className="px-4 md:px-6 lg:px-12  py-10 ">
+        <section className="px-4 md:px-6 lg:px-12 xl:px-[80px]  py-10 ">
           <div className="grid md:grid-cols-5 mb-8">
             <div className="col-span-2 flex flex-col justify-start px-4 md:p-6">
               <h1 className="text-[24px] md:text-[28px] font-playfair">

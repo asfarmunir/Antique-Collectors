@@ -287,7 +287,7 @@ const page: React.FC = () => {
           Select the items you’ll feature.
         </p>
       </div>
-      <section className="bg-[#F9F8F3] py-4 px-4 md:px-6 mt-5 lg:px-12">
+      <section className="bg-[#F9F8F3] py-4 px-4 md:px-6 mt-5 lg:px-12 xl:px-[80px]">
         <div className=" flex flex-wrap flex-row gap-5 justify-between items-center">
           {/* Filter button */}
           <div

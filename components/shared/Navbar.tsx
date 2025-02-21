@@ -54,7 +54,7 @@ const Navbar = () => {
 
   return (
     <nav className="relative">
-      <div className="w-full border-b border-[#F9F8F3] p-3 md:px-8  lg:px-12  md:py-4 flex items-center justify-between">
+      <div className="w-full border-b border-[#F9F8F3] p-3 md:px-8  lg:px-12 xl:px-[80px]  md:py-4 flex items-center justify-between">
         <Link href={"/"}>
           <Image src={"/images/logo.svg"} alt="logo" width={160} height={150} />
         </Link>
@@ -142,7 +142,7 @@ const Navbar = () => {
 
       {/* Horizontal Menu (Desktop/Large Screens) */}
       <div
-        className={`hidden z-50 md:flex items-center justify-between py-3.5 2xl:py-5 px-9 lg:px-12 border-b border-[#EBE9E0]`}
+        className={`hidden z-50 md:flex items-center justify-between py-3.5 2xl:py-5 px-9 lg:px-12 xl:px-[80px] border-b border-[#EBE9E0]`}
       >
         <ul className="flex items-center gap-5 xl:gap-[32px] py-2">
           <li>

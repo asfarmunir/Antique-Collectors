@@ -64,7 +64,7 @@ const ProductDetails = ({ params }: { params: any }) => {
   return (
     <>
       <div>
-        <div className="py-4 px-4 md:px-6 xl:py-[32px] lg:px-12 border-y border-[#EBE9E0]">
+        <div className="py-4 px-4 md:px-6 xl:py-[32px] lg:px-12 xl:px-[80px] border-y border-[#EBE9E0]">
           <h1 className="text-[14px] ">
             Home / Products / {productDetails?.category}
           </h1>
@@ -294,7 +294,7 @@ const ProductDetails = ({ params }: { params: any }) => {
                 />
               </div>
               <button className=" text-[#919089]">
-                <VscSend />
+                <Image src="/arrow.svg" alt="icon" width={18} height={18} />
               </button>
             </div>
           </div>
@@ -377,7 +377,7 @@ const ProductDetails = ({ params }: { params: any }) => {
 
         {/* recommeded product add below */}
 
-        <div className="px-4 md:px-6 lg:px-12">
+        <div className="px-4 md:px-6 lg:px-12 xl:px-[80px]">
           <div className="flex flex-row flex-wrap items-center justify-between gap-6 mt-8 pb-3">
             <h2 className="text-sm md:text-[20px] font-playfair uppercase">
               Recommedned Product for you

@@ -74,7 +74,7 @@ const Presentations = () => {
   return (
     <>
       <div>
-        <div className="py-4 xl:py-[32px] px-4 md:px-6 lg:px-12 border-b border-[#EBE9E0] flex flex-row flex-wrap gap-4 justify-between items-center">
+        <div className="py-4 xl:py-[32px] px-4 md:px-6 lg:px-12 xl:px-[80px] border-b border-[#EBE9E0] flex flex-row flex-wrap gap-4 justify-between items-center">
           <div>
             <p className="text-[14px]">Home / Live Presentations</p>
             <h1 className="font-playfair pt-4 uppercase text-base md:text-[24px] ">
@@ -92,7 +92,7 @@ const Presentations = () => {
           </div>
         </div>
 
-        <section className="py-4 px-4 md:px-6 lg:px-12 lg:z-10">
+        <section className="py-4 px-4 md:px-6 lg:px-12 xl:px-[80px] lg:z-10">
           <h1 className="text-[32px] md:text-[44px] xl:text-[48px]  font-playfair capitalize">
             Discover Upcoming Live Showcases
           </h1>
@@ -146,7 +146,7 @@ const Presentations = () => {
           </div>
         </section>
 
-        <section className="py-4 px-8 lg:px-12  md:block hidden">
+        <section className="py-4 px-8 lg:px-12 xl:px-[80px]  md:block hidden">
           <h1 className="text-[48px] font-playfair capitalize">Time Table</h1>
           <p className="text-sm xl:text-[16px] text-[#919089] py-3">
             Explore our schedule of live presentations where sellers unveil
@@ -224,7 +224,7 @@ const Presentations = () => {
           </div>
         </section>
 
-        <section className="py-4 px-4 md:px-6 lg:px-12">
+        <section className="py-4 px-4 md:px-6 lg:px-12 xl:px-[80px]">
           <h1 className="text-[32px] md:text-[48px] font-playfair capitalize">
             Catch Up on Recent Showcases
           </h1>

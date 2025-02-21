@@ -82,7 +82,7 @@ const Product = () => {
   return (
     <>
       <div>
-        <div className="py-4 xl:py-[32px] px-4 md:px-6 lg:px-12">
+        <div className="py-4 xl:py-[32px] px-4 md:px-6 lg:px-12 xl:px-[80px]">
           <h1 className="text-[14px] text-[#919089]">
             Home / Products / New Arrivals
           </h1>
@@ -92,7 +92,7 @@ const Product = () => {
         </div>
 
         {/* Filter and Sort Section */}
-        <section className="bg-[#F9F8F3] border-t border-[#EBE9E0] py-4 px-4 md:px-6 lg:px-12">
+        <section className="bg-[#F9F8F3] border-t border-[#EBE9E0] py-4 px-4 md:px-6 lg:px-12 xl:px-[80px]">
           <div className=" flex flex-wrap flex-row gap-5 justify-between items-center">
             {/* Filter button */}
             <div
@@ -174,7 +174,7 @@ text-[#463F3A] md:hidden"
         )}
 
         <div
-          className={`px-4 md:px-6 lg:px-12 grid gap-12 grid-cols-1 md:grid-cols-${
+          className={`px-4 md:px-6 lg:px-12 xl:px-[80px] grid gap-12 grid-cols-1 md:grid-cols-${
             filterOpen ? 4 : 4
           }`}
         >

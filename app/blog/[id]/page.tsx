@@ -23,13 +23,13 @@ const BlogDetails = ({ params }: { params: any }) => {
   return (
     <>
       <div>
-        <div className="py-5 xl:py-[32px] px-4 md:px-12 border border-[#EBE9E0]">
+        <div className="py-5 xl:py-[32px] px-4 md:px-12 xl:px-[80px] border border-[#EBE9E0]">
           <h1 className="text-[14px] ">Home / Blog / Blog Post Title</h1>
           <h1 className="font-playfair pt-4 uppercase text-[24px] 2xl:text-2xl ">
             {blogDetails?.title}
           </h1>
         </div>
-        <div className="p-4 md:py-8 md:px-12">
+        <div className="p-4 md:py-8 md:px-12 xl:px-[80px]">
           <div className="relative w-full h-[409px] mx-auto">
             <Image
               src="/images/post/post4.jpeg"
@@ -143,10 +143,10 @@ const BlogDetails = ({ params }: { params: any }) => {
             nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam.
           </p>
         </div>
-        <div className="flex px-8 gap-4 flex-col md:flex-row ">
-          <div className=" px-8 w-full mx-4">
+        <div className="flex  xl:px-[80px] gap-6 flex-col md:flex-row ">
+          <div className="  w-full ">
             {/* Left Side: Like and Comment */}
-            <div className="flex items-center bg-[#F9F8F3] p-5 justify-between">
+            <div className="flex items-center border-y border-[#EBE9E0] bg-[#F9F8F3] p-5 justify-between">
               <div className="flex flex-row gap-6 ">
                 <button className="flex flex-row gap-2 items-center ">
                   <FaRegHeart className="text-xl text-gray-600" /> 23
@@ -184,14 +184,17 @@ const BlogDetails = ({ params }: { params: any }) => {
                     <span className="text-[#463F3A]"> 23</span>
                   </button>
                   <button className="flex flex-row gap-2 items-center ">
-                    <CgMailReply className="text-xl" />{" "}
+                    <Image src="/reply.svg" alt="icon" width={15} height={15} />
                     <span className="text-[#463F3A]"> 35</span>
                   </button>
                 </div>
                 <div className=" p-3 pl-8 my-3 ">
-                  <h3 className="uppercase text-semibold text-[14px] text-[#0D0106]">
-                    Name SurName
-                  </h3>
+                  <div className="flex items-center gap-2">
+                    <div className=" w-3 h-3 lg:w-6 lg:h-6 rounded-full bg-[#EBE9E0]"></div>
+                    <h3 className="uppercase text-semibold text-[14px] text-[#0D0106]">
+                      Name SurName
+                    </h3>
+                  </div>
                   <p className="text-[14px] py-3 text-[#919089]">
                     Lorem ipsum dolor sit, amet consectetur adipisicing elit.
                     Veritatis facilis non dolorum veniam odit quasi odio earum,
@@ -205,7 +208,12 @@ const BlogDetails = ({ params }: { params: any }) => {
                       <span className="text-[#463F3A]"> 23</span>
                     </button>
                     <button className="flex flex-row gap-2 items-center ">
-                      <CgMailReply className="text-xl" />{" "}
+                      <Image
+                        src="/reply.svg"
+                        alt="icon"
+                        width={15}
+                        height={15}
+                      />
                       <span className="text-[#463F3A]"> 35</span>
                     </button>
                   </div>
@@ -222,15 +230,15 @@ const BlogDetails = ({ params }: { params: any }) => {
                 />
               </div>
               <button className=" text-[#919089]">
-                <VscSend />
+                <Image src="/arrow.svg" alt="icon" width={18} height={18} />
               </button>
             </div>
           </div>
-          <div className=" bg-[#F9F8F3] p-[24px] w-full space-y-3 h-full md:w-[35%]">
-            <h3 className="text-[24px] font-playfair pb-2">
+          <div className=" bg-[#F9F8F3] p-[24px] w-full  h-full md:w-[32%]">
+            <h3 className="text-[24px] font-playfair pb-5">
               Want to share your knowledge in Antiques?
             </h3>
-            <p className="text-[#919089] text-sm xl:text-[16px] pb-6">
+            <p className="text-[#919089] border-b border-[#EBE9E0] mb-4 text-sm xl:text-[16px] pb-6">
               Lorem ipsum dolor sit amet consectetur. Sed amet bibendum at
               venenatis faucibus mi fringilla viverra. In nulla aliquam magna
               orci neque penatibus neque eget. Commodo scelerisque cursus purus
@@ -242,23 +250,26 @@ const BlogDetails = ({ params }: { params: any }) => {
           </div>
         </div>
 
-        <section className="bg-white">
-          <div className=" py-[32px] border-y border-[#EBE9E0] px-4 md:px-6 lg:px-12 flex items-center font-playfair justify-between">
+        <section className="bg-white ">
+          <div className=" py-[32px] border-y border-[#EBE9E0] px-4 md:px-6 lg:px-12 xl:px-[80px] flex items-center font-playfair justify-between">
             <h2 className="text-lg md:text-[24px] uppercase ">
               Similar Blog Posts
             </h2>
-            <Link href={"/blog"} className="text-[12px] text-[#463F3A] ">
+            <Link
+              href={"/blog"}
+              className="text-[12px] font-openSans text-[#463F3A] "
+            >
               VIEW ALL
             </Link>
           </div>
         </section>
 
-        <section className="px-4 border-b border-[#EBE9E0]  md:px-6 lg:px-12 ">
-          <div className="grid   sm:grid-cols-2 md:grid-cols-3 gap-6 w-full mt-6">
+        <section className="px-4 border-b  border-[#EBE9E0]  md:px-6 lg:px-12 xl:px-[80px]">
+          <div className="grid   sm:grid-cols-2 md:grid-cols-3 gap-6 w-full ">
             {blog.slice(0, 3).map((b) => (
               <div
                 key={b.id}
-                className="w-full py-3 border-r border-[#EBE9E0] md:py-5 md:pr-4  last:border-r-0"
+                className="w-full py-3 border-r xl:pt-[55px] border-[#EBE9E0] md:py-5 md:pr-4  last:border-r-0"
               >
                 <Image
                   src="/images/blogs/b1.png" //replacce with original image
@@ -274,7 +285,7 @@ const BlogDetails = ({ params }: { params: any }) => {
 
                 <button
                   onClick={() => handleReadMore(b.id)}
-                  className=" pt-4 pb-6 text-[12px] text-[#0D0106]"
+                  className=" pt-[24px] pb-6 text-[12px] text-[#0D0106]"
                 >
                   READ MORE
                 </button>
