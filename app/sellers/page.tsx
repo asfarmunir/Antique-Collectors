@@ -69,7 +69,7 @@ const Seller = () => {
           <div className="flex flex-wrap gap-5 flex-row justify-between items-center">
             <div
               onClick={() => setFilterOpen(!filterOpen)}
-              className="inline-flex justify-center md:w-64 2xl:w-80 cursor-pointer flex-row items-center gap-2 py-3 px-8 md:px-24 bg-[#EBE9E0]"
+              className="inline-flex justify-center md:w-64 2xl:w-80 xl:h-[48px] cursor-pointer flex-row items-center gap-2 py-3 px-8 md:px-24 bg-[#EBE9E0]"
             >
               <Image src={"/candle.svg"} width={15} height={15} alt="icon" />
               <p className="text-xs text-[#0D0106]">FILTER</p>
@@ -143,7 +143,7 @@ text-[#463F3A] md:hidden"
             </div>
           )}
 
-          <div className={`col-span-${filterOpen ? 3 : 4} py-6`}>
+          <div className={`col-span-${filterOpen ? 3 : 4} `}>
             {isGridView && (
               <div
                 className={`grid grid-cols-1 sm:grid-cols-2 md:grid-cols-${
@@ -198,11 +198,13 @@ text-[#463F3A] md:hidden"
                     onClick={handleSellerDetails}
                   >
                     <div className=" bg-[#F9F8F3] ">
-                      <div className="uppercase p-4 xl:py-[8px] text-xs flex flex-row justify-between items-center">
+                      <div className="uppercase p-4 py-2 text-[12px] flex flex-row justify-between items-center">
                         <p>{item.product_count} products</p>
-                        <Link href={"#"}>View All</Link>
+                        <Link href={"#"} className="">
+                          View All
+                        </Link>
                       </div>
-                      <div className="flex flex-row items-center  py-2 overflow-x-auto">
+                      <div className="flex flex-row items-center  pb-2 overflow-x-auto">
                         {Array.from({ length: 6 }).map((_, index) => (
                           <Image
                             src="/images/products/p5.png"

@@ -87,7 +87,7 @@ const Blog = () => {
       <div>
         <div className="flex relative flex-col-reverse gap-5 bg-[#F9F8F3] md:flex-row h-[480px] md:h-[500px] xl:h-[680px] border-b border-[#EBE9E0]">
           {/* Text Section */}
-          <div className="w-full px-6 md:px-12 xl:pl-[80px] flex flex-col my-auto justify-center h-full">
+          <div className="w-full px-6 md:px-12  flex flex-col my-auto justify-center h-full">
             <h1
               className={`text-3xl xl:text-[48px] xl:leading-[63px] md:text-4xl 2xl:text-5xl font-playfair italic ${playfair.className}`}
             >
@@ -101,9 +101,11 @@ const Blog = () => {
                 height={50}
                 className=" rounded-full w-[30px] h-[30px]"
               />
-              <p className="-mt-4 uppercase text-[12px] text-[#919089]">
-                Oliver Bennett 18 <span className="text-4xl ">.</span> Jan 2022
+              <p className=" uppercase text-[12px] text-[#919089]">
+                Oliver Bennett 18
               </p>
+              <div className=" w-1.5 h-1.5 rounded-full bg-[#919089]"></div>
+              <p className=" uppercase text-[12px] text-[#919089]">Jan 2022</p>
             </div>
             <p className="text-sm xl:text-[16px] text-[#463F3A]  text-justify py-4">
               Lorem ipsum dolor sit amet consectetur, adipisicing elit. Neque
@@ -164,7 +166,7 @@ const Blog = () => {
             <div className="flex flex-row flex-wrap justify-between gap-4 items-center">
               <div
                 onClick={() => setFilterOpen(!filterOpen)}
-                className="inline-flex flex-row md:w-56 xl:w-72 justify-center items-center gap-2 py-3 px-8 bg-[#EBE9E0]"
+                className="inline-flex flex-row md:w-56 xl:w-72 xl:h-[48px] justify-center items-center gap-2 py-3 px-8 bg-[#EBE9E0]"
               >
                 <Image src={"/candle.svg"} width={15} height={15} alt="icon" />
                 <p className="text-xs text-[#0D0106] ">FILTER</p>
@@ -178,7 +180,7 @@ const Blog = () => {
                 placeholder="Search"
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                className="text-sm placeholder:text-sm w-full md:w-[311px] border border-[#EBE9E0]"
+                className="text-sm placeholder:text-sm w-full xl:h-[48px] md:w-[311px] border border-[#EBE9E0]"
               />
               <div className="w-full md:w-auto flex flex-row gap-2 items-center">
                 <p className="uppercase text-[12px] pr-12 text-[#463F3A] md:block hidden text-nowrap">
@@ -232,7 +234,7 @@ const Blog = () => {
                 {post.map((p) => (
                   <div
                     key={p.title}
-                    className="flex flex-row items-end py-2   gap-4 mt-3 text-[16px]"
+                    className="flex flex-row items-end py-2   gap-2 mt-3 text-[16px]"
                   >
                     <div
                       className="w-[50px] h-[50px]
@@ -254,7 +256,7 @@ const Blog = () => {
                       >
                         {p.title}
                       </Link>
-                      <p className="font-light text-[12px] mt-2 text-[#9F9F9F]">
+                      <p className="font-light text-[12px] mt-1.5 text-[#9F9F9F]">
                         {p.date}
                       </p>
                     </div>
@@ -283,8 +285,8 @@ const Blog = () => {
                       <p className="text-[12px] text-[#919089] uppercase inline-flex items-center gap-2">
                         <Image
                           src="/images/hero1.svg"
-                          width={15}
-                          height={15}
+                          width={18}
+                          height={18}
                           alt="icon"
                           className="rounded-full"
                         />
@@ -295,7 +297,7 @@ const Blog = () => {
                       </p>
                     </div>
 
-                    <h1 className="text-[24px] font-playfair mb-2 ">
+                    <h1 className="text-[24px] font-playfair mb-2.5 ">
                       {blogs.title}
                     </h1>
                     <p className="mt-2 text-[#919089] text-[14px] lime-clamp-5">
@@ -315,7 +317,7 @@ const Blog = () => {
                 <Button
                   onClick={handleViewMoreOrLess}
                   label={showAll ? "View Less" : "View More"}
-                  className="uppercase border border-[#0D0106] hover:bg-[#0D0106] hover:text-white py-2 px-8 bg-white text-[#0D0106]"
+                  className="uppercase border text-[12px] w-[126px] h-[56px]  border-[#0D0106] hover:bg-[#0D0106] hover:text-white  bg-white text-[#0D0106]"
                 />
               </div>
             </div>

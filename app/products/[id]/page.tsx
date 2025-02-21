@@ -64,8 +64,8 @@ const ProductDetails = ({ params }: { params: any }) => {
   return (
     <>
       <div>
-        <div className="py-4 px-4 md:px-6 lg:px-12 border-y border-[#EBE9E0]">
-          <h1 className="text-[14px] text-[#919089]">
+        <div className="py-4 px-4 md:px-6 xl:py-[32px] lg:px-12 border-y border-[#EBE9E0]">
+          <h1 className="text-[14px] ">
             Home / Products / {productDetails?.category}
           </h1>
           <h1 className="font-playfair pt-4 uppercase text-[24px] ">

@@ -24,9 +24,7 @@ const BlogDetails = ({ params }: { params: any }) => {
     <>
       <div>
         <div className="py-5 xl:py-[32px] px-4 md:px-12 border border-[#EBE9E0]">
-          <h1 className="text-[14px] text-[#919089]">
-            Home / Blog / Blog Post Title
-          </h1>
+          <h1 className="text-[14px] ">Home / Blog / Blog Post Title</h1>
           <h1 className="font-playfair pt-4 uppercase text-[24px] 2xl:text-2xl ">
             {blogDetails?.title}
           </h1>
@@ -64,7 +62,7 @@ const BlogDetails = ({ params }: { params: any }) => {
             </h1>
           </div>
 
-          <p className="text-[#463F3A] text-[16px] pb-4 border-b border-[#EBE9E0] ">
+          <p className="text-[#463F3A] text-[16px] pb-5 border-b border-[#EBE9E0] ">
             Antiques are more than just objects; they are windows into the past,
             stories captured in time, and treasures that connect generations. At
             The Antique Collector, we believe every antique has a tale to tell,
@@ -72,7 +70,7 @@ const BlogDetails = ({ params }: { params: any }) => {
             the artistry and craftsmanship of bygone eras.
           </p>
 
-          <h1 className=" mb-3 py-3 text-lg xl:text-[32px] font-playfair">
+          <h1 className=" mb-3 py-5 text-lg xl:text-[32px] font-playfair">
             Why Collect Antiques?
           </h1>
           <p className="text-[#666666] text-sm">

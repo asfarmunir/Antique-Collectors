@@ -75,7 +75,7 @@ const Seller = () => {
   return (
     <>
       <div>
-        <div className="py-4 px-8 border-b border-[#EBE9E0]">
+        <div className="py-4 px-8 lg:px-12 border-b border-[#EBE9E0]">
           <h1 className="text-[14px] text-[#919089]">
             Home / Sellers / A-Z Sellers
           </h1>
@@ -84,7 +84,7 @@ const Seller = () => {
           </h1>
         </div>
 
-        <div className="relative md:px-6 md:-mt-6 mb-4 xl:px-[80px] pb-4">
+        <div className="relative md:px-6 md:-mt-6 mb-4 lg:px-12 pb-4">
           <div className="relative z-10 top-16 flex items-center justify-center md:justify-start md:left-6">
             <Image
               src="/images/sellers/s1.png"
@@ -104,11 +104,11 @@ const Seller = () => {
               <div className="flex flex-col  md:flex-row gap-3">
                 <Button
                   label="Follow"
-                  className="uppercase text-white text-xs px-14"
+                  className="uppercase text-white text-[12px] py-[16px] px-14"
                 />
                 <Button
                   label="Message Seller"
-                  className="uppercase text-[#0D0106] bg-transparent border border-[#0D0106] px-7 text-xs"
+                  className="uppercase text-[#0D0106] bg-transparent border border-[#0D0106] px-7 text-[12px] py-[16px]"
                 />
               </div>
             </div>
@@ -123,7 +123,7 @@ const Seller = () => {
             </p>
             <Link
               href={"#"}
-              className="text-sm lowercase text-[#463F3A] text-center md:text-left"
+              className="text-[14px] lowercase text-[#463F3A] text-center md:text-left"
             >
               https://www.antiqueanimaljewelry.com{" "}
             </Link>
@@ -135,7 +135,7 @@ const Seller = () => {
             {/* Filter button */}
             <div
               onClick={() => setFilterOpen(!filterOpen)}
-              className="inline-flex cursor-pointer flex-row md:w-64 2xl:w-80 justify-center items-center gap-2 py-3 px-8 bg-[#EBE9E0]"
+              className="inline-flex cursor-pointer flex-row md:w-64 2xl:w-80 xl:h-[48px] justify-center items-center gap-2 py-3 px-8 bg-[#EBE9E0]"
             >
               <Image src={"/candle.svg"} width={15} height={15} alt="icon" />
               <p className="text-xs text-[#0D0106] ">FILTER</p>

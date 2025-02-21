@@ -97,7 +97,7 @@ const Product = () => {
             {/* Filter button */}
             <div
               onClick={() => setFilterOpen(!filterOpen)}
-              className=" inline-flex justify-center   cursor-pointer md:w-64 2xl:w-80 flex-row items-center gap-2 py-3 px-8 md:px-24 2xl:px-28 bg-[#EBE9E0]"
+              className=" inline-flex xl:h-[48px] justify-center   cursor-pointer md:w-64 2xl:w-80 flex-row items-center gap-2 py-3 px-8 md:px-24 2xl:px-28 bg-[#EBE9E0]"
             >
               <Image src={"/candle.svg"} width={15} height={15} alt="icon" />
               <p className="text-[12px] text-[#0D0106] ">FILTER</p>
