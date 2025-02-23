@@ -65,14 +65,15 @@ export function LivePresentation({ onClose }: { onClose: any }) {
           </DialogHeader>
 
           <div className="mt-2 px-6 p-4">
-            <p className="bg-[#EBE9E0] text-center text-sm py-1 font-sans uppercase">
-              Available to watch for another 14 hours
-            </p>
+            <div className="bg-[#463F3A] text-white py-2 px-[8px] text-xs flex flex-row justify-between gap-4">
+              <p className="text-[12px] text-white">12.23.2025</p>
+              <p className="text-[12px] text-white">5.00 pm (UTC)</p>
+            </div>
             <div className="">
               <div className="pb-2">
                 <div
                   style={{
-                    height: "200px",
+                    height: "300px",
                     width: "full",
                     position: "relative",
                   }}
@@ -139,7 +140,7 @@ export function LivePresentation({ onClose }: { onClose: any }) {
             </div>
             <Button
               onClick={onClose}
-              label="Watch Now"
+              label="Set a Reminder"
               className="text-sm py-[16px] text-[12px] uppercase font-sans hover:opacity-80 w-full"
             />
           </div>

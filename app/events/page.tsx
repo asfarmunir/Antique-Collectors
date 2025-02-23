@@ -10,40 +10,40 @@ const page = () => {
           fairs & events
         </h1>
       </div>
-      <div className=" w-full  p-5 md:p-12 space-y-16 2xl:space-y-20 border-b border-[#EBE9E0] md:pb-20">
-        <div className=" w-full flex flex-col md:flex-row items-end justify-between gap-6 md:gap-16">
+      <div className=" w-full  p-5 md:p-12 xl:px-[80px] space-y-16 2xl:space-y-20 border-b border-[#EBE9E0] md:pb-20">
+        <div className=" w-full flex flex-col md:flex-row items-end justify-between gap-6 md:gap-12">
           <div className=" w-full relative flex justify-center">
             <Image
               src="/images/events/event1.png"
               height={300}
               width={400}
               alt="pic2"
-              className=" w-full"
+              className=" w-full "
             />
             <div className=" absolute flex items-center justify-between -bottom-4 md:-bottom-10 w-[85%] bg-[#F9F8F3] p-2 md:p-4">
-              <p className="text-xs md:text-sm 2xl:text-base">
+              <p className="text-xs md:text-sm xl:text-[12px]">
                 15.12.2024, Monday
               </p>
-              <p className="text-xs md:text-sm 2xl:text-base">5.00 pm (UTC)</p>
+              <p className="text-xs md:text-sm xl:text-[12px]">5.00 pm (UTC)</p>
             </div>
           </div>
           <div className=" w-full">
-            <h2 className="text-3xl 2xl:text-5xl  font-playfair">
+            <h2 className="text-3xl xl:text-[48px]  font-playfair">
               Milan Antique Fair
             </h2>
-            <p className="text-[#666666] text-sm 2xl:text-base py-4 max-w-lg">
+            <p className="text-[#919089] text-sm xl:text-[16px] py-[24px] max-w-lg">
               Lorem ipsum dolor sit amet consectetur. Molestie adipiscing massa
               tincidunt purus tristique malesuada. Ultricies ac aliquet sapien
               quis magna accumsan purus. Massa enim sit.
             </p>
             <button>
-              <a href="/events/1" className="text-sm uppercase">
+              <a href="/events/1" className="text-[12px] uppercase">
                 Read More
               </a>
             </button>
           </div>
         </div>
-        <div className=" w-full flex flex-col md:flex-row-reverse items-end justify-between gap-6 md:gap-16">
+        <div className=" w-full flex flex-col md:flex-row-reverse items-end justify-between gap-6 md:gap-12">
           <div className=" w-full relative flex justify-center">
             <Image
               src="/images/events/event1.png"
@@ -53,23 +53,23 @@ const page = () => {
               className=" w-full"
             />
             <div className=" absolute flex items-center justify-between -bottom-4 md:-bottom-10 w-[85%] bg-[#F9F8F3] p-2 md:p-4">
-              <p className="text-xs md:text-sm 2xl:text-base">
+              <p className="text-xs md:text-sm xl:text-[12px]">
                 15.12.2024, Monday
               </p>
-              <p className="text-xs md:text-sm 2xl:text-base">5.00 pm (UTC)</p>
+              <p className="text-xs md:text-sm xl:text-[12px]">5.00 pm (UTC)</p>
             </div>
           </div>
           <div className=" w-full flex flex-col items-start md:items-end">
-            <h2 className="text-3xl 2xl:text-5xl  font-playfair">
+            <h2 className="text-3xl xl:text-[48px]  font-playfair">
               Milan Antique Fair
             </h2>
-            <p className="text-[#666666] text-sm 2xl:text-base md:text-end py-4 max-w-lg">
+            <p className="text-[#919089] text-sm xl:text-[16px] md:text-end py-[24px] max-w-lg">
               Lorem ipsum dolor sit amet consectetur. Molestie adipiscing massa
               tincidunt purus tristique malesuada. Ultricies ac aliquet sapien
               quis magna accumsan purus. Massa enim sit.
             </p>
             <button>
-              <a href="/events/1" className="text-sm uppercase">
+              <a href="/events/1" className="text-[12px] uppercase">
                 Read More
               </a>
             </button>

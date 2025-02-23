@@ -166,7 +166,7 @@ const Footer = () => {
         {/* copy right */}
 
         <div className="border-t border-[#EBE9E0] py-6 pt-9">
-          <p className="text-xs xl:text-[18px] text-[#0D0106] text-center font-openSans">
+          <p className="text-xs xl:text-[12px] text-[#0D0106] text-center font-openSans">
             Copyright © 2025 The Antique Collector | All Rights Reserved |
             <span className=" underline text-[#919089]">
               {" "}

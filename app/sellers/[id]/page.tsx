@@ -115,7 +115,7 @@ const Seller = () => {
             <p className="capitalize text-xs xl:text-[16px] pt-4 text-center md:text-left">
               Location, UK
             </p>
-            <p className="py-4 text-xs xl:text-[16px] text-center md:text-left">
+            <p className="py-4 text-xs xl:text-[16px] xl:leading-6 text-center md:text-left">
               Lorem, ipsum dolor sit amet consectetur adipisicing elit. Est
               assumenda blanditiis beatae voluptatem cumque placeat adipisci
               voluptatibus, ea quae quod laudantium eligendi repudiandae, enim,

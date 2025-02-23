@@ -126,7 +126,7 @@ const Presentations = () => {
                   />
                 </div>
 
-                <h3 className="text-[#463F3A] font-playfair text-[20px] pt-2">
+                <h3 className="font-playfair text-[20px] pt-2">
                   Antique Showcase Live: Unveiling Rare jewelry Finds in Real
                   Time
                 </h3>
@@ -228,7 +228,7 @@ const Presentations = () => {
           <h1 className="text-[32px] md:text-[48px] font-playfair capitalize">
             Catch Up on Recent Showcases
           </h1>
-          <p className="text-[16px] py-4 text-[#919089] mb-3">
+          <p className="text-[16px] py-4 text-[#919089] mb-[32px]">
             Missed a live session? Watch the highlights and explore featured
             antiques from the past 24 hours before they’re gone.
           </p>
@@ -237,7 +237,7 @@ const Presentations = () => {
             {Array.from({ length: 2 }).map((item) => (
               <div className="md:mx-2 ">
                 <div className="border-b border-[#EBE9E0] pb-4">
-                  <p className=" w-full bg-[#EBE9E0] py-2 items-center text-[12px] text-center">
+                  <p className=" w-full bg-[#EBE9E0] py-2 uppercase items-center text-[12px] text-center">
                     Available to watch for another 14 hours
                   </p>
                   <div
@@ -273,7 +273,7 @@ const Presentations = () => {
                 </div>
 
                 <div>
-                  <div className="flex flex-row justify-between py-4 items-center text-sm gap-2 ">
+                  <div className="flex border-b border-[#EBE9E0]  flex-row justify-between py-4 items-center text-sm gap-2 ">
                     <div className="flex flex-row items-center gap-2">
                       <div className="bg-[#EBE9E0] p-2 rounded-full w-8 h-8 flex items-center justify-center">
                         <Image
@@ -295,7 +295,7 @@ const Presentations = () => {
                       className="uppercase text-[12px] p-0 bg-transparent text-[#0D0106]"
                     />
                   </div>
-                  <h2 className="text-[16px] mt-2 font-playfair">
+                  <h2 className="text-[16px] mt-4 font-playfair">
                     Featured Products in the Live
                   </h2>
                   <div className="flex items-center gap-2">
@@ -309,7 +309,7 @@ const Presentations = () => {
                       />
                     ))}
                   </div>
-                  <button className=" w-full bg-[#0D0106] py-[16px] text-[12px] text-white">
+                  <button className=" w-full uppercase bg-[#0D0106] py-[16px] text-[12px] text-white">
                     Watch Now
                   </button>
                 </div>
@@ -318,6 +318,7 @@ const Presentations = () => {
           </div>
         </section>
       </div>
+      <div className="border-b border-[#EBE9E0] mt-12 "></div>
 
       {/* Dialog Popup */}
       {openPopup && <LivePresentation onClose={() => setOpenPopup(false)} />}
