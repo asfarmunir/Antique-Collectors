@@ -49,10 +49,10 @@ export function LivePresentation({ onClose }: { onClose: any }) {
     <div className="relative">
       <Dialog open onOpenChange={onClose}>
         <DialogContent
-          className="font-playfair max-h-[90vh] overflow-y-auto"
-          customWidth="max-w-xl"
+          className="font-playfair max-h-[90vh] p-0 overflow-y-auto"
+          customWidth="max-w-2xl"
         >
-          <DialogHeader className="font-playfair text-xl border-b border-[#EBE9E0] pb-2">
+          <DialogHeader className="font-playfair text-xl border-b border-[#EBE9E0] p-[32px]">
             <DialogTitle>
               <Button
                 onClick={onClose}
@@ -60,14 +60,18 @@ export function LivePresentation({ onClose }: { onClose: any }) {
                 label=""
                 className="bg-transparent absolute right-0 top-4"
               />
-              <h1 className="font-playfair text-xl">Live Presentation</h1>
+              <h1 className="font-playfair text-[24px] uppercase">
+                Live Presentation
+              </h1>
             </DialogTitle>
           </DialogHeader>
 
-          <div className="mt-2 px-6 p-4">
-            <div className="bg-[#463F3A] text-white py-2 px-[8px] text-xs flex flex-row justify-between gap-4">
-              <p className="text-[12px] text-white">12.23.2025</p>
-              <p className="text-[12px] text-white">5.00 pm (UTC)</p>
+          <div className="mt-2 px-6 xl:px-[80px] p-4 pb-10">
+            <div className="bg-[#463F3A] text-white py-[16px] px-[8px] text-xs flex flex-row justify-between gap-4">
+              <p className="text-[14px] font-openSans text-white">12.23.2025</p>
+              <p className="text-[14px] font-openSans text-white">
+                5.00 pm (UTC)
+              </p>
             </div>
             <div className="">
               <div className="pb-2">

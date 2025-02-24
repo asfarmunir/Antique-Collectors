@@ -53,7 +53,7 @@ const BlogDetails = ({ params }: { params: any }) => {
                 alt=""
               />
             </div>
-            <h1 className="text-[14px] uppercase text-[#463F3A]">
+            <h1 className="text-[14px] font-normal uppercase text-[#463F3A]">
               Oliver bennett
             </h1>
             <span className="w-1 h-1 bg-[#463F3A] rounded-full"></span>
@@ -143,13 +143,14 @@ const BlogDetails = ({ params }: { params: any }) => {
             nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam.
           </p>
         </div>
-        <div className="flex  xl:px-[80px] gap-6 flex-col md:flex-row ">
-          <div className="  w-full ">
+        <div className="flex  xl:px-[80px]  gap-6 flex-col md:flex-row ">
+          <div className="  w-full  ">
             {/* Left Side: Like and Comment */}
             <div className="flex items-center border-y border-[#EBE9E0] bg-[#F9F8F3] p-5 justify-between">
               <div className="flex flex-row gap-6 ">
                 <button className="flex flex-row gap-2 items-center ">
-                  <FaRegHeart className="text-xl text-gray-600" /> 23
+                  <Image src="/heart.svg" alt="icon" width={25} height={25} />{" "}
+                  32
                 </button>
                 <button className="flex flex-row gap-2 items-center ">
                   <Image
@@ -174,13 +175,11 @@ const BlogDetails = ({ params }: { params: any }) => {
                 <p className="text-[14px] py-3 text-[#919089]">
                   Lorem ipsum dolor sit, amet consectetur adipisicing elit.
                   Veritatis facilis non dolorum veniam odit quasi odio earum,
-                  fugit suscipit maxime eaque fugiat reiciendis voluptates id
-                  voluptatibus nam, mollitia distinctio necessitatibus!
                 </p>
 
                 <div className="flex flex-row gap-6  text-[#919089]">
                   <button className="flex flex-row gap-2 items-center ">
-                    <FaRegHeart className="text-xl]" />{" "}
+                    <Image src="/heart.svg" alt="icon" width={19} height={19} />{" "}
                     <span className="text-[#463F3A]"> 23</span>
                   </button>
                   <button className="flex flex-row gap-2 items-center ">
@@ -198,13 +197,16 @@ const BlogDetails = ({ params }: { params: any }) => {
                   <p className="text-[14px] py-3 text-[#919089]">
                     Lorem ipsum dolor sit, amet consectetur adipisicing elit.
                     Veritatis facilis non dolorum veniam odit quasi odio earum,
-                    fugit suscipit maxime eaque fugiat reiciendis voluptates id
-                    voluptatibus nam, mollitia distinctio necessitatibus!
                   </p>
 
                   <div className="flex flex-row gap-6  text-[#919089]">
                     <button className="flex flex-row gap-2 items-center ">
-                      <FaRegHeart className="text-xl]" />{" "}
+                      <Image
+                        src="/heart.svg"
+                        alt="icon"
+                        width={19}
+                        height={19}
+                      />{" "}
                       <span className="text-[#463F3A]"> 23</span>
                     </button>
                     <button className="flex flex-row gap-2 items-center ">
@@ -220,7 +222,7 @@ const BlogDetails = ({ params }: { params: any }) => {
                 </div>
               </div>
             ))}
-            <div className="flex mb-5 items-center justify-between border-t pt-4 border-[#EBE9E0]">
+            <div className="flex mb-5 items-center justify-between border-t pt-4 pr-3 border-[#EBE9E0]">
               <div className=" inline-flex items-center gap-2 ">
                 <BsEmojiSmile className="text-balance text-lg" />
                 <input
@@ -234,7 +236,7 @@ const BlogDetails = ({ params }: { params: any }) => {
               </button>
             </div>
           </div>
-          <div className=" bg-[#F9F8F3] p-[24px] w-full  h-full md:w-[32%]">
+          <div className=" bg-[#F9F8F3]  p-[24px] w-full  h-full md:w-[32%]">
             <h3 className="text-[24px] font-playfair pb-5">
               Want to share your knowledge in Antiques?
             </h3>

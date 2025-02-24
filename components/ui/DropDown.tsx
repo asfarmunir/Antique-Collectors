@@ -37,7 +37,7 @@ const Dropdown: React.FC<DropdownProps> = ({
       {/* Dropdown Button */}
       <button
         onClick={toggleDropdown}
-        className={`dropdown-toggle ${className} w-full bg-gray-200 text-[#919089] text-[14px] py-2 px-4 xl:w-[186px] xl:h-[56px]   flex items-center justify-between`}
+        className={`dropdown-toggle ${className} border border-[#EBE9E0] w-full bg-gray-200 text-[#919089] text-[14px] py-2 px-4 xl:w-[186px] xl:h-[56px]   flex items-center justify-between`}
         aria-haspopup="listbox"
         aria-expanded={isOpen}
       >

@@ -292,7 +292,9 @@ const Blog = () => {
                             className="rounded-full object-cover object-center w-full h-full"
                           />
                         </div>
-                        <p className="text-[#919089]">Oliver Bennett</p>
+                        <p className="text-[#919089] font-normal">
+                          Oliver Bennett
+                        </p>
                       </div>
                       <p className="text-[12px] text-[#919089] uppercase">
                         {blogs.date || "03 AUG 2002"}

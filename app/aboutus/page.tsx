@@ -14,7 +14,7 @@ const Aboutus = () => {
           </h1>
         </div>
 
-        <div className=" bg-[#F9F8F3] flex flex-col  pt-20 pb-16 px-4 relative">
+        <div className=" bg-[#F9F8F3] border border-[#F9F8F3] flex flex-col  pt-20 pb-16 px-4 relative">
           <div className="px-10">
             <div className="absolute -top-20 md:-top-10 right-8">
               <Image
@@ -52,8 +52,10 @@ const Aboutus = () => {
           </div>
 
           <div className="mt-28 px-4 sm:mt-20 md:mt-0 flex flex-col gap-2 items-center justify-center">
-            <h1 className="font-playfair text-3xl md:text-5xl">Our Story</h1>
-            <p className=" max-w-lg md:max-w-xl font-sans text-sm px-4 text-center md:mt-4">
+            <h1 className="font-playfair text-3xl md:text-[64px] ">
+              Our Story
+            </h1>
+            <p className=" max-w-lg md:max-w-xl font-openSans text-[16px] px-4 text-center md:mt-12">
               <span className=" font-bold px-1">The Antique Collector</span>
               was conceived when two dealers realised it was time for a change,
               that there needed to be a real community where dealers and
@@ -73,7 +75,7 @@ const Aboutus = () => {
           </div>
         </div>
 
-        <section className="py-4 px-4 md:px-6 lg:px-12 xl:px-[80px] flex flex-col-reverse md:flex-row gap-4 pt-20">
+        <section className="py-4 px-4 md:px-6 lg:px-12 xl:px-[80px] flex flex-col-reverse md:flex-row gap-4 pt-32">
           <div className="w-full md:w-1/2">
             <Image
               src="/images/about/about3.png"
@@ -86,10 +88,10 @@ const Aboutus = () => {
           <div className="w-full  md:w-1/2 flex flex-col justify-center ">
             {" "}
             {/* Updated this div */}
-            <h1 className="font-playfair text-[26px] md:text-[32px]">
+            <h1 className="font-playfair capitalize text-[26px] md:text-[32px]">
               Discover Antiques from all over the World
             </h1>
-            <p className="text-[#666666] text-[14px] py-2">
+            <p className="text-[#666666] text-[14px] max-w-md py-2">
               The Antique Collector partners with dealers and auction houses
               from all over the world. From Antique and Vintage Jewelry, to
               Furniture and Decorative Antiques, all under one virtual roof.
@@ -97,9 +99,9 @@ const Aboutus = () => {
           </div>
         </section>
 
-        <section className="px-4 md:px-6 lg:px-12 xl:px-[80px]  pt-10">
+        <section className="px-4 md:px-6 lg:px-12 xl:px-[80px]  pt-16">
           <div>
-            <h1 className="text-[26px] md:text-[32px] font-playfair">
+            <h1 className="text-[26px]  capitalize md:text-[32px] font-playfair">
               Follow your favorite dealers
             </h1>
             <p className="text-[#666666] py-2 text-[14px]">
@@ -130,12 +132,12 @@ const Aboutus = () => {
         </section>
 
         <section className="px-4 md:px-6 lg:px-12 xl:px-[80px]  py-10 ">
-          <div className="grid md:grid-cols-5 mb-8">
-            <div className="col-span-2 flex flex-col justify-start px-4 md:p-6">
-              <h1 className="text-[24px] md:text-[28px] font-playfair">
+          <div className="grid md:grid-cols-5 xl:gap-8 mb-8">
+            <div className="col-span-2 flex flex-col justify-start   md:py-6">
+              <h1 className="text-[24px] md:text-[32px] font-playfair">
                 Liaise With Dealers Privately
               </h1>
-              <p className="text-xs text-[#666666] py-2 mt-2">
+              <p className="text-[16px] text-[#666666] py-2 mt-2">
                 Liaise with dealers with our direct message, or their email, and
                 arrange payment offline or on their website. The Antique
                 Collector does not add fees or commission, or share your data
@@ -148,13 +150,14 @@ const Aboutus = () => {
                 alt="About last image"
                 width={160}
                 height={160}
+                className="xl:w-[269px]"
               />
             </div>
             <div className="col-span-2 flex flex-col justify-start p-6">
-              <h1 className="text-[24px] md:text-[28px] font-playfair">
+              <h1 className="text-[24px] md:text-[32px] font-playfair">
                 Become a dealer and be seen
               </h1>
-              <p className="text-[#666666] text-xs py-0 my-2">
+              <p className="text-[#666666] text-[16px] py-0 my-2">
                 When you join our community your followers will be able to see
                 all your new finds in the daily feed, in chronological order.
                 Our algorithm does not choose what you see, you see who you
@@ -168,23 +171,23 @@ const Aboutus = () => {
 
         <section className="bg-[#463F3A] flex text-white flex-col items-center justify-center ">
           <div className="w-full flex flex-col items-center px-3 md:w-1/2 py-12 text-center">
-            <h1 className="text-[24px] md:text-[32px] font-playfair capitalize">
+            <h1 className="text-[24px] md:text-[32px] font-playfair text-white pb-4 capitalize">
               How to Join our Community
             </h1>
-            <p className="text-[#EBE9E0] max-w-lg text-[14px] py-2">
+            <p className="text-[#EBE9E0] max-w-xl text-[16px] font-openSans py-2">
               The Antique Collector is free for all buyers. Just download the
               app and login. Sellers download the app and login, and then fill
               in the online application here or on the app to start selling.
             </p>
-            <p className="uppercase text-[#EBE9E0] text-[14px] tracking-wide py-3">
+            <p className="uppercase text-[#EBE9E0] text-[16px] tracking-wide py-4">
               We are offering free seller membership for early adopters
             </p>
-            <p className="font-playfair uppercase text-lg">
+            <p className="font-playfair uppercase text-[20px] text-white">
               Join now and be ahead of the crowd!
             </p>
             <Button
               label="become a seller"
-              className="uppercase bg-[#EBE9E0] my-6 text-[#463F3A] hover:opacity-80 text-xs px-8 w-3/4"
+              className="uppercase bg-[#EBE9E0] mt-6 py-[16px] text-[#463F3A] hover:opacity-80 text-[12px] px-8 w-3/4"
             />
           </div>
         </section>

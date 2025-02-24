@@ -158,17 +158,17 @@ const Presentations = () => {
           <div className="py-6">
             <Table className="border  border-[#EBE9E0] shadow-md text-[#0D0106]">
               <TableHeader>
-                <TableRow>
-                  <TableHead className="uppercase text-[#919089] border-r  border-[#EBE9E0] text-center">
+                <TableRow className="">
+                  <TableHead className="uppercase text-[14px]  text-[#919089] border-r  border-[#EBE9E0] text-center">
                     Seller Name
                   </TableHead>
-                  <TableHead className="border-r uppercase border-[#EBE9E0] text-[#0D0106]">
+                  <TableHead className="border-r uppercase text-[14px]  border-[#EBE9E0] text-[#0D0106]">
                     Title
                   </TableHead>
-                  <TableHead className="border-r uppercase  border-[#EBE9E0] text-[#0D0106]">
+                  <TableHead className="border-r uppercase text-[14px]   border-[#EBE9E0] text-[#0D0106]">
                     Date
                   </TableHead>
-                  <TableHead className="border-r uppercase  border-[#EBE9E0] text-[#0D0106]">
+                  <TableHead className="border-r uppercase text-[14px]   border-[#EBE9E0] text-[#0D0106]">
                     Time
                   </TableHead>
                 </TableRow>
@@ -204,10 +204,10 @@ const Presentations = () => {
                         Description
                       </p>
                     </TableCell>
-                    <TableCell className="border-r text-[14px]  border-[#EBE9E0] text-[#0D0106]">
+                    <TableCell className="border-r text-[14px]  text-center border-[#EBE9E0] text-[#0D0106]">
                       {row.date}
                     </TableCell>
-                    <TableCell className="border-r text-[14px] border-[#EBE9E0] text-[#0D0106]">
+                    <TableCell className="border-r text-[14px] text-center border-[#EBE9E0] text-[#0D0106]">
                       {row.time}
                     </TableCell>
 
@@ -233,9 +233,9 @@ const Presentations = () => {
             antiques from the past 24 hours before they’re gone.
           </p>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 ">
             {Array.from({ length: 2 }).map((item) => (
-              <div className="md:mx-2 ">
+              <div className=" border border-[#F9F8F3] p-5 ">
                 <div className="border-b border-[#EBE9E0] pb-4">
                   <p className=" w-full bg-[#EBE9E0] py-2 uppercase items-center text-[12px] text-center">
                     Available to watch for another 14 hours
@@ -255,10 +255,13 @@ const Presentations = () => {
                     />
                   </div>
 
-                  <div className="flex flex-row items-center gap-4 py-2 justify-between">
-                    <h1 className="font-playfair text-[20px] md:text-[24px]">
-                      Home Decor originating from Italy
-                    </h1>
+                  <div className="flex flex-row items-center gap-4 pt-2 justify-between">
+                    <div>
+                      <h1 className="font-playfair text-[20px] md:text-[24px]">
+                        Home Decor originating from Italy
+                      </h1>
+                      <p className="text-[14px]">Streamed 22 hours ago</p>
+                    </div>
                     <button>
                       <Image
                         src="/export.svg"
@@ -268,8 +271,6 @@ const Presentations = () => {
                       />
                     </button>
                   </div>
-
-                  <p className="text-[14px]">Streamed 22 hours ago</p>
                 </div>
 
                 <div>

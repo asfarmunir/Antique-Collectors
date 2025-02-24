@@ -10,7 +10,7 @@ const page = () => {
           fairs & events
         </h1>
       </div>
-      <div className=" w-full  p-5 md:p-12 xl:px-[80px] space-y-16 2xl:space-y-20 border-b border-[#EBE9E0] md:pb-20">
+      <div className=" w-full  p-5 md:p-12 xl:px-[80px] space-y-16 xl:space-y-20 border-b border-[#EBE9E0] md:pb-20">
         <div className=" w-full flex flex-col md:flex-row items-end justify-between gap-6 md:gap-12">
           <div className=" w-full relative flex justify-center">
             <Image
@@ -20,7 +20,7 @@ const page = () => {
               alt="pic2"
               className=" w-full "
             />
-            <div className=" absolute flex items-center justify-between -bottom-4 md:-bottom-10 w-[85%] bg-[#F9F8F3] p-2 md:p-4">
+            <div className=" absolute flex items-center justify-between -bottom-4 md:-bottom-10 xl:-bottom-6 w-[85%] bg-[#F9F8F3] p-2 md:p-4">
               <p className="text-xs md:text-sm xl:text-[12px]">
                 15.12.2024, Monday
               </p>
@@ -31,7 +31,7 @@ const page = () => {
             <h2 className="text-3xl xl:text-[48px]  font-playfair">
               Milan Antique Fair
             </h2>
-            <p className="text-[#919089] text-sm xl:text-[16px] py-[24px] max-w-lg">
+            <p className="text-[#919089] font-normal text-sm xl:text-[16px] py-[24px] max-w-lg">
               Lorem ipsum dolor sit amet consectetur. Molestie adipiscing massa
               tincidunt purus tristique malesuada. Ultricies ac aliquet sapien
               quis magna accumsan purus. Massa enim sit.
@@ -52,7 +52,7 @@ const page = () => {
               alt="pic2"
               className=" w-full"
             />
-            <div className=" absolute flex items-center justify-between -bottom-4 md:-bottom-10 w-[85%] bg-[#F9F8F3] p-2 md:p-4">
+            <div className=" absolute flex items-center justify-between -bottom-4 md:-bottom-10   xl:-bottom-6 w-[85%] bg-[#F9F8F3] p-2 md:p-4">
               <p className="text-xs md:text-sm xl:text-[12px]">
                 15.12.2024, Monday
               </p>
@@ -63,7 +63,7 @@ const page = () => {
             <h2 className="text-3xl xl:text-[48px]  font-playfair">
               Milan Antique Fair
             </h2>
-            <p className="text-[#919089] text-sm xl:text-[16px] md:text-end py-[24px] max-w-lg">
+            <p className="text-[#919089] text-sm font-normal xl:text-[16px] md:text-end py-[24px] max-w-lg">
               Lorem ipsum dolor sit amet consectetur. Molestie adipiscing massa
               tincidunt purus tristique malesuada. Ultricies ac aliquet sapien
               quis magna accumsan purus. Massa enim sit.
