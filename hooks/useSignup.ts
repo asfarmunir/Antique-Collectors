@@ -40,12 +40,12 @@ const useSignup = () => {
         e.preventDefault();
 
         if (currentStep === 2) {
-            if (!formData.name || !formData.mobile || !formData.password || !formData.confirmPassword) {
-                return { success: false, message: "Please fill all fields" };
-            }
-            if (formData.password !== formData.confirmPassword) {
-                return { success: false, message: "Passwords do not match!" };
-            }
+            // if (!formData.name || !formData.mobile || !formData.password || !formData.confirmPassword) {
+            //     return { success: false, message: "Please fill all fields" };
+            // }
+            // if (formData.password !== formData.confirmPassword) {
+            //     return { success: false, message: "Passwords do not match!" };
+            // }
 
             alert('account created successfully');
             setCurrentStep(3);

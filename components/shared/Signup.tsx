@@ -44,10 +44,10 @@ const SignUp = ({ onClose }: { onClose: any }) => {
       <div className="relative ">
         <Dialog open onOpenChange={onClose}>
           <DialogContent
-            className="font-playfair  max-h-[95svh] overflow-y-auto"
-            customWidth="max-w-lg "
+            className="font-playfair  max-h-[95svh] p-0 overflow-y-auto"
+            customWidth="max-w-[554px] "
           >
-            <DialogHeader className="font-playfair text-xl border-b border-[#EBE9E0] pb-2 xl:pb-6">
+            <DialogHeader className="font-playfair xl:p-[32px] text-xl border-b border-[#EBE9E0] pb-2 ">
               <DialogTitle>
                 <Button
                   onClick={onClose}
@@ -66,15 +66,15 @@ const SignUp = ({ onClose }: { onClose: any }) => {
             {/* step 1 */}
 
             {currentStep === 1 && (
-              <div className="flex flex-col px-2 ">
-                <h1 className="text-[48px] text-center leading-tight">
+              <div className="flex flex-col px-6 xl:px-[48px] ">
+                <h1 className="text-[48px] pt-8 text-center leading-tight">
                   Welcome to <br />
                   <span className={`${playfair.className}`}>
                     {" "}
                     The Antique Collector
                   </span>
                 </h1>
-                <p className="text-[16px] text-[#919089] text-center   font-openSans pb-4 pt-4">
+                <p className="text-[16px] text-[#919089] text-center   font-openSans pb-6 pt-4">
                   Join the community of antique and jewelry lovers today and see
                   a custom feed tailored to your requirements
                 </p>
@@ -104,13 +104,13 @@ const SignUp = ({ onClose }: { onClose: any }) => {
                   </form>
                 </div>
 
-                <div className="flex items-center gap-3 py-3">
+                <div className="flex items-center gap-3 py-3 xl:py-5">
                   <div className="flex-grow border-t border-[#EBE9E0]"></div>
                   <p className="text-[#919089] px-3 text-[14px]">or</p>
                   <div className="flex-grow border-t border-[#EBE9E0]"></div>
                 </div>
 
-                <div>
+                <div className="pb-8">
                   <p className="text-[12px]  font-openSans uppercase text-[#0D0106] py-2">
                     Instantly Login or sign up via google
                   </p>
@@ -134,8 +134,10 @@ const SignUp = ({ onClose }: { onClose: any }) => {
             {/* step 2 */}
 
             {currentStep === 2 && (
-              <div className="flex flex-col px-2 md:px-6 py-4">
-                <h1 className="text-[32px] mb-4">Create your account</h1>
+              <div className="flex flex-col px-2 md:px-6 xl:px-[48px] py-4">
+                <h1 className="text-[32px] xl:py-3 mb-4">
+                  Create your account
+                </h1>
                 <div className="my-4">
                   <form onSubmit={handleSubmit}>
                     <div className="space-y-2">
@@ -216,13 +218,17 @@ const SignUp = ({ onClose }: { onClose: any }) => {
                       />
                     </div>
 
-                    <div className="my-3">
+                    <div className="mt-7  inline-flex items-center gap-2 mb-4">
                       <Checkbox1
-                        label="By signing up you agree to our Terms and Conditions & Privacy Policy."
                         name="terms"
                         checked={formData.terms}
                         onChange={handleInputChange}
                       />
+                      <p className="text-[12px] text-[#919089] font-openSans">
+                        By signing up you agree to our{" "}
+                        <span className="text-black">Terms and Conditions</span>{" "}
+                        & <span className="text-black">Privacy Policy.</span>
+                      </p>
                     </div>
 
                     <Button
@@ -244,7 +250,7 @@ const SignUp = ({ onClose }: { onClose: any }) => {
                     Instantly Login or sign up via google
                   </p>
 
-                  <div className="flex flex-col md:flex-row  gap-3">
+                  <div className="flex flex-col md:flex-row pb-4 gap-3">
                     <Button
                       icon={<FcGoogle />}
                       label="Continue with google"
@@ -265,34 +271,35 @@ const SignUp = ({ onClose }: { onClose: any }) => {
             {/* code verification */}
 
             {currentStep === 3 && (
-              <div>
-                <h1 className="text-[#0D0106] text-[36px]">
+              <div className="px-8 xl:px-[44px] ">
+                <h1 className="text-[#0D0106] py-4 capitalize text-[30px]">
                   Please verify your email address to finish creating your
                   account
                 </h1>
 
                 <div className="mt-6 text-[#0D0106]">
-                  <p className=" font-openSans text-xs mb-2 uppercase">
-                    We’ve sent a verification code to your email address.
+                  <p className=" font-openSans text-[#919089] text-[16px] mb-2 ">
+                    We’ve sent a verification code to email@address.com
+                    containing 4-digit verification code.{" "}
                   </p>
 
-                  <InputField
+                  {/* <InputField
                     className="text-sm text-[#0D0106]  font-openSans placeholder:text-sm  w-full border-b border-[#919089]"
                     placeholder="email@gmail.com"
                     value={formData.email}
                     type="email"
                     readOnly
-                  />
+                  /> */}
 
                   <div className="py-4">
-                    <p className="text-[10px] text-[#0D0106]  font-openSans uppercase">
+                    <p className="text-[12px] text-[#0D0106]  font-openSans uppercase">
                       Your 4-digit code
                     </p>
 
                     <div className="flex flex-row gap-4 py-2">
                       {otp.map((digit, index) => (
                         <InputField
-                          className="border border-[#EBE9E0] h-16 w-16"
+                          className="border border-[#EBE9E0] h-32 w-full"
                           key={index}
                           value={digit}
                           onChange={(e) =>
@@ -303,9 +310,9 @@ const SignUp = ({ onClose }: { onClose: any }) => {
                       ))}
                     </div>
 
-                    <p className="text-[12px]  font-openSans">
+                    <p className="text-[14px] text-[#463F3A] my-5 font-openSans">
                       Didn't receive a code?{" "}
-                      <Link href={"#"} className="uppercase text-[10px]">
+                      <Link href={"#"} className="uppercase text-[13px]">
                         Resend
                       </Link>
                     </p>
@@ -317,32 +324,37 @@ const SignUp = ({ onClose }: { onClose: any }) => {
             {/* last step */}
 
             {currentStep === 4 && (
-              <div>
-                <h1 className="text-lg">Welcome To</h1>
-                <h1 className="italic text-2xl">The Antique Collector Anna!</h1>
+              <div className="flex flex-col items-center px-8 xl:px-[48px] ">
+                <h1 className=" text-2xl xl:text-[48px] xl:py-7 leading-[3.2rem] text-center">
+                  Welcome to <br />{" "}
+                  <span className={`${playfair.className}`}>
+                    The Antique Collector
+                  </span>{" "}
+                  Anna!
+                </h1>
 
-                <div className=" font-openSans mt-6">
-                  <p className="text-[#0D0106] text-[10px] uppercase">
+                <div className=" font-openSans text-center mt-6">
+                  <p className="text-[#0D0106] text-[14px] xl:mb-2  tracking-wide uppercase">
                     Are You Here to Buy or Sell?
                   </p>
-                  <p className="text-[10px] pt-2 pb-3">
+                  <p className="text-[16px] text-[#919089] pt-2 pb-3">
                     Let us know your goals, and we’ll tailor your journey to
                     match. You can start as a Buyer, and further upgrade your
                     account to Seller.
                   </p>
                 </div>
 
-                <div className=" font-openSans flex flex-col gap-2 md:flex-row ">
+                <div className=" font-openSans my-6 flex flex-col w-full  md:flex-row ">
                   <Button
                     type="submit"
                     onClick={handleBuyer}
                     label="I'm a Buyer"
-                    className="bg-[#EBE9E0] text-xs uppercase text-[#463F3A] w-full"
+                    className="bg-[#EBE9E0] py-[16px] text-[12px] uppercase text-[#463F3A] w-full"
                   />
                   <Button
                     type="submit"
                     label="I'm a Seller"
-                    className="bg-[#463F3A] text-xs text-white uppercase w-full"
+                    className="bg-[#463F3A] text-[12px] text-white uppercase w-full"
                     onClick={handleSellerAccount}
                   />
                 </div>

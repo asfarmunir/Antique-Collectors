@@ -14,16 +14,16 @@ const Aboutus = () => {
           </h1>
         </div>
 
-        <div className=" bg-[#F9F8F3] border border-[#F9F8F3] flex flex-col  pt-20 pb-16 px-4 relative">
+        <div className=" bg-[#F9F8F3]  border border-[#F9F8F3] flex flex-col  pt-20 pb-16 px-4 relative">
           <div className="px-10">
-            <div className="absolute -top-20 md:-top-10 right-8">
+            <div className="absolute -top-20 md:-top-10 right-8 xl:right-[4.6rem]">
               <Image
                 src="/images/about/about1.png"
                 width={190}
                 height={100}
                 alt="about pic1"
                 className="
-                xl:w-[250px] 
+                xl:w-[284px] xl:h-[368px] 
                 "
               />
             </div>
@@ -34,7 +34,7 @@ const Aboutus = () => {
                 height={80}
                 alt="about pic1"
                 className="
-                xl:w-[220px] 
+                xl:w-[284px] xl:h-[372px] 
                 "
               />
             </div>
@@ -75,13 +75,14 @@ const Aboutus = () => {
           </div>
         </div>
 
-        <section className="py-4 px-4 md:px-6 lg:px-12 xl:px-[80px] flex flex-col-reverse md:flex-row gap-4 pt-32">
+        <section className="py-4  px-4 md:px-6 lg:px-12 xl:px-[80px] flex flex-col-reverse md:flex-row gap-4 pt-36">
           <div className="w-full md:w-1/2">
             <Image
               src="/images/about/about3.png"
               width={480}
               height={250}
               alt="about pic1"
+              className=" xl:w-[511px] xl:h-[355px]"
             />
           </div>
 
