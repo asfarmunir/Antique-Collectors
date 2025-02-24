@@ -47,7 +47,7 @@ const SignUp = ({ onClose }: { onClose: any }) => {
             className="font-playfair  max-h-[95svh] overflow-y-auto"
             customWidth="max-w-lg "
           >
-            <DialogHeader className="font-playfair text-xl border-b border-[#EBE9E0] pb-2">
+            <DialogHeader className="font-playfair text-xl border-b border-[#EBE9E0] pb-2 xl:pb-6">
               <DialogTitle>
                 <Button
                   onClick={onClose}
@@ -55,7 +55,7 @@ const SignUp = ({ onClose }: { onClose: any }) => {
                   label=""
                   className="bg-transparent absolute right-0 top-4"
                 />
-                <h1 className="font-playfair text-base uppercase text-start">
+                <h1 className="font-playfair text-base xl:text-[24px] uppercase text-start">
                   {currentStep === 1 && <span>Login or Sign Up</span>}
 
                   {currentStep > 1 && <span>Sign Up</span>}
@@ -66,27 +66,27 @@ const SignUp = ({ onClose }: { onClose: any }) => {
             {/* step 1 */}
 
             {currentStep === 1 && (
-              <div className="flex flex-col px-2 md:px-6">
-                <h1 className="text-[35px] text-center leading-tight">
+              <div className="flex flex-col px-2 ">
+                <h1 className="text-[48px] text-center leading-tight">
                   Welcome to <br />
                   <span className={`${playfair.className}`}>
                     {" "}
                     The Antique Collector
                   </span>
                 </h1>
-                <p className="text-sm text-[#919089] text-center  font-sans pb-4 pt-4">
+                <p className="text-[16px] text-[#919089] text-center   font-openSans pb-4 pt-4">
                   Join the community of antique and jewelry lovers today and see
                   a custom feed tailored to your requirements
                 </p>
 
                 <div className="my-4">
                   <form onSubmit={handleSubmit}>
-                    <div className="space-y-2">
-                      <label className="block text-xs uppercase font-sans tracking-wide">
+                    <div className="">
+                      <label className="block mb-2 text-[12px] uppercase  font-openSans tracking-wide">
                         use your email address to sign up or log in
                       </label>
                       <InputField
-                        className="text-sm font-sans placeholder:text-sm text-[#919089] w-full border border-[#EBE9E0]"
+                        className="text-sm  font-openSans placeholder:text-sm text-[#919089] placeholder:text-[#919089]  w-full border border-[#EBE9E0]"
                         placeholder="email@gmail.com"
                         type="email"
                         name="email"
@@ -98,7 +98,7 @@ const SignUp = ({ onClose }: { onClose: any }) => {
                       <Button
                         type="submit"
                         label="Continue"
-                        className="text-sm hover:opacity-80 capitalize w-full font-sans"
+                        className="text-[12px] uppercase mt-6 hover:opacity-80 py-[16px] tracking-wider w-full  font-openSans"
                       />
                     </div>
                   </form>
@@ -106,12 +106,12 @@ const SignUp = ({ onClose }: { onClose: any }) => {
 
                 <div className="flex items-center gap-3 py-3">
                   <div className="flex-grow border-t border-[#EBE9E0]"></div>
-                  <p className="text-[#919089] px-3 text-xs">or</p>
+                  <p className="text-[#919089] px-3 text-[14px]">or</p>
                   <div className="flex-grow border-t border-[#EBE9E0]"></div>
                 </div>
 
                 <div>
-                  <p className="text-[10px] font-sans uppercase text-[#0D0106] py-2">
+                  <p className="text-[12px]  font-openSans uppercase text-[#0D0106] py-2">
                     Instantly Login or sign up via google
                   </p>
 
@@ -119,12 +119,12 @@ const SignUp = ({ onClose }: { onClose: any }) => {
                     <Button
                       icon={<FcGoogle />}
                       label="Continue with google"
-                      className="w-full font-semibold hover:bg-gray-100 font-sans bg-white uppercase  border border-[#919089] text-nowrap flex text-xs text-[#0D0106] flex-row "
+                      className="w-full font-semibold hover:bg-gray-100  py-[16px] font-openSans bg-white uppercase  border border-[#919089] text-nowrap flex text-xs text-[#0D0106] flex-row "
                     />
                     <Button
                       icon={<FaApple />}
                       label="Continue with apple"
-                      className="w-full font-semibold  hover:bg-gray-100 uppercase font-sans bg-white border border-[#919089] text-nowrap text-xs flex flex-row text-[#0D0106] "
+                      className="w-full font-semibold  hover:bg-gray-100 py-[16px] uppercase  font-openSans bg-white border border-[#919089] text-nowrap text-xs flex flex-row text-[#0D0106] "
                     />
                   </div>
                 </div>
@@ -139,11 +139,11 @@ const SignUp = ({ onClose }: { onClose: any }) => {
                 <div className="my-4">
                   <form onSubmit={handleSubmit}>
                     <div className="space-y-2">
-                      <label className="block text-xs uppercase font-sans">
+                      <label className="block text-xs uppercase  font-openSans">
                         use your email address to sign up or login
                       </label>
                       <InputField
-                        className="text-sm font-sans text-[#0D0106] placeholder:text-sm  w-full border-b border-[#919089]"
+                        className="text-sm  font-openSans text-[#0D0106] placeholder:text-sm  w-full border-b border-[#919089]"
                         placeholder="email@gmail.com"
                         value={formData.email}
                         type="email"
@@ -152,25 +152,25 @@ const SignUp = ({ onClose }: { onClose: any }) => {
                     </div>
 
                     <div className="mt-4">
-                      <label className="block text-xs pb-2 uppercase font-sans">
+                      <label className="block text-xs pb-2 uppercase  font-openSans">
                         Your name
                       </label>
                       <InputField
-                        className="text-sm font-sans placeholder:text-sm text-[#919089] w-full border border-[#EBE9E0]"
+                        className="text-sm  font-openSans placeholder:text-sm text-[#919089] w-full border border-[#EBE9E0]"
                         required
                         name="name"
                         value={formData.name}
                         onChange={handleInputChange}
-                        placeholder="FIRST and LAST NAME"
+                        placeholder="First and Last name"
                         type="text"
                       />
                     </div>
                     <div className="mt-4">
-                      <label className="block text-xs pb-2 uppercase font-sans">
+                      <label className="block text-xs pb-2 uppercase  font-openSans">
                         mobile number
                       </label>
                       <InputField
-                        className="text-sm font-sans placeholder:text-sm text-[#919089] w-full border border-[#EBE9E0]"
+                        className="text-sm  font-openSans placeholder:text-sm text-[#919089] w-full border border-[#EBE9E0]"
                         placeholder="+44"
                         type="number"
                         required
@@ -181,33 +181,33 @@ const SignUp = ({ onClose }: { onClose: any }) => {
                     </div>
 
                     <div className="mt-4">
-                      <label className="block text-xs pb-2 uppercase font-sans">
+                      <label className="block text-xs pb-2 uppercase  font-openSans">
                         create a Password
                       </label>
                       <InputField
                         required
                         minLength={8}
-                        className="text-sm font-sans placeholder:text-sm text-[#919089] w-full border border-[#EBE9E0]"
+                        className="text-sm  font-openSans placeholder:text-sm text-[#919089] w-full border border-[#EBE9E0]"
                         placeholder="*******"
                         type="password"
                         name="password"
                         value={formData.password}
                         onChange={handleInputChange}
                       />
-                      <p className="text-[10px] py-2 font-sans text-[#919089] text-start">
+                      <p className="text-[12px] py-2  font-openSans text-[#919089] text-start">
                         Create a strong password containing at least 1 Upper
                         case, 1 Lower case and a Number
                       </p>
                     </div>
 
                     <div className="mt-4">
-                      <label className="block text-xs pb-2 uppercase font-sans">
+                      <label className="block text-xs pb-2 uppercase  font-openSans">
                         confirm Password
                       </label>
                       <InputField
                         required
                         minLength={8}
-                        className="text-sm font-sans placeholder:text-sm text-[#919089] w-full border border-[#EBE9E0]"
+                        className="text-sm  font-openSans placeholder:text-sm text-[#919089] w-full border border-[#EBE9E0]"
                         placeholder="*******"
                         type="password"
                         name="confirmPassword"
@@ -228,19 +228,19 @@ const SignUp = ({ onClose }: { onClose: any }) => {
                     <Button
                       type="submit"
                       label="Continue"
-                      className="text-sm hover:opacity-80 capitalize w-full font-sans"
+                      className="text-sm hover:opacity-80 capitalize w-full  font-openSans"
                     />
                   </form>
                 </div>
 
                 <div className="flex items-center gap-3 py-3">
                   <div className="flex-grow border-t border-[#EBE9E0]"></div>
-                  <p className="text-[#919089] px-3 text-xs">or</p>
+                  <p className="text-[#919089] px-3 text-[[14px]">or</p>
                   <div className="flex-grow border-t border-[#EBE9E0]"></div>
                 </div>
 
                 <div>
-                  <p className="text-[10px] font-sans uppercase text-[#0D0106] py-2">
+                  <p className="text-[10px]  font-openSans uppercase text-[#0D0106] py-2">
                     Instantly Login or sign up via google
                   </p>
 
@@ -248,12 +248,12 @@ const SignUp = ({ onClose }: { onClose: any }) => {
                     <Button
                       icon={<FcGoogle />}
                       label="Continue with google"
-                      className="w-full hover:bg-gray-100 text-nowrap font-sans bg-white uppercase  border border-[#919089] flex text-xs text-[#0D0106] flex-row "
+                      className="w-full hover:bg-gray-100 py-[16px] text-nowrap  font-openSans bg-white uppercase  border border-[#919089] flex text-xs text-[#0D0106] flex-row "
                     />
                     <Button
                       icon={<FaApple />}
                       label="Continue with apple"
-                      className="w-full hover:bg-gray-100 uppercase text-nowrap font-sans bg-white border border-[#919089] text-xs flex flex-row text-[#0D0106] "
+                      className="w-full hover:bg-gray-100 uppercase text-nowrap  font-openSans bg-white border border-[#919089] text-xs flex flex-row text-[#0D0106] "
                     />
                   </div>
                 </div>
@@ -272,12 +272,12 @@ const SignUp = ({ onClose }: { onClose: any }) => {
                 </h1>
 
                 <div className="mt-6 text-[#0D0106]">
-                  <p className="font-sans text-xs mb-2 uppercase">
+                  <p className=" font-openSans text-xs mb-2 uppercase">
                     We’ve sent a verification code to your email address.
                   </p>
 
                   <InputField
-                    className="text-sm text-[#0D0106] font-sans placeholder:text-sm  w-full border-b border-[#919089]"
+                    className="text-sm text-[#0D0106]  font-openSans placeholder:text-sm  w-full border-b border-[#919089]"
                     placeholder="email@gmail.com"
                     value={formData.email}
                     type="email"
@@ -285,7 +285,7 @@ const SignUp = ({ onClose }: { onClose: any }) => {
                   />
 
                   <div className="py-4">
-                    <p className="text-[10px] text-[#0D0106] font-sans uppercase">
+                    <p className="text-[10px] text-[#0D0106]  font-openSans uppercase">
                       Your 4-digit code
                     </p>
 
@@ -303,7 +303,7 @@ const SignUp = ({ onClose }: { onClose: any }) => {
                       ))}
                     </div>
 
-                    <p className="text-[12px] font-sans">
+                    <p className="text-[12px]  font-openSans">
                       Didn't receive a code?{" "}
                       <Link href={"#"} className="uppercase text-[10px]">
                         Resend
@@ -321,7 +321,7 @@ const SignUp = ({ onClose }: { onClose: any }) => {
                 <h1 className="text-lg">Welcome To</h1>
                 <h1 className="italic text-2xl">The Antique Collector Anna!</h1>
 
-                <div className="font-sans mt-6">
+                <div className=" font-openSans mt-6">
                   <p className="text-[#0D0106] text-[10px] uppercase">
                     Are You Here to Buy or Sell?
                   </p>
@@ -332,7 +332,7 @@ const SignUp = ({ onClose }: { onClose: any }) => {
                   </p>
                 </div>
 
-                <div className="font-sans flex flex-col gap-2 md:flex-row ">
+                <div className=" font-openSans flex flex-col gap-2 md:flex-row ">
                   <Button
                     type="submit"
                     onClick={handleBuyer}
