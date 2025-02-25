@@ -369,9 +369,9 @@ const SignUp = ({ onClose }: { onClose: any }) => {
       {isSettingOpen && (
         <SellerAccountSetting onClose={() => setIsSettingOpen(false)} />
       )}
-      {isBuyerOpen && (
-        <BuyerAccountSetting onClose={() => setIsBuyerOpen(false)} />
-      )}
+      {/* {isBuyerOpen && ( */}
+      <BuyerAccountSetting onClose={() => setIsBuyerOpen(false)} />
+      {/* )} */}
 
       <ToastContainer />
     </>

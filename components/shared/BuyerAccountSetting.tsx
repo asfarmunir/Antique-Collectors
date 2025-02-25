@@ -18,6 +18,8 @@ import { FcGoogle } from "react-icons/fc";
 import { FaApple } from "react-icons/fa";
 import Checkbox1 from "../ui/tickbox";
 import { intrests } from "@/lib/data";
+import localFont from "next/font/local";
+const playfair = localFont({ src: "../../fonts/PlayfairDisplay-Italic.ttf" });
 
 const checkboxLabels = [
   "Roman - 753 BC - 476 AD",
@@ -63,7 +65,10 @@ export const BuyerAccountSetting = ({ onClose }: { onClose: any }) => {
     });
   };
 
-  const handleNext = () => setStep((prev) => prev + 1);
+  const handleNext = () => {
+    console.log("Form Data:", formData);
+    setStep((prev) => prev + 1);
+  };
 
   const handleFinish = () => {
     alert(`Account setup complete: ${JSON.stringify(formData)}`);
@@ -77,10 +82,10 @@ export const BuyerAccountSetting = ({ onClose }: { onClose: any }) => {
     <div className="relative">
       <Dialog open onOpenChange={onClose}>
         <DialogContent
-          className="font-playfair max-h-[90vh] overflow-y-auto"
-          customWidth="max-w-lg"
+          className="font-playfair max-h-[90vh] p-0 overflow-y-auto"
+          customWidth="max-w-lg "
         >
-          <DialogHeader className="font-playfair text-xl border-b border-[#EBE9E0] pb-2">
+          <DialogHeader className="font-playfair text-xl border-b border-[#EBE9E0] p-[32px]">
             <DialogTitle>
               <Button
                 onClick={onClose}
@@ -88,39 +93,39 @@ export const BuyerAccountSetting = ({ onClose }: { onClose: any }) => {
                 label=""
                 className="bg-transparent absolute right-0 top-4"
               />
-              <h1 className="font-playfair text-base uppercase text-start">
+              <h1 className="font-playfair text-[24px] uppercase text-start">
                 Setting up your account
               </h1>
             </DialogTitle>
           </DialogHeader>
 
           {step === 1 && (
-            <div className="flex flex-col px-2 md:px-6">
+            <div className="flex flex-col  py-[16px]  px-6 xl:px-12">
               <h1 className="text-3xl md:text-4xl">Location Preferences</h1>
-              <p className="text-xs py-2 font-sans">
+              <p className="text-base text-[#919089] py-4 font-openSans">
                 Personalize your experience by sharing a few details about your
                 location preferences.
               </p>
 
-              <form>
+              <div>
                 <div className="py-3">
-                  <p className="text-xs pb-2 font-sans uppercase">
+                  <p className="text-xs tracking-wide pb-2 font-openSans uppercase">
                     What is your country of residence?
                   </p>
                   <div>
                     <Dropdown
                       label="-Select-"
                       items={sortData}
-                      onSelect={(item) => handleSelect("country", item)}
-                      isOpen={openDropdown === 1}
-                      toggleDropdown={() => toggleDropdown(1)}
-                      className="bg-white border border-[#EBE9E0] font-sans"
+                      // onSelect={(item) => handleSelect("country", item)}
+                      // isOpen={openDropdown === 1}
+                      // toggleDropdown={() => toggleDropdown(1)}
+                      className="bg-white border xl:w-full border-[#EBE9E0] font-openSans"
                     />
                   </div>
                 </div>
 
                 <div className="py-3">
-                  <p className="text-xs pb-2 font-sans uppercase">
+                  <p className="text-xs  tracking-wide pb-2 font-openSans uppercase">
                     Do you have a preference for countries you would like to buy
                     from?
                   </p>
@@ -128,50 +133,53 @@ export const BuyerAccountSetting = ({ onClose }: { onClose: any }) => {
                     <Dropdown
                       label="-Select-"
                       items={sortData}
-                      onSelect={(item) =>
-                        handleSelect("buyFromCountries", item)
-                      }
-                      isOpen={openDropdown === 2}
-                      toggleDropdown={() => toggleDropdown(2)}
-                      className="bg-white border border-[#EBE9E0] font-sans"
+                      // onSelect={(item) =>
+                      //   handleSelect("buyFromCountries", item)
+                      // }
+                      // isOpen={openDropdown === 2}
+                      // toggleDropdown={() => toggleDropdown(2)}
+                      className="bg-white border xl:w-full border-[#EBE9E0] font-openSans"
                     />
                   </div>
                 </div>
 
-                <div className="flex flex-col md:flex-row gap-3">
+                <div className="flex flex-col py-4 md:flex-row gap-3">
                   <Button
                     label="I'll Do It Later"
-                    className="w-full font-sans md:w-[40%] bg-white uppercase text-xs text-[#0D0106]"
+                    className="w-full text-nowrap font-openSans md:w-[40%] bg-white uppercase text-xs text-[#0D0106]"
                   />
                   <Button
                     onClick={handleNext}
-                    disabled={!isStep1Complete}
+                    type="button"
+                    // disabled={!isStep1Complete}
                     label="Continue"
-                    className="w-full font-sans uppercase bg-[#F9F8F3] text-xs text-[#0D0106]"
+                    className="w-full font-openSans  uppercase bg-[#F9F8F3] py-[16px] text-xs text-[#0D0106]"
                   />
                 </div>
-              </form>
+              </div>
             </div>
           )}
 
           {step === 2 && (
-            <div className="flex flex-col px-2 md:px-6">
-              <h1 className="text-2xl md:text-3xl">What Interests You</h1>
-              <p className="text-xs font-sans">
+            <div className="flex flex-col py-[26px]   px-6 xl:px-12">
+              <h1 className="text-2xl md:text-[32px] pb-2">
+                What Interests You
+              </h1>
+              <p className="text-base font-openSans text-[#919089]">
                 Personalize your experience by sharing a few details about your
                 interests.
               </p>
 
-              <div className="font-sans mt-6">
-                <h3 className="uppercase text-sm">
+              <div className="font-openSans mt-6">
+                <h3 className="uppercase tracking-wide text-sm">
                   1. What Kind of Antiques Do You Love?
                 </h3>
-                <p className="text-gray-500 text-xs">
+                <p className="text-[#919089] text-sm">
                   Choose your favorite categories to see more of what you’re
                   passionate about.
                 </p>
 
-                <div className="flex my-3 px-5 py-6 flex-wrap gap-4 bg-[#F9F8F3]">
+                <div className="flex my-3 px-5 py-6 flex-wrap  justify-center  gap-6 bg-[#F9F8F3]">
                   {intrests.map((interest, index) => (
                     <div
                       key={index}
@@ -183,20 +191,24 @@ export const BuyerAccountSetting = ({ onClose }: { onClose: any }) => {
                         width={70}
                         height={70}
                       />
-                      <h2 className="uppercase text-xs">{interest.name}</h2>
+                      <h2 className="uppercase text-xs text-[#919089]">
+                        {interest.name}
+                      </h2>
                     </div>
                   ))}
                 </div>
               </div>
 
-              <div className="font-sans mt-6">
-                <h3 className="uppercase text-sm">2. What's your style?</h3>
-                <p className="text-gray-500 text-xs">
+              <div className="font-openSans mt-6">
+                <h3 className="uppercase text-sm tracking-wide">
+                  2. What's your style?
+                </h3>
+                <p className="text-[#919089] text-sm py-2">
                   Select the eras and styles that inspire you most, from Art
                   Deco to Victorian.
                 </p>
 
-                <div className="flex flex-wrap gap-3 bg-[#F9F8F3] p-6 h-40 overflow-y-auto">
+                <div className="flex flex-col gap-3 bg-[#F9F8F3] p-6 h-40 overflow-y-auto">
                   {checkboxLabels.map((item) => (
                     <div
                       key={item}
@@ -209,25 +221,27 @@ export const BuyerAccountSetting = ({ onClose }: { onClose: any }) => {
                 </div>
               </div>
 
-              <div className="flex flex-col md:flex-row gap-3">
+              <div className="flex flex-col md:flex-row gap-3 mt-5">
                 <Button
                   label="I'll Do It Later"
-                  className="w-full font-semibold bg-white uppercase text-xs text-[#0D0106]"
+                  className="w-1/3  font-openSans py-[16px] bg-white uppercase text-xs text-[#0D0106]"
                 />
                 <Button
                   onClick={handleNext}
-                  disabled={!isStep2Complete}
+                  // disabled={!isStep2Complete}
                   label="Continue"
-                  className="w-full font-semibold uppercase bg-[#F9F8F3] text-xs text-[#0D0106]"
+                  className="w-2/3  font-openSans py-[16px] uppercase bg-[#F9F8F3] text-xs text-[#0D0106]"
                 />
               </div>
             </div>
           )}
 
           {step === 3 && (
-            <div className="px-2 md:px-6">
+            <div className=" px-6 xl:px-12 py-[24px]">
               <h1 className="text-3xl">Stay in the Loop</h1>
-              <p className="text-xs py-2 font-sans">Never Miss a New Arrival</p>
+              <p className="text-sm text-[#919089] uppercase  tracking-wide py-2 font-openSans">
+                Never Miss a New Arrival
+              </p>
 
               <div className="flex items-center gap-2 py-7">
                 <Checkbox1
@@ -240,7 +254,7 @@ export const BuyerAccountSetting = ({ onClose }: { onClose: any }) => {
                     }))
                   }
                 />
-                <label className="text-[10px] uppercase font-sans">
+                <label className="text-[14px]  font-openSans">
                   Enable email notifications to get updates on items matching
                   your preferences.
                 </label>
@@ -249,37 +263,46 @@ export const BuyerAccountSetting = ({ onClose }: { onClose: any }) => {
               <Button
                 label="Finish Setting Up My Account"
                 onClick={handleFinish}
-                className="uppercase w-full text-xs"
+                className="uppercase w-full font-openSans tracking-wide text-xs py-[12px]"
               />
             </div>
           )}
 
           {step === 4 && (
-            <div className="px-2 md:px-6">
-              <h1 className="text-lg">Welcome To</h1>
-              <h1 className="italic text-2xl">The Antique Collector's Hub!</h1>
-              <p className="text-xs uppercase py-2">
+            <div className=" flex flex-col items-center px-6 xl:px-10">
+              <h1 className="text-[40px]">Welcome To</h1>
+              <h1 className={` ${playfair.className} text-[40px]`}>
+                The Antique Collectors
+              </h1>
+              <h1 className="text-[40px]">Anna!</h1>
+              <p className="text-sm tracking-wide font-openSans text-center py-4 text-[#919089] uppercase ">
                 The global platform for lovers of all antiques and jewelry.
               </p>
 
               <div className="mt-3">
-                <p className="py-4 text-sm">
-                  We have started you off with a few default sellers in your
-                  feed. Visit the Sellers page to choose more.
+                <p className="py-4 text-base text-center font-openSans">
+                  Now that you have created an account it is important to follow
+                  your favorite sellers so that you see their latest posts in
+                  your daily feed.
                 </p>
-                <p className="py-2 text-sm">
-                  Use filters to find dealers by country or type, or search by
-                  typing their name or browsing their profiles.
+                <p className="py-2 text-base text-center font-openSans">
+                  You can do this by heading over the Seller Directory picking
+                  out your favourites. To help with this we suggest you use the
+                  filters provided to narrow down your search.
                 </p>
-                <p className="py-2 text-sm">
-                  Search for pieces on the Search page or explore the directory
-                  for types.
+                <p className="py-2 text-base text-center font-openSans">
+                  Alternatively you can find Sellers by exploring the ‘Shop By
+                  Category’ section, or the Search bar.
                 </p>
               </div>
 
+              <p className={`text-[24px] ${playfair.className} py-4`}>
+                Happy Hunting
+              </p>
+
               <Button
                 label="Start Exploring"
-                className="uppercase w-full mt-4 text-xs"
+                className="uppercase w-full mt-4 py-[16px] mb-8 font-openSans text-xs"
               />
             </div>
           )}
