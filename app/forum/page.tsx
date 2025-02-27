@@ -132,22 +132,22 @@ const PersonalInfo = () => {
         {/* Sidebar */}
         <div className="w-full md:w-1/4">
           <div className="bg-white border border-[#EBE9E0] p-[16px]  mb-6">
-            <h4 className="font-playfair w-full pb-[24px] border-b text-xl 2xl:text-2xl mb-4 inline-flex items-center gap-2">
-              <FaRegStar className="text-base text-[#919089] 2xl:text-lg" />
+            <h4 className="font-playfair w-full pb-[24px] border-b border-[#EBE9E0] text-xl 2xl:text-2xl mb-4 inline-flex items-center gap-2">
+              <FaRegStar className="text-base text-[#919089] xl:text-[20px]" />
               Must-read blog posts
             </h4>
             <ul className="text-xs text-[#463F3A] 2xl:text-base list-disc pl-5">
-              <li className="mb-2 list-item">
+              <li className="mb-3 list-item">
                 Please read Seller rules before you start working on a platform
               </li>
               <li>Helpful tips for Sellers</li>
             </ul>
-            <h4 className="font-playfair w-full pb-[24px] border-b text-xl 2xl:text-2xl mt-8 mb-4 inline-flex items-center gap-2">
-              <GoLink className="text-base text-[#919089] 2xl:text-lg" />
+            <h4 className="font-playfair w-full pb-[24px] border-b border-[#EBE9E0] text-xl 2xl:text-2xl mt-8 mb-4 inline-flex items-center gap-2">
+              <GoLink className="text-base text-[#919089] xl:text-[20px]" />
               Featured links
             </h4>
             <ul className="text-xs text-[#463F3A] 2xl:text-base list-disc pl-5">
-              <li className="mb-2">
+              <li className="mb-3">
                 The Ultimate Guide to creating the perfect Seller's Profile
               </li>
               <li>Frequently Asked Questions for Sellers</li>

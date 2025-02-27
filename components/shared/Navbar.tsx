@@ -26,7 +26,6 @@ const productOptions = [
   { title: "Most Popular ", link: "/products" },
   { title: "Featured Products", link: "/products" },
   { title: "Most Recent ", link: "/products" },
-  { title: "By Category", link: "/products" },
   { title: "By Collections", link: "/products" },
   { title: "By Period", link: "/products" },
 ];
@@ -38,11 +37,26 @@ const sellerOptions = [
   { title: "Followed Sellers", link: "/sellers" },
 ];
 
+const categories = [
+  { title: "Jewelry (13)", link: "#" },
+  { title: "Art (34)", link: "#" },
+  { title: "Collectibles (23)", link: "#" },
+  { title: "Furniture (3)", link: "#" },
+  { title: "Clothing (19)", link: "#" },
+  { title: "Lighting (4)", link: "#" },
+  { title: "Music (2)", link: "#" },
+  { title: "Tableware (15)", link: "#" },
+  { title: "Curiosities (10)", link: "#" },
+  { title: "Gemstones (7)", link: "#" },
+  { title: "Artefacts (3)", link: "#" },
+];
+
 const Navbar = () => {
   const pathname = usePathname();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isLoginOpen, setIsLoginOpen] = useState(false);
   const [openNav, setOpenNav] = useState("");
+  const [showCategories, setShowCategories] = useState(false);
   const router = useRouter();
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -205,11 +219,11 @@ const Navbar = () => {
       <div
         className={`w-full bg-white shadow-md overflow-hidden transition-all duration-300 ease-in-out ${
           openNav === "products"
-            ? "h-[340px] 2xl:h-[400px] p-5 2xl:p-7"
+            ? "h-[340px] xl:h-[400px] p-5 2xl:p-7"
             : "h-0 p-0"
         } flex items-center justify-center`}
       >
-        <div className="flex w-full items-center justify-center gap-5 2xl:gap-10">
+        <div className="flex w-full items-center  justify-center gap-5 2xl:gap-10">
           <div className="space-y-6 2xl:space-y-6 pr-16 2xl:pr-24 border-r border-[#EBE9E0]">
             {productOptions.map((items) => (
               <div
@@ -229,12 +243,44 @@ const Navbar = () => {
                 </button>
               </div>
             ))}
+            <div
+              className={`text-xs 2xl:text-sm 
+                hover:font-bold transition-all duration-200
+              `}
+            >
+              <button
+                className=" "
+                onClick={() => {
+                  setShowCategories(!showCategories);
+                }}
+              >
+                By Categories
+              </button>
+            </div>
           </div>
-          <div className="flex items-center gap-4 w-full max-w-[70%] 2xl:max-w-[60%] ">
-            {Array.from({ length: 3 }).map((_, index) => (
+          <div
+            className={`flex flex-col gap-3 transition-all duration-300 ease-in-out overflow-hidden 
+              ${
+                showCategories
+                  ? "w-[340px] px-10 xl:px-20 opacity-100"
+                  : "w-0 opacity-0 p-0"
+              }`}
+          >
+            {categories.map((category) => (
+              <Link
+                key={category.title}
+                href={category.link}
+                className="text-xs 2xl:text-sm hover:font-bold hover:scale-105 transition-all duration-200"
+              >
+                {category.title}
+              </Link>
+            ))}
+          </div>
+          <div className="flex items-center gap-4  max-w-[70%] 2xl:max-w-[60%] ">
+            {Array.from({ length: showCategories ? 2 : 3 }).map((_, index) => (
               <div
                 key={index} // Use a unique ID
-                className={` w-full  flex flex-col md:py-6  relative px-6 py-4 bg-white `}
+                className={`   flex flex-col md:py-6  relative px-6 py-4 bg-white `}
               >
                 {/* Product Image Container */}
                 <div className="relative group">

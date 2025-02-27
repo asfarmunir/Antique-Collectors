@@ -219,7 +219,7 @@ const Blog = () => {
           )}
 
           {/* Main content start from here */}
-          <div className=" px-4 md:px-12 xl:px-[80px] py-[40px] xl:py-[80px] md:grid md:grid-cols-5">
+          <div className=" px-4 md:px-12 xl:px-[80px]   py-[40px] xl:py-[80px] md:grid md:grid-cols-5">
             <div className="md:col-span-1  md:w-56 xl:w-72 ">
               <div className="md:block hidden">
                 <FilterComponent
@@ -265,7 +265,7 @@ const Blog = () => {
               </div>
             </div>
 
-            <div className="md:px-4 xl:px-[80px]  col-span-4 space-y-[32px]">
+            <div className="md:px-4 xl:px-[35px]  xl:ml-[105px] border-l border-[#EBE9E0] col-span-4 space-y-[32px]">
               {filteredBlogs.slice(0, visibleBlogs).map((blogs: any) => (
                 <div
                   key={blogs.userId}
