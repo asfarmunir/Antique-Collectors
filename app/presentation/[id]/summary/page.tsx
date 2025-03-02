@@ -12,8 +12,8 @@ const page = () => {
   };
 
   return (
-    <div className="px-4 md:px-6 lg:px-12 xl:px-[80px]">
-      <div className="py-4  border-b border-[#EBE9E0] flex flex-row flex-wrap gap-4 justify-start items-start">
+    <div className="">
+      <div className="py-4 xl:py-[32px] px-4 md:px-6 lg:px-12 xl:px-[80px] border-b border-[#EBE9E0] flex flex-row flex-wrap gap-4 justify-start items-start">
         <Link href={"/presentation/1"}>
           <HiArrowSmallLeft className="text-[#0D0106] text-2xl cursor-pointer" />
         </Link>
@@ -27,13 +27,13 @@ const page = () => {
           </h1>
         </div>
       </div>
-      <div className="py-8 ">
+      <div className="py-8 px-4 md:px-6 lg:px-12 xl:px-[80px] ">
         {/* Info text */}
         <div className="pb-4  mb-6">
-          <h1 className="font-playfair pt-4 uppercase text-lg 2xl:text-xl mb-2  ">
+          <h1 className="font-playfair pt-4 uppercase text-[24px] text-[#333333] 2xl:text-xl mb-2  ">
             Session Summary
           </h1>
-          <p className="text-[#717171] text-sm ">
+          <p className=" text-[16px] text-[#333333] ">
             This Live Session has finished.
           </p>
         </div>
@@ -43,8 +43,10 @@ const page = () => {
           {/* Title */}
           <div className="flex items-center justify-between border-b pb-4 border-[#EBE9E0]">
             <div>
-              <h4 className="text-sm text-gray-500 uppercase mb-1">Title</h4>
-              <p className="text-[#717171] text-xs 2xl:text-sm max-w-md">
+              <h4 className="text-sm  tracking-wide uppercase mb-2">
+                Duration
+              </h4>
+              <p className="text-[#919089] text-sm 2xl:text-sm max-w-md">
                 {sessionData.duration}
               </p>
             </div>
@@ -53,8 +55,8 @@ const page = () => {
           {/* Date */}
           <div className="flex items-center justify-between border-b pb-4 border-[#EBE9E0]">
             <div>
-              <h4 className="text-sm text-gray-500 uppercase mb-1">Date</h4>
-              <p className="text-[#717171] text-xs 2xl:text-sm max-w-md">
+              <h4 className="text-sm  tracking-wide uppercase mb-1">Date</h4>
+              <p className="text-[#919089] text-sm 2xl:text-sm max-w-md">
                 {sessionData.date}
               </p>
             </div>
@@ -63,16 +65,23 @@ const page = () => {
           {/* Time */}
           <div className="flex items-center justify-between border-b pb-4 border-[#EBE9E0]">
             <div>
-              <h4 className="text-sm text-gray-500 uppercase mb-1">Time</h4>
-              <p className="text-[#717171] text-xs 2xl:text-sm max-w-md">
+              <h4 className="text-sm  tracking-wide uppercase mb-1">
+                Number of Attendees
+              </h4>
+              <p className="text-[#919089] text-sm 2xl:text-sm max-w-md">
                 {sessionData.attendies}
               </p>
             </div>
+            <button className="border border-black uppercase px-6 py-4">
+              view all attendees
+            </button>
           </div>
 
           <div className="flex items-start justify-between border-b pb-4 border-[#EBE9E0]">
             <div>
-              <h4 className="text-sm text-gray-500 uppercase mb-1">products</h4>
+              <h4 className="text-sm  tracking-wide uppercase mb-2">
+                products
+              </h4>
               <div className="flex flex-col items-start space-y-2">
                 <div className="w-64 h-48 bg-gray-100 border border-gray-300">
                   <Image
@@ -84,7 +93,7 @@ const page = () => {
                   />
                 </div>
                 <div className="flex items-center justify-between w-full">
-                  <p className="text-[#717171] text-xs 2xl:text-sm max-w-md">
+                  <p className="text-[#919089] text-sm 2xl:text-sm max-w-md">
                     {sessionData.headerImage}
                   </p>
                   <button className="text-xs font-medium hover:underline">

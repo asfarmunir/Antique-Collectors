@@ -17,7 +17,7 @@ const sub = [
 const Subscription = () => {
   return (
     <>
-      <div className="">
+      <div className="xl:px-[80px]">
         <div className="border-b border-[#EBE9E0] flex flex-row justify-between gap-6 px-4 items-center">
           <h1 className="text-xl py-4 uppercase font-playfair">
             Setting up your account{" "}

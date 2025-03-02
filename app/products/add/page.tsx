@@ -105,8 +105,8 @@ const page = () => {
   };
 
   return (
-    <div className="px-5 md:px-12">
-      <div className="py-6 xl:py-[32px] border-b border-[#EBE9E0] pb-5 mb-9">
+    <div className="">
+      <div className="py-6 px-5 md:px-12 xl:px-[80px] xl:py-[32px] border-b border-[#EBE9E0] pb-5 mb-9">
         <h1 className="text-xs text-[#919089]">
           My Products / Add a new Product
         </h1>
@@ -114,24 +114,28 @@ const page = () => {
           Add a new Product
         </h1>
       </div>
-      <div className="flex flex-col md:flex-row gap-8 md:p-6">
+      <div className="flex flex-col md:flex-row gap-8 px-5 md:px-12 xl:px-[80px]   md:py-6">
         {/* Form Section */}
         <div className="w-full md:w-1/2  ">
           <div className="bg-primary-50 p-6 w-full ">
-            <h2 className="text-2xl font-playfair  mb-6">Mandatory Fields</h2>
+            <h2 className="text-[20px] font-playfair  uppercase  mb-6">
+              Mandatory Fields
+            </h2>
 
             {/* Category */}
             <label className="block mb-4">
-              <span className="text-gray-700 text-xs 2xl:text-sm uppercase  ">
+              <span className=" text-xs 2xl:text-sm tracking-wide uppercase  ">
                 Category
               </span>
               <select
                 name="category"
                 value={formData.category}
                 onChange={handleInputChange}
-                className="block w-full text-xs 2xl:text-sm mt-1 p-3 border "
+                className="block w-full text-xs 2xl:text-sm mt-1 p-3 border text-[#919089] "
               >
-                <option value="">-Select-</option>
+                <option value="" className="">
+                  -Select-
+                </option>
                 <option value="category1">Category 1</option>
                 <option value="category2">Category 2</option>
               </select>
@@ -139,14 +143,14 @@ const page = () => {
 
             {/* Subcategory */}
             <label className="block mb-4">
-              <span className="text-gray-700 text-xs 2xl:text-sm uppercase  ">
+              <span className=" text-xs 2xl:text-sm tracking-wide uppercase  ">
                 Subcategory
               </span>
               <select
                 name="subcategory"
                 value={formData.subcategory}
                 onChange={handleInputChange}
-                className="block w-full mt-1 text-xs 2xl:text-sm  p-3 border "
+                className="block w-full mt-1 text-xs 2xl:text-sm  p-3 border text-[#919089]"
               >
                 <option value="">-Select-</option>
                 <option value="subcategory1">Subcategory 1</option>
@@ -156,7 +160,7 @@ const page = () => {
 
             {/* Product Name */}
             <label className="block mb-4">
-              <span className="text-gray-700 text-xs 2xl:text-sm uppercase  ">
+              <span className=" text-xs 2xl:text-sm tracking-wide uppercase  ">
                 Product Name
               </span>
               <input
@@ -171,7 +175,7 @@ const page = () => {
 
             {/* Date & Origin */}
             <label className="block mb-4">
-              <span className="text-gray-700 text-xs 2xl:text-sm uppercase  ">
+              <span className=" text-xs 2xl:text-sm tracking-wide uppercase  ">
                 Date & Origin
               </span>
               <input
@@ -185,7 +189,7 @@ const page = () => {
 
             {/* Product Description */}
             <label className="block mb-4">
-              <span className="text-gray-700 text-xs 2xl:text-sm uppercase  ">
+              <span className=" text-xs 2xl:text-sm tracking-wide uppercase  ">
                 Product Description
               </span>
               <textarea
@@ -197,24 +201,24 @@ const page = () => {
                 className="block w-full mt-1 p-3 text-xs 2xl:text-sm  border "
                 placeholder="Describe your product"
               ></textarea>
-              <span className="text-gray-500 text-sm">
+              <span className="text-[#919089] text-sm">
                 {formData.description.length} / 300
               </span>
             </label>
 
             {/* Upload Header Image */}
             <label className="block mb-6">
-              <span className="text-gray-700 text-xs 2xl:text-sm uppercase  ">
+              <span className=" text-xs 2xl:text-sm tracking-wide uppercase  ">
                 Upload a Header Image
               </span>
               {/* <input
               type="file"
               accept="image/*"
               onChange={(e) => handleImageUpload(e, "header")}
-              className="block w-full mt-3 p-3 border-dashed border  text-gray-500 cursor-pointer"
+              className="block w-full mt-3 p-3 border-dashed border  text-[#919089] cursor-pointer"
             /> */}
               <div className=" w-full bg-white border-dotted border mt-2 h-28 flex items-center justify-center">
-                <span className="text-gray-500 text-xs 2xl:text-sm uppercase">
+                <span className="text-[#919089] text-xs 2xl:text-sm uppercase">
                   Drag and Drop or <br /> Upload image here
                 </span>
               </div>
@@ -222,11 +226,11 @@ const page = () => {
 
             {/* Upload Other Images */}
             <label className="block mb-6">
-              <span className="text-gray-700 text-xs 2xl:text-sm uppercase  ">
+              <span className=" text-xs 2xl:text-sm tracking-wide uppercase  ">
                 Upload Other Images & Videos
               </span>
               <div className=" w-full bg-white border-dotted border mt-2 h-28 flex items-center justify-center">
-                <span className="text-gray-500 text-xs 2xl:text-sm uppercase">
+                <span className="text-[#919089] text-xs 2xl:text-sm uppercase">
                   Drag and Drop or <br /> Upload image here
                 </span>
               </div>
@@ -235,20 +239,20 @@ const page = () => {
               accept="image/*,video/*"
               multiple
               onChange={(e) => handleImageUpload(e, "other")}
-              className="block w-full mt-3 p-3 border-dashed border  text-gray-500 cursor-pointer"
+              className="block w-full mt-3 p-3 border-dashed border  text-[#919089] cursor-pointer"
             /> */}
             </label>
 
             {/* Choose Feed */}
             <label className="block mb-4">
-              <span className="text-gray-700 text-xs 2xl:text-sm uppercase  ">
+              <span className=" text-xs 2xl:text-sm tracking-wide uppercase  ">
                 Choose Feed
               </span>
               <select
                 name="feed"
                 value={formData.feed}
                 onChange={handleInputChange}
-                className="block w-full mt-1 p-3 text-xs 2xl:text-sm  border "
+                className="block w-full mt-1 p-3 text-xs 2xl:text-sm  border text-[#919089] "
               >
                 <option value="">-Select-</option>
                 <option value="feed1">Feed 1</option>
@@ -257,11 +261,13 @@ const page = () => {
             </label>
           </div>
           <div className=" w-full p-6">
-            <h2 className="text-2xl font-playfair mb-6">Optional Fields</h2>
+            <h2 className="text-[20px] uppercase font-playfair mb-6">
+              Optional
+            </h2>
 
             {/* Price */}
             <label className="block mb-4">
-              <span className="text-gray-700 text-xs 2xl:text-sm uppercase">
+              <span className=" tracking-wide text-xs 2xl:text-sm uppercase">
                 Price
               </span>
               <input
@@ -276,7 +282,7 @@ const page = () => {
 
             {/* Material */}
             <label className="block mb-4">
-              <span className="text-gray-700 text-xs 2xl:text-sm uppercase">
+              <span className=" tracking-wide text-xs 2xl:text-sm uppercase">
                 Material
               </span>
               <select
@@ -294,7 +300,7 @@ const page = () => {
 
             {/* Condition */}
             <label className="block mb-4">
-              <span className="text-gray-700 text-xs 2xl:text-sm uppercase">
+              <span className=" tracking-wide text-xs 2xl:text-sm uppercase">
                 Condition
               </span>
               <select
@@ -311,7 +317,7 @@ const page = () => {
 
             {/* Measurements */}
             <label className="block mb-4">
-              <span className="text-gray-700 text-xs 2xl:text-sm uppercase">
+              <span className=" tracking-wide text-xs 2xl:text-sm uppercase">
                 Measurements
               </span>
               <div className="flex flex-col gap-4 mt-2">
@@ -354,7 +360,7 @@ const page = () => {
 
             {/* Website Product Link */}
             <label className="block mb-4">
-              <span className="text-gray-700 text-xs 2xl:text-sm uppercase">
+              <span className=" tracking-wide text-xs 2xl:text-sm uppercase">
                 Your Website Product Link
               </span>
               <input
@@ -369,7 +375,7 @@ const page = () => {
 
             {/* Hallmarks */}
             <label className="block mb-4">
-              <span className="text-gray-700 text-xs 2xl:text-sm uppercase">
+              <span className=" tracking-wide text-xs 2xl:text-sm uppercase">
                 Hallmarks
               </span>
               <input
@@ -384,7 +390,7 @@ const page = () => {
 
             {/* Availability */}
             <label className="block mb-6">
-              <span className="text-gray-700 text-xs 2xl:text-sm uppercase">
+              <span className=" tracking-wide text-xs 2xl:text-sm uppercase">
                 Availability
               </span>
               <div className="flex flex-col gap-4 mt-3">
@@ -433,14 +439,14 @@ const page = () => {
               </div>
             </label>
           </div>
-          <button className=" text-xs 2xl:text-sm w-full bg-[#0D0106] text-white uppercase py-3.5 px-6">
+          <button className=" text-xs tracking-wide 2xl:text-sm w-full bg-[#0D0106] text-white uppercase py-4 px-6">
             PUBLISH PRODUCT
           </button>
         </div>
 
         {/* Preview Section */}
-        <div className="w-full md:w-1/2 md:p-6 ">
-          <h2 className="text-xl font-playfair mb-6">Preview</h2>
+        <div className="w-full border-l md:pl-10 md:w-1/2 md:p-6 ">
+          <h2 className="text-[20px] font-playfair uppercase mb-6">Preview</h2>
           <div className="md:col-span-3 md:h-[350px]">
             <div className="flex w-full flex-col-reverse md:flex-row  md:border-r border-[#EBE9E0] h-full">
               {/* Scrollable Image Gallery */}
@@ -499,13 +505,29 @@ const page = () => {
               </div>
             </div>
           </div>
-          <div className="mt-8 md:mt-0">
-            <h1 className="text-lg md:text-xl uppercase font-playfair my-4">
+          <div className="mt-8 md:mt-[48px]">
+            <div className="flex items-center justify-between py-[16px] border-b border-[#EBE9E0]">
+              <div className="flex flex-row items-center text-sm gap-3 pb-3">
+                <div className="bg-[#EBE9E0] p-2 rounded-full w-8 h-8 flex items-center justify-center">
+                  <Image
+                    src="/"
+                    width={10}
+                    height={10}
+                    className="rounded-full"
+                    alt=""
+                  />
+                </div>
+                <h1 className="text-[24px] font-normal uppercase text-[#463F3A]">
+                  Antique Animal Jewelry
+                </h1>
+              </div>
+              <button className="text-[12px]">FOLLOW</button>
+            </div>
+            <h1 className="text-lg md:text-[20px] uppercase font-playfair my-4">
               {formData.productName || "Product Name"}
             </h1>
-
             {/* Product Description */}
-            <p className="text-[#919089]  mb-4 text-sm md:text-sm">
+            <p className="text-[#919089]  mb-4 text-sm md:text-[16px]">
               {formData.description || "Product description will appear here."}
             </p>
 
@@ -526,11 +548,11 @@ const page = () => {
               </div>
               <div className="text-[12px]">
                 <p className="text-[#919089] uppercase">Date & Origin</p>
-                <p className="mt-2">140CM X 120CM</p>
+                <p className="mt-2">1293</p>
               </div>
               <div className="text-[12px]">
                 <p className="text-[#919089] uppercase">Materials</p>
-                <p className="mt-2">140CM X 120CM</p>
+                <p className="mt-2">108C GOLD</p>
               </div>
             </div>
 
@@ -539,11 +561,11 @@ const page = () => {
               <Button
                 label="Add to favorite"
                 icon={<CiHeart className="text-xl" />}
-                className="bg-white uppercase text-xs hover:bg-[#0D0106] hover:text-white text-nowrap 2xl:text-sm border border-[#0D0106] text-[#0D0106] w-full py-2.5 "
+                className="bg-white uppercase text-xs hover:bg-[#0D0106] hover:text-white text-nowrap 2xl:text-sm border border-[#0D0106] text-[#0D0106] w-full py-4 "
               />
               <Button
                 label="Send a Query"
-                className="bg-[#0D0106] uppercase border text-xs 2xl:text-sm border-[#0D0106] text-white w-full py-2.5 hover:bg-gray-800"
+                className="bg-[#0D0106] uppercase border text-xs 2xl:text-sm border-[#0D0106] text-white w-full py-4 hover:bg-gray-800"
               />
             </div>
           </div>

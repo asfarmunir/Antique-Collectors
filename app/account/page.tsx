@@ -47,19 +47,19 @@ const page = () => {
 
   return (
     <div>
-      <div className="py-6 px-6 md:px-12">
+      <div className="py-6 xl:py-[32px] px-6 border-b border-[#EBE9E0] md:px-12 xl:px-[80px] ">
         <h1 className="text-xs text-[#919089]">Home / My Account</h1>
         <h1 className="font-playfair pt-4 uppercase text-[24px] ">
           My account
         </h1>
       </div>
-      <div className="  px-6 md:px-12 py-7">
-        <h2 className=" text-3xl font-playfair">My Account</h2>
-        <p className=" uppercase py-3 text-[#666666] text-xs 2xl:text-sm gap-1 inline-flex items-center">
-          <span className=" font-semibold">Anna,</span>
+      <div className="  px-6 md:px-12 py-7 xl:py-[80px] xl:px-[80px] ">
+        <h2 className=" text-[32px] font-playfair">My Account</h2>
+        <p className=" uppercase py-3  text-xs 2xl:text-sm gap-1 inline-flex items-center">
+          <span className=" font-bold">Anna,</span>
           <span> annasmith@gmail.com </span>
         </p>
-        <div className=" w-full mt-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5 ">
+        <div className=" w-full xl:w-[80%] mt-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5 ">
           {settings.map((setting) => (
             <Link
               key={setting.title}
@@ -72,17 +72,17 @@ const page = () => {
                 width={30}
                 alt="pic2"
               />
-              <h2 className=" font-semibold pt-4   pb-2 text-sm 2xl:text-base uppercase">
+              <h2 className=" font-semibold tracking-wide pt-7 pb-2 text-sm 2xl:text-[14px] uppercase">
                 {setting.title}
               </h2>
-              <p className="text-[#919089] text-sm">{setting.description}</p>
+              <p className="text-[#919089] text-[14px]">
+                {setting.description}
+              </p>
             </Link>
           ))}
         </div>
         <div className=" mt-32">
-          <p className="text-xs font-semibold">
-            Need to deactivate your account?
-          </p>
+          <p className="text-sm ">Need to deactivate your account?</p>
           <button className=" font-thin py-1 capitalize">deactivate now</button>
         </div>
       </div>

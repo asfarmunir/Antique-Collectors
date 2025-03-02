@@ -42,8 +42,8 @@ const page: React.FC = () => {
   };
 
   return (
-    <div className="px-4 md:px-6 lg:px-12 xl:px-[80px]">
-      <div className="py-4  border-b border-[#EBE9E0] flex flex-row flex-wrap gap-4 justify-between items-center">
+    <div className="">
+      <div className="py-4 xl:py-[32px] px-4 md:px-6 lg:px-12 xl:px-[80px] border-b border-[#EBE9E0] flex flex-row flex-wrap gap-4 justify-between items-center">
         <div>
           <p className="text-xs">Home / Live Presentations</p>
           <h1 className="font-playfair pt-4 uppercase text-base md:text-[24px] ">
@@ -54,24 +54,24 @@ const page: React.FC = () => {
         <div>
           <Link
             href={"/presentation/create"}
-            className="text-xs 2xl:text-sm hover:opacity-80 py-3 px-4 text-white bg-[#0D0106] uppercase"
+            className="text-xs tracking-wide xl:w-[237px] 2xl:text-sm hover:opacity-80 py-4 px-4 text-white bg-[#0D0106] uppercase"
           >
             Create a live presentation
           </Link>
         </div>
       </div>
-      <div className=" w-full py-8 gap-6  grid grid-cols-1 sm:grid-cols-5  ">
+      <div className=" w-full px-4 md:px-6 lg:px-12 xl:px-[80px] py-8 gap-6  grid grid-cols-1 sm:grid-cols-5  ">
         <div className="bg-primary-50 p-6 h-fit  shadow sm:col-span-2">
-          <h2 className="text-xl 2xl:text-2xl font-playfair  mb-4">
+          <h2 className="text-[24px] 2xl:text-2xl font-playfair  mb-3">
             How does it work?
           </h2>
-          <p className=" text-[#919089] text-sm 2xl:text-base pb-4 border-b border-[#9190898a] mb-4">
+          <p className=" text-[#919089] text-[16px] 2xl:text-base pb-4 border-b border-[#EBE9E0] mb-4">
             Host live sessions to showcase your treasures and connect with
             collectors in real time.
           </p>
-          <div className="list-decimal list-inside text-gray-700 space-y-2">
+          <div className="list-decimal list-inside text-gray-700 space-y-5">
             <div className=" space-y-2">
-              <p className=" uppercase font-semibold mb-2  text-sm 2xl:text-base">
+              <p className=" uppercase tracking-wider mb-2  text-[14px] 2xl:text-base">
                 1: Schedule the live session
               </p>{" "}
               <p className="text-xs 2xl:text-sm text-[#919089]">
@@ -80,7 +80,7 @@ const page: React.FC = () => {
               </p>
             </div>
             <div className=" space-y-2">
-              <p className=" uppercase font-semibold mb-2  text-sm 2xl:text-base">
+              <p className=" uppercase tracking-wider mb-2  text-[14px] 2xl:text-base">
                 2: Get Ready to Go Live
               </p>{" "}
               <p className="text-xs 2xl:text-sm text-[#919089]">
@@ -89,7 +89,7 @@ const page: React.FC = () => {
               </p>
             </div>
             <div className=" space-y-2">
-              <p className=" uppercase font-semibold mb-2  text-sm 2xl:text-base">
+              <p className=" uppercase tracking-wider mb-2  text-[14px] 2xl:text-base">
                 3: You’re Live!
               </p>{" "}
               <p className="text-xs 2xl:text-sm text-[#919089]">
@@ -98,7 +98,7 @@ const page: React.FC = () => {
               </p>
             </div>
             <div className=" space-y-2">
-              <p className=" uppercase font-semibold mb-2  text-sm 2xl:text-base">
+              <p className=" uppercase tracking-wider mb-2  text-[14px] 2xl:text-base">
                 4. Post-Live Summary
               </p>{" "}
               <p className="text-xs 2xl:text-sm text-[#919089]">
@@ -111,17 +111,19 @@ const page: React.FC = () => {
         <div className=" col-span-1 sm:col-span-3 p-2">
           {/* Upcoming Section */}
           <div className="mb-12 w-full ">
-            <h2 className="text-xl font-playfair  mb-6">Upcoming</h2>
+            <h2 className="text-[24px] text-[#463F3A] font-playfair  mb-6">
+              Upcoming
+            </h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 w-full gap-6">
               {data.upcoming.map((item, index) => (
                 <div
                   key={index}
-                  className="border  shadow-sm overflow-hidden bg-white"
+                  className="border border-[#EBE9E0]  shadow-sm overflow-hidden bg-white"
                 >
                   <div className="p-4">
                     <div className="flex justify-between items-center mb-2">
                       <span
-                        className={`text-xs 2xl:text-sm font-medium ${
+                        className={`text-sm  tracking-wide font-medium ${
                           item.status === "Scheduled"
                             ? "text-green-600"
                             : "text-yellow-600"
@@ -131,12 +133,12 @@ const page: React.FC = () => {
                       </span>
                       <Link
                         href="/presentation/1/edit"
-                        className="text-xs 2xl:text-sm font-medium"
+                        className="text-xs 2xl:text-sm uppercase font-medium"
                       >
                         {item.action}
                       </Link>
                     </div>
-                    <h3 className="text-md font-playfair 2xl:text-lg  mb-2">
+                    <h3 className="text-[20px] font-playfair 2xl:text-lg  mb-3">
                       {item.title}
                     </h3>
 
@@ -145,7 +147,7 @@ const page: React.FC = () => {
                       alt={item.title}
                       className="w-full h-40 object-cover"
                     />
-                    <div className="text-xs mt-2 flex items-center justify-between 2xl:text-sm text-gray-600">
+                    <div className="text-sm mt-4 flex items-center justify-between 2xl:text-sm ">
                       <p>{item.date}</p>
                       <p>{item.time}</p>
                     </div>
@@ -157,7 +159,9 @@ const page: React.FC = () => {
 
           {/* Finished Section */}
           <div>
-            <h2 className="text-xl font-playfair mb-6">Finished</h2>
+            <h2 className="text-[24px] text-[#463F3A] font-playfair mb-6">
+              Finished
+            </h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-6">
               {data.finished.map((item, index) => (
                 <div
