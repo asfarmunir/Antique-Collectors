@@ -221,10 +221,10 @@ const Navbar = () => {
           openNav === "products"
             ? "h-[340px] xl:h-[400px] p-5 2xl:p-7"
             : "h-0 p-0"
-        } flex items-center justify-center`}
+        } flex items-center justify-center xl:justify-start`}
       >
-        <div className="flex w-full items-center  justify-center gap-5 2xl:gap-10">
-          <div className="space-y-6 2xl:space-y-6 pr-16 2xl:pr-24 border-r border-[#EBE9E0]">
+        <div className="flex w-full items-center  justify-center xl:justify-start gap-5 2xl:gap-10">
+          <div className="space-y-6 2xl:space-y-6 xl:pl-32 pr-16 2xl:pr-24 border-r border-[#EBE9E0]">
             {productOptions.map((items) => (
               <div
                 key={items.title}

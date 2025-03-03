@@ -195,7 +195,7 @@ const SellerAccountSetting = ({
 
             {step === 3 && (
               <div className="flex flex-col  py-[26px] px-[48px] ">
-                <h1 className="text-2xl  capitalize xl:text-[32px] py-6 2xl:text-4xl">
+                <h1 className="text-2xl xl:leading-[42px]  capitalize xl:text-[32px] py-6 2xl:text-4xl">
                   Tell us a bit about yourself and your collection.
                 </h1>
 
@@ -281,7 +281,7 @@ const SellerAccountSetting = ({
 
             {step === 2 && (
               <div className=" py-[26px] px-[48px] ">
-                <h1 className="text-2xl xl:text-[32px]  capitalize  py-6 2xl:text-4xl">
+                <h1 className="text-2xl  xl:leading-[42px]  xl:text-[32px]  capitalize  py-6 2xl:text-4xl">
                   Tell us a bit about yourself and your collection.
                 </h1>
 

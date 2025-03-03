@@ -201,7 +201,7 @@ text-[#463F3A] md:hidden"
             {isGridView ? (
               <>
                 <div
-                  className={` grid grid-cols-1 sm:grid-cols-4 gap-4  md:grid-cols-${
+                  className={` grid grid-cols-1 sm:grid-cols-4   md:grid-cols-${
                     filterOpen ? 3 : 4
                   } lg:grid-cols-${filterOpen ? 3 : 4}`}
                 >
