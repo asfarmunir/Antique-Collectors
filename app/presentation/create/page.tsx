@@ -140,25 +140,41 @@ const page: React.FC = () => {
                     >
                       When Will You Go Live?
                     </label>
+                    <div className=" w-full px-3 flex items-center gap-2 border text-[#919089] border-[#EBE9E0] ">
+                      <input
+                        type="date"
+                        placeholder="Select Date"
+                        id="date"
+                        name="date"
+                        value={formData.date}
+                        onChange={handleInputChange}
+                        className="w-full p-3 text-xs 2xl:text-sm focus:ring focus:ring-primary-50 focus:border-primary-50"
+                      />
+                      <Image
+                        src="/calendar.svg"
+                        width={20}
+                        height={20}
+                        alt="icon"
+                      />
+                    </div>
+                  </div>
+                  <div className=" w-full px-3 flex items-center gap-2 border text-[#919089] border-[#EBE9E0] ">
                     <input
-                      type="date"
-                      placeholder="Select Date"
-                      id="date"
-                      name="date"
-                      value={formData.date}
+                      type="time"
+                      id="time"
+                      placeholder="Select Time"
+                      name="time"
+                      value={formData.time}
                       onChange={handleInputChange}
-                      className="w-full border text-[#919089] border-[#EBE9E0] p-3 text-xs 2xl:text-sm focus:ring focus:ring-primary-50 focus:border-primary-50"
+                      className="w-full p-3 text-xs 2xl:text-sm focus:ring focus:ring-primary-50 focus:border-primary-50"
+                    />
+                    <Image
+                      src="/calendar.svg"
+                      width={20}
+                      height={20}
+                      alt="icon"
                     />
                   </div>
-                  <input
-                    type="time"
-                    id="time"
-                    placeholder="Select Time"
-                    name="time"
-                    value={formData.time}
-                    onChange={handleInputChange}
-                    className="w-full border text-[#919089] border-[#EBE9E0] p-3 text-xs 2xl:text-sm focus:ring focus:ring-primary-50 focus:border-primary-50"
-                  />
                 </div>
 
                 {/* Description */}

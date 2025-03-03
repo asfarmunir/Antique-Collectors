@@ -17,15 +17,15 @@ const sub = [
 const Subscription = () => {
   return (
     <>
-      <div className="xl:px-[80px]">
-        <div className="border-b border-[#EBE9E0] flex flex-row justify-between gap-6 px-4 items-center">
+      <div className="">
+        <div className="border-b border-[#EBE9E0] flex flex-row justify-between gap-6 px-4 xl:px-[80px] items-center">
           <h1 className="text-xl py-4 uppercase font-playfair">
             Setting up your account{" "}
           </h1>
           <IoClose className="text-xl" />
         </div>
 
-        <div>
+        <div className="xl:px-[80px]">
           <div className="mt-16 relative">
             <div className="px-4 md:px-10 md:w-[450px]">
               <h1 className="text-4xl font-playfair">

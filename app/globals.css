@@ -124,6 +124,56 @@ body {
     hue-rotate(32deg) brightness(98%) contrast(92%);
 }
 
+.dashed-border-left {
+  position: relative;
+}
+.dashed-border {
+  position: relative;
+}
+
+.dashed-border-left::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 3px;
+  background: linear-gradient(0deg, #919089 50%, transparent 10%) 0 0 / 1px 40px repeat-y;
+  pointer-events: none;
+}
+.dashed-border::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border: px solid transparent;
+  background:
+    linear-gradient(90deg, #EBE9E0 50%, transparent 0%) 0 0 / 20px 1px repeat-x,
+    linear-gradient(90deg, #EBE9E0 50%, transparent 0%) 0 100% / 20px 1px repeat-x,
+    linear-gradient(0deg, #EBE9E0 50%, transparent 50%) 0 0 / 1px 20px repeat-y,
+    linear-gradient(0deg, #EBE9E0 50%, transparent 0%) 100% 0 / 1px 20px repeat-y;
+  pointer-events: none;
+}
+
+input[type="time"]::-webkit-calendar-picker-indicator {
+  display: none;
+}
+
+/* For Firefox */
+input[type="time"] {
+  -moz-appearance: textfield;
+}
+input[type="date"]::-webkit-calendar-picker-indicator {
+  display: none;
+}
+
+/* For Firefox */
+input[type="date"] {
+  -moz-appearance: textfield;
+}
+
 /* ========================================== TAILWIND STYLES */
 @layer utilities {
   .wrapper {

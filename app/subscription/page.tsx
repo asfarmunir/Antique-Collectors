@@ -60,7 +60,7 @@ const Subscription = ({
   return (
     <>
       <div className="absolute top-0 w-full">
-        <div className="border-b border-[#EBE9E0] flex flex-row justify-between gap-6 px-4 items-center">
+        <div className="border-b border-[#EBE9E0] flex flex-row justify-between gap-6 px-4 xl:px-[80px] items-center">
           <h1 className="text-xl py-4 uppercase font-playfair">
             Setting up your account{" "}
           </h1>
@@ -71,11 +71,11 @@ const Subscription = ({
 
         <div>
           <div className="mt-16 relative">
-            <div className="px-4 md:px-10 md:w-[450px]">
-              <h1 className="text-5xl font-playfair">
+            <div className="px-4 md:px-10 xl:px-[80px] md:w-[650px]">
+              <h1 className="text-[48px] leading-[63px] font-playfair">
                 Choose your Subscription Plan
               </h1>
-              <p className="py-6 text-xs">
+              <p className="py-6 text-sm text-[#919089]">
                 Each tier is designed to fit your unique needs as a seller on
                 The Antique Collector. Choose the plan that best matches your
                 goals and begin sharing your collection with a community of
@@ -83,7 +83,7 @@ const Subscription = ({
               </p>
             </div>
 
-            <div className="bg-[#F9F8F3] mt-10 py-8 px-6 md:pl-12 pr-6">
+            <div className="bg-[#F9F8F3] mt-10 py-8 px-6 xl:px-[80px] md:pl-12 pr-6">
               {[
                 "posting",
                 "feed access",
@@ -164,11 +164,11 @@ const Subscription = ({
             </div>
           </div>
         </div>
-        <div className="mt-20 mb-10 px-8">
-          <h1 className="text-3xl font-playfair capitalize">
+        <div className="mt-20 mb-10 px-8 xl:px-[80px]">
+          <h1 className="text-[32px] font-playfair capitalize">
             Or Continue with a free account
           </h1>
-          <div className="py-8">
+          <div className="py-12">
             <p className="text-sm">
               <span className="pr-1">•</span> Minimum Posts: 1 per week (or
               auto-bump to Bronze)
@@ -189,7 +189,7 @@ const Subscription = ({
           </div>
 
           <Button
-            className="w-1/3 p-2 uppercase text-sm"
+            className="w-1/3 p-2 py-4 uppercase text-XS"
             type="submit"
             label="Continue"
           />

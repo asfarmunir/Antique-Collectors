@@ -144,8 +144,8 @@ const page: React.FC = () => {
         </h1>
       </div>
       <div className=" w-full px-5 md:px-12 xl:px-[80px] py-8 h-full flex items-start gap-12">
-        <div className=" mx-auto p-6 md:p-8 flex-grow bg-primary-50  ">
-          <form onSubmit={handleSubmit} className="space-y-5 ">
+        <div className=" mx-auto w-full  flex-grow bg-primary-50  ">
+          <form onSubmit={handleSubmit} className="space-y-5 px-6 md:px-8 pt-8">
             {/* Category Field */}
             <div>
               <label className="block tracking-wide text-xs 2xl:text-sm font-medium text-[#0D0106] uppercase mb-2">
@@ -225,7 +225,7 @@ const page: React.FC = () => {
               onChange={handleImageUpload}
               className="w-full text-sm text-[#919089] file:mr-4 file:py-2 file:px-4 file:rounded file:border-0 file:text-sm file:font-semibold file:bg-indigo-50 file:text-indigo-700 hover:file:bg-indigo-100"
             /> */}
-              <div className=" w-full bg-white border border-dashed flex items-center justify-center h-28">
+              <div className=" w-full bg-white  dashed-border flex items-center justify-center h-28">
                 <p className="text-[#919089] text-center text-xs uppercase">
                   Drag and Drop <br /> or <br />
                   Upload image here
@@ -278,7 +278,7 @@ const page: React.FC = () => {
                   onChange={(e) => handleImageUpload(e, index)}
                   className="w-full text-sm text-gray-500"
                 /> */}
-                  <div className=" w-full bg-white border border-dashed flex items-center justify-center h-28">
+                  <div className=" w-full bg-white  dashed-border flex items-center justify-center h-28">
                     <p className="text-[#919089] text-center text-xs uppercase">
                       Drag and Drop <br /> or <br />
                       Upload image here
@@ -300,16 +300,16 @@ const page: React.FC = () => {
               + Add Another Section
             </button>
             {/* Submit Button */}
-            <button
-              type="submit"
-              className="w-full bg-[#0D0106] text-white py-4
-             px-4 text-xs 2xl:text-sm uppercase font-thin    focus:ring-2  focus:ring-offset-2"
-            >
-              PUBLISH blog post
-            </button>
           </form>
+          <button
+            type="submit"
+            className="w-full mt-5 bg-[#0D0106] text-white py-4
+             px-4 text-xs 2xl:text-sm uppercase font-thin    focus:ring-2  focus:ring-offset-2"
+          >
+            PUBLISH blog post
+          </button>
         </div>
-        <div className=" space-y-5 border-l border-dashed px-8 h-full flex-grow">
+        <div className=" space-y-5 w-full dashed-border-left  px-12 h-full flex-grow">
           <h2 className=" font-playfair  uppercase">Preview</h2>
           <div className=" w-full  bg-[#A6A6A6] p-28 py-48"></div>
           <h2 className="text-2xl font-playfair">Blog Title</h2>
@@ -331,7 +331,7 @@ const page: React.FC = () => {
               23 JAN 2023
             </h1>
           </div>{" "}
-          <p className=" max-w-lg pb-80 text-sm text-[#666666]">
+          <p className=" max-w-lg xl:pb-96 text-sm text-[#666666]">
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cumque
             quaerat neque nemo iure eos officiis sit <br />
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cumque

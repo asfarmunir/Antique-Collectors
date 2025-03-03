@@ -276,8 +276,8 @@ const Navbar = () => {
               </Link>
             ))}
           </div>
-          <div className="flex items-center gap-4  max-w-[70%] 2xl:max-w-[60%] ">
-            {Array.from({ length: showCategories ? 2 : 3 }).map((_, index) => (
+          <div className="flex items-center gap-4  max-w-[80%] 2xl:max-w-[60%] ">
+            {Array.from({ length: showCategories ? 2 : 4 }).map((_, index) => (
               <div
                 key={index} // Use a unique ID
                 className={`   flex flex-col md:py-6  relative px-6 py-4 bg-white `}

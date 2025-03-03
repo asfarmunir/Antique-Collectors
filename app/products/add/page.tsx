@@ -233,7 +233,7 @@ const page = () => {
               onChange={(e) => handleImageUpload(e, "header")}
               className="block w-full mt-3 p-3 border-dashed border  text-[#919089] cursor-pointer"
             /> */}
-              <div className=" w-full bg-white border-dashed border mt-2 h-28 flex items-center justify-center">
+              <div className=" w-full bg-white dashed-border  mt-2 h-28 flex items-center justify-center">
                 <span className="text-[#919089] text-xs 2xl:text-sm uppercase">
                   Drag and Drop or <br /> Upload image here
                 </span>
@@ -245,7 +245,7 @@ const page = () => {
               <span className=" text-xs 2xl:text-sm tracking-wide uppercase  ">
                 Upload Other Images & Videos
               </span>
-              <div className=" w-full bg-white border-dashed border mt-2 h-28 flex items-center justify-center">
+              <div className=" w-full bg-white dashed-border  mt-2 h-28 flex items-center justify-center">
                 <span className="text-[#919089] text-xs 2xl:text-sm uppercase">
                   Drag and Drop or <br /> Upload image here
                 </span>
@@ -367,7 +367,7 @@ const page = () => {
                 Measurements
               </span>
               <div className="flex flex-col gap-4 mt-2">
-                <div className="flex items-center gap-4">
+                <div className="flex items-center gap-3">
                   <span className="  text-xs 2xl:text-sm w-12">Width</span>
                   <input
                     type="text"
@@ -491,7 +491,7 @@ const page = () => {
         </div>
 
         {/* Preview Section */}
-        <div className="w-full border-l border-dashed  md:pl-10 md:w-1/2 md:p-6 ">
+        <div className="w-full dashed-border-left   md:pl-10 md:w-1/2 md:p-6 ">
           <h2 className="text-[20px] font-playfair uppercase mb-6">Preview</h2>
           <div className="md:col-span-3 md:h-[350px] ">
             <div className="flex w-full flex-col-reverse items-center gap-4 md:flex-row  md:border-r border-[#EBE9E0]  ">

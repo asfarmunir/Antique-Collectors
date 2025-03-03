@@ -299,7 +299,7 @@ const SignUp = ({ onClose }: { onClose: any }) => {
                     <div className="flex flex-row gap-4 py-2">
                       {otp.map((digit, index) => (
                         <InputField
-                          className="border border-[#EBE9E0] h-32 w-full"
+                          className="border border-[#EBE9E0] h-32 text-4xl  w-full"
                           key={index}
                           value={digit}
                           onChange={(e) =>
@@ -344,17 +344,17 @@ const SignUp = ({ onClose }: { onClose: any }) => {
                   </p>
                 </div>
 
-                <div className=" font-openSans my-6 flex flex-col w-full  md:flex-row ">
+                <div className=" font-openSans my-6 flex flex-col w-full  gap-3 ">
                   <Button
                     type="submit"
                     onClick={handleBuyer}
                     label="I'm a Buyer"
-                    className="bg-[#EBE9E0] py-[16px] text-[12px] uppercase text-[#463F3A] w-full"
+                    className="bg-[#EBE9E0] py-[14px] text-[12px] uppercase text-[#463F3A] w-full"
                   />
                   <Button
                     type="submit"
                     label="I'm a Seller"
-                    className="bg-[#463F3A] text-[12px] text-white uppercase w-full"
+                    className="bg-[#463F3A] text-[12px] py-[14px] text-white uppercase w-full"
                     onClick={handleSellerAccount}
                   />
                 </div>
