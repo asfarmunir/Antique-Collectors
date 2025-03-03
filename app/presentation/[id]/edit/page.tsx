@@ -32,7 +32,7 @@ const page = () => {
       <div className="py-8 px-4 md:px-6 lg:px-12 xl:px-[80px] ">
         {/* Info text */}
         <div className="flex items-center justify-between  pb-4  mb-6">
-          <div className="text-[16px] ">
+          <div className="text-[16px] text-[#463F3A ] ">
             You can edit the Live Session up to 48 hours before the start of the
             event.
           </div>
@@ -53,7 +53,7 @@ const page = () => {
                 {sessionData.title}
               </p>
             </div>
-            <button className="text-sm font-medium hover:underline">
+            <button className="text-xs font-medium hover:underline">
               EDIT
             </button>
           </div>
@@ -66,7 +66,7 @@ const page = () => {
                 {sessionData.date}
               </p>
             </div>
-            <button className="text-sm font-medium hover:underline">
+            <button className="text-xs font-medium hover:underline">
               EDIT
             </button>
           </div>
@@ -79,7 +79,7 @@ const page = () => {
                 {sessionData.time}
               </p>
             </div>
-            <button className="text-sm font-medium hover:underline">
+            <button className="text-xs font-medium hover:underline">
               EDIT
             </button>
           </div>
@@ -94,7 +94,7 @@ const page = () => {
                 {sessionData.description}
               </p>
             </div>
-            <button className="text-sm font-medium hover:underline">
+            <button className="text-xs font-medium hover:underline">
               EDIT
             </button>
           </div>
@@ -106,40 +106,50 @@ const page = () => {
                 Header Image
               </h4>
               <div className="flex flex-col items-start space-y-2">
-                <div className="w-56 h-32 bg-gray-100 border border-gray-300"></div>
+                <div className="w-60 h-32 bg-[#EBE9E0] border border-gray-300"></div>
                 <p className="text-xs 2xl:text-sm max-w-md text-[#919089]">
                   {sessionData.headerImage}
                 </p>
               </div>
             </div>
-            <button className="text-sm font-medium hover:underline">
+            <button className="text-xs font-medium hover:underline">
               EDIT
             </button>
           </div>
           <div className="flex items-start justify-between border-b pb-4 border-[#EBE9E0]">
             <div>
-              <h4 className="text-sm tracking-wide uppercase mb-1">products</h4>
-              <div className="flex flex-col items-start space-y-2">
-                <div className="w-64 h-48 bg-gray-100 border border-gray-300">
-                  <Image
-                    src="/images/products/p2.png"
-                    alt={"hehe"}
-                    width={150}
-                    height={150}
-                    className="w-full h-full object-contain object-center transform hover:scale-105 transition duration-500 ease-in-out"
-                  />
-                </div>
-                <div className="flex items-center justify-between w-full">
-                  <p className="text-xs 2xl:text-sm max-w-md text-[#919089]">
-                    {sessionData.headerImage}
-                  </p>
-                  <button className="text-xs font-medium hover:underline">
-                    EDIT
-                  </button>
-                </div>
+              <h4 className="text-sm tracking-wide uppercase mb-1.5">
+                products
+              </h4>
+              <div className=" w-full flex items-center gap-4">
+                {Array.from({ length: 3 }).map((_, index) => (
+                  <div
+                    key={index}
+                    className="flex flex-col items-start space-y-2 border-r border-[#EBE9E0] px-4"
+                  >
+                    <div className="w-64 h-52 ">
+                      <Image
+                        src="/images/products/p5.png"
+                        alt={"hehe"}
+                        width={150}
+                        height={150}
+                        className="w-full h-full object-contain object-center transform hover:scale-105 transition duration-500 ease-in-out"
+                      />
+                    </div>
+                    <div className="flex items-center justify-between w-full">
+                      <p className="text-xs 2xl:text-sm max-w-md uppercase ">
+                        {/* {sessionData.headerImage} */}
+                        NATIVE IRON CHAIR
+                      </p>
+                      <button className="text-xs font-medium hover:underline">
+                        EDIT
+                      </button>
+                    </div>
+                  </div>
+                ))}
               </div>
             </div>
-            <button className="text-sm font-medium hover:underline">
+            <button className="text-xs font-medium hover:underline">
               EDIT
             </button>
           </div>

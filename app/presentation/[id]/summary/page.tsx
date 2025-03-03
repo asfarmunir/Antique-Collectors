@@ -39,9 +39,9 @@ const page = () => {
         </div>
 
         {/* Editable fields */}
-        <div className="space-y-6">
+        <div className="">
           {/* Title */}
-          <div className="flex items-center justify-between border-b pb-4 border-[#EBE9E0]">
+          <div className="flex items-center justify-between border-b py-4 border-[#EBE9E0]">
             <div>
               <h4 className="text-sm  tracking-wide uppercase mb-2">
                 Duration
@@ -53,7 +53,7 @@ const page = () => {
           </div>
 
           {/* Date */}
-          <div className="flex items-center justify-between border-b pb-4 border-[#EBE9E0]">
+          <div className="flex items-center justify-between border-b py-4 border-[#EBE9E0]">
             <div>
               <h4 className="text-sm  tracking-wide uppercase mb-1">Date</h4>
               <p className="text-[#919089] text-sm 2xl:text-sm max-w-md">
@@ -63,7 +63,7 @@ const page = () => {
           </div>
 
           {/* Time */}
-          <div className="flex items-center justify-between border-b pb-4 border-[#EBE9E0]">
+          <div className="flex items-center  justify-between border-b py-4 border-[#EBE9E0]">
             <div>
               <h4 className="text-sm  tracking-wide uppercase mb-1">
                 Number of Attendees
@@ -72,55 +72,76 @@ const page = () => {
                 {sessionData.attendies}
               </p>
             </div>
-            <button className="border border-black uppercase px-6 py-4">
+            <button className="border text-xs border-black uppercase px-6 py-4">
               view all attendees
             </button>
           </div>
 
-          <div className="flex items-start justify-between border-b pb-4 border-[#EBE9E0]">
+          <div className="flex items-start justify-between border-b py-5 border-[#EBE9E0]">
             <div>
-              <h4 className="text-sm  tracking-wide uppercase mb-2">
+              <h4 className="text-sm tracking-wide uppercase mb-1.5">
                 products
               </h4>
-              <div className="flex flex-col items-start space-y-2">
-                <div className="w-64 h-48 bg-gray-100 border border-gray-300">
-                  <Image
-                    src="/images/products/p2.png"
-                    alt={"hehe"}
-                    width={150}
-                    height={150}
-                    className="w-full h-full object-contain object-center transform hover:scale-105 transition duration-500 ease-in-out"
-                  />
-                </div>
-                <div className="flex items-center justify-between w-full">
-                  <p className="text-[#919089] text-sm 2xl:text-sm max-w-md">
-                    {sessionData.headerImage}
-                  </p>
-                  <button className="text-xs font-medium hover:underline">
-                    EDIT
-                  </button>
-                </div>
+              <div className=" w-full flex items-center gap-4">
+                {Array.from({ length: 3 }).map((_, index) => (
+                  <div
+                    key={index}
+                    className="flex flex-col items-start space-y-2 border-r border-[#EBE9E0] px-4"
+                  >
+                    <div className="w-64 h-52 ">
+                      <Image
+                        src="/images/products/p5.png"
+                        alt={"hehe"}
+                        width={150}
+                        height={150}
+                        className="w-full h-full object-contain object-center transform hover:scale-105 transition duration-500 ease-in-out"
+                      />
+                    </div>
+                    <div className="flex items-center justify-between w-full">
+                      <p className="text-xs 2xl:text-sm max-w-md uppercase ">
+                        {/* {sessionData.headerImage} */}
+                        NATIVE IRON CHAIR
+                      </p>
+                      <button className="text-xs font-medium hover:underline">
+                        EDIT
+                      </button>
+                    </div>
+                  </div>
+                ))}
               </div>
             </div>
+            <button className="text-xs font-medium hover:underline">
+              EDIT
+            </button>
           </div>
 
-          <div className="py-4  mb-6">
-            <h1 className="font-playfair pt-4 uppercase text-lg 2xl:text-xl mb-3  ">
+          <div className="py-4  mb-6 border-b border-[#D9D9D9]">
+            <h1 className="font-playfair pt-4 uppercase text-[20px] text-[#222222] 2xl:text-xl mb-3  ">
               Chat History
             </h1>
-            <p className="text-[#717171] text-sm mb-2 ">
+            <p className="text-[#717171] text-sm mb-4 ">
               Buyer1 (VintageLover): Hi! Could you please show the clasp of the
               Art Deco necklace?
             </p>
-            <p className="text-[#717171] text-sm mb-2 ">
+            <p className="text-[#717171] text-sm mb-4 ">
               Buyer2 (CollectorGal): Is the emerald ring genuine, and do you
               have any provenance for it?
             </p>
-            <p className="text-[#717171] text-sm mb-2 ">
+            <p className="text-[#717171] text-sm mb-4 ">
               Buyer3 (HistoryBuff): Can you share more about the history of the
               cameo brooch?
             </p>
-            <p className="text-[#717171] text-sm mb-2 ">
+            <p className="text-[#717171] text-sm mb-4 ">
+              Buyer1 (VintageLover): How much is the Art Deco necklace?
+            </p>
+            <p className="text-[#717171] text-sm mb-4 ">
+              Buyer2 (CollectorGal): I'm interested in the emerald ring. How can
+              I buy it?{" "}
+            </p>
+            <p className="text-[#717171] text-sm mb-4 ">
+              Buyer3 (HistoryBuff): Do you ship internationally?{" "}
+            </p>
+            <p className="text-[#717171] text-sm mb-4 ">
               Buyer1 (VintageLover): Thank you for the information. I'll think
               about the necklace.
             </p>

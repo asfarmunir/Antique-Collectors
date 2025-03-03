@@ -53,11 +53,20 @@ const page = () => {
           My account
         </h1>
       </div>
-      <div className="  px-6 md:px-12 py-7 xl:py-[80px] xl:px-[80px] ">
+      <div className="  px-6 md:px-12 py-7 xl:py-[80px] font-openSans xl:px-[80px] ">
         <h2 className=" text-[32px] font-playfair">My Account</h2>
         <p className=" uppercase py-3  text-xs 2xl:text-sm gap-1 inline-flex items-center">
           <span className=" font-bold">Anna,</span>
           <span> annasmith@gmail.com </span>
+          <select
+            name="Swtich Account"
+            id=""
+            className=" uppercase text-xs pr-2 pl-4"
+          >
+            <option value="1">Switch Account</option>
+            <option value="2">Switch Account</option>
+            <option value="3">Switch Account</option>
+          </select>
         </p>
         <div className=" w-full xl:w-[80%] mt-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5 ">
           {settings.map((setting) => (
@@ -83,7 +92,9 @@ const page = () => {
         </div>
         <div className=" mt-32">
           <p className="text-sm ">Need to deactivate your account?</p>
-          <button className=" font-thin py-1 capitalize">deactivate now</button>
+          <button className=" font-thin text-xs uppercase py-1 tracking-wide ">
+            deactivate now
+          </button>
         </div>
       </div>
     </div>

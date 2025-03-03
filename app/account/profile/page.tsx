@@ -20,68 +20,82 @@ const PersonalInfo = () => {
               <div className="w-20 h-20 bg-[#EBE9E0] rounded-full flex items-center justify-center">
                 {/* Placeholder for profile picture */}
               </div>
-              <button className="ml-4 text-xs  hover:underline">Edit</button>
+              <button className="ml-4 text-xs uppercase  hover:underline">
+                Edit
+              </button>
             </div>
           </div>
           {/* Info Section */}
-          <div className="space-y-6">
+          <div className="">
             {/* Name */}
-            <div className="flex pb-3 border-b border-[#EBE9E0] justify-between items-center">
+            <div className="flex py-[16px] border-b border-[#EBE9E0] justify-between items-center">
               <div>
                 <p className="mb-1 text-xs tracking-wide">NAME</p>
                 <p className="text-sm text-[#919089]">Anna Smith</p>
               </div>
-              <button className=" text-xs hover:underline">Edit</button>
+              <button className=" text-xs uppercase hover:underline">
+                Edit
+              </button>
             </div>
 
             {/* Username */}
-            <div className="flex pb-3 border-b border-[#EBE9E0] justify-between items-center">
+            <div className="flex py-[16px] border-b border-[#EBE9E0] justify-between items-center">
               <div>
                 <p className="mb-1 text-xs tracking-wide">USERNAME</p>
                 <p className="text-sm text-[#919089]">Anna12</p>
               </div>
-              <button className=" text-xs hover:underline">Edit</button>
+              <button className=" text-xs uppercase hover:underline">
+                Edit
+              </button>
             </div>
 
             {/* Email Address */}
-            <div className="flex pb-3 border-b border-[#EBE9E0] justify-between items-center">
+            <div className="flex py-[16px] border-b border-[#EBE9E0] justify-between items-center">
               <div>
                 <p className="mb-1 text-xs tracking-wide">EMAIL ADDRESS</p>
                 <p className="text-sm text-[#919089]">h***o@designdrops.op</p>
               </div>
-              <button className=" text-xs hover:underline">Edit</button>
+              <button className=" text-xs uppercase hover:underline">
+                Edit
+              </button>
             </div>
 
             {/* Phone Number */}
-            <div className="flex pb-3 border-b border-[#EBE9E0] justify-between items-center">
+            <div className="flex py-[16px] border-b border-[#EBE9E0] justify-between items-center">
               <div>
                 <p className="mb-1 text-xs tracking-wide">PHONE NUMBER</p>
                 <p className="text-sm text-[#919089]">+31 231323432</p>
               </div>
-              <button className=" text-xs hover:underline">Edit</button>
+              <button className=" text-xs uppercase hover:underline">
+                Edit
+              </button>
             </div>
 
             {/* Government ID */}
-            <div className="flex pb-3 border-b border-[#EBE9E0] justify-between items-center">
+            <div className="flex py-[16px] border-b border-[#EBE9E0] justify-between items-center">
               <div>
                 <p className="mb-1 text-xs tracking-wide">GOVERNMENT ID</p>
                 <p className="text-sm text-[#919089] ">Not provided</p>
               </div>
-              <button className=" text-xs hover:underline">Edit</button>
+              <button className=" text-xs uppercase hover:underline">
+                Edit
+              </button>
             </div>
 
             {/* Password */}
-            <div className="flex pb-3 border-b border-[#EBE9E0] justify-between items-center">
+            <div className="flex py-[16px] justify-between items-center">
               <div>
                 <p className="mb-1 text-xs tracking-wide">PASSWORD</p>
                 <p className="text-sm text-[#919089]">●●●●●●●</p>
               </div>
-              <button className=" text-xs hover:underline">Edit</button>
+              <button className=" text-xs uppercase hover:underline">
+                Edit
+              </button>
             </div>
           </div>
         </div>
 
-        <div className="max-w-xs 2xl:max-w-sm  bg-white border border-[#EBE9E0] rounded-lg p-6  shadow-sm">
+        <div className="max-w-xs 2xl:max-w-sm  bg-white border border-[#EBE9E0] rounded-[1px] p-6  shadow-sm">
           {/* Section 1 */}
           <div className="flex-col flex gap-4 ">
             <div className="text-gray-600 text-2xl">
@@ -90,11 +104,12 @@ const PersonalInfo = () => {
                 src="/images/icons/lock.svg"
                 width={50}
                 height={20}
+                className="py-2"
                 alt="lock"
               />
             </div>
             <div className=" space-y-3">
-              <h2 className=" text-[20px] font-playfair ">
+              <h2 className=" text-[20px] pb-2 font-playfair ">
                 Which details can be edited?
               </h2>
               <p className="text-[16px] text-[#919089] ">
@@ -105,9 +120,9 @@ const PersonalInfo = () => {
               </p>
             </div>
           </div>
-          <hr className="border-[#EBE9E0] my-[36px]" />
+          <hr className="border-[#EBE9E0] my-[30px]" />
           {/* Section 2 */}
-          <div className="flex-col flex gap-4 min-h-56 ">
+          <div className="flex-col flex gap-4  ">
             <div className="text-gray-600 text-2xl">
               {/* Lock Icon */}
               <Image
@@ -117,8 +132,8 @@ const PersonalInfo = () => {
                 alt="lock"
               />
             </div>
-            <div className=" space-y-3">
-              <h2 className=" text-[20px] font-playfair ">
+            <div className=" space-y-3 ">
+              <h2 className=" text-[20px] pb-3 font-playfair ">
                 What info is shared with others?
               </h2>
               <p className="text-[16px] text-[#919089] ">

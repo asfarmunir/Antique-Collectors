@@ -12,6 +12,13 @@ import {
   RiArrowLeftLine,
   RiArrowRightLine,
 } from "react-icons/ri";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
 interface FormData {
   category: string;
   subcategory: string;
@@ -127,18 +134,17 @@ const page = () => {
               <span className=" text-xs 2xl:text-sm tracking-wide uppercase  ">
                 Category
               </span>
-              <select
-                name="category"
-                value={formData.category}
-                onChange={handleInputChange}
-                className="block w-full text-xs 2xl:text-sm mt-1 p-3 border text-[#919089] "
-              >
-                <option value="" className="">
-                  -Select-
-                </option>
-                <option value="category1">Category 1</option>
-                <option value="category2">Category 2</option>
-              </select>
+
+              <Select>
+                <SelectTrigger className="w-full text-xs 2xl:text-sm mt-1 xl:p-4 rounded-none  border border-[#EBE9E0] text-[#919089] ">
+                  <SelectValue placeholder="Theme" />
+                </SelectTrigger>
+                <SelectContent>
+                  <SelectItem value="light">Light</SelectItem>
+                  <SelectItem value="dark">Dark</SelectItem>
+                  <SelectItem value="system">System</SelectItem>
+                </SelectContent>
+              </Select>
             </label>
 
             {/* Subcategory */}
@@ -146,7 +152,7 @@ const page = () => {
               <span className=" text-xs 2xl:text-sm tracking-wide uppercase  ">
                 Subcategory
               </span>
-              <select
+              {/* <select
                 name="subcategory"
                 value={formData.subcategory}
                 onChange={handleInputChange}
@@ -155,7 +161,17 @@ const page = () => {
                 <option value="">-Select-</option>
                 <option value="subcategory1">Subcategory 1</option>
                 <option value="subcategory2">Subcategory 2</option>
-              </select>
+              </select> */}
+              <Select value={formData.subcategory}>
+                <SelectTrigger className="w-full text-xs 2xl:text-sm mt-1 xl:p-4 rounded-none  border border-[#EBE9E0] text-[#919089] ">
+                  <SelectValue placeholder="Theme" />
+                </SelectTrigger>
+                <SelectContent>
+                  <SelectItem value="light">Light</SelectItem>
+                  <SelectItem value="dark">Dark</SelectItem>
+                  <SelectItem value="system">System</SelectItem>
+                </SelectContent>
+              </Select>
             </label>
 
             {/* Product Name */}
@@ -217,7 +233,7 @@ const page = () => {
               onChange={(e) => handleImageUpload(e, "header")}
               className="block w-full mt-3 p-3 border-dashed border  text-[#919089] cursor-pointer"
             /> */}
-              <div className=" w-full bg-white border-dotted border mt-2 h-28 flex items-center justify-center">
+              <div className=" w-full bg-white border-dashed border mt-2 h-28 flex items-center justify-center">
                 <span className="text-[#919089] text-xs 2xl:text-sm uppercase">
                   Drag and Drop or <br /> Upload image here
                 </span>
@@ -229,7 +245,7 @@ const page = () => {
               <span className=" text-xs 2xl:text-sm tracking-wide uppercase  ">
                 Upload Other Images & Videos
               </span>
-              <div className=" w-full bg-white border-dotted border mt-2 h-28 flex items-center justify-center">
+              <div className=" w-full bg-white border-dashed border mt-2 h-28 flex items-center justify-center">
                 <span className="text-[#919089] text-xs 2xl:text-sm uppercase">
                   Drag and Drop or <br /> Upload image here
                 </span>
@@ -248,7 +264,7 @@ const page = () => {
               <span className=" text-xs 2xl:text-sm tracking-wide uppercase  ">
                 Choose Feed
               </span>
-              <select
+              {/* <select
                 name="feed"
                 value={formData.feed}
                 onChange={handleInputChange}
@@ -257,7 +273,17 @@ const page = () => {
                 <option value="">-Select-</option>
                 <option value="feed1">Feed 1</option>
                 <option value="feed2">Feed 2</option>
-              </select>
+              </select> */}
+              <Select>
+                <SelectTrigger className="w-full text-xs 2xl:text-sm mt-1 xl:p-4 rounded-none  border border-[#EBE9E0] text-[#919089] ">
+                  <SelectValue placeholder="Theme" />
+                </SelectTrigger>
+                <SelectContent>
+                  <SelectItem value="light">Light</SelectItem>
+                  <SelectItem value="dark">Dark</SelectItem>
+                  <SelectItem value="system">System</SelectItem>
+                </SelectContent>
+              </Select>
             </label>
           </div>
           <div className=" w-full p-6">
@@ -285,7 +311,7 @@ const page = () => {
               <span className=" tracking-wide text-xs 2xl:text-sm uppercase">
                 Material
               </span>
-              <select
+              {/* <select
                 name="material"
                 value={formData.material}
                 onChange={handleInputChange}
@@ -295,7 +321,17 @@ const page = () => {
                 <option value="Wood">Wood</option>
                 <option value="Metal">Metal</option>
                 <option value="Plastic">Plastic</option>
-              </select>
+              </select> */}
+              <Select>
+                <SelectTrigger className="w-full text-xs 2xl:text-sm mt-1 xl:p-3 rounded-none  border border-[#EBE9E0] text-[#919089] ">
+                  <SelectValue placeholder="Theme" />
+                </SelectTrigger>
+                <SelectContent>
+                  <SelectItem value="light">Light</SelectItem>
+                  <SelectItem value="dark">Dark</SelectItem>
+                  <SelectItem value="system">System</SelectItem>
+                </SelectContent>
+              </Select>
             </label>
 
             {/* Condition */}
@@ -303,7 +339,7 @@ const page = () => {
               <span className=" tracking-wide text-xs 2xl:text-sm uppercase">
                 Condition
               </span>
-              <select
+              {/* <select
                 name="condition"
                 value={formData.condition}
                 onChange={handleInputChange}
@@ -312,7 +348,17 @@ const page = () => {
                 <option value="">-Select-</option>
                 <option value="New">New</option>
                 <option value="Used">Used</option>
-              </select>
+              </select> */}
+              <Select>
+                <SelectTrigger className="w-full text-xs 2xl:text-sm mt-1 xl:p-4 rounded-none  border border-[#EBE9E0] text-[#919089] ">
+                  <SelectValue placeholder="Theme" />
+                </SelectTrigger>
+                <SelectContent>
+                  <SelectItem value="light">Light</SelectItem>
+                  <SelectItem value="dark">Dark</SelectItem>
+                  <SelectItem value="system">System</SelectItem>
+                </SelectContent>
+              </Select>
             </label>
 
             {/* Measurements */}
@@ -321,8 +367,8 @@ const page = () => {
                 Measurements
               </span>
               <div className="flex flex-col gap-4 mt-2">
-                <div className="flex items-center gap-3">
-                  <span className="  text-xs 2xl:text-sm">Width</span>
+                <div className="flex items-center gap-4">
+                  <span className="  text-xs 2xl:text-sm w-12">Width</span>
                   <input
                     type="text"
                     name="dimensions.width"
@@ -333,7 +379,7 @@ const page = () => {
                   />
                 </div>
                 <div className="flex items-center gap-3">
-                  <span className="  text-xs 2xl:text-sm">Height</span>
+                  <span className="  text-xs 2xl:text-sm w-12">Height</span>
                   <input
                     type="text"
                     name="dimensions.height"
@@ -344,7 +390,7 @@ const page = () => {
                   />
                 </div>
                 <div className="flex items-center gap-3">
-                  <span className="  text-xs 2xl:text-sm">Length</span>
+                  <span className="  text-xs 2xl:text-sm w-12">Length</span>
 
                   <input
                     type="text"
@@ -445,12 +491,12 @@ const page = () => {
         </div>
 
         {/* Preview Section */}
-        <div className="w-full border-l md:pl-10 md:w-1/2 md:p-6 ">
+        <div className="w-full border-l border-dashed  md:pl-10 md:w-1/2 md:p-6 ">
           <h2 className="text-[20px] font-playfair uppercase mb-6">Preview</h2>
-          <div className="md:col-span-3 md:h-[350px]">
-            <div className="flex w-full flex-col-reverse md:flex-row  md:border-r border-[#EBE9E0] h-full">
+          <div className="md:col-span-3 md:h-[350px] ">
+            <div className="flex w-full flex-col-reverse items-center gap-4 md:flex-row  md:border-r border-[#EBE9E0]  ">
               {/* Scrollable Image Gallery */}
-              <div className="w-full md:w-1/3 flex lg:flex-col items-center gap-1">
+              <div className="w-full md:w-fit  flex lg:flex-col items-center gap-2">
                 <button
                   className="text-3xl cursor-pointer"
                   onClick={handleMoveUp}
@@ -469,8 +515,8 @@ const page = () => {
                       key={index}
                       src={image}
                       alt={`Image ${index + 1}`}
-                      width={60}
-                      height={60}
+                      width={90}
+                      height={90}
                       className={`border border-[#EBE9E0] cursor-pointer ${
                         index === selectedImageIndex
                           ? "ring-2 ring-[#EBE9E0]"
@@ -494,20 +540,20 @@ const page = () => {
               </div>
 
               {/* Main Image */}
-              <div className="w-full py-3 flex h-auto ">
+              <div className="w-full py-3 flex bjustify-center bg-[#D9D9D9]  ">
                 <Image
                   src={images[selectedImageIndex]}
                   alt="Selected image"
                   width={350}
                   height={350}
-                  className=""
+                  className=" opacity-0 "
                 />
               </div>
             </div>
           </div>
           <div className="mt-8 md:mt-[48px]">
             <div className="flex items-center justify-between py-[16px] border-b border-[#EBE9E0]">
-              <div className="flex flex-row items-center text-sm gap-3 pb-3">
+              <div className="flex flex-row items-center text-sm gap-3 py-3">
                 <div className="bg-[#EBE9E0] p-2 rounded-full w-8 h-8 flex items-center justify-center">
                   <Image
                     src="/"
@@ -517,7 +563,7 @@ const page = () => {
                     alt=""
                   />
                 </div>
-                <h1 className="text-[24px] font-normal uppercase text-[#463F3A]">
+                <h1 className="text-[20px] font-playfair font-normal uppercase ">
                   Antique Animal Jewelry
                 </h1>
               </div>

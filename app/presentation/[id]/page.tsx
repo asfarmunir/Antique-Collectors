@@ -61,7 +61,7 @@ const page: React.FC = () => {
         </div>
       </div>
       <div className=" w-full px-4 md:px-6 lg:px-12 xl:px-[80px] py-8 gap-6  grid grid-cols-1 sm:grid-cols-5  ">
-        <div className="bg-primary-50 p-6 h-fit  shadow sm:col-span-2">
+        <div className="bg-primary-50 p-6 h-fit sm:col-span-2">
           <h2 className="text-[24px] 2xl:text-2xl font-playfair  mb-3">
             How does it work?
           </h2>
@@ -69,7 +69,7 @@ const page: React.FC = () => {
             Host live sessions to showcase your treasures and connect with
             collectors in real time.
           </p>
-          <div className="list-decimal list-inside text-gray-700 space-y-5">
+          <div className="list-decimal list-inside pt-3 text-gray-700 space-y-5">
             <div className=" space-y-2">
               <p className=" uppercase tracking-wider mb-2  text-[14px] 2xl:text-base">
                 1: Schedule the live session
@@ -126,7 +126,7 @@ const page: React.FC = () => {
                         className={`text-sm  tracking-wide font-medium ${
                           item.status === "Scheduled"
                             ? "text-green-600"
-                            : "text-yellow-600"
+                            : "text-[#FBBC04]"
                         }`}
                       >
                         {item.status.toUpperCase()}
@@ -164,17 +164,12 @@ const page: React.FC = () => {
             </h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-6">
               {data.finished.map((item, index) => (
-                <div
-                  key={index}
-                  className="border  shadow-sm overflow-hidden bg-white"
-                >
+                <div key={index} className="border overflow-hidden bg-white">
                   <div className="p-4">
                     <div className="flex justify-between items-center mb-2">
                       <span
                         className={`text-xs 2xl:text-sm font-medium ${
-                          item.status === "Scheduled"
-                            ? "text-green-600"
-                            : "text-yellow-600"
+                          true ? "text-[#919089]" : "text-yellow-600"
                         }`}
                       >
                         {item.status.toUpperCase()}

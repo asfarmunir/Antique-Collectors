@@ -95,8 +95,8 @@ const page: React.FC = () => {
 
   return (
     <>
-      <div className="px-5 md:px-12">
-        <div className="py-6 border-b border border-[#EBE9E0] pb-5 mb-9">
+      <div className="">
+        <div className="py-6 xl:py-[32px] border-b   px-5 md:px-12 xl:px-[80px] border-[#EBE9E0] pb-5 mb-9">
           <h1 className="text-[14px] text-[#919089]">
             Home / Live Presentation / Create a Live Presentation
           </h1>
@@ -104,11 +104,11 @@ const page: React.FC = () => {
             Create a Live Presentation
           </h1>
         </div>
-        <div className=" w-full ">
+        <div className=" w-full px-5 md:px-12 xl:px-[80px] ">
           <div className="grid grid-cols-1 md:grid-cols-5 gap-8">
             {/* Form Section */}
             <div className="md:col-span-3 border-r border-[#EBE9E0] sm:pr-8">
-              <h1 className="text-2xl font-playfair  mb-6">
+              <h1 className="text-[32px] font-playfair  mb-6">
                 Schedule A Live Presentation
               </h1>
               <form onSubmit={handleSubmit} className="space-y-6">
@@ -116,7 +116,7 @@ const page: React.FC = () => {
                 <div>
                   <label
                     htmlFor="sessionTitle"
-                    className="block text-xs 2xl:text-sm uppercase mb-2 font-medium text-gray-900"
+                    className="block text-xs tracking-wide 2xl:text-sm uppercase mb-2 font-medium   "
                   >
                     What's Your Event About?
                   </label>
@@ -127,51 +127,45 @@ const page: React.FC = () => {
                     value={formData.sessionTitle}
                     onChange={handleInputChange}
                     placeholder="Session Title"
-                    className="w-full  border border-[#EBE9E0]  shadow-sm p-3 text-xs 2xl:text-sm focus:ring focus:ring-primary-50 focus:border-primary-50"
+                    className="w-full  border border-[#EBE9E0] p-3 text-xs 2xl:text-sm focus:ring focus:ring-primary-50 focus:border-primary-50"
                   />
                 </div>
 
                 {/* Date and Time */}
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div className=" w-full space-y-4">
                   <div>
                     <label
                       htmlFor="date"
-                      className="block text-xs 2xl:text-sm uppercase mb-2 font-medium text-gray-900"
+                      className="block text-xs tracking-wide 2xl:text-sm uppercase mb-2 font-medium   "
                     >
                       When Will You Go Live?
                     </label>
                     <input
                       type="date"
+                      placeholder="Select Date"
                       id="date"
                       name="date"
                       value={formData.date}
                       onChange={handleInputChange}
-                      className="w-full border border-[#EBE9E0]  shadow-sm p-3 text-xs 2xl:text-sm focus:ring focus:ring-primary-50 focus:border-primary-50"
+                      className="w-full border text-[#919089] border-[#EBE9E0] p-3 text-xs 2xl:text-sm focus:ring focus:ring-primary-50 focus:border-primary-50"
                     />
                   </div>
-                  <div>
-                    <label
-                      htmlFor="time"
-                      className="block text-xs 2xl:text-sm uppercase mb-2 font-medium text-gray-900"
-                    >
-                      Pick a Time
-                    </label>
-                    <input
-                      type="time"
-                      id="time"
-                      name="time"
-                      value={formData.time}
-                      onChange={handleInputChange}
-                      className="w-full border border-[#EBE9E0]  shadow-sm p-3 text-xs 2xl:text-sm focus:ring focus:ring-primary-50 focus:border-primary-50"
-                    />
-                  </div>
+                  <input
+                    type="time"
+                    id="time"
+                    placeholder="Select Time"
+                    name="time"
+                    value={formData.time}
+                    onChange={handleInputChange}
+                    className="w-full border text-[#919089] border-[#EBE9E0] p-3 text-xs 2xl:text-sm focus:ring focus:ring-primary-50 focus:border-primary-50"
+                  />
                 </div>
 
                 {/* Description */}
                 <div>
                   <label
                     htmlFor="description"
-                    className="block text-xs 2xl:text-sm uppercase mb-2 font-medium text-gray-900"
+                    className="block text-xs tracking-wide 2xl:text-sm uppercase mb-2 font-medium   "
                   >
                     Description (Optional)
                   </label>
@@ -181,7 +175,7 @@ const page: React.FC = () => {
                     value={formData.description}
                     onChange={handleInputChange}
                     placeholder="Tell your audience what to expect"
-                    className="w-full border border-[#EBE9E0]  shadow-sm p-3 text-xs 2xl:text-sm h-24 focus:ring focus:ring-primary-50 focus:border-primary-50"
+                    className="w-full border border-[#EBE9E0] p-3 text-xs 2xl:text-sm h-24 focus:ring focus:ring-primary-50 focus:border-primary-50"
                   ></textarea>
                 </div>
 
@@ -189,11 +183,11 @@ const page: React.FC = () => {
                 <div>
                   <label
                     htmlFor="headerImage"
-                    className="block text-xs 2xl:text-sm uppercase mb-2 font-medium text-gray-900"
+                    className="block text-xs tracking-wide 2xl:text-sm uppercase mb-2 font-medium   "
                   >
                     Upload A Header Image
                   </label>
-                  <div className="border-2 border-dashed bg-primary-50 h-24 flex items-center justify-center  border-[#EBE9E0]  p-6 text-center">
+                  <div className="border-2 border-dashed bg-primary-50 h-36 flex items-center justify-center  border-[#EBE9E0]  p-6 text-center">
                     <input
                       type="file"
                       id="headerImage"
@@ -205,7 +199,7 @@ const page: React.FC = () => {
                       htmlFor="headerImage"
                       className="text-gray-400 text-xs 2xl:text-sm uppercase cursor-pointer"
                     >
-                      upload image here
+                      Drag and Drop <br /> or <br /> Upload image here
                     </label>
                     {formData.headerImage && (
                       <p className="mt-2 text-sm text-gray-700">
@@ -216,27 +210,21 @@ const page: React.FC = () => {
                 </div>
 
                 {/* Submit Button */}
-                <button
-                  type="submit"
-                  className="w-full bg-[#0D0106] text-white py-3  text-sm font-medium hover:bg-gray-800 focus:ring-2 focus:ring-primary-50 focus:ring-offset-2"
-                >
-                  Schedule Live Presentation
-                </button>
               </form>
             </div>
 
             {/* Instructions Section */}
             <div className="bg-primary-50 p-6 h-fit  shadow md:col-span-2">
-              <h2 className="text-xl 2xl:text-2xl font-playfair  mb-4">
+              <h2 className="text-[24px] 2xl:text-2xl font-playfair  mb-4">
                 How does it work?
               </h2>
-              <p className=" text-[#919089] text-sm 2xl:text-base pb-4 border-b border-[#9190898a] mb-4">
+              <p className=" text-[#919089] text-[16px] 2xl:text-base pb-4 border-b border-[#EBE9E0] mb-6">
                 Host live sessions to showcase your treasures and connect with
                 collectors in real time.
               </p>
-              <div className="list-decimal list-inside text-gray-700 space-y-2">
+              <div className="list-decimal list-inside space-y-4">
                 <div className=" space-y-2">
-                  <p className=" uppercase font-semibold mb-2  text-sm 2xl:text-base">
+                  <p className=" uppercase  tracking-wide mb-2  text-sm 2xl:text-base">
                     1: Schedule the live session
                   </p>{" "}
                   <p className="text-xs 2xl:text-sm text-[#919089]">
@@ -246,7 +234,7 @@ const page: React.FC = () => {
                   </p>
                 </div>
                 <div className=" space-y-2">
-                  <p className=" uppercase font-semibold mb-2  text-sm 2xl:text-base">
+                  <p className=" uppercase  tracking-wide mb-2  text-sm 2xl:text-base">
                     2: Get Ready to Go Live
                   </p>{" "}
                   <p className="text-xs 2xl:text-sm text-[#919089]">
@@ -255,7 +243,7 @@ const page: React.FC = () => {
                   </p>
                 </div>
                 <div className=" space-y-2">
-                  <p className=" uppercase font-semibold mb-2  text-sm 2xl:text-base">
+                  <p className=" uppercase  tracking-wide mb-2  text-sm 2xl:text-base">
                     3: You’re Live!
                   </p>{" "}
                   <p className="text-xs 2xl:text-sm text-[#919089]">
@@ -264,7 +252,7 @@ const page: React.FC = () => {
                   </p>
                 </div>
                 <div className=" space-y-2">
-                  <p className=" uppercase font-semibold mb-2  text-sm 2xl:text-base">
+                  <p className=" uppercase  tracking-wide mb-2  text-sm 2xl:text-base">
                     4. Post-Live Summary
                   </p>{" "}
                   <p className="text-xs 2xl:text-sm text-[#919089]">
@@ -279,11 +267,11 @@ const page: React.FC = () => {
       </div>
       {/* Filter and Sort Section */}
 
-      <div className="px-5 md:px-12 mt-8 md:mt-12 ">
+      <div className="px-5 md:px-12 xl:px-[80px] mt-8 md:mt-12 ">
         <h1 className="font-playfair pt-4 uppercase text-[24px] ">
           Products to Showcase (Optional)
         </h1>
-        <p className="text-sm text-[#ebe3bd]">
+        <p className="text-[16px] text-[#919089]">
           Select the items you’ll feature.
         </p>
       </div>
@@ -292,7 +280,7 @@ const page: React.FC = () => {
           {/* Filter button */}
           <div
             onClick={() => setFilterOpen(!filterOpen)}
-            className=" inline-flex cursor-pointer flex-row items-center gap-2 py-3 px-8 bg-[#EBE9E0]"
+            className=" inline-flex cursor-pointer flex-row justify-center items-center gap-2 py-4 xl:w-[272px] px-8 bg-[#EBE9E0]"
           >
             <Image src={"/candle.svg"} width={15} height={15} alt="icon" />
             <p className="text-xs text-[#0D0106] ">FILTER</p>
@@ -309,14 +297,14 @@ const page: React.FC = () => {
 
               <div className="flex flex-row gap-2 items-center ">
                 <HiViewGrid
-                  className={`text-lg cursor-pointer ${
-                    isGridView ? "text-[#0D0106]" : "text-gray-400"
+                  className={`text-xl  cursor-pointer ${
+                    isGridView ? "text-[#0D0106]" : "text-[#EBE9E0]"
                   }`}
                   onClick={handleGridView}
                 />
                 <TbLayoutDistributeHorizontal
-                  className={`text-lg cursor-pointer ${
-                    !isGridView ? "text-[#0D0106]" : "text-gray-400"
+                  className={`text-xl cursor-pointer ${
+                    !isGridView ? "text-[#0D0106]" : "text-[#EBE9E0]"
                   }`}
                   onClick={handleHorizontalView}
                 />
@@ -343,7 +331,7 @@ const page: React.FC = () => {
         {isGridView ? (
           <>
             <div
-              className={` grid grid-cols-1 sm:grid-cols-4 gap-4  md:grid-cols-${
+              className={` grid grid-cols-1 sm:grid-cols-4  md:grid-cols-${
                 filterOpen ? 3 : 4
               } lg:grid-cols-${filterOpen ? 3 : 4}`}
             >
@@ -358,31 +346,29 @@ const page: React.FC = () => {
                 return (
                   <div
                     key={p.id}
-                    className={`flex flex-col stroke-[#0D0106] md:py-6 px-6 cursor-pointer border-[#EBE9E0]
+                    className={`flex flex-col stroke-[#0D0106] md:py-6 px-6 cursor-pointer  border-[#EBE9E0]
                                       ${!isLastRow ? "md:border-b" : ""} 
-                                      ${
-                                        !isLastColumn
-                                          ? "md:border-r -mr-[3px]"
-                                          : ""
-                                      }`}
+                                      ${!isLastColumn ? "md:border-r" : ""}
+                                      `}
+
                     // onClick={() => handleProductDetails(p.id)}
                   >
                     <div className="flex items-center justify-center relative group">
-                      <div className="absolute top-2 right-4 z-20">
+                      <div className="absolute top-2 left-4 z-20">
                         <button
                           onClick={() => toggleFavorite(p.id)}
                           aria-label={`Add ${p.title} to favorites`}
                           className="text-xl font-semibold focus:outline-none"
                         >
                           {isFavorited ? (
-                            <MdCheckBox className="text-gray-500" /> // Filled heart for favorited
+                            <MdCheckBox className="text-[#919089]" /> // Filled heart for favorited
                           ) : (
-                            <MdCheckBoxOutlineBlank className="text-gray-500" /> // Outline heart for non-favorited
+                            <MdCheckBoxOutlineBlank className="text-[#919089]" /> // Outline heart for non-favorited
                           )}
                         </button>
                       </div>
                       <Image
-                        src="/images/products/p2.png"
+                        src="/images/products/p5.png"
                         alt={p.title}
                         width={150}
                         height={150}
@@ -390,7 +376,7 @@ const page: React.FC = () => {
                       />
 
                       {/* Likes and Comments Overlay on Hover */}
-                      <div className="absolute inset-0 bg-white bg-opacity-80   flex flex-row gap-4 items-center justify-center text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                      {/* <div className="absolute inset-0 bg-white bg-opacity-80   flex flex-row gap-4 items-center justify-center text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                         <p className="text-sm text-[#0D0106] flex items-center gap-4">
                           <CiHeart className="text-lg" /> {p.likes || 34}
                         </p>
@@ -398,16 +384,13 @@ const page: React.FC = () => {
                           <FaRegCommentDots className="text-lg" />{" "}
                           {p.comments || 34}
                         </p>
-                      </div>
+                      </div> */}
                     </div>
                     <div className="w-full pt-4 flex flex-col justify-between">
-                      <div className="text-sm flex flex-row justify-between gap-4">
-                        <p className="text-[#919089] mb-1">{p.brand}</p>
-                        <p className="text-[#919089]">FOLLOW</p>
+                      <div className="text-sm flex flex-row justify-between gap-4 xl:px-5">
+                        <p className=" text-[14px] mb-1">{p.title}</p>
+                        <p className=" text-[12px]">EDIT</p>
                       </div>
-                      <h2 className="text-sm pt-2 md:text-[14px] uppercase">
-                        {p.title}
-                      </h2>
                     </div>
                   </div>
                 );
@@ -471,6 +454,20 @@ const page: React.FC = () => {
             ))}
           </div>
         )}
+      </div>
+      <div className=" w-full flex items-center justify-between flex-col md:flex-row px-5 gap-5 md:px-12 xl:px-[80px] py-8">
+        <button
+          type="submit"
+          className="w-full border border-[#0D0106]  py-4 uppercase  text-xs font-medium hover:bg-gray-800 focus:ring-2 focus:ring-primary-50 focus:ring-offset-2"
+        >
+          save draft
+        </button>
+        <button
+          type="submit"
+          className="w-full bg-[#0D0106] text-white py-4 uppercase  text-xs font-medium hover:bg-gray-800 focus:ring-2 focus:ring-primary-50 focus:ring-offset-2"
+        >
+          Publush
+        </button>
       </div>
     </>
   );
