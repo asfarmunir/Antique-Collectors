@@ -350,8 +350,8 @@ const page = () => {
               </h2>
               <p className=" font-light font-openSans text-sm xl:text-[16px] 2xl:text-base text-[#919089]">
                 All the latest pieces land here in real time. <br />{" "}
-                <span className=" underline text-[#0D0106]">Sign up</span> for an
-                account to create your own custom feed, and only see products
+                <span className=" underline text-[#0D0106]">Sign up</span> for
+                an account to create your own custom feed, and only see products
                 from sellers you follow
               </p>
             </div>
@@ -362,7 +362,7 @@ const page = () => {
               VIEW ALL
             </Link>
           </div>
-          <div className="flex flex-row flex-nowrap md:flex-wrap overflow-x-auto gap-y-3 2xl:gap-y-4 py-6 md:py-10 px-4 md:px-6 lg:px-10">
+          <div className="flex flex-row flex-nowrap md:flex-wrap overflow-x-auto  py-6 md:py-10 px-4 md:px-6 lg:px-10">
             {product.map((p, index) => {
               const isLastRow =
                 Math.floor(index / 4) === Math.floor((product.length - 1) / 4);
@@ -654,12 +654,12 @@ const page = () => {
             </p>
             <p className="md:w-[550px]  xl:text-[14px]  text-pretty my-3 font-openSans text-center text-[#919089]">
               As part of{" "}
-              <span className="text-[#0D0106] px-0.5">The AC Community</span> you
-              will have access to
+              <span className="text-[#0D0106] px-0.5">The AC Community</span>{" "}
+              you will have access to
               <span className="text-[#0D0106] px-0.5">Forums,</span>
               <span className="text-[#0D0106] px-0.5">Blogs</span> and
-              <span className="text-[#0D0106] px-0.5"> ‘Lives’,</span> as well as
-              news on all the latest
+              <span className="text-[#0D0106] px-0.5"> ‘Lives’,</span> as well
+              as news on all the latest
               <span className="text-[#0D0106] px-0.5">Fairs and Events.</span>
             </p>
 

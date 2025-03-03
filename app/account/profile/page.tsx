@@ -3,7 +3,7 @@ import React from "react";
 
 const PersonalInfo = () => {
   return (
-    <div className="">
+    <div className="border-b border-[#EBE9E0] pb-24">
       <div className="py-6 px-5 md:px-12 xl:px-[80px] xl:py-[32px] border-b border-[#EBE9E0] pb-5 mb-9">
         <h1 className="text-xs text-[#919089]">
           Home / My Account / Personal info

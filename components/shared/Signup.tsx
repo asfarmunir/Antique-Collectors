@@ -224,7 +224,7 @@ const SignUp = ({ onClose }: { onClose: any }) => {
                         checked={formData.terms}
                         onChange={handleInputChange}
                       />
-                      <p className="text-[12px] text-[#919089] font-openSans">
+                      <p className="text-[14px] text-[#919089] font-openSans">
                         By signing up you agree to our{" "}
                         <span className="text-black">Terms and Conditions</span>{" "}
                         & <span className="text-black">Privacy Policy.</span>
@@ -246,7 +246,7 @@ const SignUp = ({ onClose }: { onClose: any }) => {
                 </div>
 
                 <div>
-                  <p className="text-[10px]  font-openSans uppercase text-[#0D0106] py-2">
+                  <p className="text-[12px]  font-openSans uppercase text-[#0D0106] py-2">
                     Instantly Login or sign up via google
                   </p>
 
@@ -312,7 +312,7 @@ const SignUp = ({ onClose }: { onClose: any }) => {
 
                     <p className="text-[14px] text-[#463F3A] my-5 font-openSans">
                       Didn't receive a code?{" "}
-                      <Link href={"#"} className="uppercase text-[13px]">
+                      <Link href={"#"} className="uppercase text-[10px]">
                         Resend
                       </Link>
                     </p>

@@ -471,7 +471,7 @@ const page: React.FC = () => {
           </div>
         )}
       </div>
-      <div className=" w-full flex items-center justify-between flex-col md:flex-row px-5 gap-5 md:px-12 xl:px-[80px] py-8">
+      <div className=" w-full border-b border-[#EBE9E0] pb-12 flex items-center justify-between flex-col md:flex-row px-5 gap-5 md:px-12 xl:px-[80px] py-8">
         <button
           type="submit"
           className="w-full border border-[#0D0106]  py-4 uppercase  text-xs font-medium hover:bg-gray-800 focus:ring-2 focus:ring-primary-50 focus:ring-offset-2"

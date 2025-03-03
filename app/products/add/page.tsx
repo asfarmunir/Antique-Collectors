@@ -112,7 +112,7 @@ const page = () => {
   };
 
   return (
-    <div className="">
+    <div className="border-b border-[#EBE9E0] pb-12">
       <div className="py-6 px-5 md:px-12 xl:px-[80px] xl:py-[32px] border-b border-[#EBE9E0] pb-5 mb-9">
         <h1 className="text-xs text-[#919089]">
           My Products / Add a new Product
@@ -369,29 +369,49 @@ const page = () => {
               <div className="flex flex-col gap-4 mt-2">
                 <div className="flex items-center gap-3">
                   <span className="  text-xs 2xl:text-sm w-12">Width</span>
-                  <input
+                  {/* <input
                     type="text"
                     name="dimensions.width"
                     value={formData.dimensions?.width}
                     onChange={handleInputChange}
                     className="block w-full mt-1 p-3 text-xs border"
                     placeholder="Width (cm)"
-                  />
+                  /> */}
+                  <Select>
+                    <SelectTrigger className="w-full text-xs 2xl:text-sm mt-1 xl:p-4 rounded-none  border border-[#EBE9E0] text-[#919089] ">
+                      <SelectValue placeholder="Theme" />
+                    </SelectTrigger>
+                    <SelectContent>
+                      <SelectItem value="light">Light</SelectItem>
+                      <SelectItem value="dark">Dark</SelectItem>
+                      <SelectItem value="system">System</SelectItem>
+                    </SelectContent>
+                  </Select>
                 </div>
                 <div className="flex items-center gap-3">
                   <span className="  text-xs 2xl:text-sm w-12">Height</span>
-                  <input
+                  {/* <input
                     type="text"
                     name="dimensions.height"
                     value={formData.dimensions?.height}
                     onChange={handleInputChange}
                     className="block w-full mt-1 p-3 text-xs border"
                     placeholder="Height (cm)"
-                  />
+                  /> */}
+                  <Select>
+                    <SelectTrigger className="w-full text-xs 2xl:text-sm mt-1 xl:p-4 rounded-none  border border-[#EBE9E0] text-[#919089] ">
+                      <SelectValue placeholder="Theme" />
+                    </SelectTrigger>
+                    <SelectContent>
+                      <SelectItem value="light">Light</SelectItem>
+                      <SelectItem value="dark">Dark</SelectItem>
+                      <SelectItem value="system">System</SelectItem>
+                    </SelectContent>
+                  </Select>
                 </div>
                 <div className="flex items-center gap-3">
                   <span className="  text-xs 2xl:text-sm w-12">Length</span>
-
+                  {/* 
                   <input
                     type="text"
                     name="dimensions.length"
@@ -399,7 +419,17 @@ const page = () => {
                     onChange={handleInputChange}
                     className="block w-full mt-1 p-3 text-xs border"
                     placeholder="Length (cm)"
-                  />
+                  /> */}
+                  <Select>
+                    <SelectTrigger className="w-full text-xs 2xl:text-sm mt-1 xl:p-4 rounded-none  border border-[#EBE9E0] text-[#919089] ">
+                      <SelectValue placeholder="Theme" />
+                    </SelectTrigger>
+                    <SelectContent>
+                      <SelectItem value="light">Light</SelectItem>
+                      <SelectItem value="dark">Dark</SelectItem>
+                      <SelectItem value="system">System</SelectItem>
+                    </SelectContent>
+                  </Select>
                 </div>
               </div>
             </label>

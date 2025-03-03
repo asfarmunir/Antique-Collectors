@@ -46,7 +46,7 @@ const page = () => {
   ];
 
   return (
-    <div>
+    <div className="border-b border-[#EBE9E0]">
       <div className="py-6 xl:py-[32px] px-6 border-b border-[#EBE9E0] md:px-12 xl:px-[80px] ">
         <h1 className="text-xs text-[#919089]">Home / My Account</h1>
         <h1 className="font-playfair pt-4 uppercase text-[24px] ">

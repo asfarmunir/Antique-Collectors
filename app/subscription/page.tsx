@@ -104,20 +104,22 @@ const Subscription = ({
               ))}
             </div>
 
-            <div className="lg:absolute lg:right-10 lg:top-0 ">
+            <div className="lg:absolute lg:right-36 lg:top-0 ">
               <div className="mt-5 lg:mt-0 grid grid-cols-1  md:grid-cols-3 gap-2 px-4 lg:px-0">
                 {subscriptionPlans.map((plan) => (
                   <div
                     key={plan.name}
-                    className={`border relative min-w-52 h-[650px] rounded-sm p-4 bg-[#FFFFFF8F] flex flex-col justify-between gap-3 items-center  border-[#EBE9E0] ${
-                      plan.name === "Silver" ? "border-2 border-[#0D0106]" : ""
+                    className={` relative min-w-52 h-[650px]  p-4 bg-[#FFFFFF8F] flex flex-col justify-between gap-3 items-center   ${
+                      plan.name === "Silver"
+                        ? "border-2 border-[#0D0106] rounded-[7px]"
+                        : "border border-[#EBE9E0] rounded-sm"
                     }`}
                   >
                     <div className="mt-6 space-y-3  text-center flex flex-col items-center">
                       <p
                         className={`${
                           plan.name === "Silver"
-                            ? "bg-[#0D0106] flex items-center justify-center absolute top-0 py-1 w-full "
+                            ? "bg-[#0D0106] flex items-center justify-center absolute top-0 py-2 rounded-tr-[5px] rounded-tl-[5px] w-full "
                             : ""
                         }   text-white text-[10px] `}
                       >

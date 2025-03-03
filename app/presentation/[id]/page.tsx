@@ -42,7 +42,7 @@ const page: React.FC = () => {
   };
 
   return (
-    <div className="">
+    <div className="border-b border-[#EBE9E0] pb-12">
       <div className="py-4 xl:py-[32px] px-4 md:px-6 lg:px-12 xl:px-[80px] border-b border-[#EBE9E0] flex flex-row flex-wrap gap-4 justify-between items-center">
         <div>
           <p className="text-xs">Home / Live Presentations</p>
