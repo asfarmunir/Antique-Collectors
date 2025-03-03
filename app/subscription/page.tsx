@@ -123,7 +123,9 @@ const Subscription = ({
                       >
                         {plan.name === "Silver" ? "Popular Plan" : ""}
                       </p>
-                      <h1 className="text-2xl font-playfair ">{plan.name}</h1>
+                      <h1 className="text-2xl font-playfair uppercase ">
+                        {plan.name}
+                      </h1>
                       <p className="text-xs">
                         <span className="text-base font-semibold">
                           ${plan.price_per_month}{" "}
@@ -142,7 +144,7 @@ const Subscription = ({
                             key={key}
                             className="text-center  border-b border-[#EBE9E0]"
                           >
-                            <span className="text-xs text-[#454545]">
+                            <span className="text-xs text-[#919089]">
                               {" "}
                               {value}
                             </span>
@@ -154,7 +156,7 @@ const Subscription = ({
                         <Button
                           label="Select"
                           onClick={() => updateSubscriptionPlan(plan.name)}
-                          className="py-2 w-3/4  text-xs uppercase text-[#0D0106] bg-white border-[1.5px] font-semibold border-[#0D0106]"
+                          className="py-2 w-3/4  text-xs uppercase text-[#0D0106] bg-white border-[1px] xl:w-[124px] font-semibold border-[#0D0106]"
                         />
                       </div>
                     </div>
@@ -164,7 +166,7 @@ const Subscription = ({
             </div>
           </div>
         </div>
-        <div className="mt-20 mb-10 px-8 xl:px-[80px]">
+        <div className="mt-36 mb-20 px-8 xl:px-[80px]">
           <h1 className="text-[32px] font-playfair capitalize">
             Or Continue with a free account
           </h1>
@@ -189,7 +191,7 @@ const Subscription = ({
           </div>
 
           <Button
-            className="w-1/3 p-2 py-4 uppercase text-XS"
+            className="w-1/3 p-2 py-4 uppercase text-xs"
             type="submit"
             label="Continue"
           />
