@@ -60,8 +60,8 @@ const Subscription = ({
   return (
     <>
       <div className="absolute top-0 w-full">
-        <div className="border-b border-[#EBE9E0] flex flex-row justify-between gap-6 px-4 xl:px-[80px] items-center">
-          <h1 className="text-xl py-4 uppercase font-playfair">
+        <div className="border-b xl:py-8 border-[#EBE9E0] flex flex-row justify-between gap-6 px-4 xl:px-[80px] items-center">
+          <h1 className="text-[24px]  uppercase font-playfair">
             Setting up your account{" "}
           </h1>
           <Link href={"/"}>
@@ -83,7 +83,7 @@ const Subscription = ({
               </p>
             </div>
 
-            <div className="bg-[#F9F8F3] mt-10 py-8 px-6 xl:px-[80px] md:pl-12 pr-6">
+            <div className="bg-[#F9F8F3] mt-10 py-8 px-6 xl:px-[80px] md:pl-12 pr-6 space-y-2">
               {[
                 "posting",
                 "feed access",
@@ -96,7 +96,7 @@ const Subscription = ({
                 "analytics",
               ].map((item) => (
                 <p
-                  className="border-b w-full max-w-lg py-1 font-semibold border-[#EBE9E0] text-[#0D0106] capitalize text-xs"
+                  className="border-b w-full max-w-lg py-1  border-[#EBE9E0] text-[#0D0106] capitalize text-xs"
                   key={item}
                 >
                   {item}
@@ -104,15 +104,15 @@ const Subscription = ({
               ))}
             </div>
 
-            <div className="lg:absolute lg:right-36 lg:top-0 ">
+            <div className="lg:absolute lg:right-36 lg:top-6 ">
               <div className="mt-5 lg:mt-0 grid grid-cols-1  md:grid-cols-3 gap-2 px-4 lg:px-0">
                 {subscriptionPlans.map((plan) => (
                   <div
                     key={plan.name}
-                    className={` relative min-w-52 h-[650px]  p-4 bg-[#FFFFFF8F] flex flex-col justify-between gap-3 items-center   ${
+                    className={` relative min-w-52   p-4 bg-[#FFFFFF8F] flex flex-col justify-between gap-3 items-center   ${
                       plan.name === "Silver"
-                        ? "border-2 border-[#0D0106] rounded-[7px]"
-                        : "border border-[#EBE9E0] rounded-sm"
+                        ? "border-2 border-[#0D0106] rounded-tr-[7px] rounded-tl-[7px] h-[655px] "
+                        : "border border-[#EBE9E0] rounded-sm h-[650px]"
                     }`}
                   >
                     <div className="mt-6 space-y-3  text-center flex flex-col items-center">
@@ -132,15 +132,12 @@ const Subscription = ({
                         <span className="text-base font-semibold">
                           ${plan.price_per_month}{" "}
                         </span>
-                        <span className="text-[#919089]">user/mo</span>
+                        <span className="text-[#919089]">user / mo</span>
                       </p>
-                      <p className="text-xs">
-                        or ${plan.price_per_year}{" "}
-                        <span className="text-[#919089]">/year</span>
-                      </p>
+                      <p className="text-xs">or ${plan.price_per_year} /year</p>
                     </div>
                     <div className="mt-2 lg:mt-4">
-                      <ul className="list-inside list-disc">
+                      <ul className="list-inside list-disc space-y-1.5">
                         {Object.entries(plan.features).map(([key, value]) => (
                           <li
                             key={key}
@@ -154,7 +151,7 @@ const Subscription = ({
                         ))}
                       </ul>
 
-                      <div className="mt-14 flex justify-center items-center">
+                      <div className="mt-8 mb-6 flex justify-center items-center">
                         <Button
                           label="Select"
                           onClick={() => updateSubscriptionPlan(plan.name)}
@@ -173,27 +170,27 @@ const Subscription = ({
             Or Continue with a free account
           </h1>
           <div className="py-12">
-            <p className="text-sm">
+            <p className="text-md">
               <span className="pr-1">•</span> Minimum Posts: 1 per week (or
               auto-bump to Bronze)
             </p>
-            <p className="text-sm">
+            <p className="text-md">
               <span className="pr-1">•</span> Messaging: View-Only – Receive
               email notifications of new messages, but no in-app message view.
             </p>
-            <p className="text-sm">
+            <p className="text-md">
               <span className="pr-1">•</span> Forum Access: Not included
             </p>
-            <p className="text-sm">
+            <p className="text-md">
               <span className="pr-1">•</span> Features: Full sharing features
             </p>
-            <p className="text-sm">
+            <p className="text-md">
               <span className="pr-1">•</span> Basic analytics
             </p>
           </div>
 
           <Button
-            className="w-1/3 p-2 py-4 uppercase text-xs"
+            className="w-1/4 p-2 py-4 uppercase text-xs"
             type="submit"
             label="Continue"
           />

@@ -74,12 +74,12 @@ const ProductDetails = ({ params }: { params: any }) => {
         </div>
 
         {/* Product details here */}
-        <div className="grid grid-cols-1 md:grid-cols-7 gap-2 pt-4 px-4">
+        <div className="grid grid-cols-1 md:grid-cols-7 gap-2 pt-4 px-4  xl:px-[80px] ">
           {/* Left Column: Image Gallery */}
           <div className="md:col-span-3 md:h-[350px]">
-            <div className="flex w-full flex-col-reverse md:flex-row  md:border-r border-[#EBE9E0] h-full">
+            <div className="flex w-full flex-col-reverse md:flex-row   h-full">
               {/* Scrollable Image Gallery */}
-              <div className="w-full md:w-1/3 flex lg:flex-col items-center gap-1">
+              <div className="w-fit flex lg:flex-col items-center gap-1">
                 <button
                   className="text-3xl cursor-pointer"
                   onClick={handleMoveUp}
@@ -146,7 +146,7 @@ const ProductDetails = ({ params }: { params: any }) => {
 
           {/* Right Column: Product Details */}
           <div className=" md:col-span-4 md:h-[350px] mt-12 md:mt-0">
-            <div className="flex flex-col px-4 md:px-6 lg:px-10">
+            <div className="flex flex-col px-4 md:pl-6 lg:pl-10">
               {/* Seller Info */}
               <div className="flex items-center justify-between border-b pb-[16px] border-[#EBE9E0]">
                 <div className="flex items-center text-sm gap-3">
@@ -207,7 +207,7 @@ const ProductDetails = ({ params }: { params: any }) => {
                 <Button
                   label="add to favorites"
                   icon={<IoIosHeartEmpty className="text-xl" />}
-                  className="bg-white uppercase font-openSans text-xs hover:bg-[#0D0106] hover:text-white text-nowrap 2xl:text-[12px] py-[16px] border border-[#0D0106] text-[#0D0106] w-[70%]   "
+                  className="bg-white uppercase font-normal font-openSans text-xs hover:bg-[#0D0106] hover:text-white text-nowrap 2xl:text-[12px] py-[16px] border border-[#0D0106] text-[#0D0106] w-[70%]   "
                 />
                 <EnquiryModal />
               </div>
@@ -215,10 +215,10 @@ const ProductDetails = ({ params }: { params: any }) => {
           </div>
         </div>
 
-        <div className="md:px-8 grid grid-cols-1 md:grid-cols-7 md:mb-8  mt-4">
-          <div className=" md:col-span-3 mx-4">
+        <div className="md:px-8 grid grid-cols-1 md:grid-cols-7 md:mb-8   xl:px-[80px] mt-4">
+          <div className=" md:col-span-3 ">
             {/* Left Side: Like and Comment */}
-            <div className="flex items-center justify-between  border-b pb-[16px] border-[#EBE9E0]">
+            <div className="flex items-center justify-between  border-b pb-[20px] border-[#EBE9E0]">
               <div className="flex flex-row gap-6">
                 <button className="flex flex-row gap-2 items-center ">
                   <FaRegHeart className="text-xl text-gray-700" /> 23
@@ -235,8 +235,8 @@ const ProductDetails = ({ params }: { params: any }) => {
               </div>
               <Image src="/export.svg" alt="icon" width={25} height={25} />
             </div>
-            {Array.from({ length: 2 }).map((_, index) => (
-              <div className="border-b border-[#EBE9E0] p-3 my-3 ">
+            {Array.from({ length: 1 }).map((_, index) => (
+              <div key={index} className="border-b border-[#EBE9E0] p-3 my-3 ">
                 <h3 className="uppercase text-semibold text-[14px] text-[#0D0106]">
                   Anna J.
                 </h3>
@@ -247,17 +247,17 @@ const ProductDetails = ({ params }: { params: any }) => {
                   voluptatibus nam, mollitia distinctio necessitatibus!
                 </p>
 
-                <div className="flex flex-row gap-6  text-[#919089]">
+                <div className="flex flex-row gap-6 text-sm  text-[#919089]">
                   <button className="flex flex-row gap-2 items-center ">
-                    <FaRegHeart className="text-xl]" />{" "}
+                    <Image src="/heart.svg" alt="icon" width={19} height={19} />{" "}
                     <span className="text-[#463F3A]"> 23</span>
                   </button>
                   <button className="flex flex-row gap-2 items-center ">
-                    <CgMailReply className="text-xl" />{" "}
+                    <Image src="/reply.svg" alt="icon" width={15} height={15} />
                     <span className="text-[#463F3A]"> 35</span>
                   </button>
                 </div>
-                <div className=" p-3 pl-8 my-3 ">
+                <div className=" p-3 pl-20 my-3 ">
                   <div className="flex items-center gap-2">
                     <p className="w-6 h-6 rounded-full bg-[#EBE9E0]"></p>
                     <h3 className="uppercase text-semibold text-[14px] text-[#0D0106]">
@@ -271,14 +271,24 @@ const ProductDetails = ({ params }: { params: any }) => {
                     voluptatibus nam, mollitia distinctio necessitatibus!
                   </p>
 
-                  <div className="flex flex-row gap-6  text-[#919089]">
+                  <div className="flex flex-row gap-6 text-sm  text-[#919089]">
                     <button className="flex flex-row gap-2 items-center ">
-                      <FaRegHeart className="text-xl]" />{" "}
+                      <Image
+                        src="/heart.svg"
+                        alt="icon"
+                        width={19}
+                        height={19}
+                      />{" "}
                       <span className="text-[#463F3A]"> 23</span>
                     </button>
                     <button className="flex flex-row gap-2 items-center ">
-                      <CgMailReply className="text-xl" />{" "}
-                      <span className="text-[#463F3A]"> 35</span>
+                      <Image
+                        src="/reply.svg"
+                        alt="icon"
+                        width={15}
+                        height={15}
+                      />
+                      <span className="text-[#463F3A] "> 35</span>
                     </button>
                   </div>
                 </div>
@@ -299,7 +309,7 @@ const ProductDetails = ({ params }: { params: any }) => {
             </div>
           </div>
           <div className="md:col-span-4">
-            <div className="flex flex-row flex-wrap items-center justify-between gap-2 mx-4 md:ml-10 my-2 border-b pb-3 border-[#EBE9E0]">
+            <div className="flex flex-row flex-wrap items-center justify-between gap-2 mx-4 md:ml-10 my-2 border-b pb-5 border-[#EBE9E0]">
               <p className="text-sm md:text-[20px] font-playfair uppercase">
                 Other Products by Seller Name
               </p>
@@ -378,7 +388,7 @@ const ProductDetails = ({ params }: { params: any }) => {
         {/* recommeded product add below */}
 
         <div className="px-4 md:px-6 lg:px-12 xl:px-[80px]">
-          <div className="flex flex-row flex-wrap items-center justify-between gap-6 mt-8 pb-3">
+          <div className="flex flex-row flex-wrap items-center justify-between gap-6 mt-8 py-8">
             <h2 className="text-sm md:text-[20px] font-playfair uppercase">
               Recommedned Product for you
             </h2>
