@@ -74,8 +74,8 @@ const Seller = () => {
 
   return (
     <>
-      <div>
-        <div className="py-4 px-8 lg:px-12 xl:px-[80px] border-b border-[#EBE9E0]">
+      <div className="border-b border-[#EBE9E0] pb-8 xl:pb-12">
+        <div className="py-4 xl:py-[32px] px-8 lg:px-12 xl:px-[80px] border-b border-[#EBE9E0]">
           <h1 className="text-[14px] text-[#919089]">
             Home / Sellers / A-Z Sellers
           </h1>
@@ -209,7 +209,7 @@ const Seller = () => {
         )}
 
         <div
-          className={`px-4 md:px-6 lg:px-12 xl:px-[80px] xl:px-[80px] md:grid py-6 md:grid-cols-${
+          className={`px-4 md:px-6 lg:px-12 xl:px-[80px] md:grid py-6 md:grid-cols-${
             filterOpen ? 4 : 4
           }`}
         >
@@ -235,7 +235,7 @@ const Seller = () => {
                 <div
                   className={` grid grid-cols-1  md:grid-cols-${
                     filterOpen ? 3 : 4
-                  }   gap-5 `}
+                  }    `}
                 >
                   {products.map((p, index) => {
                     const columns = 3; // Adjust based on your actual column count for grid view
@@ -248,7 +248,7 @@ const Seller = () => {
                     return (
                       <div
                         key={index}
-                        className={`flex  gap-4 md:gap-0 flex-col stroke-[#0D0106]  px-6 cursor-pointer border-[#EBE9E0]
+                        className={`flex p-3 xl:p-4 gap-4 md:gap-0 flex-col stroke-[#0D0106]  px-6 cursor-pointer border-[#EBE9E0]
                                         ${!isLastRow ? "md:border-b pb-4" : ""} 
                                         ${
                                           !isLastColumn
@@ -272,7 +272,7 @@ const Seller = () => {
                             </button>
                           </div>
                           <Image
-                            src="/images/products/p1.png"
+                            src="/images/products/p5.png"
                             alt="product"
                             width={150}
                             className=" w-full h-full object-contain object-center hover:scale-105 transition duration-500 ease-in-out"

@@ -85,7 +85,7 @@ const Presentations = () => {
           <div>
             <Link
               href={"/presentation/create"}
-              className="text-xs xl:text-[12px] xl:w-[237px] xl:h-[48px] 2xl:text-sm hover:opacity-80 py-3 px-4 xl:px-6 text-white bg-[#0D0106] uppercase"
+              className="text-xs xl:text-[12px] xl:w-[237px] xl:h-[48px] 2xl:text-sm hover:opacity-80 py-4 px-4 xl:px-6 text-white bg-[#0D0106] uppercase"
             >
               Create a live presentation
             </Link>

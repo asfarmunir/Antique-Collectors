@@ -187,7 +187,7 @@ const BlogDetails = ({ params }: { params: any }) => {
                     <span className="text-[#463F3A]"> 35</span>
                   </button>
                 </div>
-                <div className=" p-3 pl-8 my-3 ">
+                <div className=" p-3 pl-20 my-3 ">
                   <div className="flex items-center gap-2">
                     <div className=" w-3 h-3 lg:w-6 lg:h-6 rounded-full bg-[#EBE9E0]"></div>
                     <h3 className="uppercase text-semibold text-[14px] text-[#0D0106]">

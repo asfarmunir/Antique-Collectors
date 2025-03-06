@@ -57,7 +57,7 @@ const Seller = () => {
 
   return (
     <>
-      <div>
+      <div className="border-b border-[#EBE9E0] pb-8 xl:pb-12">
         <div className="py-4 xl:py-[32px] px-4 md:px-6 lg:px-12 xl:px-[80px]">
           <h1 className="text-[14px] text-[#919089]">
             Home / Sellers / A-Z Sellers
@@ -250,7 +250,7 @@ text-[#463F3A] md:hidden"
           </div>
         </div>
 
-        <div className="mt-6 flex justify-center">
+        <div className="mt-6 xl:mt-10 flex justify-center">
           <Button
             label={
               isGridView

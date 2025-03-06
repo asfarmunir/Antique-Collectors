@@ -84,7 +84,7 @@ const Blog = () => {
 
   return (
     <>
-      <div>
+      <div className="border-b border-[#EBE9E0] pb-8 xl:pb-12">
         <div className="flex relative flex-col-reverse gap-5 bg-[#F9F8F3] md:flex-row h-[480px] md:h-[500px] xl:h-[680px] border-b border-[#EBE9E0]">
           {/* Text Section */}
           <div className="w-full px-6 md:px-12 xl:px-[80px]  flex flex-col my-auto justify-center h-full">
