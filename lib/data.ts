@@ -771,12 +771,12 @@ export const intrests = [
         image: "/images/curiosities.svg",
     },
     {
-        name: "gemstones",
-        image: "/images/gemstones.svg",
-    },
-    {
         name: "artefacts",
         image: "/images/artefacts.svg",
+    },
+    {
+        name: "gemstones",
+        image: "/images/gemstones.svg",
     },
 ];
 

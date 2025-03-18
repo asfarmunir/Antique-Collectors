@@ -19,7 +19,7 @@ import localFont from "next/font/local";
 import { IoIosHeartEmpty } from "react-icons/io";
 const playfair = localFont({ src: "../fonts/PlayfairDisplay-Italic.ttf" });
 
-const page = () => {
+const Page = () => {
   const [subEmail, setSubEmail] = useState();
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isLogin, setIsLogin] = useState(false);
@@ -80,7 +80,7 @@ const page = () => {
         <section
           className="w-full h-[713px]  lg:h-screen flex items-center justify-center flex-col  relative"
           style={{
-            backgroundImage: "url(/heroBg.png)",
+            backgroundImage: "url(/heroBg2.webp)",
             backgroundSize: "cover",
             backgroundPosition: "center",
           }}
@@ -502,7 +502,7 @@ const page = () => {
             {intrests.map((intrest, index) => (
               <div
                 key={index}
-                className="flex flex-col flex-nowrap gap-4 items-center justify-between"
+                className="flex flex-col flex-nowrap gap-2 items-center justify-between"
               >
                 <div className="mb-3">
                   <Image
@@ -720,4 +720,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;

@@ -1,7 +1,11 @@
 import React from "react";
 import Image from "next/image";
 import Button from "@/components/ui/Button";
-import { intrests } from "@/lib/data";
+import { intrests, sellerdata, sellers } from "@/lib/data";
+import localFont from "next/font/local";
+import Link from "next/link";
+import { VscVerifiedFilled } from "react-icons/vsc";
+const playfair = localFont({ src: "../../fonts/PlayfairDisplay-Italic.ttf" });
 
 const Aboutus = () => {
   return (
@@ -75,24 +79,27 @@ const Aboutus = () => {
           </div>
         </div>
 
-        <section className="py-4  px-4 md:px-6 lg:px-12 xl:px-[80px] flex flex-col-reverse md:flex-row gap-4 pt-36">
-          <div className="w-full md:w-1/2">
+        <section className="py-4  px-4 md:px-6 lg:px-12 xl:px-[80px] flex flex-col-reverse md:flex-row justify-center items-center gap-4 pt-36">
+          <div className="">
             <Image
-              src="/images/about/about3.png"
+              src="/about_globe.svg"
               width={480}
               height={250}
               alt="about pic1"
-              className=" xl:w-[511px] xl:h-[355px]"
+              className=" xl:w-[298px] xl:h-[298px]"
             />
           </div>
 
-          <div className="w-full  md:w-1/2 flex flex-col justify-center ">
+          <div className=" flex flex-col justify-center ">
             {" "}
             {/* Updated this div */}
-            <h1 className="font-playfair capitalize text-[26px] md:text-[32px]">
-              Discover Antiques from all over the World
+            <h1 className="font-playfair capitalize text-center text-[26px] md:text-[32px]">
+              Discover Antiques from <br />
+              <span className={`${playfair.className}`}>
+                all over the World
+              </span>
             </h1>
-            <p className="text-[#666666] text-[14px] max-w-md py-2">
+            <p className="text-[#919089] text-[16px] text-center max-w-md py-4">
               The Antique Collector partners with dealers and auction houses
               from all over the world. From Antique and Vintage Jewelry, to
               Furniture and Decorative Antiques, all under one virtual roof.
@@ -100,32 +107,51 @@ const Aboutus = () => {
           </div>
         </section>
 
-        <section className="px-4 md:px-6 lg:px-12 xl:px-[80px]  pt-16">
-          <div>
+        <section className="px-4 md:px-6 lg:px-12 xl:px-[80px]  pt-16 pb-[60px]">
+          <div className="flex flex-col justify-center items-center gap-3">
             <h1 className="text-[26px]  capitalize md:text-[32px] font-playfair">
               Follow your favorite dealers
             </h1>
-            <p className="text-[#666666] py-2 text-[14px]">
+            <p className="text-[#919089]  text-[16px]">
               Follow the people you love and see all their new posts. Or go to
               the categories and hunt down specific pieces.
             </p>
-
-            <div className="flex flex-row flex-wrap justify-start md:justify-between items-center gap-12 md:gap-8 py-10">
-              {intrests.map((intrest, index) => (
+            <div
+              className={`grid grid-cols-1 -mt-6 sm:grid-cols-2 md:grid-cols-4 w-full gap-x-2`}
+            >
+              {sellers.slice(0, 4).map((items, index) => (
                 <div
-                  key={index}
-                  className="flex flex-col flex-nowrap items-center justify-between"
+                  key={index} // Use a unique ID
+                  className="relative flex flex-col items-center hover:scale-105 transition duration-500 ease-in-out"
                 >
-                  <div className="mb-3">
+                  <div className="relative z-30 top-[3.5rem]">
                     <Image
-                      src={intrest.image}
-                      alt="interest"
-                      width={70}
-                      height={70}
-                      className=" "
+                      src={items.src}
+                      alt={items.title}
+                      width={80}
+                      className="xl:w-[112px] xl:h-[112px]"
+                      height={80}
                     />
                   </div>
-                  <h2 className="uppercase text-xs">{intrest.name}</h2>
+                  <div className="bg-[#F9F8F3] w-full capitalize flex flex-col gap-1 items-center relative pt-[60px] pb-[16px] z-10">
+                    <div className="flex flex-row items-center gap-2 pt-1">
+                      <h1 className="font-playfair text-[20px] ">
+                        Seller Name
+                      </h1>
+                      {items.verified ? (
+                        <VscVerifiedFilled className="text-green-600" />
+                      ) : (
+                        ""
+                      )}
+                    </div>
+                    <p className="uppercase text-xs text-[#919089]">
+                      {items.totalproduct} Products
+                    </p>
+                    <Button
+                      className="bg-transparent uppercase text-xs text-[#0D0106] p-0"
+                      label="Follow"
+                    />
+                  </div>
                 </div>
               ))}
             </div>
@@ -133,12 +159,12 @@ const Aboutus = () => {
         </section>
 
         <section className="px-4 md:px-6 lg:px-12 xl:px-[80px]  py-10 ">
-          <div className="grid md:grid-cols-5 xl:gap-8 mb-8">
+          <div className="grid md:grid-cols-5 xl:gap-10 mb-8">
             <div className="col-span-2 flex flex-col justify-start   md:py-6">
               <h1 className="text-[24px] md:text-[32px] font-playfair">
                 Liaise With Dealers Privately
               </h1>
-              <p className="text-[16px] text-[#666666] py-2 mt-2">
+              <p className="text-[16px] text-[#919089] py-2 mt-2">
                 Liaise with dealers with our direct message, or their email, and
                 arrange payment offline or on their website. The Antique
                 Collector does not add fees or commission, or share your data
@@ -147,18 +173,18 @@ const Aboutus = () => {
             </div>
             <div className="col-span-1 flex flex-row   items-center justify-center">
               <Image
-                src="/images/about/about4.png"
+                src="/about_sun.svg"
                 alt="About last image"
                 width={160}
                 height={160}
-                className="xl:w-[269px]"
+                className="xl:w-[298px]"
               />
             </div>
             <div className="col-span-2 flex flex-col justify-start p-6">
               <h1 className="text-[24px] md:text-[32px] font-playfair">
                 Become a dealer and be seen
               </h1>
-              <p className="text-[#666666] text-[16px] py-0 my-2">
+              <p className="text-[#919089] text-[16px] py-0 my-2">
                 When you join our community your followers will be able to see
                 all your new finds in the daily feed, in chronological order.
                 Our algorithm does not choose what you see, you see who you
